@@ -1,21 +1,13 @@
 import React from "react";
 import { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import styled from "styled-components/native";
-
-const StyledView = styled.View`
-flex: 1;
-justify-content: center;
-align-items: center;
-background-color: papayawhip;
-`;
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <StyledView>
+      <View>
         <Text style={styles.welcome}>Welcome to Typescript React Native!</Text>
-      </StyledView>
+      </View>
     );
   }
 }
