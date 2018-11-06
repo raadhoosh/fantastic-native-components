@@ -49,7 +49,7 @@
       "node"
     ],
     "transform": {
-      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.(js)$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest"
     },
     "globals": {
