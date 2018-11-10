@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with defaults 1`] = `
+<View
+  className="sc-bdVaJa gGuYrZ"
+>
+  <View>
+    <Text>
+      Test
+    </Text>
+  </View>
+</View>
+`;
