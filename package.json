@@ -9,16 +9,18 @@
   "dependencies": {
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4",
+    "react-navigation": "^2.18.2",
     "styled-components": "^4.0.3"
   },
   "devDependencies": {
-    "@types/styled-components": "^4.0.3",
     "@types/enzyme": "^3.1.14",
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^23.3.9",
     "@types/react": "^16.4.18",
     "@types/react-native": "^0.57.7",
+    "@types/react-navigation": "^2.13.1",
     "@types/react-test-renderer": "^16.0.3",
+    "@types/styled-components": "^4.0.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
     "babel-plugin-inline-import": "^3.0.0",
@@ -59,8 +61,7 @@
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "testPathIgnorePatterns": [
-      "\\.snap$",
-      "<rootDir>/node_modules/|styled-components|@type/styled-components"
+      "<rootDir>/node_modules/(?!(jest-)?react-native|nodejs-formatter|styled-components|react-navigation)"
     ],
     "cacheDirectory": ".jest/cache",
     "modulePaths": [
