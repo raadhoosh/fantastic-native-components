@@ -1,7 +1,18 @@
 import * as React from "react";
-import { ThemeProvider, Theme as IPropsTheme, Text } from "./components";
+import { ThemeProvider, Theme as IPropsTheme } from "./components";
 import theme from "./common/theme";
-import { View } from "react-native";
+import { DrawerNavigator } from "react-navigation";
+import AlApp from "./AlApp";
+import SmApp from "./SmApp";
+import SideBar from "./container/SideBarContainer";
+
+const RootStack = DrawerNavigator({
+  Grid: SmApp,
+  Text: AlApp,
+},
+  {
+    contentComponent: props => <SideBar {...props} />,
+  });
 
 type Props = {
   theme?: IPropsTheme,
@@ -11,9 +22,7 @@ export default class App extends React.Component<Props> {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <View>
-          <Text>Welcome to Typescript React Native!</Text>
-        </View>
+        <RootStack />
       </ThemeProvider>
     );
   }

@@ -1,5 +1,6 @@
-import styled from "styled-components/native";
-const Text = styled.Text`
+import styled from "styled-components";
+import { Text as ReText } from "react-native";
+const Text = styled(ReText)`
 color: ${(props: any) => props.theme.primary.main};
 `;
 
