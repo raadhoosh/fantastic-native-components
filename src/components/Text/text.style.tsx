@@ -6,15 +6,15 @@ function getColor(props: any) {
     if (props.color) {
         ForeC = props.color;
     } else {
-        const color = (
+        const color =
             (props.primary || "primary")
             || (props.secondary || "secondary")
             || (props.success || "success")
             || (props.info || "info")
             || (props.warning || "warning")
-            || (props.danger || "danger"))
-            || "undefinded"
-        if (color) { ForeC = props.theme[color].main; }
+            || (props.danger || "danger");
+
+        if (typeof (color) === "string") { ForeC = props.theme[color].main; }
     }
 
     return ForeC;
