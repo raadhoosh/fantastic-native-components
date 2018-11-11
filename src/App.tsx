@@ -2,13 +2,13 @@ import * as React from "react";
 import { ThemeProvider, Theme as IPropsTheme } from "./components";
 import theme from "./common/theme";
 import { DrawerNavigator } from "react-navigation";
-import AlApp from "./AlApp";
-import SmApp from "./SmApp";
+import GridContainer from "./container/GridContainer";
+import TextContainer from "./container/TextContainer";
 import SideBar from "./container/SideBarContainer";
 
 const RootStack = DrawerNavigator({
-  Grid: SmApp,
-  Text: AlApp,
+  Grid: GridContainer,
+  Text: TextContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,
