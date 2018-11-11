@@ -3,9 +3,9 @@
 exports[`Grid rendering should render a <View /> 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GridPage>
-    test
-  </GridPage>,
+  Symbol(enzyme.__unrendered__): <GridPage
+    openDrawer={[Function]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,58 +17,882 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
-      "children": <Component>
-        test
-      </Component>,
-      "style": Object {
-        "alignItems": "center",
-        "flex": 1,
-        "justifyContent": "center",
-      },
+      "children": Array [
+        <ForwardRef>
+          <default_1>
+            <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
+            >
+              <Component>
+                menu
+              </Component>
+            </TouchableOpacity>
+          </default_1>
+          <default_1>
+            Headers
+          </default_1>
+          <default_1>
+            <Component>
+              right
+            </Component>
+          </default_1>
+        </ForwardRef>,
+        <Unknown
+          full={true}
+        >
+          <GridNB
+            style={
+              Object {
+                "flex": 1,
+                "height": 1334,
+              }
+            }
+          >
+            <ColumnNB
+              style={
+                Object {
+                  "backgroundColor": "purple",
+                }
+              }
+            >
+              <Component>
+                1
+              </Component>
+            </ColumnNB>
+            <ColumnNB>
+              <RowNB
+                style={
+                  Object {
+                    "backgroundColor": "blue",
+                  }
+                }
+              >
+                <Component>
+                  2
+                </Component>
+              </RowNB>
+              <RowNB
+                style={
+                  Object {
+                    "backgroundColor": "yellow",
+                  }
+                }
+              >
+                <Component>
+                  3
+                </Component>
+              </RowNB>
+            </ColumnNB>
+          </GridNB>
+        </Unknown>,
+        <Unknown>
+          <default_1>
+            Footer
+          </default_1>
+        </Unknown>,
+      ],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": "test",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <default_1>
+              <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+              >
+                <Component>
+                  menu
+                </Component>
+              </TouchableOpacity>
+            </default_1>,
+            <default_1>
+              Headers
+            </default_1>,
+            <default_1>
+              <Component>
+                right
+              </Component>
+            </default_1>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+              >
+                <Component>
+                  menu
+                </Component>
+              </TouchableOpacity>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeOpacity": 0.2,
+                "children": <Component>
+                  menu
+                </Component>,
+                "onPress": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "menu",
+                },
+                "ref": null,
+                "rendered": "menu",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Headers",
+            },
+            "ref": null,
+            "rendered": "Headers",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Component>
+                right
+              </Component>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "right",
+              },
+              "ref": null,
+              "rendered": "right",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "WithTheme(MyComponent)",
+          "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
       },
-      "ref": null,
-      "rendered": "test",
-      "type": [Function],
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <GridNB
+            style={
+              Object {
+                "flex": 1,
+                "height": 1334,
+              }
+            }
+          >
+            <ColumnNB
+              style={
+                Object {
+                  "backgroundColor": "purple",
+                }
+              }
+            >
+              <Component>
+                1
+              </Component>
+            </ColumnNB>
+            <ColumnNB>
+              <RowNB
+                style={
+                  Object {
+                    "backgroundColor": "blue",
+                  }
+                }
+              >
+                <Component>
+                  2
+                </Component>
+              </RowNB>
+              <RowNB
+                style={
+                  Object {
+                    "backgroundColor": "yellow",
+                  }
+                }
+              >
+                <Component>
+                  3
+                </Component>
+              </RowNB>
+            </ColumnNB>
+          </GridNB>,
+          "full": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <ColumnNB
+                style={
+                  Object {
+                    "backgroundColor": "purple",
+                  }
+                }
+              >
+                <Component>
+                  1
+                </Component>
+              </ColumnNB>,
+              <ColumnNB>
+                <RowNB
+                  style={
+                    Object {
+                      "backgroundColor": "blue",
+                    }
+                  }
+                >
+                  <Component>
+                    2
+                  </Component>
+                </RowNB>
+                <RowNB
+                  style={
+                    Object {
+                      "backgroundColor": "yellow",
+                    }
+                  }
+                >
+                  <Component>
+                    3
+                  </Component>
+                </RowNB>
+              </ColumnNB>,
+            ],
+            "style": Object {
+              "flex": 1,
+              "height": 1334,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Component>
+                  1
+                </Component>,
+                "style": Object {
+                  "backgroundColor": "purple",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "1",
+                },
+                "ref": null,
+                "rendered": "1",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <RowNB
+                    style={
+                      Object {
+                        "backgroundColor": "blue",
+                      }
+                    }
+                  >
+                    <Component>
+                      2
+                    </Component>
+                  </RowNB>,
+                  <RowNB
+                    style={
+                      Object {
+                        "backgroundColor": "yellow",
+                      }
+                    }
+                  >
+                    <Component>
+                      3
+                    </Component>
+                  </RowNB>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <Component>
+                      2
+                    </Component>,
+                    "style": Object {
+                      "backgroundColor": "blue",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "2",
+                    },
+                    "ref": null,
+                    "rendered": "2",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <Component>
+                      3
+                    </Component>,
+                    "style": Object {
+                      "backgroundColor": "yellow",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "3",
+                    },
+                    "ref": null,
+                    "rendered": "3",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <default_1>
+            Footer
+          </default_1>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Footer",
+          },
+          "ref": null,
+          "rendered": "Footer",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
-        "children": <Component>
-          test
-        </Component>,
-        "style": Object {
-          "alignItems": "center",
-          "flex": 1,
-          "justifyContent": "center",
-        },
+        "children": Array [
+          <ForwardRef>
+            <default_1>
+              <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+              >
+                <Component>
+                  menu
+                </Component>
+              </TouchableOpacity>
+            </default_1>
+            <default_1>
+              Headers
+            </default_1>
+            <default_1>
+              <Component>
+                right
+              </Component>
+            </default_1>
+          </ForwardRef>,
+          <Unknown
+            full={true}
+          >
+            <GridNB
+              style={
+                Object {
+                  "flex": 1,
+                  "height": 1334,
+                }
+              }
+            >
+              <ColumnNB
+                style={
+                  Object {
+                    "backgroundColor": "purple",
+                  }
+                }
+              >
+                <Component>
+                  1
+                </Component>
+              </ColumnNB>
+              <ColumnNB>
+                <RowNB
+                  style={
+                    Object {
+                      "backgroundColor": "blue",
+                    }
+                  }
+                >
+                  <Component>
+                    2
+                  </Component>
+                </RowNB>
+                <RowNB
+                  style={
+                    Object {
+                      "backgroundColor": "yellow",
+                    }
+                  }
+                >
+                  <Component>
+                    3
+                  </Component>
+                </RowNB>
+              </ColumnNB>
+            </GridNB>
+          </Unknown>,
+          <Unknown>
+            <default_1>
+              Footer
+            </default_1>
+          </Unknown>,
+        ],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": "test",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <default_1>
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                >
+                  <Component>
+                    menu
+                  </Component>
+                </TouchableOpacity>
+              </default_1>,
+              <default_1>
+                Headers
+              </default_1>,
+              <default_1>
+                <Component>
+                  right
+                </Component>
+              </default_1>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                >
+                  <Component>
+                    menu
+                  </Component>
+                </TouchableOpacity>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "activeOpacity": 0.2,
+                  "children": <Component>
+                    menu
+                  </Component>,
+                  "onPress": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "menu",
+                  },
+                  "ref": null,
+                  "rendered": "menu",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Headers",
+              },
+              "ref": null,
+              "rendered": "Headers",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Component>
+                  right
+                </Component>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "right",
+                },
+                "ref": null,
+                "rendered": "right",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "WithTheme(MyComponent)",
+            "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
         },
-        "ref": null,
-        "rendered": "test",
-        "type": [Function],
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <GridNB
+              style={
+                Object {
+                  "flex": 1,
+                  "height": 1334,
+                }
+              }
+            >
+              <ColumnNB
+                style={
+                  Object {
+                    "backgroundColor": "purple",
+                  }
+                }
+              >
+                <Component>
+                  1
+                </Component>
+              </ColumnNB>
+              <ColumnNB>
+                <RowNB
+                  style={
+                    Object {
+                      "backgroundColor": "blue",
+                    }
+                  }
+                >
+                  <Component>
+                    2
+                  </Component>
+                </RowNB>
+                <RowNB
+                  style={
+                    Object {
+                      "backgroundColor": "yellow",
+                    }
+                  }
+                >
+                  <Component>
+                    3
+                  </Component>
+                </RowNB>
+              </ColumnNB>
+            </GridNB>,
+            "full": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <ColumnNB
+                  style={
+                    Object {
+                      "backgroundColor": "purple",
+                    }
+                  }
+                >
+                  <Component>
+                    1
+                  </Component>
+                </ColumnNB>,
+                <ColumnNB>
+                  <RowNB
+                    style={
+                      Object {
+                        "backgroundColor": "blue",
+                      }
+                    }
+                  >
+                    <Component>
+                      2
+                    </Component>
+                  </RowNB>
+                  <RowNB
+                    style={
+                      Object {
+                        "backgroundColor": "yellow",
+                      }
+                    }
+                  >
+                    <Component>
+                      3
+                    </Component>
+                  </RowNB>
+                </ColumnNB>,
+              ],
+              "style": Object {
+                "flex": 1,
+                "height": 1334,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Component>
+                    1
+                  </Component>,
+                  "style": Object {
+                    "backgroundColor": "purple",
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <RowNB
+                      style={
+                        Object {
+                          "backgroundColor": "blue",
+                        }
+                      }
+                    >
+                      <Component>
+                        2
+                      </Component>
+                    </RowNB>,
+                    <RowNB
+                      style={
+                        Object {
+                          "backgroundColor": "yellow",
+                        }
+                      }
+                    >
+                      <Component>
+                        3
+                      </Component>
+                    </RowNB>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <Component>
+                        2
+                      </Component>,
+                      "style": Object {
+                        "backgroundColor": "blue",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "2",
+                      },
+                      "ref": null,
+                      "rendered": "2",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <Component>
+                        3
+                      </Component>,
+                      "style": Object {
+                        "backgroundColor": "yellow",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "3",
+                      },
+                      "ref": null,
+                      "rendered": "3",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <default_1>
+              Footer
+            </default_1>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Footer",
+            },
+            "ref": null,
+            "rendered": "Footer",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
       "type": [Function],
     },
   ],

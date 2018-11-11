@@ -9,7 +9,7 @@ import Content from "./Content";
 import ThemeProvider from "./ThemeProvider";
 import Theme from "./ThemeProvider/interface.index";
 import Text from "./Text";
-
+export { Grid, Col, Row } from "react-native-easy-grid";
 export {
     StatusBar,
     Right,
