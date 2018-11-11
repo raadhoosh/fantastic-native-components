@@ -3,7 +3,12 @@
 exports[`Text rendering should render a <Text /> 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <Text
+    color="#f00"
+    primary={true}
+  >
+    text
+  </Text>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,10 +22,20 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": undefined,
+      "children": Array [
+        " ",
+        "text",
+        " ",
+      ],
+      "color": "#f00",
+      "primary": true,
     },
     "ref": null,
-    "rendered": null,
+    "rendered": Array [
+      " ",
+      "text",
+      " ",
+    ],
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": undefined,
@@ -71,10 +86,20 @@ color: ",
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": undefined,
+        "children": Array [
+          " ",
+          "text",
+          " ",
+        ],
+        "color": "#f00",
+        "primary": true,
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Array [
+        " ",
+        "text",
+        " ",
+      ],
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": undefined,
