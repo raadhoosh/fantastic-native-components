@@ -1,5 +1,5 @@
 import * as React from "react";
-import View from "./style.index";
+import View from "./container.style";
 type Props = {
     theme?: any,
     children: JSX.Element | JSX.Element[] | string;

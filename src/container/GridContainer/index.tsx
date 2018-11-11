@@ -1,9 +1,13 @@
 import React from "react";
 import GridPage from "../../screen/GridPage";
-
-class GridContainer extends React.PureComponent {
+export interface IProps {
+    navigation: any;
+}
+class GridContainer extends React.PureComponent<IProps> {
     render() {
-        return (<GridPage>Grid test</GridPage>);
+        return (<GridPage openDrawer={() => {
+            this.props.navigation.openDrawer();
+        }}>Grid test</GridPage>);
     }
 }
 
