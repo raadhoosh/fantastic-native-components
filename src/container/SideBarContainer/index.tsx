@@ -4,6 +4,7 @@ import SideBar from "../../screen/SideBar";
 const list = [
     { route: "Grid", name: "Grid" },
     { route: "Text", name: "Text" },
+    { route: "Button", name: "Button" },
 ];
 export interface IProps {
     navigation: any;

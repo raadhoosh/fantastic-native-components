@@ -5,10 +5,12 @@ import { DrawerNavigator } from "react-navigation";
 import GridContainer from "./container/GridContainer";
 import TextContainer from "./container/TextContainer";
 import SideBar from "./container/SideBarContainer";
+import ButtonContainer from "./container/ButtonContainer";
 
 const RootStack = DrawerNavigator({
   Grid: GridContainer,
   Text: TextContainer,
+  Button: ButtonContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,
