@@ -7,12 +7,12 @@ function getColor(props: any) {
         ForeC = props.color;
     } else {
         const color =
-            (props.primary || "primary")
-            || (props.secondary || "secondary")
-            || (props.success || "success")
-            || (props.info || "info")
-            || (props.warning || "warning")
-            || (props.danger || "danger");
+            (props.primary && "primary")
+            || (props.secondary && "secondary")
+            || (props.success && "success")
+            || (props.info && "info")
+            || (props.warning && "warning")
+            || (props.danger && "danger");
 
         if (typeof (color) === "string") { ForeC = props.theme[color].main; }
     }
