@@ -21,7 +21,7 @@ class GridPage extends React.PureComponent<Props> {
                 </Right>
             </Header>
             <Content>
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 20 }}>
                     <Button primary width={'200px'} >primary</Button>
                     <Button secondary width={'200px'} >secondary</Button>
                     <Button success width={'200px'} >success</Button>
@@ -34,7 +34,7 @@ class GridPage extends React.PureComponent<Props> {
                     >Press Me</Button>
                 </View>
 
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 20 }}>
                     <Button primary width={'200px'} inverse >primary</Button>
                     <Button secondary width={'200px'} inverse >secondary</Button>
                     <Button success width={'200px'} inverse >success</Button>

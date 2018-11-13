@@ -1,9 +1,8 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, TextInput } from "../../components";
 
 export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
     openDrawer: any;
 }
 class GridPage extends React.PureComponent<Props> {
@@ -22,11 +21,15 @@ class GridPage extends React.PureComponent<Props> {
             </Header>
             <Content>
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
-                    <Text color='#f00' >This text represents props color.</Text>
-                    <Text primary >This text represents primary.</Text>
-                    <Text secondary >This text represents secondary.</Text>
-                    <Text success >This text represents success.</Text>
-                    <Text info >This text represents info.</Text>
+                    <TextInput width={'200px'} backgroundColor={"#ddd"} placeholder={"Type here to translate!"} />
+                    <TextInput primary width={'200px'} placeholder={"primary"} />
+                    <TextInput secondary width={'200px'} placeholder={"secondary"} />
+                    <TextInput success width={'200px'} placeholder={"success"} placeholderTextColor={"#618833"} />
+                    <TextInput info width={'200px'} />
+                    <TextInput danger width={'200px'}
+                        placeholder={"Handling Text Input"}
+                        onChangeText={() => alert('Handling Text Input')}
+                    />
                 </View>
             </Content>
             <Footer>

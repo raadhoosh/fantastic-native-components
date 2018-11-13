@@ -105,10 +105,7 @@ ShallowWrapper {
         "componentId": "sc-bdVaJa",
         "isStatic": false,
         "rules": Array [
-          "    
-    background-color: ",
-          [Function],
-          "; 
+          "      
     background-color: ",
           [Function],
           ";
@@ -222,10 +219,7 @@ ShallowWrapper {
           "componentId": "sc-bdVaJa",
           "isStatic": false,
           "rules": Array [
-            "    
-    background-color: ",
-            [Function],
-            "; 
+            "      
     background-color: ",
             [Function],
             ";

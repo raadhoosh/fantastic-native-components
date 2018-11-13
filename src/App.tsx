@@ -6,11 +6,13 @@ import GridContainer from "./container/GridContainer";
 import TextContainer from "./container/TextContainer";
 import SideBar from "./container/SideBarContainer";
 import ButtonContainer from "./container/ButtonContainer";
+import TextInputContainer from "./container/TextInputContainer";
 
 const RootStack = DrawerNavigator({
   Grid: GridContainer,
   Text: TextContainer,
   Button: ButtonContainer,
+  TextInput: TextInputContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,

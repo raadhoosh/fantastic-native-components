@@ -29,8 +29,7 @@ interface IProps {
   width?: string;
   margin?: string;
   theme?: any;
-  onPress?(): any;
-  bgColor?: string;
+  onPress?(): any; 
 }
 
 const Button = (props: IProps) => {

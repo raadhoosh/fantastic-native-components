@@ -10,6 +10,7 @@ import ThemeProvider from "./ThemeProvider";
 import Theme from "./ThemeProvider/interface.index";
 import Text from "./Text";
 import Button from "./Button";
+import TextInput from "./TextInput";
 
 export {
     StatusBar,
@@ -23,5 +24,6 @@ export {
     ThemeProvider,
     Theme,
     Text,
-    Button
+    Button,
+    TextInput,
 };

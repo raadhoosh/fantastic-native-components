@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TouchableOpacity, Text } from "react-native";
+import { TextInput as RnTextInput } from "react-native";
 
 function getColor(props: any) {
     let bgC = "#6c757d";
@@ -20,25 +20,16 @@ function getColor(props: any) {
             forC = props.theme[color].contrastText;
         }
     }
-    return bgC
-    // const btnColor = { bgC: bgC, forC: forC };
-    // return btnColor;
+    return bgC    
 }
 
-// const arrayColor = getColor((props: any) => getColor(props));
-
-const ButtonWrapper = styled(TouchableOpacity)`      
-    background-color: ${(props: any) => props.inverse ? '#fff' : getColor(props)};
-    border: 1px solid ${(props) => getColor(props)};        
+const TextInput = styled(RnTextInput)`    
+    background-color: ${(props: any) => props.backgroundColor ? props.backgroundColor : '#fff'};    
+    border: 1px solid ${(props) => getColor(props)};          
     width: ${(props: any) => props.width ? props.width : "auto"};    
     border-radius: 3px;
     margin-bottom: 5px;
     padding: 5px 10px;
 `;
 
-const ButtonText = styled(Text)`    
-    text-align: center;
-    color: ${(props: any) => props.inverse ? getColor(props) : "#fff"};    
-`;
-
-export { ButtonWrapper, ButtonText };
+export default TextInput;

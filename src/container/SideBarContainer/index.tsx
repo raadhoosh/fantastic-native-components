@@ -5,6 +5,7 @@ const list = [
     { route: "Grid", name: "Grid" },
     { route: "Text", name: "Text" },
     { route: "Button", name: "Button" },
+    { route: "TextInput", name: "TextInput" },
 ];
 export interface IProps {
     navigation: any;
