@@ -50,6 +50,14 @@ const mainTheme: Theme = {
         dark: "#6d1b7b",
         contrastText: "#fff",
     },
+    grey: {
+        light: "#dddddd",
+        main: "#6c757d",
+        dark: "#343a40",
+        contrastText: "#fff",
+    },
+
+    
     deviceWidth: deviceHeight,
     deviceHeight: deviceWidth,
     isIphoneX: isIphoneX,
