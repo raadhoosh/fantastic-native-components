@@ -24,6 +24,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
+      "activeOpacity": 0.8,
       "children": <ForwardRef
         color="#f00"
         primary={true}
@@ -33,6 +34,7 @@ ShallowWrapper {
         Button
       </ForwardRef>,
       "color": "#f00",
+      "onPress": undefined,
       "primary": true,
       "secondary": true,
       "success": true,
@@ -56,11 +58,13 @@ ShallowWrapper {
         "attrs": undefined,
         "componentStyle": ComponentStyle {
           "componentId": "sc-bwzfXH",
-          "isStatic": true,
+          "isStatic": false,
           "rules": Array [
             "    
     text-align: center;
-    color: #fff;
+    color: ",
+            [Function],
+            ";    
 ",
           ],
         },
@@ -102,15 +106,18 @@ ShallowWrapper {
         "isStatic": false,
         "rules": Array [
           "    
-    /* background-color: ",
+    background-color: ",
           [Function],
-          "; */
+          "; 
     background-color: ",
           [Function],
           ";
+    border: 1px solid ",
+          [Function],
+          ";        
     width: ",
           [Function],
-          ";
+          ";    
     border-radius: 3px;
     margin-bottom: 5px;
     padding: 5px 10px;
@@ -134,6 +141,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "activeOpacity": 0.8,
         "children": <ForwardRef
           color="#f00"
           primary={true}
@@ -143,6 +151,7 @@ ShallowWrapper {
           Button
         </ForwardRef>,
         "color": "#f00",
+        "onPress": undefined,
         "primary": true,
         "secondary": true,
         "success": true,
@@ -166,11 +175,13 @@ ShallowWrapper {
           "attrs": undefined,
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
-            "isStatic": true,
+            "isStatic": false,
             "rules": Array [
               "    
     text-align: center;
-    color: #fff;
+    color: ",
+              [Function],
+              ";    
 ",
             ],
           },
@@ -212,15 +223,18 @@ ShallowWrapper {
           "isStatic": false,
           "rules": Array [
             "    
-    /* background-color: ",
+    background-color: ",
             [Function],
-            "; */
+            "; 
     background-color: ",
             [Function],
             ";
+    border: 1px solid ",
+            [Function],
+            ";        
     width: ",
             [Function],
-            ";
+            ";    
     border-radius: 3px;
     margin-bottom: 5px;
     padding: 5px 10px;

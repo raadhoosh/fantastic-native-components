@@ -1,7 +1,6 @@
 import Button from "../index";
 import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
-import { any } from "prop-types";
 
 const createTestProps = (props: Object) => ({
   ...props,
@@ -18,7 +17,11 @@ describe("Button", () => {
         secondary: true,
         success: true,
       });
-      component = shallow(<Button {...props} >Button</Button>);
+      component = shallow(<Button {...props} 
+        onPress={() => {
+          alert('You tapped the button!');
+      }}
+      >Button</Button>);
     });
     it("should render a <Button />", () => {
       const component = shallow(<Button {...props} >Button</Button>);

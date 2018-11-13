@@ -29,12 +29,14 @@ interface IProps {
   width?: string;
   margin?: string;
   theme?: any;
+  onPress?(): any;
+  bgColor?: string;
 }
 
 const Button = (props: IProps) => {
 
   return (
-    <ButtonWrapper {...props} >
+    <ButtonWrapper {...props} activeOpacity={ 0.8 } onPress={props.onPress} >
       <ButtonText {...props}>
         {props.children}
       </ButtonText>

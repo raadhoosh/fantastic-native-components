@@ -12,6 +12,7 @@ export default interface Theme {
     danger: ColorBase;
     success: ColorBase;
     purple: ColorBase;
+    grey: ColorBase;
     deviceWidth: number;
     deviceHeight: number;
     isIphoneX: boolean;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { TouchableOpacity, Text } from "react-native";
-import { any } from "prop-types";
 
 function getColor(props: any) {
     let bgC = "#6c757d";

@@ -56,8 +56,6 @@ const mainTheme: Theme = {
         dark: "#343a40",
         contrastText: "#fff",
     },
-
-    
     deviceWidth: deviceHeight,
     deviceHeight: deviceWidth,
     isIphoneX: isIphoneX,
