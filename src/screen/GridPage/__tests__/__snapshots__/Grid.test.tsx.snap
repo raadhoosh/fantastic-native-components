@@ -31,9 +31,9 @@ ShallowWrapper {
               </Component>
             </TouchableOpacity>
           </default_1>
-          <default_1>
+          <Unknown>
             Headers
-          </default_1>
+          </Unknown>
           <default_1>
             <Component>
               right
@@ -89,9 +89,9 @@ ShallowWrapper {
           </GridNB>
         </Unknown>,
         <Unknown>
-          <default_1>
+          <Unknown>
             Footer
-          </default_1>
+          </Unknown>
         </Unknown>,
       ],
     },
@@ -113,9 +113,9 @@ ShallowWrapper {
                 </Component>
               </TouchableOpacity>
             </default_1>,
-            <default_1>
+            <Unknown>
               Headers
-            </default_1>,
+            </Unknown>,
             <default_1>
               <Component>
                 right
@@ -433,9 +433,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <default_1>
+          "children": <Unknown>
             Footer
-          </default_1>,
+          </Unknown>,
         },
         "ref": null,
         "rendered": Object {
@@ -472,9 +472,9 @@ ShallowWrapper {
                 </Component>
               </TouchableOpacity>
             </default_1>
-            <default_1>
+            <Unknown>
               Headers
-            </default_1>
+            </Unknown>
             <default_1>
               <Component>
                 right
@@ -530,9 +530,9 @@ ShallowWrapper {
             </GridNB>
           </Unknown>,
           <Unknown>
-            <default_1>
+            <Unknown>
               Footer
-            </default_1>
+            </Unknown>
           </Unknown>,
         ],
       },
@@ -554,9 +554,9 @@ ShallowWrapper {
                   </Component>
                 </TouchableOpacity>
               </default_1>,
-              <default_1>
+              <Unknown>
                 Headers
-              </default_1>,
+              </Unknown>,
               <default_1>
                 <Component>
                   right
@@ -874,9 +874,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <default_1>
+            "children": <Unknown>
               Footer
-            </default_1>,
+            </Unknown>,
           },
           "ref": null,
           "rendered": Object {

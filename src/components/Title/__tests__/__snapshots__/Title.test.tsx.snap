@@ -3,9 +3,62 @@
 exports[`Title rendering toMatchSnapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <default_1>
-    Title
-  </default_1>,
+  Symbol(enzyme.__unrendered__): <Provider
+    theme={
+      Object {
+        "danger": Object {
+          "contrastText": "#fff",
+          "dark": "#aa2e25",
+          "light": "#f6685e",
+          "main": "#f44336",
+        },
+        "deviceHeight": 750,
+        "deviceWidth": 1334,
+        "info": Object {
+          "contrastText": "#fff",
+          "dark": "#ba000d",
+          "light": "#33c9dc",
+          "main": "#00bcd4",
+        },
+        "isIphoneX": false,
+        "platform": "ios",
+        "primary": Object {
+          "contrastText": "#fff",
+          "dark": "#1769aa",
+          "light": "#4dabf5",
+          "main": "#2196f3",
+        },
+        "purple": Object {
+          "contrastText": "#fff",
+          "dark": "#6d1b7b",
+          "light": "#af52bf",
+          "main": "#9c27b0",
+        },
+        "secondary": Object {
+          "contrastText": "#fff",
+          "dark": "#b26a00",
+          "light": "#ffac33",
+          "main": "#ff9800",
+        },
+        "success": Object {
+          "contrastText": "#fff",
+          "dark": "#618833",
+          "light": "#a2cf6e",
+          "main": "#8bc34a",
+        },
+        "warning": Object {
+          "contrastText": "#fff",
+          "dark": "#b28704",
+          "light": "#ffcd38",
+          "main": "#ffc107",
+        },
+      }
+    }
+  >
+    <Unknown>
+      Title
+    </Unknown>
+  </Provider>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,11 +70,59 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
-      "children": <ForwardRef>
+      "children": <Unknown>
         Title
-      </ForwardRef>,
+      </Unknown>,
+      "theme": Object {
+        "danger": Object {
+          "contrastText": "#fff",
+          "dark": "#aa2e25",
+          "light": "#f6685e",
+          "main": "#f44336",
+        },
+        "deviceHeight": 750,
+        "deviceWidth": 1334,
+        "info": Object {
+          "contrastText": "#fff",
+          "dark": "#ba000d",
+          "light": "#33c9dc",
+          "main": "#00bcd4",
+        },
+        "isIphoneX": false,
+        "platform": "ios",
+        "primary": Object {
+          "contrastText": "#fff",
+          "dark": "#1769aa",
+          "light": "#4dabf5",
+          "main": "#2196f3",
+        },
+        "purple": Object {
+          "contrastText": "#fff",
+          "dark": "#6d1b7b",
+          "light": "#af52bf",
+          "main": "#9c27b0",
+        },
+        "secondary": Object {
+          "contrastText": "#fff",
+          "dark": "#b26a00",
+          "light": "#ffac33",
+          "main": "#ff9800",
+        },
+        "success": Object {
+          "contrastText": "#fff",
+          "dark": "#618833",
+          "light": "#a2cf6e",
+          "main": "#8bc34a",
+        },
+        "warning": Object {
+          "contrastText": "#fff",
+          "dark": "#b28704",
+          "light": "#ffcd38",
+          "main": "#ffc107",
+        },
+      },
     },
     "ref": null,
     "rendered": Object {
@@ -30,89 +131,70 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": "Title",
-        "style": undefined,
       },
       "ref": null,
       "rendered": "Title",
-      "type": Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": undefined,
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bwzfXH",
-          "isStatic": true,
-          "rules": Array [
-            "
-    font-size: 22;
-    color: #fff;
-",
-          ],
-        },
-        "displayName": "Styled(Component)",
-        "propTypes": Object {
-          "accessible": [Function],
-          "adjustsFontSizeToFit": [Function],
-          "allowFontScaling": [Function],
-          "disabled": [Function],
-          "ellipsizeMode": [Function],
-          "minimumFontScale": [Function],
-          "nativeID": [Function],
-          "numberOfLines": [Function],
-          "onLayout": [Function],
-          "onLongPress": [Function],
-          "onPress": [Function],
-          "pressRetentionOffset": [Function],
-          "selectable": [Function],
-          "selectionColor": [Function],
-          "style": [Function],
-          "suppressHighlighting": [Function],
-          "testID": [Function],
-          "textBreakStrategy": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-bwzfXH",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
-    "type": Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": undefined,
-      "componentStyle": ComponentStyle {
-        "componentId": "sc-bdVaJa",
-        "isStatic": false,
-        "rules": Array [
-          "
-    background-color: transparent;
-    justify-content: center;
-    align-items: ",
-          [Function],
-          ";
-    flex: 1;
-",
-        ],
-      },
-      "displayName": "Styled(Component)",
-      "render": [Function],
-      "styledComponentId": "sc-bdVaJa",
-      "target": [Function],
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-      Symbol(Symbol.hasInstance): [Function],
-    },
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
-        "children": <ForwardRef>
+        "children": <Unknown>
           Title
-        </ForwardRef>,
+        </Unknown>,
+        "theme": Object {
+          "danger": Object {
+            "contrastText": "#fff",
+            "dark": "#aa2e25",
+            "light": "#f6685e",
+            "main": "#f44336",
+          },
+          "deviceHeight": 750,
+          "deviceWidth": 1334,
+          "info": Object {
+            "contrastText": "#fff",
+            "dark": "#ba000d",
+            "light": "#33c9dc",
+            "main": "#00bcd4",
+          },
+          "isIphoneX": false,
+          "platform": "ios",
+          "primary": Object {
+            "contrastText": "#fff",
+            "dark": "#1769aa",
+            "light": "#4dabf5",
+            "main": "#2196f3",
+          },
+          "purple": Object {
+            "contrastText": "#fff",
+            "dark": "#6d1b7b",
+            "light": "#af52bf",
+            "main": "#9c27b0",
+          },
+          "secondary": Object {
+            "contrastText": "#fff",
+            "dark": "#b26a00",
+            "light": "#ffac33",
+            "main": "#ff9800",
+          },
+          "success": Object {
+            "contrastText": "#fff",
+            "dark": "#618833",
+            "light": "#a2cf6e",
+            "main": "#8bc34a",
+          },
+          "warning": Object {
+            "contrastText": "#fff",
+            "dark": "#b28704",
+            "light": "#ffcd38",
+            "main": "#ffc107",
+          },
+        },
       },
       "ref": null,
       "rendered": Object {
@@ -121,79 +203,12 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "Title",
-          "style": undefined,
         },
         "ref": null,
         "rendered": "Title",
-        "type": Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": true,
-            "rules": Array [
-              "
-    font-size: 22;
-    color: #fff;
-",
-            ],
-          },
-          "displayName": "Styled(Component)",
-          "propTypes": Object {
-            "accessible": [Function],
-            "adjustsFontSizeToFit": [Function],
-            "allowFontScaling": [Function],
-            "disabled": [Function],
-            "ellipsizeMode": [Function],
-            "minimumFontScale": [Function],
-            "nativeID": [Function],
-            "numberOfLines": [Function],
-            "onLayout": [Function],
-            "onLongPress": [Function],
-            "onPress": [Function],
-            "pressRetentionOffset": [Function],
-            "selectable": [Function],
-            "selectionColor": [Function],
-            "style": [Function],
-            "suppressHighlighting": [Function],
-            "testID": [Function],
-            "textBreakStrategy": [Function],
-          },
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        },
+        "type": [Function],
       },
-      "type": Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": undefined,
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bdVaJa",
-          "isStatic": false,
-          "rules": Array [
-            "
-    background-color: transparent;
-    justify-content: center;
-    align-items: ",
-            [Function],
-            ";
-    flex: 1;
-",
-          ],
-        },
-        "displayName": "Styled(Component)",
-        "render": [Function],
-        "styledComponentId": "sc-bdVaJa",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
