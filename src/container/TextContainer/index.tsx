@@ -3,7 +3,7 @@ import TextPage from "../../screen/TextPage";
 
 class TextContainer extends React.PureComponent {
     render() {
-        return (<TextPage>hi test</TextPage>);
+        return (<TextPage />);
     }
 }
 

@@ -12,7 +12,7 @@ describe("Grid", () => {
         let props: Object;
         beforeEach(() => {
             props = createTestProps({});
-            wrapper = shallow(<Grid {...props}>test</Grid>);
+            wrapper = shallow(<Grid openDrawer={jest.fn} {...props} />);
         });
         it("should render a <View />", () => {
             expect(wrapper).toMatchSnapshot();

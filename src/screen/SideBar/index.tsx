@@ -8,7 +8,7 @@ class SideBar extends React.PureComponent<Props> {
     render() {
         const { routes, onChangeRoute } = this.props;
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, marginTop: 20 }}>
                 {routes.map((item, index) => (
                     <TouchableOpacity
                         onPress={onChangeRoute(item.route)}
