@@ -9,17 +9,16 @@ export interface IProps {
   center?: boolean;
   children: JSX.Element | JSX.Element[] | string;
 }
-
-export default function ({ children, textStyle, ...others }: IProps) {
-  function renderChild(element: JSX.Element | JSX.Element[] | string) {
-    if (typeof element === "string") {
-      return <StText style={textStyle}>{element}</StText>;
-    }
-    return element;
+function renderChild(element: JSX.Element | JSX.Element[] | string, textStyle?: TextStyle) {
+  if (typeof element === "string") {
+    return <StText style={textStyle}>{element}</StText>;
   }
+  return element;
+}
+export default ({ children, textStyle, ...others }: IProps) => {
   return (
     <StTitle {...others}>
-      {renderChild(children)}
+      {renderChild(children, textStyle)}
     </StTitle>
   );
-}
+};

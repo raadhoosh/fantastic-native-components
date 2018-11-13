@@ -10,10 +10,9 @@ type Props = {
     danger?: boolean;
     light?: boolean;
     dark?: boolean;
-    theme?: any;
-    children: JSX.Element | JSX.Element[] ;
+    children: JSX.Element | JSX.Element[];
 };
 
-export default (props: Props) => {
-    return <StFooter {...props}>{props.children}</StFooter>;
+export default ({ children, ...props }: Props) => {
+    return <StFooter {...props}>{children}</StFooter>;
 };

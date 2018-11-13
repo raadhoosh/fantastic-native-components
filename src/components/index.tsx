@@ -1,3 +1,5 @@
+
+export { Grid, Col, Row } from "react-native-easy-grid";
 import StatusBar from "./StatusBar";
 import Right from "./Right";
 import Left from "./Left";
