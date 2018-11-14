@@ -13,6 +13,7 @@ import Theme from "./ThemeProvider/interface.index";
 import Text from "./Text";
 import Button from "./Button";
 import TextInput from "./TextInput";
+import Image from "./Image";
 
 export {
     StatusBar,
@@ -28,4 +29,5 @@ export {
     Text,
     Button,
     TextInput,
+    Image,
 };

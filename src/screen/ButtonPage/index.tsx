@@ -27,7 +27,7 @@ class GridPage extends React.PureComponent<Props> {
                     <Button success width={'200px'} >success</Button>
                     <Button info width={'200px'} >info</Button>
                     <Button warning width={'200px'} >warning</Button>
-                    <Button bgColor={"#9c27b0"} width={'200px'}
+                    <Button backgroundColor={"#9c27b0"} width={'200px'}
                         onPress={() => {
                             alert('You tapped the button!');
                         }}

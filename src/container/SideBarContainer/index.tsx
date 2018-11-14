@@ -6,6 +6,7 @@ const list = [
     { route: "Text", name: "Text" },
     { route: "Button", name: "Button" },
     { route: "TextInput", name: "TextInput" },
+    { route: "Image", name: "Image" },
 ];
 export interface IProps {
     navigation: any;
