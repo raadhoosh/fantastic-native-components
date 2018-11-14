@@ -14,6 +14,12 @@ ShallowWrapper {
         },
         "deviceHeight": 750,
         "deviceWidth": 1334,
+        "grey": Object {
+          "contrastText": "#fff",
+          "dark": "#343a40",
+          "light": "#dddddd",
+          "main": "#6c757d",
+        },
         "info": Object {
           "contrastText": "#fff",
           "dark": "#ba000d",
@@ -84,6 +90,12 @@ ShallowWrapper {
         },
         "deviceHeight": 750,
         "deviceWidth": 1334,
+        "grey": Object {
+          "contrastText": "#fff",
+          "dark": "#343a40",
+          "light": "#dddddd",
+          "main": "#6c757d",
+        },
         "info": Object {
           "contrastText": "#fff",
           "dark": "#ba000d",
@@ -156,6 +168,12 @@ ShallowWrapper {
           },
           "deviceHeight": 750,
           "deviceWidth": 1334,
+          "grey": Object {
+            "contrastText": "#fff",
+            "dark": "#343a40",
+            "light": "#dddddd",
+            "main": "#6c757d",
+          },
           "info": Object {
             "contrastText": "#fff",
             "dark": "#ba000d",

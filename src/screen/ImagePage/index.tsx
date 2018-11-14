@@ -2,10 +2,8 @@ import React from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Container, Content, Header, Footer, Title, Left, Right, Text, Image } from "../../components";
 
-export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
-    source?: any;
+export interface Props {   
+    openDrawer: any;   
 }
 
 class GridPage extends React.PureComponent<Props> {

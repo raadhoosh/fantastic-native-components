@@ -1,4 +1,4 @@
-import Text from "../index";
+import Image from "../index";
 import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
 
@@ -6,18 +6,17 @@ const createTestProps = (props: Object) => ({
   ...props,
 });
 
-describe("Text", () => {
+describe("Image", () => {
   describe("rendering", () => {
     let component: ShallowWrapper;
     let props: Object;
     beforeEach(() => {
-      props = createTestProps({
-        color: "#f00",
-        primary: true,
+      props = createTestProps({       
+        source: require('../../../screen/ImagePage/img_avatar3.png'),        
       });
-      component = shallow(<Text {...props} >text</Text>);
+      component = shallow(<Image {...props} source />);
     });
-    it("should render a <Text />", () => {
+    it("should render a <Image />", () => {
       expect(component).toMatchSnapshot();
     });
   });
