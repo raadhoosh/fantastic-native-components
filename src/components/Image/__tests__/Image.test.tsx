@@ -11,10 +11,7 @@ describe("Image", () => {
     let component: ShallowWrapper;
     let props: Object;
     beforeEach(() => {
-      props = createTestProps({       
-        source: require('../../../screen/ImagePage/img_avatar3.png'),        
-      });
-      component = shallow(<Image {...props} source />);
+      component = shallow(<Image source={require("../../../screen/ImagePage/img_avatar3.png")} />);
     });
     it("should render a <Image />", () => {
       expect(component).toMatchSnapshot();
