@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { TouchableOpacity, Text } from "react-native";
 
 function getColor(props: any) {
-    let bgC = "#6c757d";
-    let forC = "#fff";
+
+    let bgColor = "#6c757d";
+    let ForeColor = "#fff";
     if (props.backgroundColor) {
-        bgC = props.backgroundColor;
+        bgColor = props.backgroundColor;
     } else {
         const color =
             (props.primary && "primary")
@@ -16,20 +17,19 @@ function getColor(props: any) {
             || (props.danger && "danger");
 
         if (typeof (color) === "string") {
-            bgC = props.theme[color].main;
-            forC = props.theme[color].contrastText;
+            bgColor = props.theme[color].main;
+            ForeColor = props.theme[color].contrastText;
         }
+
     }
-    return bgC
-    // const btnColor = { bgC: bgC, forC: forC };
-    // return btnColor;
+
+    const btnColor = { bgColor: bgColor, ForeColor: ForeColor };
+    return btnColor;
 }
 
-// const arrayColor = getColor((props: any) => getColor(props));
-
 const ButtonWrapper = styled(TouchableOpacity)`      
-    background-color: ${(props: any) => props.inverse ? '#fff' : getColor(props)};
-    border: 1px solid ${(props) => getColor(props)};        
+    background-color: ${(props: any) => props.inverse ? '#fff' : getColor(props).bgColor};    
+    border: 1px solid ${(props) => getColor(props).bgColor};        
     width: ${(props: any) => props.width ? props.width : "auto"};    
     border-radius: 3px;
     margin-bottom: 5px;
@@ -37,8 +37,8 @@ const ButtonWrapper = styled(TouchableOpacity)`
 `;
 
 const ButtonText = styled(Text)`    
-    text-align: center;
-    color: ${(props: any) => props.inverse ? getColor(props) : "#fff"};    
+    text-align: center;   
+    color: ${(props: any) => props.inverse ? getColor(props).bgColor : "#fff"}; 
 `;
 
 export { ButtonWrapper, ButtonText };
