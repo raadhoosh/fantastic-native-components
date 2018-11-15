@@ -27,9 +27,11 @@ function getColor(props: any) {
     return btnColor;
 }
 
+const btnColor = (props: any) => getColor(props).bgColor;
+
 const ButtonWrapper = styled(TouchableOpacity)`      
-    background-color: ${(props: any) => props.inverse ? '#fff' : getColor(props).bgColor};    
-    border: 1px solid ${(props) => getColor(props).bgColor};        
+    background-color: ${(props: any) => props.inverse ? '#fff' : btnColor};    
+    border: 1px solid ${btnColor};        
     width: ${(props: any) => props.width ? props.width : "auto"};    
     border-radius: 3px;
     margin-bottom: 5px;
@@ -38,7 +40,7 @@ const ButtonWrapper = styled(TouchableOpacity)`
 
 const ButtonText = styled(Text)`    
     text-align: center;   
-    color: ${(props: any) => props.inverse ? getColor(props).bgColor : "#fff"}; 
+    color: ${(props: any) => props.inverse ? btnColor : "#fff"}; 
 `;
 
 export { ButtonWrapper, ButtonText };
