@@ -1,7 +1,7 @@
 import * as React from "react";
 import StImage from "./image.style";
 
-interface IProps {   
+interface IProps {
   source?: any;
   style?: any;
 }
