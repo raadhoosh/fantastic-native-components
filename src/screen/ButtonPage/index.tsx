@@ -2,11 +2,14 @@ import React from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Container, Content, Header, Footer, Title, Left, Right, Text, Button } from "../../components";
 
-export interface Props {
+export interface ButtonPageProps {
     children: JSX.Element | JSX.Element[] | string;
     openDrawer: any;
 }
-class GridPage extends React.PureComponent<Props> {
+class ButtonPage extends React.PureComponent<ButtonPageProps> {
+    constructor(props: ButtonPageProps) {
+        super(props)
+    }
     render() {
         return (<Container>
             <Header>
@@ -49,4 +52,4 @@ class GridPage extends React.PureComponent<Props> {
     }
 }
 
-export default GridPage;
+export default ButtonPage;

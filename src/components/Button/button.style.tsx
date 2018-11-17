@@ -3,23 +3,15 @@ import { TouchableOpacity, Text } from "react-native";
 import {Theme} from '..';
 
 interface IProps {
-    primary?: boolean;
-    /** This is a secondary Button it out!. */
-    secondary?: boolean;
-    /** This is a success Button it out!. */
-    success?: boolean;
-    /** This is a info Button it out!. */
-    info?: boolean;
-    /** This is a warning Button it out!. */
-    warning?: boolean;
-    /** This is a danger Button it out!. */
-    danger?: boolean;
-    /** This is a light Button it out!. */
-    light?: boolean;
-    /** This is a dark Button it out!. */
+    primary?: boolean;   
+    secondary?: boolean;  
+    success?: boolean;    
+    info?: boolean;    
+    warning?: boolean;    
+    danger?: boolean;  
+    light?: boolean;   
     dark?: boolean;
-    inverse?: boolean;
-    /** Description of prop "primary". */
+    inverse?: boolean;   
     bgColor?: string;
     color?: string;
     width?: string;
