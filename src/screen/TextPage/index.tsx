@@ -21,12 +21,12 @@ class GridPage extends React.PureComponent<Props> {
                 </Right>
             </Header>
             <Content>
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
-                    <Text color='#f00' >This text represents props color.</Text>
+                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>                    
                     <Text primary >This text represents primary.</Text>
                     <Text secondary >This text represents secondary.</Text>
                     <Text success >This text represents success.</Text>
                     <Text info >This text represents info.</Text>
+                    <Text color='#f00' fontSize={18} >This text represents props color.</Text>
                 </View>
             </Content>
             <Footer>

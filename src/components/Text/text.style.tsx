@@ -1,10 +1,28 @@
 import styled from "styled-components";
 import { Text as RnText } from "react-native";
+import { Theme } from '..';
 
-function getColor(props: any) {
-    let ForeC = "#000";
+interface IProps {
+    primary?: boolean;
+    secondary?: boolean;
+    success?: boolean;
+    info?: boolean;
+    warning?: boolean;
+    danger?: boolean;
+    light?: boolean;
+    dark?: boolean;
+    bgColor?: string;
+    color?: string;
+    margin?: string;
+    fontSize: number
+    theme: Theme;
+}
+
+function getColor(props: IProps) {
+
+    let ForeColor = "#fff";
     if (props.color) {
-        ForeC = props.color;
+        ForeColor = props.color;
     } else {
         const color =
             (props.primary && "primary")
@@ -14,14 +32,20 @@ function getColor(props: any) {
             || (props.warning && "warning")
             || (props.danger && "danger");
 
-        if (typeof (color) === "string") { ForeC = props.theme[color].main; }
+        if (typeof (color) === "string") {
+            ForeColor = props.theme[color].main;
+        }
+
     }
 
-    return ForeC;
+    return ForeColor;
 }
 
+const ForeColor = (props: IProps) => getColor(props);
+
 const Text = styled(RnText)`
-color: ${(props) => getColor(props)};
+color: ${ForeColor};
+font-size:${(props: IProps) => props.fontSize ? props.fontSize : "14px"}; 
 `;
 
 export default Text;

@@ -18,6 +18,7 @@ interface IProps {
     margin?: string;
     theme: Theme;
 }
+
 function getColor(props: IProps) {
 
     let backgroundColor = "#6c757d";
