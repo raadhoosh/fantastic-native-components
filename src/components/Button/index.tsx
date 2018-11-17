@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ButtonText, ButtonWrapper } from "./button.style";
 import { ViewStyle } from "react-native";
+import { Theme } from '..';
 
 interface IProps {
   children: JSX.Element | JSX.Element[] | string;
@@ -23,19 +24,18 @@ interface IProps {
   dark?: boolean;
   inverse?: boolean;
   /** Description of prop "primary". */
-  backgroundColor?: string;
-  text?: string;
+  bgColor?: string;  
   color?: string;
   width?: string;
   margin?: string;
-  theme?: any;
-  onPress?(): any; 
+  theme: Theme;
+  onPress?(): any;
 }
 
 const Button = (props: IProps) => {
 
   return (
-    <ButtonWrapper {...props} activeOpacity={ 0.8 } onPress={props.onPress} >
+    <ButtonWrapper {...props} activeOpacity={0.8} onPress={props.onPress} >
       <ButtonText {...props}>
         {props.children}
       </ButtonText>
