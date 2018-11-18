@@ -11,19 +11,19 @@ enum TextAlign {
     center = "center",
     justify = "justify",
 }
-enum FontWeight {
-    normal = "normal",
-    bold = "bold",
-    hundred = "100",
-    twoHundred = "200",
-    threeHundred = "300",
-    fourHundred = "400",
-    fiveHundred = "500",
-    sixHundred = "600",
-    sevenHundred = "700",
-    eightHundred = "800",
-    nineHundred = "900",
-}
+type FontWeight = {
+    normal : "normal",
+    bold : "bold",
+    hundred : "100",
+    twoHundred : "200",
+    threeHundred : "300",
+    fourHundred : "400",
+    fiveHundred : "500",
+    sixHundred : "600",
+    sevenHundred : "700",
+    eightHundred : "800",
+    nineHundred : "900",
+  }
 interface Text {
     fontsize?: string | number,
     color?: number | string,
