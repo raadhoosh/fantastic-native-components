@@ -29,7 +29,7 @@ class GridPage extends React.PureComponent<Props> {
                     <Text info >This text represents info.</Text>
                     <Text color="#f00" fontSize={18} >This text represents props color.</Text>
                     <Text fontWeight={"900"} >This text represents props color.</Text>
-                    <Text fontWeight={"normal"} >This text represents props fontWeight.</Text>
+                    <Text fontWeight={"normal"} textAlign="center" >This text represents props fontWeight.</Text>
                 </View>
             </Content>
             <Footer>

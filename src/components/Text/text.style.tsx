@@ -17,6 +17,7 @@ interface IProps {
     fontSize?: number
     theme?: Theme;
     fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
+    textAlign?: "auto" | "left" | "right" | "center" | "justify",
 }
 
 function getColor(props: IProps) {
@@ -47,7 +48,11 @@ const ForeColor = (props: IProps) => getColor(props);
 const Text = styled(RnText)`
 color: ${ForeColor};
 font-size:${(props: IProps) => props.fontSize ? props.fontSize : "14px"}; 
-font-weight:${(props: IProps) => props.fontWeight ? props.fontWeight : (props.theme && props.theme.text.fontWeight ? props.theme.text.fontWeight : 'normal')}; 
+font-weight:${(props: IProps) => props.fontWeight ? props.fontWeight :
+        (props.theme && props.theme.text.fontWeight ? props.theme.text.fontWeight : 'normal')}; 
+text-align:${(props: IProps) => props.textAlign ? props.textAlign :
+        (props.theme && props.theme.text.textAlign ? props.theme.text.textAlign : 'auto')}; 
+width: auto       
 `;
 
 export default Text;
