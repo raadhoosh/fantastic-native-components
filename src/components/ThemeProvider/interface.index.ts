@@ -30,7 +30,7 @@ interface Text {
     lineHeight?: number,
     textAlign?: TextAlign,
     fontFamily?: string,
-    fontWeight?: FontWeight,
+    fontWeight?: FontWeight | string | number;
 }
 export default interface Theme {
     primary: ColorBase;

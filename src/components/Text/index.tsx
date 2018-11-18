@@ -3,8 +3,21 @@ import StText from "./text.style";
 import { Theme } from '..';
 import { TextStyle } from "react-native";
 
+enum FontWeight {
+  normal = "normal",
+  bold = "bold",
+  hundred = "100",
+  twoHundred = "200",
+  threeHundred = "300",
+  fourHundred = "400",
+  fiveHundred = "500",
+  sixHundred = "600",
+  sevenHundred = "700",
+  eightHundred = "800",
+  nineHundred = "900",
+}
 interface IProps {
-  children: JSX.Element | JSX.Element[] | string;
+  children?: JSX.Element | JSX.Element[] | string;
   style?: TextStyle | object | Array<TextStyle>;
   primary?: boolean;
   secondary?: boolean;
@@ -17,8 +30,9 @@ interface IProps {
   bgColor?: string;
   color?: string;
   margin?: string;
-  fontSize: number
-  theme: Theme;
+  fontWeight?: FontWeight | string | number;
+  fontSize?: number;
+  theme?: Theme;
 }
 
 const Text = (props: IProps) => {

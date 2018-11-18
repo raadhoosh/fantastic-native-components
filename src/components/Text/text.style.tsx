@@ -1,7 +1,19 @@
 import styled from "styled-components";
 import { Text as RnText } from "react-native";
 import { Theme } from '..';
-
+enum FontWeight {
+    normal = "normal",
+    bold = "bold",
+    hundred = "100",
+    twoHundred = "200",
+    threeHundred = "300",
+    fourHundred = "400",
+    fiveHundred = "500",
+    sixHundred = "600",
+    sevenHundred = "700",
+    eightHundred = "800",
+    nineHundred = "900",
+}
 interface IProps {
     primary?: boolean;
     secondary?: boolean;
@@ -14,13 +26,14 @@ interface IProps {
     bgColor?: string;
     color?: string;
     margin?: string;
-    fontSize: number
-    theme: Theme;
+    fontSize?: number
+    theme?: Theme;
+    fontWeight?: FontWeight | string | number;
 }
 
 function getColor(props: IProps) {
 
-    let ForeColor = "#fff";
+    let ForeColor = props.theme && props.theme.text.color ? props.theme.text.color : "#000";
     if (props.color) {
         ForeColor = props.color;
     } else {
@@ -32,7 +45,7 @@ function getColor(props: IProps) {
             || (props.warning && "warning")
             || (props.danger && "danger");
 
-        if (typeof (color) === "string") {
+        if (typeof (color) === "string" && props.theme) {
             ForeColor = props.theme[color].main;
         }
 
@@ -46,6 +59,7 @@ const ForeColor = (props: IProps) => getColor(props);
 const Text = styled(RnText)`
 color: ${ForeColor};
 font-size:${(props: IProps) => props.fontSize ? props.fontSize : "14px"}; 
+font-weight:${(props: IProps) => props.fontWeight ? props.fontWeight : FontWeight.nineHundred}; 
 `;
 
 export default Text;
