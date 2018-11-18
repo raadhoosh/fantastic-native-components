@@ -4,33 +4,14 @@ interface ColorBase {
     dark: string;
     contrastText: string;
 }
-enum TextAlign {
-    auto = "auto",
-    left = "left",
-    right = "right",
-    center = "center",
-    justify = "justify",
-}
-type FontWeight = {
-    normal : "normal",
-    bold : "bold",
-    hundred : "100",
-    twoHundred : "200",
-    threeHundred : "300",
-    fourHundred : "400",
-    fiveHundred : "500",
-    sixHundred : "600",
-    sevenHundred : "700",
-    eightHundred : "800",
-    nineHundred : "900",
-  }
+
 interface Text {
     fontsize?: string | number,
-    color?: number | string,
+    color?: string,
     lineHeight?: number,
-    textAlign?: TextAlign,
+    textAlign?: "auto" | "left" | "right" | "center" | "justify",
     fontFamily?: string,
-    fontWeight?: FontWeight | string | number;
+    fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900",
 }
 export default interface Theme {
     primary: ColorBase;

@@ -6,19 +6,7 @@ const deviceWidth = Dimensions.get("window").width;
 const platform = Platform.OS;
 const isIphoneX =
     platform === "ios" && deviceHeight === 812 && deviceWidth === 375;
-enum FontWeight {
-    normal = "normal",
-    bold = "bold",
-    hundred = "100",
-    twoHundred = "200",
-    threeHundred = "300",
-    fourHundred = "400",
-    fiveHundred = "500",
-    sixHundred = "600",
-    sevenHundred = "700",
-    eightHundred = "800",
-    nineHundred = "900",
-}
+
 const mainTheme: Theme = {
     primary: {
         light: "#4dabf5",
@@ -71,7 +59,7 @@ const mainTheme: Theme = {
     text: {
         fontsize: '14px',
         color: '#000',
-        fontWeight: FontWeight.normal,
+        fontWeight: 'normal',
     },
     deviceWidth: deviceHeight,
     deviceHeight: deviceWidth,
