@@ -22,6 +22,15 @@ interface Button {
     backgroundColor?: string;
     padding?: string;   
 }
+interface TextInput {
+    fontSize?: string | number;
+    width?: string;
+    color?: string;
+    borderRadius?: string;
+    fontFamily?: string;
+    backgroundColor?: string;
+    padding?: string;   
+}
 export default interface Theme {
     primary: ColorBase;
     secondary: ColorBase;
@@ -37,4 +46,5 @@ export default interface Theme {
     platform: "ios" | "android";
     text: Text;
     button: Button;
+    textInput :TextInput;
 }
