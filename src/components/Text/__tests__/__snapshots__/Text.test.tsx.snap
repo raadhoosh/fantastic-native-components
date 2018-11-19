@@ -47,6 +47,19 @@ ShallowWrapper {
 color: ",
           [Function],
           ";
+font-size:",
+          [Function],
+          "; 
+font-weight:",
+          [Function],
+          "; 
+text-align:",
+          [Function],
+          "; 
+font-size:",
+          [Function],
+          ";         
+width: auto       
 ",
         ],
       },
@@ -111,6 +124,19 @@ color: ",
 color: ",
             [Function],
             ";
+font-size:",
+            [Function],
+            "; 
+font-weight:",
+            [Function],
+            "; 
+text-align:",
+            [Function],
+            "; 
+font-size:",
+            [Function],
+            ";         
+width: auto       
 ",
           ],
         },

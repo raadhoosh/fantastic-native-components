@@ -16,7 +16,8 @@ interface IProps {
     color?: string;
     width?: string;
     margin?: string;
-    theme: Theme;
+    theme?: Theme;
+    disabled : boolean;
 }
 
 function getColor(props: IProps) {
@@ -37,7 +38,7 @@ function getColor(props: IProps) {
             || (props.warning && "warning")
             || (props.danger && "danger");
 
-        if (typeof (color) === "string") {
+        if (typeof (color) === "string" && props.theme) {
             backgroundColor = props.theme[color].main;
             ForeColor = props.theme[color].contrastText;
         }

@@ -19,8 +19,9 @@ interface IProps {
   color?: string;
   width?: string;
   margin?: string;
-  theme: Theme;
+  theme?: Theme;
   onPress?(): any;
+  disabled : boolean;
 }
 
 const Button = (props: IProps) => {

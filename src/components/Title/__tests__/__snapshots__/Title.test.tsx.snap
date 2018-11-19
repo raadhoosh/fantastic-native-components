@@ -52,6 +52,12 @@ ShallowWrapper {
           "light": "#a2cf6e",
           "main": "#8bc34a",
         },
+        "text": Object {
+          "color": "#000",
+          "fontSize": "14px",
+          "fontWeight": "normal",
+          "textAlign": "auto",
+        },
         "warning": Object {
           "contrastText": "#fff",
           "dark": "#b28704",
@@ -127,6 +133,12 @@ ShallowWrapper {
           "dark": "#618833",
           "light": "#a2cf6e",
           "main": "#8bc34a",
+        },
+        "text": Object {
+          "color": "#000",
+          "fontSize": "14px",
+          "fontWeight": "normal",
+          "textAlign": "auto",
         },
         "warning": Object {
           "contrastText": "#fff",
@@ -205,6 +217,12 @@ ShallowWrapper {
             "dark": "#618833",
             "light": "#a2cf6e",
             "main": "#8bc34a",
+          },
+          "text": Object {
+            "color": "#000",
+            "fontSize": "14px",
+            "fontWeight": "normal",
+            "textAlign": "auto",
           },
           "warning": Object {
             "contrastText": "#fff",
