@@ -58,9 +58,18 @@ const mainTheme: Theme = {
     },
     text: {
         fontSize: "14px",
-        color: '#000',
+        color: "#000",
         fontWeight: "normal",
         textAlign: "auto"
+    },
+    button: {
+        fontSize: "14px",
+        color: "#000",
+        width: "auto",
+        borderRadius: "5px",
+        backgroundColor: "#6c757d",
+        padding: "5px 10px",
+        border: "1px solid #343a40",
     },
     deviceWidth: deviceHeight,
     deviceHeight: deviceWidth,
