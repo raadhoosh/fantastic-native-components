@@ -5,7 +5,7 @@ import { Container, Content, Header, Footer, Title, Left, Right, Text, TextInput
 export interface Props {
     openDrawer: any;
 }
-class GridPage extends React.PureComponent<Props> {
+class TextInputPage extends React.PureComponent<Props> {
     render() {
         return (<Container>
             <Header>
@@ -26,6 +26,7 @@ class GridPage extends React.PureComponent<Props> {
                     <TextInput secondary width={'200px'} placeholder={"secondary"} />
                     <TextInput success width={'200px'} placeholder={"success"} placeholderTextColor={"#618833"} />
                     <TextInput info width={'200px'} />
+                    <TextInput info inverse width={'200px'} />
                     <TextInput danger width={'200px'}
                         placeholder={"Handling Text Input"}
                         onChangeText={() => alert('Handling Text Input')}
@@ -39,4 +40,4 @@ class GridPage extends React.PureComponent<Props> {
     }
 }
 
-export default GridPage;
+export default TextInputPage;
