@@ -46,9 +46,6 @@ ShallowWrapper {
           "
 color: ",
           [Function],
-          ";
-font-size:",
-          [Function],
           "; 
 font-weight:",
           [Function],
@@ -122,9 +119,6 @@ width: auto
           "rules": Array [
             "
 color: ",
-            [Function],
-            ";
-font-size:",
             [Function],
             "; 
 font-weight:",

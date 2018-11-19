@@ -65,6 +65,9 @@ ShallowWrapper {
     color: ",
             [Function],
             "; 
+    font-size:",
+            [Function],
+            "; 
 ",
           ],
         },
@@ -114,10 +117,14 @@ ShallowWrapper {
           ";        
     width: ",
           [Function],
+          ";  
+    border-radius: ",
+          [Function],
+          "; 
+    margin-bottom: 5px;   
+    padding: ",
+          [Function],
           ";    
-    border-radius: 3px;
-    margin-bottom: 5px;
-    padding: 5px 10px;
 ",
         ],
       },
@@ -179,6 +186,9 @@ ShallowWrapper {
     color: ",
               [Function],
               "; 
+    font-size:",
+              [Function],
+              "; 
 ",
             ],
           },
@@ -228,10 +238,14 @@ ShallowWrapper {
             ";        
     width: ",
             [Function],
+            ";  
+    border-radius: ",
+            [Function],
+            "; 
+    margin-bottom: 5px;   
+    padding: ",
+            [Function],
             ";    
-    border-radius: 3px;
-    margin-bottom: 5px;
-    padding: 5px 10px;
 ",
           ],
         },

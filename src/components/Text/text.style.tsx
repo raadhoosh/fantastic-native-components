@@ -46,14 +46,13 @@ function getColor(props: IProps) {
 const ForeColor = (props: IProps) => getColor(props);
 
 const Text = styled(RnText)`
-color: ${ForeColor};
-font-size:${(props: IProps) => props.fontSize ? props.fontSize : "14px"}; 
+color: ${ForeColor}; 
 font-weight:${(props: IProps) => props.fontWeight ? props.fontWeight :
         (props.theme && props.theme.text.fontWeight ? props.theme.text.fontWeight : 'normal')}; 
 text-align:${(props: IProps) => props.textAlign ? props.textAlign :
         (props.theme && props.theme.text.textAlign ? props.theme.text.textAlign : 'auto')}; 
 font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.text.fontSize ? props.theme.text.fontSize : 'auto')};         
+        (props.theme && props.theme.text.fontSize ? props.theme.text.fontSize : '14px')};         
 width: auto       
 `;
 

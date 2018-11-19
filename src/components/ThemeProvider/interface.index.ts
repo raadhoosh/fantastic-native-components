@@ -20,8 +20,7 @@ interface Button {
     borderRadius?: string;
     fontFamily?: string;
     backgroundColor?: string;
-    padding?: string;
-    border?: string;
+    padding?: string;   
 }
 export default interface Theme {
     primary: ColorBase;

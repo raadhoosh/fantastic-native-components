@@ -5,29 +5,31 @@ import { Theme } from '..';
 
 interface IProps {
   children: JSX.Element | JSX.Element[] | string;
-  style?: ViewStyle | object | Array<ViewStyle>; 
-  primary?: boolean;  
-  secondary?: boolean; 
-  success?: boolean;  
-  info?: boolean;  
-  warning?: boolean;  
-  danger?: boolean;  
-  light?: boolean;  
+  style?: ViewStyle | object | Array<ViewStyle>;
+  primary?: boolean;
+  secondary?: boolean;
+  success?: boolean;
+  info?: boolean;
+  warning?: boolean;
+  danger?: boolean;
+  light?: boolean;
   dark?: boolean;
-  inverse?: boolean; 
-  bgColor?: string;  
+  inverse?: boolean;
+  bgColor?: string;
   color?: string;
   width?: string;
   margin?: string;
   theme?: Theme;
   onPress?(): any;
-  disabled : boolean;
+  disabled?: boolean;
+  fontSize?: string | number;
+  borderRadius?: string;
 }
 
 const Button = (props: IProps) => {
 
   return (
-    <ButtonWrapper {...props} activeOpacity={0.8} onPress={props.onPress} >
+    <ButtonWrapper {...props} activeOpacity={0.8} onPress={props.disabled ? undefined : props.onPress} >
       <ButtonText {...props}>
         {props.children}
       </ButtonText>
