@@ -45,15 +45,16 @@ const TextInput = styled(RnTextInput)`
     text-align: center;   
     color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff": color)}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
+        (props.theme && props.theme.textInput.fontSize ? props.theme.textInput.fontSize : '14px')}; 
     background-color: ${(props: IProps) => props.inverse ? color : "#fff"};    
     border: 1px solid ${(props: IProps) => color};        
     width: ${(props: IProps) => props.width ? props.width :
-        (props.theme && props.theme.button.width ? props.theme.button.width : 'auto')};  
+        (props.theme && props.theme.textInput.width ? props.theme.textInput.width : 'auto')};  
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :
-        (props.theme && props.theme.button.borderRadius ? props.theme.button.borderRadius : '0')}; 
+        (props.theme && props.theme.textInput.borderRadius ? props.theme.textInput.borderRadius : '0')}; 
     margin-bottom: 5px;   
-    padding: ${(props: IProps) => (props.theme && props.theme.button.padding) ? props.theme.button.padding : '5px 10px'};    
+    padding: ${(props: IProps) => (props.theme && props.theme.textInput.padding) ? props.theme.textInput.padding : '5px 10px'};  
+     
 `;
 
 export default TextInput;
