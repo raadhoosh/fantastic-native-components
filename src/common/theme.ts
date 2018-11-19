@@ -57,9 +57,10 @@ const mainTheme: Theme = {
         contrastText: "#fff",
     },
     text: {
-        fontsize: '14px',
+        fontsize: "14px",
         color: '#000',
-        fontWeight: 'normal',
+        fontWeight: "normal",
+        textAlign: "auto"
     },
     deviceWidth: deviceHeight,
     deviceHeight: deviceWidth,
