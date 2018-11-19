@@ -19,7 +19,7 @@ interface IProps {
   margin?: string;
   fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
   textAlign?: "auto" | "left" | "right" | "center" | "justify",
-  fontSize?: number;
+  fontSize?: string | number,
   theme?: Theme;
 }
 

@@ -14,7 +14,7 @@ interface IProps {
     bgColor?: string;
     color?: string;
     margin?: string;
-    fontSize?: number
+    fontSize?: string | number,
     theme?: Theme;
     fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
     textAlign?: "auto" | "left" | "right" | "center" | "justify",
@@ -52,6 +52,8 @@ font-weight:${(props: IProps) => props.fontWeight ? props.fontWeight :
         (props.theme && props.theme.text.fontWeight ? props.theme.text.fontWeight : 'normal')}; 
 text-align:${(props: IProps) => props.textAlign ? props.textAlign :
         (props.theme && props.theme.text.textAlign ? props.theme.text.textAlign : 'auto')}; 
+font-size:${(props: IProps) => props.fontSize ? props.fontSize :
+        (props.theme && props.theme.text.fontSize ? props.theme.text.fontSize : 'auto')};         
 width: auto       
 `;
 
