@@ -57,7 +57,7 @@ const mainTheme: Theme = {
         contrastText: "#fff",
     },
     text: {
-        fontsize: "14px",
+        fontSize: "14px",
         color: '#000',
         fontWeight: "normal",
         textAlign: "auto"

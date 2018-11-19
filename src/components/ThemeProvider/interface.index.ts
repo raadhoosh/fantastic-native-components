@@ -6,7 +6,7 @@ interface ColorBase {
 }
 
 interface Text {
-    fontsize?: string | number,
+    fontSize?: string | number,
     color?: string,
     lineHeight?: number,
     textAlign?: "auto" | "left" | "right" | "center" | "justify",
