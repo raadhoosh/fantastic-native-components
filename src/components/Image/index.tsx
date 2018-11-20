@@ -1,16 +1,15 @@
 import * as React from "react";
-import StImage from "./image.style";
+import {ImagePropsBase,ImageStyle, Image} from "react-native";
 
-interface IProps {
-  source?: any;
-  style?: any;
+interface IProps extends ImagePropsBase {
+  style?: ImageStyle | object | Array<ImageStyle>;  
 }
 
-const Image = (props: IProps) => {
+const RnImage = (props: IProps) => {
 
   return (
-    <StImage {...props} source={props.source} />
+    <Image {...props} style={props.style} />
   );
 };
 
-export default Image;
+export default RnImage;

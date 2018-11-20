@@ -3,7 +3,7 @@
 exports[`Image rendering should render a <Image /> 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Image
+  Symbol(enzyme.__unrendered__): <RnImage
     source={
       Object {
         "testUri": "../../../src/screen/ImagePage/img_avatar3.png",
@@ -21,115 +21,31 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
       "source": Object {
         "testUri": "../../../src/screen/ImagePage/img_avatar3.png",
       },
+      "style": undefined,
     },
     "ref": null,
     "rendered": null,
-    "type": Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": undefined,
-      "componentStyle": ComponentStyle {
-        "componentId": "sc-bdVaJa",
-        "isStatic": true,
-        "rules": Array [
-          "
-width: 400px;
-height: 400px;
-",
-        ],
-      },
-      "displayName": "Styled(Component)",
-      "getSize": [Function],
-      "prefetch": [Function],
-      "propTypes": Object {
-        "accessibilityLabel": [Function],
-        "accessible": [Function],
-        "blurRadius": [Function],
-        "capInsets": [Function],
-        "defaultSource": [Function],
-        "onError": [Function],
-        "onLayout": [Function],
-        "onLoad": [Function],
-        "onLoadEnd": [Function],
-        "onLoadStart": [Function],
-        "onPartialLoad": [Function],
-        "onProgress": [Function],
-        "resizeMethod": [Function],
-        "resizeMode": [Function],
-        "source": [Function],
-        "style": [Function],
-        "testID": [Function],
-      },
-      "render": [Function],
-      "resolveAssetSource": [Function],
-      "styledComponentId": "sc-bdVaJa",
-      "target": [Function],
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-      Symbol(Symbol.hasInstance): [Function],
-    },
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "source": Object {
           "testUri": "../../../src/screen/ImagePage/img_avatar3.png",
         },
+        "style": undefined,
       },
       "ref": null,
       "rendered": null,
-      "type": Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": undefined,
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bdVaJa",
-          "isStatic": true,
-          "rules": Array [
-            "
-width: 400px;
-height: 400px;
-",
-          ],
-        },
-        "displayName": "Styled(Component)",
-        "getSize": [Function],
-        "prefetch": [Function],
-        "propTypes": Object {
-          "accessibilityLabel": [Function],
-          "accessible": [Function],
-          "blurRadius": [Function],
-          "capInsets": [Function],
-          "defaultSource": [Function],
-          "onError": [Function],
-          "onLayout": [Function],
-          "onLoad": [Function],
-          "onLoadEnd": [Function],
-          "onLoadStart": [Function],
-          "onPartialLoad": [Function],
-          "onProgress": [Function],
-          "resizeMethod": [Function],
-          "resizeMode": [Function],
-          "source": [Function],
-          "style": [Function],
-          "testID": [Function],
-        },
-        "render": [Function],
-        "resolveAssetSource": [Function],
-        "styledComponentId": "sc-bdVaJa",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
