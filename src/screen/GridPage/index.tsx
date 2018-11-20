@@ -20,14 +20,14 @@ class GridPage extends React.PureComponent<Props> {
             </Header>
             <Content full>
                 <Grid style={{ flex: 1 , height: Dimensions.get("screen").height }}>
-                    <Col style={{backgroundColor: "purple" }}>
+                    <Col style={{backgroundColor: "#f2f2f2" }}>
                         <Text>1</Text>
                     </Col>
                     <Col>
-                        <Row style={{backgroundColor: "blue" }}>
+                        <Row style={{backgroundColor: "#fff" }}>
                             <Text>2</Text>
                         </Row>
-                        <Row style={{backgroundColor: "yellow" }}>
+                        <Row style={{backgroundColor: "#eee" }}>
                             <Text>3</Text>
                         </Row>
                     </Col>

@@ -7,7 +7,7 @@ export interface Props {
     openDrawer: any;
 }
 
-class GridPage extends React.PureComponent<Props> {
+class TextPage extends React.PureComponent<Props> {
     render() {
         return (<Container>
             <Header>
@@ -39,4 +39,4 @@ class GridPage extends React.PureComponent<Props> {
     }
 }
 
-export default GridPage;
+export default TextPage;

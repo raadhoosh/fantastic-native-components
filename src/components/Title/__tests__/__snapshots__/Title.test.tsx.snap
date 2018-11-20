@@ -66,6 +66,14 @@ ShallowWrapper {
           "fontWeight": "normal",
           "textAlign": "auto",
         },
+        "textInput": Object {
+          "backgroundColor": "#dddddd",
+          "borderRadius": "5px",
+          "color": "#6c757d",
+          "fontSize": "14px",
+          "padding": "5px 10px",
+          "width": "auto",
+        },
         "warning": Object {
           "contrastText": "#fff",
           "dark": "#b28704",
@@ -155,6 +163,14 @@ ShallowWrapper {
           "fontSize": "14px",
           "fontWeight": "normal",
           "textAlign": "auto",
+        },
+        "textInput": Object {
+          "backgroundColor": "#dddddd",
+          "borderRadius": "5px",
+          "color": "#6c757d",
+          "fontSize": "14px",
+          "padding": "5px 10px",
+          "width": "auto",
         },
         "warning": Object {
           "contrastText": "#fff",
@@ -247,6 +263,14 @@ ShallowWrapper {
             "fontSize": "14px",
             "fontWeight": "normal",
             "textAlign": "auto",
+          },
+          "textInput": Object {
+            "backgroundColor": "#dddddd",
+            "borderRadius": "5px",
+            "color": "#6c757d",
+            "fontSize": "14px",
+            "padding": "5px 10px",
+            "width": "auto",
           },
           "warning": Object {
             "contrastText": "#fff",

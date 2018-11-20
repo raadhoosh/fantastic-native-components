@@ -14,11 +14,11 @@ interface IProps {
     inverse?: boolean;
     bgColor?: string;
     color?: string;
-    width?: string;
-    margin?: string;
+    width?: string;    
     theme?: Theme;
     fontSize?: string | number;
     borderRadius?: string;
+    borderColor?: string;
 }
 
 function getColor(props: IProps) {
@@ -46,8 +46,8 @@ const TextInput = styled(RnTextInput)`
     color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff": color)}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
         (props.theme && props.theme.textInput.fontSize ? props.theme.textInput.fontSize : '14px')}; 
-    background-color: ${(props: IProps) => props.inverse ? color : "#fff"};    
-    border: 1px solid ${(props: IProps) => color};        
+    background-color: ${(props: IProps) => props.bgColor ? props.bgColor : (props.inverse ? color: "#fff")};       
+    border: 1px solid ${(props: IProps) => props.borderColor ? props.borderColor : color};        
     width: ${(props: IProps) => props.width ? props.width :
         (props.theme && props.theme.textInput.width ? props.theme.textInput.width : 'auto')};  
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :

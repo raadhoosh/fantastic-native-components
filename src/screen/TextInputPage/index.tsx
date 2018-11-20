@@ -21,13 +21,14 @@ class TextInputPage extends React.PureComponent<Props> {
             </Header>
             <Content>
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
-                    <TextInput width={'200px'} backgroundColor={"#ddd"} placeholder={"Type here to translate!"} />
+                    <TextInput width={'200px'}  placeholder={"Type here to translate!"} />
                     <TextInput primary width={'200px'} placeholder={"primary"} />
                     <TextInput secondary width={'200px'} placeholder={"secondary"} />
                     <TextInput success width={'200px'} placeholder={"success"} placeholderTextColor={"#618833"} />
                     <TextInput info width={'200px'} />
-                    <TextInput info inverse width={'200px'} />
-                    <TextInput danger width={'200px'}
+                    <TextInput success inverse borderRadius="0" width={'200px'} />
+                    <TextInput bgColor="#f2f2f2" color="#6c757d" borderColor="transparent" borderRadius="0" inverse width={'200px'} />
+                    <TextInput danger placeholderTextColor="#f44336" width={'200px'}
                         placeholder={"Handling Text Input"}
                         onChangeText={() => alert('Handling Text Input')}
                     />

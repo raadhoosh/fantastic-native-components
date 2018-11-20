@@ -1,6 +1,7 @@
 import * as React from "react";
 import StTextInput from "./textInput.style";
 import { ViewStyle } from "react-native";
+import { Theme } from '..';
 
 interface IProps {
   style?: ViewStyle | object | Array<ViewStyle>;
@@ -12,12 +13,10 @@ interface IProps {
   danger?: boolean;
   light?: boolean;
   dark?: boolean;
-  backgroundColor?: string;
-  text?: string;
+  bgColor?: string;  
   color?: string;
-  width?: string;
-  margin?: string;
-  theme?: any;
+  width?: string;  
+  theme?: Theme;
   onChangeText?(): any;
   placeholder?: string;
   value?: string;
@@ -25,6 +24,7 @@ interface IProps {
   fontSize?: string | number;
   borderRadius?: string;
   inverse?: boolean;
+  borderColor?: string;
 }
 
 const TextInput = (props: IProps) => {
