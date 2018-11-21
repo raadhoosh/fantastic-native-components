@@ -1,11 +1,9 @@
 import * as React from "react";
 import StText from "./text.style";
 import { Theme } from '..';
-import { TextStyle } from "react-native";
+import { TextStyle, TextProps } from "react-native";
 
-interface IProps {
-  children?: JSX.Element | JSX.Element[] | string;
-  style?: TextStyle | object | Array<TextStyle>;
+interface IProps extends TextStyle ,TextProps{  
   primary?: boolean;
   secondary?: boolean;
   success?: boolean;
@@ -13,20 +11,14 @@ interface IProps {
   warning?: boolean;
   danger?: boolean;
   light?: boolean;
-  dark?: boolean;
-  bgColor?: string;
-  color?: string;
-  margin?: string;
-  fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
-  textAlign?: "auto" | "left" | "right" | "center" | "justify",
-  fontSize?: string | number,
-  theme?: Theme;
+  dark?: boolean;    
+  theme?: Theme;    
 }
 
 const Text = (props: IProps) => {
 
   return (
-    <StText {...props}> {props.children} </StText>
+    <StText {...props}/>
   );
 };
 

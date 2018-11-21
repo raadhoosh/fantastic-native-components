@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Text as RnText } from "react-native";
+import { Text as RnText ,TextStyle} from "react-native";
 import { Theme } from '..';
 
-interface IProps {
+interface IProps extends TextStyle{
     primary?: boolean;
     secondary?: boolean;
     success?: boolean;
@@ -10,14 +10,8 @@ interface IProps {
     warning?: boolean;
     danger?: boolean;
     light?: boolean;
-    dark?: boolean;
-    bgColor?: string;
-    color?: string;
-    margin?: string;
-    fontSize?: string | number,
-    theme?: Theme;
-    fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
-    textAlign?: "auto" | "left" | "right" | "center" | "justify",
+    dark?: boolean;    
+    theme?: Theme;    
 }
 
 function getColor(props: IProps) {
