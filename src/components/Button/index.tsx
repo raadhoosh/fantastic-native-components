@@ -19,7 +19,7 @@ interface IProps {
   color?: string;
   width?: string;  
   theme?: Theme;
-  onPress?(): any;
+  onPress?: () => void;
   disabled?: boolean;
   fontSize?: string | number;
   borderRadius?: string;

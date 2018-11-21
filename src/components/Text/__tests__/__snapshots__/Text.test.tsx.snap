@@ -22,20 +22,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [
-        " ",
-        "text",
-        " ",
-      ],
+      "children": "text",
       "color": "#f00",
       "primary": true,
     },
     "ref": null,
-    "rendered": Array [
-      " ",
-      "text",
-      " ",
-    ],
+    "rendered": "text",
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": undefined,
@@ -96,20 +88,12 @@ width: auto
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": Array [
-          " ",
-          "text",
-          " ",
-        ],
+        "children": "text",
         "color": "#f00",
         "primary": true,
       },
       "ref": null,
-      "rendered": Array [
-        " ",
-        "text",
-        " ",
-      ],
+      "rendered": "text",
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": undefined,
