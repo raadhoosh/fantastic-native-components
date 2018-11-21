@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { TextInput as RnTextInput } from "react-native";
+import { TextInput as RnTextInput,TextInputProps } from "react-native";
 import { Theme } from '..';
 
-interface IProps {
+interface IProps extends TextInputProps {
     primary?: boolean;
     secondary?: boolean;
     success?: boolean;

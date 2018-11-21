@@ -1,9 +1,9 @@
 import * as React from "react";
 import StTextInput from "./textInput.style";
-import { ViewStyle } from "react-native";
+import { ViewStyle ,TextInputProps} from "react-native";
 import { Theme } from '..';
 
-interface IProps {
+interface IProps extends TextInputProps {
   style?: ViewStyle | object | Array<ViewStyle>;
   primary?: boolean;
   secondary?: boolean;
