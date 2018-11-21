@@ -1,4 +1,5 @@
 
+import Icon from "./Icon";
 export { Grid, Col, Row } from "react-native-easy-grid";
 import StatusBar from "./StatusBar";
 import Right from "./Right";
@@ -16,6 +17,7 @@ import TextInput from "./TextInput";
 import Image from "./Image";
 
 export {
+    Icon,
     StatusBar,
     Right,
     Left,
