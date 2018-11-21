@@ -6,7 +6,7 @@ export interface Props {
 }
 class TextContainer extends React.PureComponent<Props> {
     render() {
-        return (<ButtonPage {...this.props} >{this.props.children}</ButtonPage>);
+        return (<ButtonPage {...this.props} />);
     }
 }
 

@@ -5,6 +5,8 @@ type Props = {
     children: JSX.Element | JSX.Element[] | string;
 };
 
-export default (props: Props) => {
-    return <View {...props} />;
+export default ({ children, ...props }: Props) => {
+    return <View {...props}>
+        {children}
+    </View>;
 };

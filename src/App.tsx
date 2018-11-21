@@ -6,11 +6,15 @@ import GridContainer from "./container/GridContainer";
 import TextContainer from "./container/TextContainer";
 import SideBar from "./container/SideBarContainer";
 import ButtonContainer from "./container/ButtonContainer";
+import TextInputContainer from "./container/TextInputContainer";
+import ImageContainer from "./container/ImageContainer";
 
 const RootStack = DrawerNavigator({
   Grid: GridContainer,
   Text: TextContainer,
   Button: ButtonContainer,
+  TextInput: TextInputContainer,
+  Image: ImageContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,

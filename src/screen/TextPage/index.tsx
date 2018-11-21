@@ -6,7 +6,8 @@ export interface Props {
     children: JSX.Element | JSX.Element[] | string;
     openDrawer: any;
 }
-class GridPage extends React.PureComponent<Props> {
+
+class TextPage extends React.PureComponent<Props> {
     render() {
         return (<Container>
             <Header>
@@ -21,12 +22,14 @@ class GridPage extends React.PureComponent<Props> {
                 </Right>
             </Header>
             <Content>
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                    <Text color='#f00' >This text represents props color.</Text>
+                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
                     <Text primary >This text represents primary.</Text>
                     <Text secondary >This text represents secondary.</Text>
                     <Text success >This text represents success.</Text>
                     <Text info >This text represents info.</Text>
+                    <Text color="#f00" fontSize={18} >This text represents props color.</Text>
+                    <Text fontWeight={"900"} >This text represents props color.</Text>
+                    <Text fontWeight={"normal"} textAlign="center" >This text represents props fontWeight.</Text>
                 </View>
             </Content>
             <Footer>
@@ -36,4 +39,4 @@ class GridPage extends React.PureComponent<Props> {
     }
 }
 
-export default GridPage;
+export default TextPage;

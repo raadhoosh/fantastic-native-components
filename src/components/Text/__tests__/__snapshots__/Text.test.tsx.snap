@@ -22,20 +22,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [
-        " ",
-        "text",
-        " ",
-      ],
+      "children": "text",
       "color": "#f00",
       "primary": true,
     },
     "ref": null,
-    "rendered": Array [
-      " ",
-      "text",
-      " ",
-    ],
+    "rendered": "text",
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": undefined,
@@ -46,7 +38,17 @@ ShallowWrapper {
           "
 color: ",
           [Function],
-          ";
+          "; 
+font-weight:",
+          [Function],
+          "; 
+text-align:",
+          [Function],
+          "; 
+font-size:",
+          [Function],
+          ";         
+width: auto       
 ",
         ],
       },
@@ -86,20 +88,12 @@ color: ",
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": Array [
-          " ",
-          "text",
-          " ",
-        ],
+        "children": "text",
         "color": "#f00",
         "primary": true,
       },
       "ref": null,
-      "rendered": Array [
-        " ",
-        "text",
-        " ",
-      ],
+      "rendered": "text",
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": undefined,
@@ -110,7 +104,17 @@ color: ",
             "
 color: ",
             [Function],
-            ";
+            "; 
+font-weight:",
+            [Function],
+            "; 
+text-align:",
+            [Function],
+            "; 
+font-size:",
+            [Function],
+            ";         
+width: auto       
 ",
           ],
         },
