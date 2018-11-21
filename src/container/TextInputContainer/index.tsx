@@ -6,7 +6,7 @@ export interface Props {
 }
 class TextContainer extends React.PureComponent<Props> {
     render() {
-        return (<TextInputPage {...this.props} >{this.props.children}</TextInputPage>);
+        return (<TextInputPage {...this.props} />);
     }
 }
 
