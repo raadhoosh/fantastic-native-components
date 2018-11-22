@@ -1,6 +1,6 @@
 import { withTheme } from "styled-components";
 import * as React from "react";
-import StHeader from "./header.style";
+import StHeader from "./Header.style";
 import { StatusBar } from "..";
 
 type Props = {

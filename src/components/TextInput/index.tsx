@@ -1,5 +1,5 @@
 import * as React from "react";
-import StTextInput from "./textInput.style";
+import StTextInput from "./TextInput.style";
 import { ViewStyle ,TextInputProps} from "react-native";
 import { Theme } from '..';
 

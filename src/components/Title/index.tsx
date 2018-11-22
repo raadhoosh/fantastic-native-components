@@ -1,5 +1,5 @@
 import * as React from "react";
-import StTitle, { StText } from "./title.style";
+import StTitle, { StText } from "./Title.style";
 import { ViewStyle, TextStyle } from "react-native";
 
 export interface IProps {

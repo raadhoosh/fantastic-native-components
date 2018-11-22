@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
-import Theme from "./interface.index";
+import Theme from "./Interface.index";
 type Props = {
     theme?: Theme,
     children: any,

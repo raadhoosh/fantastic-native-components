@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ButtonText, ButtonWrapper } from "./button.style";
+import { ButtonText, ButtonWrapper } from "./Button.style";
 import { ViewStyle } from "react-native";
 import { Theme } from '..';
 

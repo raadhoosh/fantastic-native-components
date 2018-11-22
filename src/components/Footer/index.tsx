@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import StFooter from "./footer.style";
+import StFooter from "./Footer.style";
 type Props = {
     primary?: boolean;
     secondary?: boolean;

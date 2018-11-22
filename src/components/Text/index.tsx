@@ -1,5 +1,5 @@
 import * as React from "react";
-import StText from "./text.style";
+import StText from "./Text.style";
 import { Theme } from '..';
 import { TextStyle, TextProps } from "react-native";
 

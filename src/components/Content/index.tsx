@@ -1,5 +1,5 @@
 import * as React from "react";
-import StKeyboardAwareScrollView from "./content.style";
+import StKeyboardAwareScrollView from "./Content.style";
 type Props = {
     theme?: any,
     color?: string,

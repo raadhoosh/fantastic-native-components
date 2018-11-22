@@ -1,5 +1,5 @@
 import * as React from "react";
-import StLeft from "./left.style";
+import StLeft from "./Left.style";
 import { ViewStyle } from "react-native";
 
 export interface IProps {
