@@ -2,6 +2,7 @@ import React from "react";
 import SideBar from "../../screen/SideBar";
 
 const list = [
+    { route: "Icon", name: "Icon" },
     { route: "Grid", name: "Grid" },
     { route: "Text", name: "Text" },
     { route: "Button", name: "Button" },
