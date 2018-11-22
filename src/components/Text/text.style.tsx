@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Text as RnText ,TextStyle} from "react-native";
+import { Text ,TextStyle} from "react-native";
 import { Theme } from '..';
 
 interface IProps extends TextStyle{
@@ -39,7 +39,7 @@ function getColor(props: IProps) {
 
 const ForeColor = (props: IProps) => getColor(props);
 
-const Text = styled(RnText)`
+const StyledText  = styled(Text)`
 color: ${ForeColor}; 
 font-weight:${(props: IProps) => props.fontWeight ? props.fontWeight :
         (props.theme && props.theme.text.fontWeight ? props.theme.text.fontWeight : 'normal')}; 
@@ -50,4 +50,4 @@ font-size:${(props: IProps) => props.fontSize ? props.fontSize :
 width: auto       
 `;
 
-export default Text;
+export default StyledText ;
