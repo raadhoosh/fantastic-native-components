@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { View as RnView } from "react-native";
-const Footer = styled(RnView)`
+import { View } from "react-native";
+const StyledFooter = styled(View)`
 width: 100%;
 height:  ${(props: any) => props.theme.isIphoneX ? 65 : 55};
 justify-content: center;
@@ -21,4 +21,4 @@ background-color:  ${(props: any) => {
     }};
 `;
 
-export default Footer;
+export default StyledFooter;

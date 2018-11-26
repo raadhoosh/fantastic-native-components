@@ -1,5 +1,5 @@
 import * as React from "react";
-import StText from "./Text.style";
+import StyledText from "./Text.style";
 import { Theme } from '..';
 import { TextStyle, TextProps } from "react-native";
 
@@ -19,7 +19,7 @@ interface IProps extends TextStyle ,TextProps{
 const Text = (props: IProps) => {
 
   return (
-    <StText {...props}/>
+    <StyledText {...props}/>
   );
 };
 

@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { View, Text } from "react-native";
-const StTitle = styled(View)`
+const StyledTitle = styled(View)`
     background-color: transparent;
     justify-content: center;
     align-items: ${(props: any) => (props.center ? "center" : "flex-start")};
     flex: 1;
 `;
-const StText = styled(Text)`
+const StyledText = styled(Text)`
     font-size: 22;
     color: #fff;
 `;
-export { StText };
-export default StTitle;
+
+export { StyledText,StyledTitle };

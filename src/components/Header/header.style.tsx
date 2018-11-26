@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { View as RnView } from "react-native";
+import { View } from "react-native";
 type Props = {
     color: "primary" | "secondary" | "success" | "info" | "warning" | "danger" | "light" | "dark";
     theme?: any;
 };
 
-const Header = styled(RnView)`
+const StyledHeader = styled(View)`
 height:  ${(props: Props) => props.theme.isIphoneX ? 45 : 55};
 padding-left: 6px;
 padding-right: 6px;
@@ -15,4 +15,4 @@ background-color:  ${(props: Props) => {
     }};
 `;
 
-export default Header;
+export default StyledHeader;

@@ -55,7 +55,7 @@ ShallowWrapper {
       "rendered": "Button",
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": undefined,
+        "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "sc-bwzfXH",
           "isStatic": false,
@@ -103,7 +103,7 @@ ShallowWrapper {
     },
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
-      "attrs": undefined,
+      "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
         "isStatic": false,
@@ -176,7 +176,7 @@ ShallowWrapper {
         "rendered": "Button",
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
+          "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
@@ -224,7 +224,7 @@ ShallowWrapper {
       },
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": undefined,
+        "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": false,

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { View } from "react-native";
-const StRight = styled(View)`
+const StyledView = styled(View)`
     background-color: transparent;
     justify-content: center;
     align-items: flex-end;
@@ -8,4 +8,4 @@ const StRight = styled(View)`
     flex-direction: row-reverse;
 `;
 
-export default StRight;
+export default StyledView;

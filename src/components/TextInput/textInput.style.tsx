@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TextInput as RnTextInput,TextInputProps } from "react-native";
+import { TextInput ,TextInputProps } from "react-native";
 import { Theme } from '..';
 
 interface IProps extends TextInputProps {
@@ -41,7 +41,7 @@ function getColor(props: IProps) {
 
 const color = (props: IProps) => getColor(props);
 
-const TextInput = styled(RnTextInput)`    
+const StyledTextInput = styled(TextInput)`    
     text-align: center;   
     color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff": color)}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
@@ -57,4 +57,4 @@ const TextInput = styled(RnTextInput)`
      
 `;
 
-export default TextInput;
+export default StyledTextInput;

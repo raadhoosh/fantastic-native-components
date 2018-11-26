@@ -1,5 +1,5 @@
 import * as React from "react";
-import StTitle, { StText } from "./Title.style";
+import { StyledText,StyledTitle } from "./Title.style";
 import { ViewStyle, TextStyle } from "react-native";
 
 export interface IProps {
@@ -11,14 +11,14 @@ export interface IProps {
 }
 function renderChild(element: JSX.Element | JSX.Element[] | string, textStyle?: TextStyle) {
   if (typeof element === "string") {
-    return <StText style={textStyle}>{element}</StText>;
+    return <StyledText style={textStyle}>{element}</StyledText>;
   }
   return element;
 }
 export default ({ children, textStyle, ...others }: IProps) => {
   return (
-    <StTitle {...others}>
+    <StyledTitle {...others}>
       {renderChild(children, textStyle)}
-    </StTitle>
+    </StyledTitle>
   );
 };

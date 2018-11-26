@@ -1,20 +1,20 @@
 
-import Icon from "./icon";
+import Icon from "./Icon";
 export { Grid, Col, Row } from "react-native-easy-grid";
-import StatusBar from "./statusBar";
-import Right from "./right";
-import Left from "./left";
-import Title from "./title";
-import Footer from "./footer";
-import Header from "./header";
+import StatusBar from "./StatusBar";
+import Right from "./Right";
+import Left from "./Left";
+import Title from "./Title";
+import Footer from "./Footer";
+import Header from "./Header";
 import Container from "./container";
-import Content from "./content";
-import ThemeProvider from "./themeProvider";
-import Theme from "./themeProvider/Interface.index";
-import Text from "./text";
+import Content from "./Content";
+import ThemeProvider from "./ThemeProvider";
+import Theme from "./ThemeProvider/Interface.index";
+import Text from "./Text";
 import Button from "./button";
-import TextInput from "./textInput";
-import Image from "./image";
+import TextInput from "./TextInput";
+import Image from "./Image";
 
 export {
     Icon,

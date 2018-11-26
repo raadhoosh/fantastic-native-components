@@ -1,5 +1,5 @@
 import * as React from "react";
-import StTextInput from "./TextInput.style";
+import StyledTextInput from "./TextInput.style";
 import { ViewStyle ,TextInputProps} from "react-native";
 import { Theme } from '..';
 
@@ -30,7 +30,7 @@ interface IProps extends TextInputProps {
 const TextInput = (props: IProps) => {
 
   return (
-    <StTextInput {...props} editable={true} onChangeText={props.onChangeText} />)
+    <StyledTextInput {...props} editable={true} onChangeText={props.onChangeText} />)
 
 };
 
