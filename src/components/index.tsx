@@ -11,10 +11,10 @@ import Container from "./container";
 import Content from "./Content";
 import ThemeProvider from "./ThemeProvider";
 import Theme from "./ThemeProvider/Interface.index";
-import Text from "./Text";
+import Text from "./text";
 import Button from "./button";
 import TextInput from "./TextInput";
-import Image from "./Image";
+import Image from "./image";
 
 export {
     Icon,
