@@ -25,6 +25,7 @@ function getColor(props: IProps) {
 
     let backgroundColor = props.theme && props.theme.button.backgroundColor ? props.theme.button.backgroundColor : "#6c757d";
     let ForeColor = props.theme && props.theme.button.color ? props.theme.button.color : "#fff";
+    
     if (props.color) {
         ForeColor = props.color;
     }
