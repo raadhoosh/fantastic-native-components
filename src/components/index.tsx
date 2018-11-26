@@ -8,7 +8,7 @@ import Title from "./Title";
 import Footer from "./footer";
 import Header from "./Header";
 import Container from "./container";
-import Content from "./Content";
+import Content from "./content";
 import ThemeProvider from "./ThemeProvider";
 import Theme from "./ThemeProvider/Interface.index";
 import Text from "./text";
