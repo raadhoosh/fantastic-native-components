@@ -5,7 +5,7 @@ import StatusBar from "./StatusBar";
 import Right from "./Right";
 import Left from "./Left";
 import Title from "./Title";
-import Footer from "./Footer";
+import Footer from "./footer";
 import Header from "./Header";
 import Container from "./container";
 import Content from "./Content";
