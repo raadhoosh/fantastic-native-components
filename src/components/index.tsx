@@ -13,7 +13,7 @@ import ThemeProvider from "./ThemeProvider";
 import Theme from "./ThemeProvider/Interface.index";
 import Text from "./text";
 import Button from "./button";
-import TextInput from "./TextInput";
+import TextInput from "./textInput";
 import Image from "./image";
 
 export {
