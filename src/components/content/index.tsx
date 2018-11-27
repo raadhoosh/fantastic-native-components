@@ -1,5 +1,5 @@
 import * as React from "react";
-import StKeyboardAwareScrollView from "./Content.style";
+import StyledKeyboardAwareScrollView from "./Content.style";
 type Props = {
     theme?: any,
     color?: string,
@@ -10,9 +10,9 @@ type Props = {
 
 export default (props: Props) => {
     const { disableKBDismissScroll, children, ...others } = props;
-    return <StKeyboardAwareScrollView {...others}
+    return <StyledKeyboardAwareScrollView {...others}
         automaticallyAdjustContentInsets={false}
         resetScrollToCoords={disableKBDismissScroll ? undefined : { x: 0, y: 0 }}>
         {children}
-    </StKeyboardAwareScrollView>;
+    </StyledKeyboardAwareScrollView>;
 };

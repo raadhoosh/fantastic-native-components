@@ -1,5 +1,5 @@
 import React from "react";
-import GridPage from "../../screen/GridPage";
+import GridPage from "../../screens/gridPage";
 export interface IProps {
     navigation: any;
 }

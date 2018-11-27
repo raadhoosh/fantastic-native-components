@@ -1,9 +1,10 @@
 import * as React from "react";
-import StLeft from "./Left.style";
+import StyledLeft from "./Left.style";
 import { ViewStyle } from "react-native";
+import { Theme } from '..';
 
 export interface IProps {
-  theme?: any;
+  theme?: Theme;
   style?: ViewStyle;
   children: JSX.Element | JSX.Element[];
 }
@@ -11,8 +12,8 @@ export interface IProps {
 export default function ({ children, ...others }: IProps) {
 
   return (
-    <StLeft {...others}>
+    <StyledLeft {...others}>
       {children}
-    </StLeft>
+    </StyledLeft>
   );
 }

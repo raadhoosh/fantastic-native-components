@@ -1,5 +1,5 @@
 import React from "react";
-import IconPage from "../../screen/IconPage";
+import IconPage from "../../screens/iconPage";
 export interface IProps {
     navigation: any;
 }

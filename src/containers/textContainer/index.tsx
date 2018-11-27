@@ -1,5 +1,5 @@
 import React from "react";
-import TextPage from "../../screen/TextPage";
+import TextPage from "../../screens/textPage";
 export interface Props {
     children: JSX.Element | JSX.Element[] | string;
     openDrawer: any;

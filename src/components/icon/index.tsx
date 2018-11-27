@@ -11,6 +11,7 @@ import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons";
 import Octicons from "react-native-vector-icons/Octicons";
 import Zocial from "react-native-vector-icons/Zocial";
 import { withTheme } from "styled-components";
+import { Theme } from '..';
 
 type Props = {
     type?: "Ionicons" | "Entypo" | "EvilIcons" | "Feather"
@@ -19,7 +20,7 @@ type Props = {
     | "SimpleLineIcons" | "Zocial";
     name: string;
     style?: any;
-    theme?: any;
+    theme?: Theme;
     onPress?: (e?: any) => any;
     size?: number;
     color?: string;
@@ -54,7 +55,7 @@ class Icon extends React.PureComponent<Props> {
             (purple && "purple") ||
             (warning && "warning") ||
             (danger && "danger");
-        const colorIcon = color ? color : tmColor ? props.theme[tmColor].main : "#000";
+        const colorIcon = color ? color : tmColor && props.theme ? props.theme[tmColor].main : "#000";
         let Icons;
         switch (type) {
             case "Ionicons":

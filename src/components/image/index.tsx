@@ -5,11 +5,11 @@ interface IProps extends ImagePropsBase {
   style?: ImageStyle | object | Array<ImageStyle>;  
 }
 
-const RnImage = (props: IProps) => {
+const Img = (props: IProps) => {
 
   return (
     <Image {...props} style={props.style} />
   );
 };
 
-export default RnImage;
+export default Img;

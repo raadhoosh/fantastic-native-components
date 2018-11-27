@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonPage from "../../screen/ButtonPage";
+import ButtonPage from "../../screens/buttonPage";
 export interface Props {
     children: JSX.Element | JSX.Element[] | string;
     openDrawer: any;

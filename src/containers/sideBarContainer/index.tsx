@@ -1,5 +1,5 @@
 import React from "react";
-import SideBar from "../../screen/SideBar";
+import SideBar from "../../screens/sideBar";
 
 const list = [
     { route: "Icon", name: "Icon" },

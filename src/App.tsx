@@ -2,13 +2,13 @@ import * as React from "react";
 import { ThemeProvider, Theme as IPropsTheme } from "./components";
 import theme from "./common/theme";
 import { DrawerNavigator } from "react-navigation";
-import IconContainer from "./container/IconContainer";
-import GridContainer from "./container/GridContainer";
-import TextContainer from "./container/TextContainer";
-import SideBar from "./container/SideBarContainer";
-import ButtonContainer from "./container/ButtonContainer";
-import TextInputContainer from "./container/TextInputContainer";
-import ImageContainer from "./container/ImageContainer";
+import IconContainer from "./containers/iconContainer";
+import GridContainer from "./containers/gridContainer";
+import TextContainer from "./containers/textContainer";
+import SideBar from "./containers/sideBarContainer";
+import ButtonContainer from "./containers/buttonContainer";
+import TextInputContainer from "./containers/textInputContainer";
+import ImageContainer from "./containers/imageContainer";
 
 const RootStack = DrawerNavigator({
   Icon: IconContainer,

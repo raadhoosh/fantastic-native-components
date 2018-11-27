@@ -1,16 +1,18 @@
 import * as React from "react";
-import StRight from "./Right.style";
+import StyledRight from "./Right.style";
 import { ViewStyle } from "react-native";
+import { Theme } from '..';
+
 export interface IProps {
-  theme?: any;
+  theme?: Theme;
   style?: ViewStyle;
   children: JSX.Element | JSX.Element[];
 }
 
 export default function ({ children, ...others }: IProps) {
   return (
-    <StRight {...others}>
+    <StyledRight {...others}>
       {children}
-    </StRight>
+    </StyledRight>
   );
 }

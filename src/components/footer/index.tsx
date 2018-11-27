@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import StFooter from "./Footer.style";
+import StyledFooter from "./Footer.style";
 type Props = {
     primary?: boolean;
     secondary?: boolean;
@@ -14,5 +14,5 @@ type Props = {
 };
 
 export default ({ children, ...props }: Props) => {
-    return <StFooter {...props}>{children}</StFooter>;
+    return <StyledFooter {...props}>{children}</StyledFooter>;
 };

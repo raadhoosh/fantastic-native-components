@@ -3,7 +3,7 @@
 exports[`Image rendering should render a <Image /> 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <RnImage
+  Symbol(enzyme.__unrendered__): <Img
     source={
       Object {
         "testUri": "../../../src/screen/ImagePage/img_avatar3.png",
