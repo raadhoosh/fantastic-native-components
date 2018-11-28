@@ -28,10 +28,10 @@ const MyComponent = (props: Props) => {
         (light && "light") ||
         (dark && "dark") ||
         "primary";
-    const bgColor = props.theme[color].dark;
+    const backgroundColor = props.theme[color].dark;
     return (
         <React.Fragment>
-            <StatusBar backgroundColor={bgColor} barStyle="light-content" />
+            <StatusBar backgroundColor={backgroundColor} barStyle="light-content" />
             <StHeader  color={color} {...others}>{children}</StHeader>
         </React.Fragment>
     );

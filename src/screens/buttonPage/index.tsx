@@ -30,7 +30,7 @@ class ButtonPage extends React.PureComponent<ButtonPageProps> {
                     <Button success width={'200px'} >Success</Button>
                     <Button info width={'200px'} >Info</Button>
                     <Button warning width={'200px'} >Warning</Button>
-                    <Button bgColor={"#9c27b0"} color="#fff" width={'200px'}
+                    <Button backgroundColor={"#9c27b0"} color="#fff" width={'200px'}
                         onPress={() => {
                             alert('You tapped the button!');
                         }}
@@ -46,7 +46,7 @@ class ButtonPage extends React.PureComponent<ButtonPageProps> {
                     <Button disabled width={'200px'} inverse >Disabled</Button>
                     <Button width={'200px'} inverse >Basic</Button>
                     <Button borderRadius={"10px"} width={'200px'}>BorderRadius</Button>
-                    <Button borderRadius={"0"} bgColor="#ff0080" color="#fff" width={'200px'}>BorderRadius</Button>
+                    <Button borderRadius={"0"} backgroundColor="#ff0080" color="#fff" width={'200px'}>BorderRadius</Button>
                 </View>
             </Content>
             <Footer>
