@@ -13,14 +13,10 @@ interface IProps extends TextInputProps {
   danger?: boolean;
   light?: boolean;
   dark?: boolean;
-  bgColor?: string;  
+  backgroundColor?: string;  
   color?: string;
   width?: string;  
-  theme?: Theme;
-  onChangeText?(): any;
-  placeholder?: string;
-  value?: string;
-  placeholderTextColor?: string;  
+  theme?: Theme;  
   fontSize?: string | number;
   borderRadius?: string;
   inverse?: boolean;
@@ -30,7 +26,7 @@ interface IProps extends TextInputProps {
 const TextInput = (props: IProps) => {
 
   return (
-    <StyledTextInput {...props} editable={true} onChangeText={props.onChangeText} />)
+    <StyledTextInput {...props}/>)
 
 };
 

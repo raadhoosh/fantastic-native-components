@@ -27,7 +27,7 @@ class TextInputPage extends React.PureComponent<Props> {
                     <TextInput success width={'200px'} placeholder={"success"} placeholderTextColor={"#618833"} />
                     <TextInput info width={'200px'} />
                     <TextInput success inverse borderRadius="0" width={'200px'} />
-                    <TextInput bgColor="#f2f2f2" color="#6c757d" borderColor="transparent" borderRadius="0" inverse width={'200px'} />
+                    <TextInput backgroundColor="#f2f2f2" color="#6c757d" borderColor="transparent" borderRadius="0" inverse width={'200px'} />
                     <TextInput danger placeholderTextColor="#f44336" width={'200px'}
                         placeholder={"Handling Text Input"}
                         onChangeText={() => alert('Handling Text Input')}
