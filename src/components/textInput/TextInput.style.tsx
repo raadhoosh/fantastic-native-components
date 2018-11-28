@@ -12,7 +12,7 @@ interface IProps extends TextInputProps {
     light?: boolean;
     dark?: boolean;
     inverse?: boolean;
-    bgColor?: string;
+    backgroundColor?: string;
     color?: string;
     width?: string;    
     theme?: Theme;
@@ -46,7 +46,7 @@ const StyledTextInput = styled(TextInput)`
     color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff": color)}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
         (props.theme && props.theme.textInput.fontSize ? props.theme.textInput.fontSize : '14px')}; 
-    background-color: ${(props: IProps) => props.bgColor ? props.bgColor : (props.inverse ? color: "#fff")};       
+    background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : (props.inverse ? color: "#fff")};       
     border: 1px solid ${(props: IProps) => props.borderColor ? props.borderColor : color};        
     width: ${(props: IProps) => props.width ? props.width :
         (props.theme && props.theme.textInput.width ? props.theme.textInput.width : 'auto')};  
