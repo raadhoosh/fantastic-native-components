@@ -15,7 +15,7 @@ interface IProps {
   light?: boolean;
   dark?: boolean;
   inverse?: boolean;
-  bgColor?: string;
+  backgroundColor?: string;
   color?: string;
   width?: string;  
   theme?: Theme;

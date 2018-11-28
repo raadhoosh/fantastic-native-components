@@ -12,7 +12,7 @@ interface IProps {
     light?: boolean;
     dark?: boolean;
     inverse?: boolean;
-    bgColor?: string;
+    backgroundColor?: string;
     color?: string;
     width?: string;    
     theme?: Theme;
@@ -29,8 +29,8 @@ function getColor(props: IProps) {
     if (props.color) {
         ForeColor = props.color;
     }
-    if (props.bgColor) {
-        backgroundColor = props.bgColor;
+    if (props.backgroundColor) {
+        backgroundColor = props.backgroundColor;
     } else {
         const color =
             (props.primary && "primary")
@@ -47,16 +47,16 @@ function getColor(props: IProps) {
 
     }
 
-    const btnColor = { bgColor: backgroundColor, ForeColor: ForeColor };
+    const btnColor = { backgroundColor: backgroundColor, ForeColor: ForeColor };
     return btnColor;
 }
 
-const bgColor = (props: IProps) => getColor(props).bgColor;
+const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
 const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
 const ButtonWrapper = styled(TouchableOpacity)`      
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : bgColor)};    
-    border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : bgColor};        
+    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};    
+    border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : backgroundColor};        
     width: ${(props: IProps) => props.width ? props.width :
         (props.theme && props.theme.button.width ? props.theme.button.width : 'auto')};  
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :
@@ -67,7 +67,7 @@ const ButtonWrapper = styled(TouchableOpacity)`
 
 const ButtonText = styled(Text)`    
     text-align: center;   
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? bgColor : ForeColor}; 
+    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
         (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
 `;
