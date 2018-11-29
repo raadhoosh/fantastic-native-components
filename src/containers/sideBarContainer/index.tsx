@@ -8,6 +8,7 @@ const list = [
     { route: "Button", name: "Button" },
     { route: "TextInput", name: "TextInput" },
     { route: "Image", name: "Image" },
+    { route: "Modal", name: "Modal" },
 ];
 export interface IProps {
     navigation: any;

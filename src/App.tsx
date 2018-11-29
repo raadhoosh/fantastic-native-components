@@ -9,6 +9,7 @@ import SideBar from "./containers/sideBarContainer";
 import ButtonContainer from "./containers/buttonContainer";
 import TextInputContainer from "./containers/textInputContainer";
 import ImageContainer from "./containers/imageContainer";
+import ModalContainer from "./containers/modalContainer";
 
 const RootStack = DrawerNavigator({
   Icon: IconContainer,
@@ -17,6 +18,7 @@ const RootStack = DrawerNavigator({
   Button: ButtonContainer,
   TextInput: TextInputContainer,
   Image: ImageContainer,
+  Modal: ModalContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,
