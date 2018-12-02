@@ -41,6 +41,7 @@ constructor(props: Props){
                 <Modal
                     primary
                     animationType="slide"
+                    iconColor="#fff"
                     transparent={false}
                     visible={this.state.modalVisible}
                     onRequestClose={() => {

@@ -54,13 +54,15 @@ const StyledModal = styled(View)`
 const StyledHeader = styled(View)`   
     background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : (props.inverse ? "#fff" : color)};         
     padding: ${(props: IProps) => (props.theme && props.theme.textInput.padding) ? props.theme.textInput.padding : '50px 10px'};
-               
+    display: flex;
+    flex-direction: row;          
 `;
 
 const StyledHeaderText = styled(Text)`    
     color: ${(props: IProps) => props.color ? props.color : (props.inverse ? color : "#fff")}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.textInput.fontSize ? props.theme.textInput.fontSize : '14px')};                         
+        (props.theme && props.theme.textInput.fontSize ? props.theme.textInput.fontSize : '14px')};    
+    width: 95%;                         
 `;
 
 const StyledBody = styled(View)` 

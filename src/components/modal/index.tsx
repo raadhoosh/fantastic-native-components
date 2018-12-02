@@ -23,6 +23,7 @@ interface IProps extends ModalProps {
   borderRadius?: string;
   inverse?: boolean;
   borderColor?: string;
+  iconColor?: string;
 }
 
 const TextInput = (props: IProps) => {
@@ -31,7 +32,7 @@ const TextInput = (props: IProps) => {
       <StyledModal {...props}>
         <StyledHeader {...props}>
           <StyledHeaderText>Hello World!</StyledHeaderText>
-          <Icon type="FontAwesome" name="user-secret" />
+          <Icon type="FontAwesome" name="close" color={props.iconColor} />
         </StyledHeader >
         <StyledBody {...props}>
           <Text>Hello body!</Text>
