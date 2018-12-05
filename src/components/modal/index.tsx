@@ -1,12 +1,12 @@
 import * as React from "react";
-import { StyledHeader, StyledHeaderText, StyledModal, StyledBody, StyledFooter } from "./Modal.style";
-import { ViewStyle, ModalProps, Text, Modal } from "react-native";
-import { Icon } from "../../components";
+import { StyledHeader, StyledHeaderText, StyledModalContent, StyledBody, StyledFooter } from "./Modal.style";
+import { ViewStyle, ModalProps, View, Modal } from "react-native";
+import { Icon, Button } from "../../components";
 import { Theme } from '..';
 
 interface IProps extends ModalProps {
   style?: ViewStyle | object | Array<ViewStyle>;
-  children: JSX.Element | JSX.Element[] | string;
+  children?: JSX.Element | JSX.Element[] | string;
   primary?: boolean;
   secondary?: boolean;
   success?: boolean;
@@ -15,6 +15,7 @@ interface IProps extends ModalProps {
   danger?: boolean;
   light?: boolean;
   dark?: boolean;
+  hasClose?: boolean;
   backgroundColor?: string;
   color?: string;
   width?: string;
@@ -24,27 +25,44 @@ interface IProps extends ModalProps {
   inverse?: boolean;
   borderColor?: string;
   iconColor?: string;
+  title?: string;
+  onPress?: () => void;
 }
 
-const TextInput = (props: IProps) => {
+const StyledModal = (props: IProps) => {
+
   return (
-    <Modal {...props}>
-      <StyledModal {...props}>
-        <StyledHeader {...props}>
-          <StyledHeaderText>Hello World!</StyledHeaderText>
-          <Icon type="FontAwesome" name="close" color={props.iconColor} />
-        </StyledHeader >
-        <StyledBody {...props}>
-          <Text>Hello body!</Text>
-          <Text>Hello body!</Text>
-        </StyledBody>
-        <StyledFooter {...props}>
-          <Text>Hello footer!</Text>
-        </StyledFooter>
-      </StyledModal>
+    <Modal  {...props}>
+      <StyledModalContent {...props}>
+        <View style={{ width: props.width }}>
+          <StyledHeader {...props}>
+            <StyledHeaderText {...props}>
+              {props.title}
+            </StyledHeaderText>
+            {
+              props.hasClose && <Icon type="FontAwesome"
+                name="close"
+                color={props.iconColor}
+                onPress={props.onPress}
+              />
+            }
+          </StyledHeader >
+          <StyledBody {...props}>
+            {props.children}
+          </StyledBody>
+          <StyledFooter {...props}>
+            <Button {...props}
+              width="80px"
+              onPress={props.onPress}
+            >
+              close
+          </Button>
+          </StyledFooter>
+        </View>
+      </StyledModalContent>
     </Modal>
   )
 
 };
 
-export default TextInput;
+export default StyledModal;

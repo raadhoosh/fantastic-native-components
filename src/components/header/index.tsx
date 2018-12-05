@@ -1,6 +1,6 @@
 import { withTheme } from "styled-components";
 import * as React from "react";
-import StHeader from "./Header.style";
+import StyledHeader from "./Header.style";
 import { StatusBar } from "..";
 
 type Props = {
@@ -32,7 +32,7 @@ const MyComponent = (props: Props) => {
     return (
         <React.Fragment>
             <StatusBar backgroundColor={backgroundColor} barStyle="light-content" />
-            <StHeader  color={color} {...others}>{children}</StHeader>
+            <StyledHeader  color={color} {...others}>{children}</StyledHeader>
         </React.Fragment>
     );
 };

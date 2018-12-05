@@ -41,14 +41,13 @@ function getColor(props: IProps) {
 
 const color = (props: IProps) => getColor(props);
 
-const StyledModal = styled(View)`    
-    background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : (props.inverse ? color : "#fff")};       
-    border: 1px solid ${(props: IProps) => props.borderColor ? props.borderColor : color};        
-    width: ${(props: IProps) => props.width ? props.width :
-        (props.theme && props.theme.textInput.width ? props.theme.textInput.width : 'auto')};  
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :
-        (props.theme && props.theme.textInput.borderRadius ? props.theme.textInput.borderRadius : '0')}; 
-    margin: 15px;       
+const StyledModalContent = styled(View)`    
+    background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : "rgba(0, 0, 0, 0.41)"};       
+    flex: 1;
+    align-items: center;
+    padding-top: 20;
+    width: 100%;
+    padding:30px 10px;    
 `;
 
 const StyledHeader = styled(View)`   
@@ -79,10 +78,10 @@ const StyledBody = styled(View)`
 
 const StyledFooter = styled(View)`    
     background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : (props.inverse ? color : "#fff")};    
-    padding: ${(props: IProps) => (props.theme && props.theme.textInput.padding) ? props.theme.textInput.padding : '5px 10px'};
+    padding: ${(props: IProps) => (props.theme && props.theme.textInput.padding) ? props.theme.textInput.padding : '10px'};
     border-top-width: 1;
     border-top-color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff" : color)};  
     border-style: dotted;       
 `;
 
-export { StyledHeader, StyledModal, StyledBody, StyledFooter, StyledHeaderText };
+export { StyledHeader, StyledModalContent, StyledBody, StyledFooter, StyledHeaderText };

@@ -21,7 +21,7 @@ type Props = {
     name: string;
     style?: any;
     theme?: Theme;
-    onPress?: (e?: any) => any;
+    onPress?: () => void;
     size?: number;
     color?: string;
     primary?: boolean;
