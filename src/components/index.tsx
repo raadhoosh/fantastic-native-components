@@ -15,6 +15,7 @@ import Text from "./text";
 import Button from "./button";
 import TextInput from "./textInput";
 import Image from "./image";
+import Modal from "./modal";
 
 export {
     Icon,
@@ -32,4 +33,5 @@ export {
     Button,
     TextInput,
     Image,
+    Modal,
 };
