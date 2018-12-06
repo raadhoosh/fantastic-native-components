@@ -29,7 +29,7 @@ interface IProps extends ModalProps {
   onPress?: () => void;
 }
 
-const StyledModal = (props: IProps) => {
+const StyledModal = ({ hasClose = true, ...props }: IProps) => {
 
   return (
     <Modal  {...props}>
@@ -40,7 +40,7 @@ const StyledModal = (props: IProps) => {
               {props.title}
             </StyledHeaderText>
             {
-              props.hasClose && <Icon type="FontAwesome"
+              hasClose && <Icon type="FontAwesome"
                 name="close"
                 color={props.iconColor}
                 onPress={props.onPress}

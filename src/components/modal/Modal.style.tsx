@@ -64,15 +64,9 @@ const StyledHeaderText = styled(Text)`
     width: 95%;                         
 `;
 
-const StyledBody = styled(View)` 
-    display:flex;   
-    text-align: center;   
-    color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff" : color)}; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.textInput.fontSize ? props.theme.textInput.fontSize : '14px')}; 
-    background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : (props.inverse ? color : "#fff")};         
-    width: ${(props: IProps) => props.width ? props.width :
-        (props.theme && props.theme.textInput.width ? props.theme.textInput.width : 'auto')};    
+const StyledBody = styled(View)`       
+    color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff" : color)};   
+    background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : (props.inverse ? color : "#fff")};       
     padding: ${(props: IProps) => (props.theme && props.theme.textInput.padding) ? props.theme.textInput.padding : '5px 10px'};     
 `;
 

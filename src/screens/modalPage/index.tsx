@@ -45,8 +45,7 @@ class ModalPage extends Component<Props, IState> {
                         animationType="fade"
                         transparent={true}
                         visible={this.state.modalVisible}
-                        title={"Title"}
-                        hasClose            
+                        title={"Title"}                                 
                         onRequestClose={() => {
                             this.setModalVisible(!this.state.modalVisible);
                         }}
