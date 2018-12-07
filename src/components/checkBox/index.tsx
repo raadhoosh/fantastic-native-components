@@ -3,8 +3,7 @@ import { View, TouchableOpacity } from "react-native";
 import { Icon, Content, Header, Footer, Title, Left, Right, Text, Button } from "../../components";
 import { Theme } from '..';
 
-export interface IProps {
-  children: JSX.Element | JSX.Element[] | string;
+export interface IProps {  
   primary?: boolean;
   secondary?: boolean;
   success?: boolean;
@@ -24,8 +23,7 @@ export interface IProps {
   fontSize?: string | number;
   borderRadius?: string;
   name?: string;
-  checked?: boolean;
-
+  checked?: boolean;  
 }
 
 class CheckBox extends React.PureComponent<IProps> {
@@ -44,7 +42,8 @@ class CheckBox extends React.PureComponent<IProps> {
       <TouchableOpacity onPress={this.onChange}>
         {(this.props.checked === true)
           ? <View style={[styles.containerTrue, this.props.checkBoxTrueStyle]}>
-            <Icon name="md-checkmark" style={[styles.icon, this.props.checkIconStyle]} />
+            {/* <Icon name="check" style={[styles.icon, this.props.checkIconStyle]} /> */}
+            <Icon name="check" type="FontAwesome" size={12} color="#fff"/>
           </View>
           : <View style={[styles.containerFalse, this.props.checkBoxFalseStyle]}></View>}
       </TouchableOpacity>
@@ -76,18 +75,18 @@ const styles = {
   }
 };
 
-CheckBox.propTypes = {
-  name: PropTypes.string,
-  checkBoxTrueStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
-  checkBoxFalseStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
-  checkIconStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
-  checked: PropTypes.bool,
-  onChange: PropTypes.func
-};
+// CheckBox.propTypes = {
+//   name: PropTypes.string,
+//   checkBoxTrueStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
+//   checkBoxFalseStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
+//   checkIconStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
+//   checked: PropTypes.bool,
+//   onChange: PropTypes.func
+// };
 
-CheckBox.defaultProps = {
-  name: 'checkbox',
-  checked: true
-};
+// CheckBox.defaultProps = {
+//   name: 'checkbox',
+//   checked: true
+// };
 
 export default CheckBox;
