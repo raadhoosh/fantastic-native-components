@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{Component} from "react";
 import { View, TouchableOpacity } from "react-native";
 import {
   Container,
@@ -17,7 +17,31 @@ export interface Props {
   openDrawer: any;
 }
 
-class CheckBoxPage extends React.PureComponent<Props> {
+export interface IState {
+  checked?: boolean;
+}
+
+class CheckBoxPage extends React.Component<Props, IState> {
+  constructor(props: Props) {
+    super(props)
+    this.state = {
+      checked: false
+    };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  // onChange() {
+  //   this.setState({
+  //     checked: !this.state.checked
+  //   })
+  //   alert(this.state.checked)
+  // }
+
+  onChange(checked?: boolean) {
+    this.setState({ checked: checked });
+    alert("check")
+  }
+
   render() {
     return (
       <Container>
@@ -41,8 +65,14 @@ class CheckBoxPage extends React.PureComponent<Props> {
               marginTop: 30
             }}
           >
-            <CheckBox checked />
-            <CheckBox/>
+            <CheckBox label="primary" checked={true} primary />
+            <CheckBox checked={true} secondary />
+            <CheckBox
+              checked={this.state.checked}
+              onChange={() => {
+                this.onChange(!this.state.checked);
+              }}
+            />
           </View>
         </Content>
         <Footer>

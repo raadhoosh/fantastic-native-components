@@ -1,9 +1,10 @@
-import React from "react";
-import { View, TouchableOpacity } from "react-native";
-import { Icon, Content, Header, Footer, Title, Left, Right, Text, Button } from "../../components";
+import React ,{Component} from "react";
+import { TouchableOpacity } from "react-native";
+import { Icon, Text } from "../../components";
+import { StyledCheckBox } from './CheckBox.style';
 import { Theme } from '..';
 
-export interface IProps {  
+export interface IProps {
   primary?: boolean;
   secondary?: boolean;
   success?: boolean;
@@ -22,11 +23,12 @@ export interface IProps {
   disabled?: boolean;
   fontSize?: string | number;
   borderRadius?: string;
-  name?: string;
-  checked?: boolean;  
+  label?: string;
+  name?: 'checkbox';
+  checked?: boolean;
 }
 
-class CheckBox extends React.PureComponent<IProps> {
+class CheckBox extends React.Component<IProps> {
   constructor(props: IProps) {
     super(props)
     this.state = {};
@@ -34,59 +36,24 @@ class CheckBox extends React.PureComponent<IProps> {
   }
 
   onChange() {
-    this.props.onChange({ name: this.props.name, value: this.props.checked });
+    // this.props.onChange({ name: this.props.name, value: this.props.checked });
+    this.props.onChange;
+    
   }
 
   render() {
+
     return (
       <TouchableOpacity onPress={this.onChange}>
-        {(this.props.checked === true)
-          ? <View style={[styles.containerTrue, this.props.checkBoxTrueStyle]}>
-            {/* <Icon name="check" style={[styles.icon, this.props.checkIconStyle]} /> */}
-            <Icon name="check" type="FontAwesome" size={12} color="#fff"/>
-          </View>
-          : <View style={[styles.containerFalse, this.props.checkBoxFalseStyle]}></View>}
+        <Text>
+          {this.props.label}
+        </Text>
+        <StyledCheckBox {...this.props}>
+        {(this.props.checked) && <Icon name="check" type="FontAwesome" size={12} color="#fff" />}
+        </StyledCheckBox>
       </TouchableOpacity>
     );
   }
 }
-
-const styles = {
-  containerTrue: {
-    justifyContent: 'center',
-    borderRadius: 5,
-    alignItems: 'center',
-    height: 20,
-    width: 20,
-    backgroundColor: '#76a6ef'
-  },
-  containerFalse: {
-    justifyContent: 'center',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#dcdee5',
-    alignItems: 'center',
-    height: 20,
-    width: 20
-  },
-  icon: {
-    color: '#ffffff',
-    fontSize: 15
-  }
-};
-
-// CheckBox.propTypes = {
-//   name: PropTypes.string,
-//   checkBoxTrueStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
-//   checkBoxFalseStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
-//   checkIconStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.number]),
-//   checked: PropTypes.bool,
-//   onChange: PropTypes.func
-// };
-
-// CheckBox.defaultProps = {
-//   name: 'checkbox',
-//   checked: true
-// };
 
 export default CheckBox;

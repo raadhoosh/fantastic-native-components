@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TouchableOpacity, Text } from "react-native";
+import { View, Text } from "react-native";
 import { Theme } from '..';
 
 interface IProps {
@@ -14,18 +14,20 @@ interface IProps {
     inverse?: boolean;
     backgroundColor?: string;
     color?: string;
-    width?: string;    
+    width?: string;
+    height?: string;
     theme?: Theme;
     disabled?: boolean;
     fontSize?: string | number;
     borderRadius?: string;
+    checked?: boolean;
 }
 
 function getColor(props: IProps) {
 
     let backgroundColor = props.theme && props.theme.button.backgroundColor ? props.theme.button.backgroundColor : "#6c757d";
     let ForeColor = props.theme && props.theme.button.color ? props.theme.button.color : "#fff";
-    
+
     if (props.color) {
         ForeColor = props.color;
     }
@@ -52,24 +54,16 @@ function getColor(props: IProps) {
 }
 
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
-const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
-const ButtonWrapper = styled(TouchableOpacity)`      
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};    
-    border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : backgroundColor};        
-    width: ${(props: IProps) => props.width ? props.width :
-        (props.theme && props.theme.button.width ? props.theme.button.width : 'auto')};  
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :
-        (props.theme && props.theme.button.borderRadius ? props.theme.button.borderRadius : '0')}; 
-    margin-bottom: 5px;   
-    padding: ${(props: IProps) => (props.theme && props.theme.button.padding) ? props.theme.button.padding : '5px 10px'};    
+const StyledCheckBox = styled(View)`      
+    border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
+    width: ${(props: IProps) => props.width ? props.width : '20px'};       
+    height: ${(props: IProps) => props.height ? props.height : '20px'};             
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};     
+    justify-content: center;
+    align-items: center;
+    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#fff")};
+    margin-bottom: 5px;    
 `;
 
-const ButtonText = styled(Text)`    
-    text-align: center;   
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
-`;
-
-export { ButtonWrapper, ButtonText };
+export { StyledCheckBox };
