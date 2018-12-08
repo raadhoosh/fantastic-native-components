@@ -11,6 +11,7 @@ import TextInputContainer from "./containers/textInputContainer";
 import ImageContainer from "./containers/imageContainer";
 import ModalContainer from "./containers/modalContainer";
 import CheckBoxContainer from "./containers/checkBoxContainer";
+import RadioContainer from "./containers/radioContainer";
 
 const RootStack = DrawerNavigator({
   Icon: IconContainer,
@@ -21,6 +22,7 @@ const RootStack = DrawerNavigator({
   Image: ImageContainer,
   Modal: ModalContainer,
   CheckBox: CheckBoxContainer,
+  Radio: RadioContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,
