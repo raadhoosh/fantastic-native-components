@@ -1,4 +1,4 @@
-import React ,{Component} from "react";
+import React, { Component } from "react";
 import { View, TouchableOpacity } from "react-native";
 import {
   Container,
@@ -18,28 +18,26 @@ export interface Props {
 }
 
 export interface IState {
-  checked?: boolean;
+  checked: Array<boolean>;
 }
 
-class CheckBoxPage extends React.Component<Props, IState> {
+class CheckBoxPage extends Component<Props, IState, Array<boolean>> {
   constructor(props: Props) {
-    super(props)
+    super(props);
     this.state = {
-      checked: false
+      checked: new Array(5).fill(true)
     };
-    this.onChange = this.onChange.bind(this);
+
+    this.handleCheck = this.handleCheck.bind(this);
   }
 
-  // onChange() {
-  //   this.setState({
-  //     checked: !this.state.checked
-  //   })
-  //   alert(this.state.checked)
-  // }
-
-  onChange(checked?: boolean) {
-    this.setState({ checked: checked });
-    alert("check")
+  handleCheck(i: number) {
+    const newArray = this.state.checked.map((element, index) => {
+      return index === i ? !element : true;
+    });
+    this.setState({
+      checked: newArray
+    });
   }
 
   render() {
@@ -66,11 +64,35 @@ class CheckBoxPage extends React.Component<Props, IState> {
             }}
           >
             <CheckBox label="primary" checked={true} primary />
-            <CheckBox checked={true} secondary />
             <CheckBox
-              checked={this.state.checked}
+              label="secondary"
+              checked={this.state.checked[0]}
               onChange={() => {
-                this.onChange(!this.state.checked);
+                this.handleCheck(0);
+              }}
+              secondary
+            />
+            <CheckBox
+              label="secondary"
+              checked={this.state.checked[1]}
+              onChange={() => {
+                this.handleCheck(1);
+              }}
+              success
+            />
+            <CheckBox
+              label="secondary"
+              checked={this.state.checked[2]}
+              onChange={() => {
+                this.handleCheck(2);
+              }}
+              warning
+            />
+            <CheckBox
+              disabled
+              checked={this.state.checked[3]}
+              onChange={() => {
+                this.handleCheck(3);
               }}
             />
           </View>

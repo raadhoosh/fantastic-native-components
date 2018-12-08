@@ -1,10 +1,10 @@
-import React ,{Component} from "react";
-import { TouchableOpacity } from "react-native";
+import React, { Component } from "react";
+import { TouchableOpacity, View, AccessibilityProps } from "react-native";
 import { Icon, Text } from "../../components";
-import { StyledCheckBox } from './CheckBox.style';
-import { Theme } from '..';
+import { StyledCheckBox } from "./CheckBox.style";
+import { Theme } from "..";
 
-export interface IProps {
+export interface IProps extends AccessibilityProps {
   primary?: boolean;
   secondary?: boolean;
   success?: boolean;
@@ -18,38 +18,29 @@ export interface IProps {
   color?: string;
   width?: string;
   theme?: Theme;
-  onPress?: () => void;
   onChange?: () => void;
   disabled?: boolean;
   fontSize?: string | number;
   borderRadius?: string;
   label?: string;
-  name?: 'checkbox';
+  name?: "checkbox";
   checked?: boolean;
 }
 
-class CheckBox extends React.Component<IProps> {
+class CheckBox extends Component<IProps> {
   constructor(props: IProps) {
-    super(props)
-    this.state = {};
-    this.onChange = this.onChange.bind(this);
-  }
-
-  onChange() {
-    // this.props.onChange({ name: this.props.name, value: this.props.checked });
-    this.props.onChange;
-    
+    super(props);
   }
 
   render() {
-
     return (
-      <TouchableOpacity onPress={this.onChange}>
-        <Text>
-          {this.props.label}
-        </Text>
+      <TouchableOpacity
+        onPress={this.props.disabled ? undefined : this.props.onChange}
+      >
         <StyledCheckBox {...this.props}>
-        {(this.props.checked) && <Icon name="check" type="FontAwesome" size={12} color="#fff" />}
+          {this.props.checked && (
+            <Icon name="check" type="FontAwesome" size={12} color="#fff" />
+          )}
         </StyledCheckBox>
       </TouchableOpacity>
     );
