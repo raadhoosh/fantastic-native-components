@@ -7,7 +7,7 @@ export interface Props {
     openDrawer: any;
 }
 
-interface IState {
+export interface IState {
     modalVisible?: boolean;
 }
 

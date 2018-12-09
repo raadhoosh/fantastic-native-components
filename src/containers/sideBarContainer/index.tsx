@@ -9,6 +9,7 @@ const list = [
     { route: "TextInput", name: "TextInput" },
     { route: "Image", name: "Image" },
     { route: "Modal", name: "Modal" },
+    { route: "CheckBox", name: "CheckBox" },
 ];
 export interface IProps {
     navigation: any;

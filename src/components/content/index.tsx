@@ -1,6 +1,6 @@
 import * as React from "react";
 import StyledKeyboardAwareScrollView from "./Content.style";
-type Props = {
+type IProps = {
     theme?: any,
     color?: string,
     full?: boolean,
@@ -8,7 +8,7 @@ type Props = {
     children: JSX.Element | JSX.Element[] | string;
 };
 
-export default (props: Props) => {
+export default (props: IProps) => {
     const { disableKBDismissScroll, children, ...others } = props;
     return <StyledKeyboardAwareScrollView {...others}
         automaticallyAdjustContentInsets={false}
