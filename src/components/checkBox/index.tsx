@@ -19,6 +19,7 @@ export interface IProps extends AccessibilityProps {
   width?: string;
   theme?: Theme;
   onChange?: () => void;
+  onPress?: () => void;
   disabled?: boolean;
   fontSize?: string | number;
   borderRadius?: string;

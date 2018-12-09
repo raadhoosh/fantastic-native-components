@@ -1,4 +1,4 @@
-import Button from "../index";
+import Radio from "../index";
 import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
 
@@ -6,7 +6,7 @@ const createTestProps = (props: Object) => ({
   ...props,
 });
 
-describe("Button", () => {
+describe("Radio", () => {
   describe("rendering", () => {
     let component: ShallowWrapper;
     let props: Object;
@@ -17,15 +17,17 @@ describe("Button", () => {
         secondary: true,
         success: true,
       });
-      component = shallow(<Button {...props} 
+      component = shallow(<Radio primary 
         onPress={() => {
-          alert('You tapped the button!');
+          alert('You tapped the Radio!');
       }}
-      >Button</Button>);
+      />);
     });
-    it("should render a <Button />", () => {
-      const component = shallow(<Button {...props} >Button</Button>);
+    it("renders", () => {
+      expect(component.exists()).toBe(true);
+  });
+  it("toMatchSnapshot", () => {
       expect(component).toMatchSnapshot();
-    });
+  });
   });
 });

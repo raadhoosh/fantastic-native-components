@@ -24,7 +24,6 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "color": "#f00",
-      "editable": true,
       "onChangeText": [Function],
       "primary": true,
       "secondary": true,
@@ -90,7 +89,6 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "color": "#f00",
-        "editable": true,
         "onChangeText": [Function],
         "primary": true,
         "secondary": true,

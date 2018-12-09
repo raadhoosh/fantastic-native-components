@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { AccessibilityProps } from "react-native";
 import { Icon } from "../../components";
 import { StyledRadio, StyledWrapper, StyledText } from "./Radio.style";
 import { Theme } from "..";
 
-export interface IProps extends AccessibilityProps {
+export interface IProps {
   primary?: boolean;
   secondary?: boolean;
   success?: boolean;
@@ -19,15 +18,15 @@ export interface IProps extends AccessibilityProps {
   width?: string;
   theme?: Theme;
   onChange?: () => void;
+  onPress?: () => void;
   disabled?: boolean;
-  fontSize?: string | number;
+  fontSize?: number;
   borderRadius?: string;
-  label?: string;
-  name?: "checkbox";
+  label?: string;  
   checked?: boolean;
 }
 
-class CheckBox extends Component<IProps> {
+class Radio extends Component<IProps> {
   constructor(props: IProps) {
     super(props);
   }
@@ -50,4 +49,4 @@ class CheckBox extends Component<IProps> {
   }
 }
 
-export default CheckBox;
+export default Radio;
