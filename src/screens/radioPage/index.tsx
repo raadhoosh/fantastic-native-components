@@ -25,7 +25,7 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      checked: new Array(5).fill(true)
+      checked: new Array(7).fill(true)
     };
 
     this.handleCheck = this.handleCheck.bind(this);
@@ -58,9 +58,8 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
           <View
             style={{
               flex: 1,
-              alignItems: "center",
-              justifyContent: "center",
-              marginTop: 30
+              marginTop: 30,
+              marginLeft: 30,
             }}
           >
             <Radio label="primary" checked={true} primary />
@@ -73,7 +72,7 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
               secondary
             />
             <Radio
-              label="secondary"
+              label="success"
               checked={this.state.checked[1]}
               onChange={() => {
                 this.handleCheck(1);
@@ -81,7 +80,7 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
               success
             />
             <Radio
-              label="secondary"
+              label="warning"
               checked={this.state.checked[2]}
               onChange={() => {
                 this.handleCheck(2);
@@ -90,9 +89,34 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
             />
             <Radio
               disabled
+              label="disabled"
               checked={this.state.checked[3]}
               onChange={() => {
                 this.handleCheck(3);
+              }}
+            />
+            <Radio
+              label="color"
+              color="#9c27b0"
+              checked={this.state.checked[4]}
+              onChange={() => {
+                this.handleCheck(4);
+              }}
+            />
+            <Radio
+              label="textColor"              
+              textColor="#9c27b0"
+              checked={this.state.checked[5]}
+              onChange={() => {
+                this.handleCheck(5);
+              }}
+            />
+            <Radio
+              label="danger"
+              danger              
+              checked={this.state.checked[6]}
+              onChange={() => {
+                this.handleCheck(6);
               }}
             />
           </View>

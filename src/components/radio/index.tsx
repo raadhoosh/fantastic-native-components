@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { TouchableOpacity, View, AccessibilityProps } from "react-native";
-import { Icon, Text } from "../../components";
-import { StyledRadio } from "./Radio.style";
+import { AccessibilityProps } from "react-native";
+import { Icon } from "../../components";
+import { StyledRadio, StyledWrapper, StyledText } from "./Radio.style";
 import { Theme } from "..";
 
 export interface IProps extends AccessibilityProps {
@@ -14,8 +14,8 @@ export interface IProps extends AccessibilityProps {
   light?: boolean;
   dark?: boolean;
   inverse?: boolean;
-  backgroundColor?: string;
   color?: string;
+  textColor?: string;
   width?: string;
   theme?: Theme;
   onChange?: () => void;
@@ -34,15 +34,18 @@ class CheckBox extends Component<IProps> {
 
   render() {
     return (
-      <TouchableOpacity
+      <StyledWrapper
         onPress={this.props.disabled ? undefined : this.props.onChange}
       >
         <StyledRadio {...this.props}>
           {this.props.checked && (
-            <Icon name="check" type="FontAwesome" size={12} color="#fff" />
+            <Icon {...this.props} name="circle" type="FontAwesome" size={11} />
           )}
         </StyledRadio>
-      </TouchableOpacity>
+        <StyledText {...this.props}>
+          {this.props.label}
+        </StyledText>
+      </StyledWrapper>
     );
   }
 }
