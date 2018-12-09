@@ -17,6 +17,7 @@ import TextInput from "./textInput";
 import Image from "./image";
 import Modal from "./modal";
 import CheckBox from "./checkBox";
+import Radio from "./radio";
 
 export {
     Icon,
@@ -35,5 +36,6 @@ export {
     TextInput,
     Image,
     Modal,
-    CheckBox
+    CheckBox,
+    Radio,
 };

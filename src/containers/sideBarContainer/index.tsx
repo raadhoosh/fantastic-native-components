@@ -10,6 +10,7 @@ const list = [
     { route: "Image", name: "Image" },
     { route: "Modal", name: "Modal" },
     { route: "CheckBox", name: "CheckBox" },
+    { route: "Radio", name: "Radio" },
 ];
 export interface IProps {
     navigation: any;
