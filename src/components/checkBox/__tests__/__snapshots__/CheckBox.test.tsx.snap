@@ -4,6 +4,7 @@ exports[`CheckBox rendering toMatchSnapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CheckBox
+    color="#f00"
     onPress={[Function]}
     primary={true}
   />,
@@ -22,6 +23,7 @@ ShallowWrapper {
     "props": Object {
       "activeOpacity": 0.2,
       "children": <ForwardRef
+        color="#f00"
         onPress={[Function]}
         primary={true}
       />,
@@ -34,6 +36,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": undefined,
+        "color": "#f00",
         "onPress": [Function],
         "primary": true,
       },
@@ -88,6 +91,7 @@ ShallowWrapper {
       "props": Object {
         "activeOpacity": 0.2,
         "children": <ForwardRef
+          color="#f00"
           onPress={[Function]}
           primary={true}
         />,
@@ -100,6 +104,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": undefined,
+          "color": "#f00",
           "onPress": [Function],
           "primary": true,
         },

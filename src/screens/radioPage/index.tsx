@@ -25,7 +25,7 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      checked: new Array(7).fill(true)
+      checked: new Array(8).fill(true)
     };
 
     this.handleCheck = this.handleCheck.bind(this);
@@ -117,6 +117,15 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
               checked={this.state.checked[6]}
               onChange={() => {
                 this.handleCheck(6);
+              }}
+            />
+            <Radio
+              label="fontSize"
+              success   
+              fontSize={12}           
+              checked={this.state.checked[7]}
+              onChange={() => {
+                this.handleCheck(7);
               }}
             />
           </View>

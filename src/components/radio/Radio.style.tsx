@@ -68,10 +68,11 @@ const StyledRadio = styled(View)`
 
 const StyledText = styled(Text)`
    color: ${(props: IProps) => props.textColor ? props.textColor : "#333"};    
+   font-size: ${(props: IProps) => props.fontSize ? props.fontSize : "14px"};    
    flex: 1;
    align-items: center;
    justify-content: center;
    height: 100%;
-` 
+`
 
 export { StyledWrapper, StyledRadio, StyledText };

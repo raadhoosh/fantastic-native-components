@@ -17,7 +17,8 @@ describe("CheckBox", () => {
         secondary: true,
         success: true,
       });
-      component = shallow(<CheckBox primary
+      component = shallow(<CheckBox primary 
+        color= '#f00'
         onPress={() => {
           alert('You tapped the CheckBox!');
       }}

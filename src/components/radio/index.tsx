@@ -41,7 +41,7 @@ class Radio extends Component<IProps> {
             <Icon {...this.props} name="circle" type="FontAwesome" size={11} />
           )}
         </StyledRadio>
-        <StyledText {...this.props}>
+        <StyledText textColor={this.props.textColor} fontSize={this.props.fontSize}>
           {this.props.label}
         </StyledText>
       </StyledWrapper>
