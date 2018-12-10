@@ -36,16 +36,21 @@ const StyledModal = (props: IProps) => {
       <StyledOverlay activeOpacity={0.95}  onPress={props.onPress}/>
       <StyledModalContent style={{ width: props.width }}>
           <StyledHeader {...props}>
-            <StyledHeaderText {...props}>
+            <StyledHeaderText
+              color={props.color}
+              fontSize={props.fontSize}
+              inverse={props.inverse}
+            >
               {props.title}
             </StyledHeaderText>
-            <TouchableOpacity style={{width:32}}>
+            <TouchableOpacity style={{width:32}}
+             onPress={props.onPress}
+            >
               {
                 props.hasClose && <Icon type="FontAwesome"
                   name="close"
-                  color={props.iconColor}
-                  onPress={props.onPress}
-                  fontSize={14}
+                  color={props.iconColor}                 
+                  size={14}
                 />
               }
             </TouchableOpacity>
