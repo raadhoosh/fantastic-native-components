@@ -1,4 +1,4 @@
-import Button from "../index";
+import CheckBox from "../index";
 import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
 
@@ -6,7 +6,7 @@ const createTestProps = (props: Object) => ({
   ...props,
 });
 
-describe("Button", () => {
+describe("CheckBox", () => {
   describe("rendering", () => {
     let component: ShallowWrapper;
     let props: Object;
@@ -17,15 +17,23 @@ describe("Button", () => {
         secondary: true,
         success: true,
       });
-      component = shallow(<Button {...props} 
+      component = shallow(<CheckBox primary 
+        color= '#f00'         
+        backgroundColor="9c27b0"      
+        checked={true}
+        width={30}
+        height={30}
         onPress={() => {
-          alert('You tapped the button!');
-      }}
-      >Button</Button>);
+          alert('You tapped the CheckBox!');
+      }} 
+      
+      />);
     });
-    it("should render a <Button />", () => {
-      const component = shallow(<Button {...props} >Button</Button>);
+    it("renders", () => {
+      expect(component.exists()).toBe(true);
+  });
+  it("toMatchSnapshot", () => {
       expect(component).toMatchSnapshot();
-    });
+  });
   });
 });

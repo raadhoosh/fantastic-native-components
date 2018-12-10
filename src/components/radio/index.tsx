@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { AccessibilityProps } from "react-native";
 import { Icon } from "../../components";
 import { StyledRadio, StyledWrapper, StyledText } from "./Radio.style";
 import { Theme } from "..";
 
-export interface IProps extends AccessibilityProps {
+export interface IProps {
   primary?: boolean;
   secondary?: boolean;
   success?: boolean;
@@ -16,18 +15,17 @@ export interface IProps extends AccessibilityProps {
   inverse?: boolean;
   color?: string;
   textColor?: string;
-  width?: string;
-  theme?: Theme;
-  onChange?: () => void;
+  width?: number | string;
+  theme?: Theme;  
+  onPress?: () => void;
   disabled?: boolean;
-  fontSize?: string | number;
+  fontSize?: number;
   borderRadius?: string;
-  label?: string;
-  name?: "checkbox";
+  label?: string;  
   checked?: boolean;
 }
 
-class CheckBox extends Component<IProps> {
+class Radio extends Component<IProps> {
   constructor(props: IProps) {
     super(props);
   }
@@ -35,14 +33,14 @@ class CheckBox extends Component<IProps> {
   render() {
     return (
       <StyledWrapper
-        onPress={this.props.disabled ? undefined : this.props.onChange}
+        onPress={this.props.disabled ? undefined : this.props.onPress}
       >
         <StyledRadio {...this.props}>
           {this.props.checked && (
             <Icon {...this.props} name="circle" type="FontAwesome" size={11} />
           )}
         </StyledRadio>
-        <StyledText {...this.props}>
+        <StyledText textColor={this.props.textColor} fontSize={this.props.fontSize}>
           {this.props.label}
         </StyledText>
       </StyledWrapper>
@@ -50,4 +48,4 @@ class CheckBox extends Component<IProps> {
   }
 }
 
-export default CheckBox;
+export default Radio;

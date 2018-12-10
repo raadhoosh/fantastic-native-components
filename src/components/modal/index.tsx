@@ -1,6 +1,6 @@
 import * as React from "react";
-import { StyledHeader, StyledHeaderText, StyledModalContent, StyledBody, StyledFooter } from "./Modal.style";
-import { ViewStyle, ModalProps, View, Modal } from "react-native";
+import { StyledHeader, StyledHeaderText, StyledModalContent, StyledBody, StyledFooter, StyledOverlay } from "./Modal.style";
+import { ViewStyle, ModalProps, View, Modal, TouchableOpacity } from "react-native";
 import { Icon, Button } from "../../components";
 import { Theme } from '..';
 
@@ -18,7 +18,7 @@ interface IProps extends ModalProps {
   hasClose?: boolean;
   backgroundColor?: string;
   color?: string;
-  width?: string;
+  width?: string | number;
   theme?: Theme;
   fontSize?: string | number;
   borderRadius?: string;
@@ -33,19 +33,27 @@ const StyledModal = (props: IProps) => {
 
   return (
     <Modal  {...props}>
-      <StyledModalContent {...props}>
-        <View style={{ width: props.width }}>
+      <StyledOverlay activeOpacity={0.95}  onPress={props.onPress}/>
+      <StyledModalContent style={{ width: props.width }}>
           <StyledHeader {...props}>
-            <StyledHeaderText {...props}>
+            <StyledHeaderText
+              color={props.color}
+              fontSize={props.fontSize}
+              inverse={props.inverse}
+            >
               {props.title}
             </StyledHeaderText>
-            {
-              props.hasClose && <Icon type="FontAwesome"
-                name="close"
-                color={props.iconColor}
-                onPress={props.onPress}
-              />
-            }
+            <TouchableOpacity style={{width:32}}
+             onPress={props.onPress}
+            >
+              {
+                props.hasClose && <Icon type="FontAwesome"
+                  name="close"
+                  color={props.iconColor}                 
+                  size={14}
+                />
+              }
+            </TouchableOpacity>
           </StyledHeader >
           <StyledBody {...props}>
             {props.children}
@@ -55,11 +63,10 @@ const StyledModal = (props: IProps) => {
               width="80px"
               onPress={props.onPress}
             >
-              close
+              cancel
           </Button>
           </StyledFooter>
-        </View>
-      </StyledModalContent>
+        </StyledModalContent>      
     </Modal>
   )
 

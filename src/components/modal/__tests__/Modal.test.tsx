@@ -1,34 +1,33 @@
-import TextInput from "../index";
-import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
+import {Text} from "react-native";
+import Modal from "../index";
+import { shallow, ShallowWrapper } from "enzyme";
 
 const createTestProps = (props: Object) => ({
   ...props,
 });
 
-describe("TextInput", () => {
+describe("Modal", () => {
   describe("rendering", () => {
     let component: ShallowWrapper;
     let props: Object;
     beforeEach(() => {
-      props = createTestProps({
-        color: '#f00',
+      props = createTestProps({        
         primary: true,
         secondary: true,
-        success: true,        
+        success: true,              
       });
-      component = shallow(<TextInput {...props}
-        onChangeText={() => {
+      component = shallow(<Modal primary
+        onPress={() => {
           alert('You tapped the Text!');
         }}
-      />);
+      >
+      <Text>
+        children
+      </Text>
+      </Modal>);
     });
-    it("should render a <TextInput />", () => {
-      const component = shallow(<TextInput {...props}
-        onChangeText={() => {
-          alert('You tapped the Text!');
-        }}
-      />);
+    it("should render a <Modal />", () => {     
       expect(component).toMatchSnapshot();
     });
   });

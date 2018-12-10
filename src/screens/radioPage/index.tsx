@@ -21,20 +21,18 @@ export interface IState {
   checked: Array<boolean>;
 }
 
-class radioPage extends Component<Props, IState, Array<boolean>> {
+class radioPage extends Component<Props, IState> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      checked: new Array(7).fill(true)
+      checked: Array.apply(null, new Array(8)).map(() => true)
     };
 
     this.handleCheck = this.handleCheck.bind(this);
   }
 
   handleCheck(i: number) {
-    const newArray = this.state.checked.map((element, index) => {
-      return index === i ? !element : true;
-    });
+    const newArray = this.state.checked.map((element: boolean, index: number) => { return index === i ? !element : true; });
     this.setState({
       checked: newArray
     });
@@ -66,7 +64,7 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
             <Radio
               label="secondary"
               checked={this.state.checked[0]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(0);
               }}
               secondary
@@ -74,7 +72,7 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
             <Radio
               label="success"
               checked={this.state.checked[1]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(1);
               }}
               success
@@ -82,7 +80,7 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
             <Radio
               label="warning"
               checked={this.state.checked[2]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(2);
               }}
               warning
@@ -91,7 +89,7 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
               disabled
               label="disabled"
               checked={this.state.checked[3]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(3);
               }}
             />
@@ -99,24 +97,33 @@ class radioPage extends Component<Props, IState, Array<boolean>> {
               label="color"
               color="#9c27b0"
               checked={this.state.checked[4]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(4);
               }}
             />
             <Radio
-              label="textColor"              
+              label="textColor"
               textColor="#9c27b0"
               checked={this.state.checked[5]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(5);
               }}
             />
             <Radio
               label="danger"
-              danger              
+              danger
               checked={this.state.checked[6]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(6);
+              }}
+            />
+            <Radio
+              label="fontSize"
+              success
+              fontSize={12}
+              checked={this.state.checked[7]}
+              onPress={() => {
+                this.handleCheck(7);
               }}
             />
           </View>
