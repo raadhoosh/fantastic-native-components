@@ -21,20 +21,18 @@ export interface IState {
   checked: Array<boolean>;
 }
 
-class CheckBoxPage extends Component<Props, IState, Array<boolean>> {
+class CheckBoxPage extends Component<Props, IState> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      checked: new Array(5).fill(true)
+      checked: Array.apply(null, new Array(5)).map(() => true)
     };
 
     this.handleCheck = this.handleCheck.bind(this);
   }
 
   handleCheck(i: number) {
-    const newArray = this.state.checked.map((element, index) => {
-      return index === i ? !element : true;
-    });
+    const newArray = this.state.checked.map((element: boolean, index: number) => { return index === i ? !element : true; });
     this.setState({
       checked: newArray
     });
@@ -63,27 +61,25 @@ class CheckBoxPage extends Component<Props, IState, Array<boolean>> {
               marginTop: 30
             }}
           >
-            <CheckBox label="primary" checked={true} primary />
+            <CheckBox checked={true} primary />
             <CheckBox
-              label="secondary"
+
               checked={this.state.checked[0]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(0);
               }}
               secondary
             />
             <CheckBox
-              label="secondary"
               checked={this.state.checked[1]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(1);
               }}
               success
             />
             <CheckBox
-              label="secondary"
               checked={this.state.checked[2]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(2);
               }}
               warning
@@ -91,8 +87,17 @@ class CheckBoxPage extends Component<Props, IState, Array<boolean>> {
             <CheckBox
               disabled
               checked={this.state.checked[3]}
-              onChange={() => {
+              onPress={() => {
                 this.handleCheck(3);
+              }}
+            />
+            <CheckBox
+              backgroundColor="#9c27b0"
+              checked={this.state.checked[4]}
+              height={30}
+              width={30}
+              onPress={() => {
+                this.handleCheck(4);
               }}
             />
           </View>

@@ -1,6 +1,7 @@
+import React from "react";
+import {Text} from "react-native";
 import Modal from "../index";
 import { shallow, ShallowWrapper } from "enzyme";
-import React from "react";
 
 const createTestProps = (props: Object) => ({
   ...props,
@@ -14,13 +15,17 @@ describe("Modal", () => {
       props = createTestProps({        
         primary: true,
         secondary: true,
-        success: true,        
+        success: true,              
       });
       component = shallow(<Modal primary
         onPress={() => {
           alert('You tapped the Text!');
         }}
-      ></Modal>);
+      >
+      <Text>
+        children
+      </Text>
+      </Modal>);
     });
     it("should render a <Modal />", () => {     
       expect(component).toMatchSnapshot();

@@ -46,7 +46,7 @@ class ModalPage extends Component<Props, IState> {
                         transparent={true}
                         visible={this.state.modalVisible}
                         title={"Title"}
-                        hasClose            
+                        hasClose                               
                         onRequestClose={() => {
                             this.setModalVisible(!this.state.modalVisible);
                         }}

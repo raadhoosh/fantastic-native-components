@@ -18,7 +18,7 @@ interface IProps extends ModalProps {
   hasClose?: boolean;
   backgroundColor?: string;
   color?: string;
-  width?: string;
+  width?: string | number;
   theme?: Theme;
   fontSize?: string | number;
   borderRadius?: string;
@@ -33,7 +33,7 @@ const StyledModal = (props: IProps) => {
 
   return (
     <Modal  {...props}>
-      <StyledModalContent {...props}>
+      <StyledModalContent activeOpacity={0.95} {...props} onPress={props.onPress}>
         <View style={{ width: props.width }}>
           <StyledHeader {...props}>
             <StyledHeaderText {...props}>
@@ -55,7 +55,7 @@ const StyledModal = (props: IProps) => {
               width="80px"
               onPress={props.onPress}
             >
-              close
+              cancel
           </Button>
           </StyledFooter>
         </View>

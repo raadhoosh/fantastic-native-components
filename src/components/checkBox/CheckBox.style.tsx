@@ -14,8 +14,8 @@ interface IProps {
     inverse?: boolean;
     backgroundColor?: string;
     color?: string;
-    width?: string;
-    height?: string;
+    width?: number | string;
+    height?: number;
     theme?: Theme;
     disabled?: boolean;
     fontSize?: string | number;

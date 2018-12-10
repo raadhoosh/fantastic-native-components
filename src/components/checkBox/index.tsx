@@ -4,7 +4,7 @@ import { Icon, Text } from "../../components";
 import { StyledCheckBox } from "./CheckBox.style";
 import { Theme } from "..";
 
-export interface IProps extends AccessibilityProps {
+export interface IProps {
   primary?: boolean;
   secondary?: boolean;
   success?: boolean;
@@ -16,15 +16,12 @@ export interface IProps extends AccessibilityProps {
   inverse?: boolean;
   backgroundColor?: string;
   color?: string;
-  width?: string;
+  width?: number | string;
+  height?: number | string;
   theme?: Theme;
-  onChange?: () => void;
-  onPress?: () => void;
-  disabled?: boolean;
-  fontSize?: string | number;
-  borderRadius?: string;
-  label?: string;
-  name?: "checkbox";
+  onPress?: () => void;  
+  disabled?: boolean;  
+  borderRadius?: string;  
   checked?: boolean;
 }
 
@@ -36,7 +33,7 @@ class CheckBox extends Component<IProps> {
   render() {
     return (
       <TouchableOpacity
-        onPress={this.props.disabled ? undefined : this.props.onChange}
+        onPress={this.props.disabled ? undefined : this.props.onPress}
       >
         <StyledCheckBox {...this.props}>
           {this.props.checked && (

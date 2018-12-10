@@ -18,10 +18,15 @@ describe("CheckBox", () => {
         success: true,
       });
       component = shallow(<CheckBox primary 
-        color= '#f00'
+        color= '#f00'         
+        backgroundColor="9c27b0"      
+        checked={true}
+        width={30}
+        height={30}
         onPress={() => {
           alert('You tapped the CheckBox!');
-      }}
+      }} 
+      
       />);
     });
     it("renders", () => {

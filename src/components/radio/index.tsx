@@ -15,9 +15,8 @@ export interface IProps {
   inverse?: boolean;
   color?: string;
   textColor?: string;
-  width?: string;
-  theme?: Theme;
-  onChange?: () => void;
+  width?: number | string;
+  theme?: Theme;  
   onPress?: () => void;
   disabled?: boolean;
   fontSize?: number;
@@ -34,7 +33,7 @@ class Radio extends Component<IProps> {
   render() {
     return (
       <StyledWrapper
-        onPress={this.props.disabled ? undefined : this.props.onChange}
+        onPress={this.props.disabled ? undefined : this.props.onPress}
       >
         <StyledRadio {...this.props}>
           {this.props.checked && (

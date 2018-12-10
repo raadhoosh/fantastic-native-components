@@ -8,16 +8,14 @@ const createTestProps = (props: Object) => ({
 
 describe("Radio", () => {
   describe("rendering", () => {
-    let component: ShallowWrapper;
-    let props: Object;
-    beforeEach(() => {
-      props = createTestProps({
-        color: '#f00',
-        primary: true,
-        secondary: true,
-        success: true,
-      });
+    let component: ShallowWrapper;    
+    beforeEach(() => {      
       component = shallow(<Radio primary 
+        color= '#f00'
+        fontSize={12} 
+        textColor="#9c27b0"
+        label="secondary"
+        checked={true}
         onPress={() => {
           alert('You tapped the Radio!');
       }}
