@@ -41,15 +41,22 @@ function getColor(props: IProps) {
 
 const color = (props: IProps) => getColor(props);
 
-const StyledModalContent = styled(TouchableOpacity)`    
+const StyledOverlay = styled(TouchableOpacity)`    
     background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : "rgba(0, 0, 0, 0.41)"};       
     flex: 1;
     align-items: center;    
     width: 100%;
-    padding-top: 20;
-    padding-bottom: 20;
-    padding-left: 10;
-    padding-right: 10;     
+    padding-top: 50;
+    padding-bottom: 50;
+    padding-left: 20;
+    padding-right: 20;     
+`;
+
+const StyledModalContent = styled(View)`    
+    position:absolute;
+    top: 40; 
+    left: 5%;
+    max-width: 95%;
 `;
 
 const StyledHeader = styled(View)`   
@@ -86,4 +93,4 @@ const StyledFooter = styled(View)`
     border-style: dotted;       
 `;
 
-export { StyledHeader, StyledModalContent, StyledBody, StyledFooter, StyledHeaderText };
+export { StyledHeader, StyledModalContent, StyledBody, StyledFooter, StyledHeaderText, StyledOverlay };

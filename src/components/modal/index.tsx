@@ -1,6 +1,6 @@
 import * as React from "react";
-import { StyledHeader, StyledHeaderText, StyledModalContent, StyledBody, StyledFooter } from "./Modal.style";
-import { ViewStyle, ModalProps, View, Modal } from "react-native";
+import { StyledHeader, StyledHeaderText, StyledModalContent, StyledBody, StyledFooter, StyledOverlay } from "./Modal.style";
+import { ViewStyle, ModalProps, View, Modal, TouchableOpacity } from "react-native";
 import { Icon, Button } from "../../components";
 import { Theme } from '..';
 
@@ -33,19 +33,22 @@ const StyledModal = (props: IProps) => {
 
   return (
     <Modal  {...props}>
-      <StyledModalContent activeOpacity={0.95} {...props} onPress={props.onPress}>
-        <View style={{ width: props.width }}>
+      <StyledOverlay activeOpacity={0.95}  onPress={props.onPress}/>
+      <StyledModalContent style={{ width: props.width }}>
           <StyledHeader {...props}>
             <StyledHeaderText {...props}>
               {props.title}
             </StyledHeaderText>
-            {
-              props.hasClose && <Icon type="FontAwesome"
-                name="close"
-                color={props.iconColor}
-                onPress={props.onPress}
-              />
-            }
+            <TouchableOpacity style={{width:32}}>
+              {
+                props.hasClose && <Icon type="FontAwesome"
+                  name="close"
+                  color={props.iconColor}
+                  onPress={props.onPress}
+                  fontSize={14}
+                />
+              }
+            </TouchableOpacity>
           </StyledHeader >
           <StyledBody {...props}>
             {props.children}
@@ -58,8 +61,7 @@ const StyledModal = (props: IProps) => {
               cancel
           </Button>
           </StyledFooter>
-        </View>
-      </StyledModalContent>
+        </StyledModalContent>      
     </Modal>
   )
 

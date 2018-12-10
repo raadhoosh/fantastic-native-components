@@ -57,10 +57,7 @@ class ModalPage extends Component<Props, IState> {
                         <View>
                             <Text>Hello World!</Text>
 
-                            <TouchableHighlight
-                                onPress={() => {
-                                    this.setModalVisible(!this.state.modalVisible);
-                                }}>
+                            <TouchableHighlight >                               
                                 <Text>Hide Modal</Text>
                             </TouchableHighlight>
                         </View>
