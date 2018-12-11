@@ -18,6 +18,7 @@ import Image from "./image";
 import Modal from "./modal";
 import CheckBox from "./checkBox";
 import Radio from "./radio";
+import Switch from "./switch";
 
 export {
     Icon,
@@ -38,4 +39,5 @@ export {
     Modal,
     CheckBox,
     Radio,
+    Switch
 };

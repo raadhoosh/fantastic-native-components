@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { TouchableOpacity } from "react-native";
 import { Icon } from "../../components";
-import { StyledCheckBox } from "./CheckBox.style";
+import { StyledSwitch } from "./Switch.style";
 import { Theme } from "..";
 
 export interface IProps {
@@ -25,7 +25,7 @@ export interface IProps {
   checked?: boolean;
 }
 
-class CheckBox extends Component<IProps> {
+class Switch extends Component<IProps> {
   constructor(props: IProps) {
     super(props);
   }
@@ -34,15 +34,13 @@ class CheckBox extends Component<IProps> {
     return (
       <TouchableOpacity
         onPress={this.props.disabled ? undefined : this.props.onPress}
-      >
-        <StyledCheckBox {...this.props}>
-          {this.props.checked && (
-            <Icon name="check" type="FontAwesome" size={12} color="#fff" />
-          )}
-        </StyledCheckBox>
+      >      
+        <StyledSwitch {...this.props}
+          value={true}               
+        />         
       </TouchableOpacity>
     );
   }
 }
 
-export default CheckBox;
+export default Switch;

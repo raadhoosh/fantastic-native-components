@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { View, Text } from "react-native";
+import { Switch, SwitchProps } from "react-native";
 import { Theme } from '..';
 
-interface IProps {
+interface IProps extends SwitchProps {
     primary?: boolean;
     secondary?: boolean;
     success?: boolean;
@@ -55,15 +55,15 @@ function getColor(props: IProps) {
 
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
 
-const StyledCheckBox = styled(View)`      
-    border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
+const StyledSwitch = styled(Switch)`      
+    /* border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
     width: ${(props: IProps) => props.width ? props.width : '20px'};       
     height: ${(props: IProps) => props.height ? props.height : '20px'};             
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};     
     justify-content: center;
     align-items: center;
     background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#fff")};
-    margin-bottom: 5px;    
+    margin-bottom: 5px;     */    
 `;
 
-export { StyledCheckBox };
+export { StyledSwitch };

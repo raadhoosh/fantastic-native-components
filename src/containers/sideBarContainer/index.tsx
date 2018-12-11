@@ -11,6 +11,7 @@ const list = [
     { route: "Modal", name: "Modal" },
     { route: "CheckBox", name: "CheckBox" },
     { route: "Radio", name: "Radio" },
+    { route: "Switch", name: "Switch" },
 ];
 export interface IProps {
     navigation: any;
