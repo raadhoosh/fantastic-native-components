@@ -14,11 +14,12 @@ interface IProps {
     inverse?: boolean;
     backgroundColor?: string;
     color?: string;
-    width?: string;    
+    width?: string | number;    
+    height?: string | number;    
     theme?: Theme;
     disabled?: boolean;
     fontSize?: string | number;
-    borderRadius?: string;
+    borderRadius?: number;
 }
 
 function getColor(props: IProps) {
@@ -58,14 +59,14 @@ const BadgeWrapper = styled(View)`
     background-color: ${(props: IProps) =>  props.inverse ? ForeColor : backgroundColor};    
     border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : backgroundColor};        
     width: ${(props: IProps) => props.width ? props.width : 'auto'};  
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :'50'}; 
-    /* padding-top: 2;
-    padding-bottom: 2; */
+    height: ${(props: IProps) => props.height ? props.height : 'auto'};  
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :'50'};     
+    padding-bottom: 2;
     padding-left: 10;
     padding-right: 10; 
     margin-bottom: 5px;  
     flex: 1;
-    align-items: center;     
+    align-items: center;    
 `;
 
 const BadgeText = styled(Text)`    
@@ -74,6 +75,7 @@ const BadgeText = styled(Text)`
     justify-content: center;   
     color: ${(props: IProps) =>  props.inverse ? backgroundColor : ForeColor}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :'12px'}; 
+    height: 100%;    
 `;
 
 export { BadgeWrapper, BadgeText };

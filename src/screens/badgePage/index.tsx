@@ -35,14 +35,14 @@ class BadgePage extends React.PureComponent<BadgePageProps> {
                 </View>
 
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 20, marginBottom: 30 }}>
-                    <Badge primary width={'100px'} inverse >Primary And Inverse</Badge>
-                    <Badge secondary width={'100px'} inverse >Secondary</Badge>
-                    <Badge success width={'100px'} inverse >Success</Badge>
-                    <Badge info width={'100px'} inverse >Info</Badge>
-                    <Badge warning width={'100px'} inverse >Warning</Badge>                    
-                    <Badge width={'100px'} inverse >Basic</Badge>
-                    <Badge borderRadius={"10px"} width={'100px'}>BorderRadius</Badge>
-                    <Badge borderRadius={"0"} backgroundColor="#ff0080" color="#fff" width={'100px'}>BorderRadius</Badge>
+                    <Badge primary inverse >Primary And Inverse</Badge>
+                    <Badge secondary inverse >Secondary</Badge>
+                    <Badge success inverse >Success</Badge>
+                    <Badge info inverse >Info</Badge>
+                    <Badge warning  inverse >Warning</Badge>                    
+                    <Badge inverse >Basic</Badge>
+                    <Badge borderRadius={10} width={100}>width</Badge>
+                    <Badge borderRadius={0} backgroundColor="#ff0080" color="#fff" width={'100px'}>BorderRadius</Badge>
                 </View>
             </Content>
             <Footer>

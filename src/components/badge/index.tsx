@@ -17,11 +17,11 @@ interface IProps {
   inverse?: boolean;
   backgroundColor?: string;
   color?: string;
-  width?: string;  
-  theme?: Theme;
-  onPress?: () => void;  
+  width?: string | number;    
+  height?: string | number;  
+  theme?: Theme;   
   fontSize?: string | number;
-  borderRadius?: string;
+  borderRadius?: number;
 }
 
 const Badge = (props: IProps) => {

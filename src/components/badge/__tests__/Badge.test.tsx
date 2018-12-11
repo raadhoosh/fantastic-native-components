@@ -17,11 +17,7 @@ describe("Badge", () => {
         secondary: true,
         success: true,
       });
-      component = shallow(<Badge {...props} 
-        onPress={() => {
-          alert('You tapped the Badge!');
-      }}
-      >Badge</Badge>);
+      component = shallow(<Badge {...props} >Badge</Badge>);
     });
     it("should render a <Badge />", () => {
       const component = shallow(<Badge {...props} >Badge</Badge>);
