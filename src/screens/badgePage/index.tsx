@@ -42,7 +42,9 @@ class BadgePage extends React.PureComponent<BadgePageProps> {
                     <Badge warning  inverse >Warning</Badge>                    
                     <Badge inverse >Basic</Badge>
                     <Badge borderRadius={10} width={100}>width</Badge>
-                    <Badge borderRadius={0} backgroundColor="#ff0080" color="#fff" width={'100px'}>BorderRadius</Badge>
+                    <Badge borderRadius={0} backgroundColor="#ff0080"  BorderColor="#ff0080">backgroundColor</Badge>
+                    <Badge borderRadius={0} backgroundColor="#fff" color="#000">BorderRadius</Badge>
+                    <Badge borderRadius={0} backgroundColor="#fff" color="#000" BorderColor="#9c27b0">BorderColor</Badge>
                 </View>
             </Content>
             <Footer>
