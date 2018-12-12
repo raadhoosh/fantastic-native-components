@@ -13,6 +13,7 @@ import ModalContainer from "./containers/modalContainer";
 import CheckBoxContainer from "./containers/checkBoxContainer";
 import RadioContainer from "./containers/radioContainer";
 import BadgeContainer from "./containers/badgeContainer";
+import SearchContainer from "./containers/searchContainer";
 
 const RootStack = DrawerNavigator({
   Icon: IconContainer,
@@ -25,6 +26,7 @@ const RootStack = DrawerNavigator({
   CheckBox: CheckBoxContainer,
   Radio: RadioContainer,
   Badge: BadgeContainer,
+  Search: SearchContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,
