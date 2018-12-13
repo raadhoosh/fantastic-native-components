@@ -1,10 +1,10 @@
 import * as React from "react";
 import { StyledSearch, StyledTextInput } from "./Search.style";
-import { ViewStyle, TextInput } from "react-native";
+import { ViewStyle, TextInputProps } from "react-native";
 import { Icon } from "../../components";
 import { Theme } from '..';
 
-interface IProps {
+interface IProps extends TextInputProps{
   style?: ViewStyle | object | Array<ViewStyle>;
   primary?: boolean;
   secondary?: boolean;
@@ -19,14 +19,16 @@ interface IProps {
   width?: string;
   theme?: Theme;
   fontSize?: string | number;
-  borderRadius?: string;
+  borderRadius?: string | number;
   inverse?: boolean;
   borderColor?: string;
-  onFocus?: () => void;
+  onChangeText?: (value: string) => void;
+  value?: string;
 }
 
 export interface IState {
-  close: boolean;
+  value?: string;
+  close?: boolean;
 }
 
 class Search extends React.PureComponent<IProps, IState> {
@@ -34,32 +36,48 @@ class Search extends React.PureComponent<IProps, IState> {
     super(props);
 
     this.state = {
+      value: props.value,
       close: false
     }
 
-    this.onFocus = this.onFocus.bind(this);
     this.onPressClose = this.onPressClose.bind(this);
   }
 
-  onFocus() {
+  UNSAFE_componentWillReceiveProps(nextProps: IProps) {
+
     this.setState({
-      close: true
-    });
+      value: nextProps.value
+    })
+
+    if (nextProps.value !== " ") {
+      this.setState({
+        close: true
+      });
+    }
   }
 
   onPressClose() {
     this.setState({
+      value: " ",
       close: false
     });
   }
 
   render() {
+
     return (
-      <StyledSearch>
+      <StyledSearch {...this.props}>
         <Icon type="FontAwesome" name="search" style={{ paddingRight: 10 }} />
-        <StyledTextInput onFocus={this.onFocus} />
+        <StyledTextInput
+          {...this.props}
+          value={this.state.value}
+          onChangeText={this.props.onChangeText}
+          placeholder= {this.props.placeholder}
+        />
         {
-          this.state.close && <Icon type="FontAwesome" name="close" style={{ paddingLeft: 10 }} onPress={this.onPressClose} />
+          this.state.value && this.state.close && <Icon type="FontAwesome" name="times-circle" style={{ paddingLeft: 10 }}
+            size={18}
+            onPress={this.onPressClose} />
         }
       </StyledSearch>
     )

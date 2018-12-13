@@ -64,13 +64,15 @@ const StyledSearch = styled(View)`
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};  
     padding-left: 10px;
     padding-right: 10px; 
+    overflow: hidden;
 `;
 
 const StyledTextInput = styled(TextInput)`      
     color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
         (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
-    background-color: #fff; 
+    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'}; 
     flex: 1;     
 `;
 

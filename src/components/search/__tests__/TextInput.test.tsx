@@ -1,4 +1,4 @@
-import TextInput from "../index";
+import Search from "../index";
 import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
 
@@ -6,7 +6,7 @@ const createTestProps = (props: Object) => ({
   ...props,
 });
 
-describe("TextInput", () => {
+describe("Search", () => {
   describe("rendering", () => {
     let component: ShallowWrapper;
     let props: Object;
@@ -17,14 +17,14 @@ describe("TextInput", () => {
         secondary: true,
         success: true,        
       });
-      component = shallow(<TextInput {...props}
+      component = shallow(<Search {...props}
         onChangeText={() => {
           alert('You tapped the Text!');
         }}
       />);
     });
-    it("should render a <TextInput />", () => {
-      const component = shallow(<TextInput {...props}
+    it("should render a <Search />", () => {
+      const component = shallow(<Search {...props}
         onChangeText={() => {
           alert('You tapped the Text!');
         }}
