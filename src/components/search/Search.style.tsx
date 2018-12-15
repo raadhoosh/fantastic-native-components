@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { View, TextInput } from "react-native";
+import { Icon } from "../../components";
 import { Theme } from '..';
 
 interface IProps {
@@ -18,7 +19,7 @@ interface IProps {
     theme?: Theme;
     disabled?: boolean;
     fontSize?: string | number;
-    borderRadius?: string;
+    borderRadius?: number;
 }
 
 function getColor(props: IProps) {
@@ -58,9 +59,9 @@ const StyledSearch = styled(View)`
     flex: 1;  
     flex-direction : row; 
     align-items: center;
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};    
-    border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : backgroundColor};        
-    width: ${(props: IProps) => props.width ? props.width :'auto'};  
+    background-color: ${(props: IProps) => props.inverse ? ForeColor : backgroundColor};    
+    border: 1px solid ${(props: IProps) => backgroundColor};        
+    width: ${(props: IProps) => props.width ? props.width : 'auto'};  
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};  
     padding-left: 10px;
     padding-right: 10px; 
@@ -68,12 +69,17 @@ const StyledSearch = styled(View)`
 `;
 
 const StyledTextInput = styled(TextInput)`      
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
+    color: ${(props: IProps) => props.inverse ? backgroundColor : ForeColor}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
         (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};
+    background-color: ${(props: IProps) => props.inverse ? ForeColor : backgroundColor};
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'}; 
     flex: 1;     
 `;
 
-export { StyledSearch, StyledTextInput };
+const StyledIcon = styled(Icon)`      
+    color: ${(props: IProps) => props.inverse ? backgroundColor : "#fff"}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '18'};        
+`;
+
+export { StyledSearch, StyledTextInput, StyledIcon };

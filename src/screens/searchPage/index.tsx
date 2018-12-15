@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TouchableOpacity, TextInput } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { Container, Content, Header, Footer, Title, Left, Right, Text, Search } from "../../components";
 
 export interface Props {
@@ -8,8 +8,7 @@ export interface Props {
 }
 
 export interface IState {
-    value?: string;
-    text?: string;
+    value: Array<string>;
 }
 
 class SearchPage extends React.PureComponent<Props, IState> {
@@ -18,14 +17,19 @@ class SearchPage extends React.PureComponent<Props, IState> {
         super(props);
 
         this.state = {
-            value: " "
+            value: Array.apply(null, new Array(5)).map(() => " ")
         }
 
         this.onChangeText = this.onChangeText.bind(this);
     }
 
-    onChangeText(value: string) {
-        this.setState({ value })
+    onChangeText(value: string, i: number) {
+
+        const newArray = this.state.value.map((element: string, index: number) => { return index === i ? value : " "; });
+
+        this.setState({
+            value: newArray
+        })
     }
 
     render() {
@@ -47,33 +51,44 @@ class SearchPage extends React.PureComponent<Props, IState> {
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
                     <Search
                         placeholder={"primary"}
-                        value={this.state.value}
+                        value={this.state.value[0]}
                         primary
-                        onChangeText={(value) => this.onChangeText(value)}
+                        onChangeText={(value) => this.onChangeText(value, 0)}
                     />
                 </View>
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
                     <Search
-                        value={this.state.value}
+                        value={this.state.value[1]}
                         secondary
-                        onChangeText={(value) => this.onChangeText(value)}
+                        onChangeText={(value) => this.onChangeText(value, 1)}
                     />
                 </View>
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
                     <Search
-                        value={this.state.value}
+                        value={this.state.value[2]}
                         success
                         inverse
-                        onChangeText={(value) => this.onChangeText(value)}
+                        onChangeText={(value) => this.onChangeText(value, 2)}
                     />
                 </View>
 
-                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
+                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
                     <Search
-                        value={this.state.value}
+                        value={this.state.value[3]}
                         success
                         borderRadius={50}
-                        onChangeText={(value) => this.onChangeText(value)}
+                        onChangeText={(value) => this.onChangeText(value, 3)}
+                    />
+                </View>
+
+                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
+                    <Search
+                        placeholder={"backgroundColor"}
+                        value={this.state.value[4]}
+                        backgroundColor={"#f00"}                        
+                        color={"#fff"}
+                        borderRadius={50}
+                        onChangeText={(value) => this.onChangeText(value, 4)}
                     />
                 </View>
             </Content>

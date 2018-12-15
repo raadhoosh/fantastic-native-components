@@ -1,7 +1,6 @@
 import * as React from "react";
-import { StyledSearch, StyledTextInput } from "./Search.style";
+import { StyledSearch, StyledTextInput, StyledIcon } from "./Search.style";
 import { ViewStyle, TextInputProps } from "react-native";
-import { Icon } from "../../components";
 import { Theme } from '..';
 
 interface IProps extends TextInputProps{
@@ -19,7 +18,7 @@ interface IProps extends TextInputProps{
   width?: string;
   theme?: Theme;
   fontSize?: string | number;
-  borderRadius?: string | number;
+  borderRadius?: number;
   inverse?: boolean;
   borderColor?: string;
   onChangeText?: (value: string) => void;
@@ -67,16 +66,14 @@ class Search extends React.PureComponent<IProps, IState> {
 
     return (
       <StyledSearch {...this.props}>
-        <Icon type="FontAwesome" name="search" style={{ paddingRight: 10 }} />
+        <StyledIcon {...this.props} type="FontAwesome" name="search" style={{ paddingRight: 10 }} />
         <StyledTextInput
-          {...this.props}
+          {...this.props}          
           value={this.state.value}
-          onChangeText={this.props.onChangeText}
-          placeholder= {this.props.placeholder}
+          onChangeText={this.props.onChangeText}                 
         />
         {
-          this.state.value && this.state.close && <Icon type="FontAwesome" name="times-circle" style={{ paddingLeft: 10 }}
-            size={18}
+          this.state.value && this.state.close && <StyledIcon {...this.props} type="FontAwesome" name="times-circle" style={{ paddingLeft: 10 }}            
             onPress={this.onPressClose} />
         }
       </StyledSearch>
