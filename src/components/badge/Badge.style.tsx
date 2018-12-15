@@ -13,11 +13,11 @@ interface IProps {
     dark?: boolean;
     inverse?: boolean;
     backgroundColor?: string;
+    BorderColor?: string;
     color?: string;
     width?: string | number;    
     height?: string | number;    
-    theme?: Theme;
-    disabled?: boolean;
+    theme?: Theme;    
     fontSize?: string | number;
     borderRadius?: number;
 }
@@ -26,6 +26,7 @@ function getColor(props: IProps) {
 
     let backgroundColor =  "#6c757d";
     let ForeColor =  "#fff";
+    let BorderColor =  "#6c757d";
     
     if (props.color) {
         ForeColor = props.color;
@@ -44,20 +45,22 @@ function getColor(props: IProps) {
         if (typeof (color) === "string" && props.theme) {
             backgroundColor = props.theme[color].main;
             ForeColor = props.theme[color].contrastText;
+            BorderColor = props.theme[color].main;
         }
 
     }
 
-    const btnColor = { backgroundColor: backgroundColor, ForeColor: ForeColor };
+    const btnColor = { backgroundColor: backgroundColor, ForeColor: ForeColor, BorderColor: BorderColor };
     return btnColor;
 }
 
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
+const BorderColor = (props: IProps) => getColor(props).BorderColor;
 const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
 const BadgeWrapper = styled(View)`      
     background-color: ${(props: IProps) =>  props.inverse ? ForeColor : backgroundColor};    
-    border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : backgroundColor};        
+    border: 1px solid ${(props: IProps) => props.BorderColor ? props.BorderColor : BorderColor};        
     width: ${(props: IProps) => props.width ? props.width : 'auto'};  
     height: ${(props: IProps) => props.height ? props.height : 'auto'};  
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :'50'};     
