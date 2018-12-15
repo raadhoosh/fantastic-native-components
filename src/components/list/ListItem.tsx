@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { TouchableOpacity, View, AccessibilityProps } from "react-native";
 import { Icon, Text, Image } from "../../components";
-import { StyledListItem } from "./List.style";
+import { StyledListItem ,StyledImage, StyledText} from "./List.style";
 import { Theme } from "..";
 
 export interface IProps {
@@ -19,13 +19,11 @@ export interface IProps {
   width?: number | string;
   height?: number | string;
   theme?: Theme;
-  onPress?: () => void;
-  disabled?: boolean;
+  onPress?: () => void; 
   borderRadius?: string;
-  text?: string;
-  checked?: boolean;
+  text?: string;  
   id?: number;
-  source: string;
+  source?: string;
 }
 
 class ListItem extends Component<IProps> {
@@ -39,11 +37,13 @@ class ListItem extends Component<IProps> {
         onPress={this.props.onPress}
         key={this.props.id}        
       >
-        <Image source={this.props.source} />
-        <Icon name="check" type="FontAwesome" size={12} color="#fff" />
-        <Text>
+        <StyledImage source={this.props.source} />  
+
+        <StyledText>
           {this.props.text}
-        </Text>
+        </StyledText>
+
+        <Icon name="chevron-right" type="FontAwesome" size={12} color="#000" />
       </StyledListItem>
     );
   }

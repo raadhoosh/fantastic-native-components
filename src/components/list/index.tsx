@@ -22,10 +22,11 @@ export interface IProps {
   theme?: Theme;
   onPress?: () => void;
   disabled?: boolean;
-  borderRadius?: string;
-  checked?: boolean;
+  borderRadius?: string;  
   dataSource: Array<Object>;
   source: string;
+  text?: string;  
+  id?: number;
 }
 
 class List extends Component<IProps> {
@@ -40,6 +41,8 @@ class List extends Component<IProps> {
           this.props.dataSource.map((item, index) => (
             <ListItem
               source={item.source}
+              id={item.id}
+              text={item.text}
             />            
           ))
         }

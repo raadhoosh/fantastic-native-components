@@ -11,6 +11,7 @@ const list = [
     { route: "Modal", name: "Modal" },
     { route: "CheckBox", name: "CheckBox" },
     { route: "Radio", name: "Radio" },
+    { route: "List", name: "List" },
     { route: "Badge", name: "Badge" },
 ];
 export interface IProps {
