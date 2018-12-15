@@ -51,7 +51,7 @@ class SearchPage extends React.PureComponent<Props, IState> {
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
                     <Search
                         placeholder={"primary"}
-                        value={this.state.value[0]}
+                        value={"dfdf"}
                         primary
                         onChangeText={(value) => this.onChangeText(value, 0)}
                     />

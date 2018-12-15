@@ -17,7 +17,7 @@ describe("Search", () => {
         secondary: true,
         success: true,        
       });
-      component = shallow(<Search {...props}
+      component = shallow(<Search value={"value"} {...props}
         onChangeText={() => {
           alert('You tapped the Text!');
         }}

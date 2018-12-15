@@ -41,9 +41,9 @@ class Search extends React.PureComponent<IProps, IState> {
 
     this.onPressClose = this.onPressClose.bind(this);
   }
-
+  
   UNSAFE_componentWillReceiveProps(nextProps: IProps) {
-
+    
     this.setState({
       value: nextProps.value
     })
@@ -66,14 +66,14 @@ class Search extends React.PureComponent<IProps, IState> {
 
     return (
       <StyledSearch {...this.props}>
-        <StyledIcon {...this.props} type="FontAwesome" name="search" style={{ paddingRight: 10 }} />
+        <StyledIcon {...this.props} type="FontAwesome" name="search" style={{ paddingRight: 7 }} />
         <StyledTextInput
           {...this.props}          
           value={this.state.value}
           onChangeText={this.props.onChangeText}                 
         />
         {
-          this.state.value && this.state.close && <StyledIcon {...this.props} type="FontAwesome" name="times-circle" style={{ paddingLeft: 10 }}            
+          this.state.value && this.state.close && <StyledIcon {...this.props} type="FontAwesome" name="times-circle" style={{ paddingLeft: 7 }}            
             onPress={this.onPressClose} />
         }
       </StyledSearch>
