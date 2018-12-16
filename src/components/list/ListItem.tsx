@@ -1,29 +1,22 @@
 import React, { Component } from "react";
-import { TouchableOpacity, View, AccessibilityProps } from "react-native";
-import { Icon, Text, Image } from "../../components";
+import { ImageSourcePropType } from "react-native";
+import { Icon } from "../../components";
 import { StyledListItem ,StyledImage, StyledText} from "./List.style";
 import { Theme } from "..";
 
-export interface IProps {
-  primary?: boolean;
-  secondary?: boolean;
-  success?: boolean;
-  info?: boolean;
-  warning?: boolean;
-  danger?: boolean;
-  light?: boolean;
-  dark?: boolean;
-  inverse?: boolean;
+export interface IProps {  
+  theme?: Theme;
   backgroundColor?: string;
   color?: string;
-  width?: number | string;
-  height?: number | string;
-  theme?: Theme;
+  width?: number ;
+  height?: number ;  
   onPress?: () => void; 
-  borderRadius?: string;
+  borderRadius?: number;
+  borderColor?: string; 
   text?: string;  
-  id?: number;
-  source?: string;
+  id?: number;  
+  dataSource:Array<{id: number, text: string, source: ImageSourcePropType}>;
+  source : ImageSourcePropType;
 }
 
 class ListItem extends Component<IProps> {
@@ -35,11 +28,14 @@ class ListItem extends Component<IProps> {
     return (
       <StyledListItem
         onPress={this.props.onPress}
-        key={this.props.id}        
+        key={this.props.id}   
+        {...this.props}     
       >
-        <StyledImage source={this.props.source} />  
+        <StyledImage source={this.props.source}
+         borderRadius={this.props.borderRadius} 
+         borderColor={this.props.borderColor} />  
 
-        <StyledText>
+        <StyledText color={this.props.color}>
           {this.props.text}
         </StyledText>
 

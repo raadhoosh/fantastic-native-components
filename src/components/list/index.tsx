@@ -1,32 +1,22 @@
 import React, { Component } from "react";
-import { TouchableOpacity, View, AccessibilityProps } from "react-native";
-import { Icon, Text, Image } from "../../components";
+import { ImageSourcePropType } from "react-native";
 import { StyledList } from "./List.style";
 import { Theme } from "..";
 import ListItem from "./ListItem"
 
 export interface IProps {
-  primary?: boolean;
-  secondary?: boolean;
-  success?: boolean;
-  info?: boolean;
-  warning?: boolean;
-  danger?: boolean;
-  light?: boolean;
-  dark?: boolean;
-  inverse?: boolean;
+  theme?: Theme;
   backgroundColor?: string;
   color?: string;
-  width?: number | string;
-  height?: number | string;
-  theme?: Theme;
+  width?: number;
+  height?: number;
   onPress?: () => void;
-  disabled?: boolean;
-  borderRadius?: string;  
-  dataSource: Array<Object>;
-  source: string;
-  text?: string;  
+  borderRadius?: number;
+  borderColor?: string;
+  text?: string;
   id?: number;
+  dataSource: Array<{ id: number, text: string, source: ImageSourcePropType }>;
+  source: ImageSourcePropType;
 }
 
 class List extends Component<IProps> {
@@ -40,10 +30,12 @@ class List extends Component<IProps> {
         {
           this.props.dataSource.map((item, index) => (
             <ListItem
+              {...this.props}
+              key={index}
               source={item.source}
               id={item.id}
               text={item.text}
-            />            
+            />
           ))
         }
       </StyledList>

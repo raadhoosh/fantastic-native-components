@@ -2,97 +2,53 @@ import styled from "styled-components";
 import { Text, TouchableOpacity, TouchableOpacityProps, Image, View  } from "react-native";
 import { Theme } from '..';
 
-interface IProps extends TouchableOpacityProps {
-    primary?: boolean;
-    secondary?: boolean;
-    success?: boolean;
-    info?: boolean;
-    warning?: boolean;
-    danger?: boolean;
-    light?: boolean;
-    dark?: boolean;
-    inverse?: boolean;
+interface IProps extends TouchableOpacityProps { 
+    theme?: Theme;   
     backgroundColor?: string;
     color?: string;
-    width?: number | string;
-    height?: number;
-    theme?: Theme;
-    disabled?: boolean;
+    width?: number;
+    height?: number;  
     fontSize?: string | number;
-    borderRadius?: string;
-    checked?: boolean;
+    borderRadius?: number;   
+    borderColor?: string; 
 }
 
-function getColor(props: IProps) {
-
-    let backgroundColor = props.theme && props.theme.button.backgroundColor ? props.theme.button.backgroundColor : "#6c757d";
-    let ForeColor = props.theme && props.theme.button.color ? props.theme.button.color : "#fff";
-
-    if (props.color) {
-        ForeColor = props.color;
-    }
-    if (props.backgroundColor) {
-        backgroundColor = props.backgroundColor;
-    } else {
-        const color =
-            (props.primary && "primary")
-            || (props.secondary && "secondary")
-            || (props.success && "success")
-            || (props.info && "info")
-            || (props.warning && "warning")
-            || (props.danger && "danger");
-
-        if (typeof (color) === "string" && props.theme) {
-            backgroundColor = props.theme[color].main;
-            ForeColor = props.theme[color].contrastText;
-        }
-
-    }
-
-    const btnColor = { backgroundColor: backgroundColor, ForeColor: ForeColor };
-    return btnColor;
-}
-
-const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
-
-const StyledList = styled(View)`      
-    border: 1px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
-    width: ${(props: IProps) => props.width ? props.width : 'auto'};       
-    height: ${(props: IProps) => props.height ? props.height : 'auto'};             
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};   
-    align-items: center;
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#fff")};         
+const StyledList = styled(View)`    
+    align-items: center;    
+    border-top-width: 1;
+    border-top-color: ${(props: IProps) => props.borderColor ? props.borderColor : "#ddd"}; 
 `;
 
-const StyledListItem = styled(TouchableOpacity)`      
-    border-bottom-width: 1;       
-    border-bottom-color: ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
-    width: ${(props: IProps) => props.width ? props.width : 'auto'};       
-    height: ${(props: IProps) => props.height ? props.height : 'auto'};             
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};     
+const StyledListItem = styled(TouchableOpacity)`          
     justify-content: center;
     align-items: center;
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#fff")};
-    margin-bottom: 5px;  
+    background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : "#fff"};     
     flex: 1;
     flex-direction: row;   
-    padding: 5px;
+    margin-bottom: ${(props: IProps) => props.backgroundColor ? "1" : "0"}; 
+    padding: 5px; 
+    border-bottom-width: 1;       
+    border-bottom-color: ${(props: IProps) => props.borderColor ? props.borderColor : "#ddd"};
+    border-right-width: 1;
+    border-right-color: ${(props: IProps) => props.borderColor ? props.borderColor : "#ddd"};
+    border-left-width: 1;
+    border-left-color: ${(props: IProps) => props.borderColor ? props.borderColor : "#ddd"};
+    width: ${(props: IProps) => props.width ? props.width : 'auto'};       
+    height: ${(props: IProps) => props.height ? props.height : 'auto'};
 `;
 
 const StyledImage = styled(Image)`      
-    border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
-    width: ${(props: IProps) => props.width ? props.width : '60px'};       
-    height: ${(props: IProps) => props.height ? props.height : '60px'};             
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '50'};     
-    justify-content: center;
-    align-items: center;
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#fff")};
-    margin-bottom: 5px;    
+    border-color: ${(props: IProps) => props.borderColor ? props.borderColor : "#ddd"}; 
+    border-width: 1;       
+    width:50;       
+    height: 50;             
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};        
 `;
 
 const StyledText = styled(Text)`      
     flex:1;    
     padding-left: 10;
+    color: ${(props: IProps) => props.color ? props.color : "#000"}; 
 `;
 
 export { StyledListItem, StyledList, StyledImage, StyledText };
