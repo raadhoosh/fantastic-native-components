@@ -14,6 +14,7 @@ import CheckBoxContainer from "./containers/checkBoxContainer";
 import RadioContainer from "./containers/radioContainer";
 import ListContainer from "./containers/listContainer";
 import BadgeContainer from "./containers/badgeContainer";
+import SearchContainer from "./containers/searchContainer";
 
 const RootStack = DrawerNavigator({
   Icon: IconContainer,
@@ -27,6 +28,7 @@ const RootStack = DrawerNavigator({
   Radio: RadioContainer,
   List: ListContainer,
   Badge: BadgeContainer,
+  Search: SearchContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,

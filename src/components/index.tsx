@@ -20,6 +20,7 @@ import CheckBox from "./checkBox";
 import Radio from "./radio";
 import List from "./list";
 import Badge from "./badge";
+import Search from "./search";
 
 export {
     Icon,
@@ -40,6 +41,7 @@ export {
     Modal,
     CheckBox,
     Radio,
-    List,
-    Badge
+    Badge,
+    Search,
+    List
 };

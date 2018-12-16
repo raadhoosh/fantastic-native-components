@@ -43,7 +43,7 @@ class ListItem extends Component<IProps> {
           {this.props.text}
         </StyledText>
 
-        <Icon name="chevron-right" type="FontAwesome" size={12} color="#000" />
+        <Icon name="chevron-right" type="FontAwesome" size={12} color="#ddd" />
       </StyledListItem>
     );
   }

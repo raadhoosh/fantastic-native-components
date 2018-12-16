@@ -13,6 +13,7 @@ const list = [
     { route: "Radio", name: "Radio" },
     { route: "List", name: "List" },
     { route: "Badge", name: "Badge" },
+    { route: "Search", name: "Search" },
 ];
 export interface IProps {
     navigation: any;

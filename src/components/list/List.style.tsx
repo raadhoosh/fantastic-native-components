@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Text, TouchableOpacity, TouchableOpacityProps, Image } from "react-native";
+import { Text, TouchableOpacity, TouchableOpacityProps, Image, View  } from "react-native";
 import { Theme } from '..';
 
 interface IProps extends TouchableOpacityProps {
@@ -55,15 +55,13 @@ function getColor(props: IProps) {
 
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
 
-const StyledList = styled(TouchableOpacity)`      
-    border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
+const StyledList = styled(View)`      
+    border: 1px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
     width: ${(props: IProps) => props.width ? props.width : 'auto'};       
     height: ${(props: IProps) => props.height ? props.height : 'auto'};             
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};     
-    justify-content: center;
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};   
     align-items: center;
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#fff")};
-    margin-bottom: 5px;       
+    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#fff")};         
 `;
 
 const StyledListItem = styled(TouchableOpacity)`      
@@ -83,8 +81,8 @@ const StyledListItem = styled(TouchableOpacity)`
 
 const StyledImage = styled(Image)`      
     border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
-    width: ${(props: IProps) => props.width ? props.width : '20px'};       
-    height: ${(props: IProps) => props.height ? props.height : '20px'};             
+    width: ${(props: IProps) => props.width ? props.width : '60px'};       
+    height: ${(props: IProps) => props.height ? props.height : '60px'};             
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '50'};     
     justify-content: center;
     align-items: center;
