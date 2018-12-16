@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { View, Text } from "react-native";
+import { View, TextInput } from "react-native";
+import { Icon } from "../../components";
 import { Theme } from '..';
 
 interface IProps {
@@ -14,13 +15,11 @@ interface IProps {
     inverse?: boolean;
     backgroundColor?: string;
     color?: string;
-    width?: number | string;
-    height?: number | string;
+    width?: string;
     theme?: Theme;
     disabled?: boolean;
     fontSize?: string | number;
-    borderRadius?: string;
-    checked?: boolean;
+    borderRadius?: number;
 }
 
 function getColor(props: IProps) {
@@ -54,16 +53,33 @@ function getColor(props: IProps) {
 }
 
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
+const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
-const StyledCheckBox = styled(View)`      
-    border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
-    width: ${(props: IProps) => props.width ? props.width : '20px'};       
-    height: ${(props: IProps) => props.height ? props.height : '20px'};             
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};     
-    justify-content: center;
+const StyledSearch = styled(View)`     
+    flex: 1;  
+    flex-direction : row; 
     align-items: center;
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#fff")};
-    margin-bottom: 5px;    
+    background-color: ${(props: IProps) => props.inverse ? ForeColor : backgroundColor};    
+    border: 1px solid ${(props: IProps) => backgroundColor};        
+    width: ${(props: IProps) => props.width ? props.width : 'auto'};  
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};  
+    padding-left: 10px;
+    padding-right: 10px; 
+    overflow: hidden;
 `;
 
-export { StyledCheckBox };
+const StyledTextInput = styled(TextInput)`      
+    color: ${(props: IProps) => props.inverse ? backgroundColor : ForeColor}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
+        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
+    background-color: ${(props: IProps) => props.inverse ? ForeColor : backgroundColor};
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'}; 
+    flex: 1;     
+`;
+
+const StyledIcon = styled(Icon)`      
+    color: ${(props: IProps) => props.inverse ? backgroundColor : "#fff"}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '18'};        
+`;
+
+export { StyledSearch, StyledTextInput, StyledIcon };

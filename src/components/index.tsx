@@ -19,6 +19,7 @@ import Modal from "./modal";
 import CheckBox from "./checkBox";
 import Radio from "./radio";
 import Badge from "./badge";
+import Search from "./search";
 
 export {
     Icon,
@@ -39,5 +40,6 @@ export {
     Modal,
     CheckBox,
     Radio,
-    Badge
+    Badge,
+    Search,
 };
