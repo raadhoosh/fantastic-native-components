@@ -12,6 +12,7 @@ import ImageContainer from "./containers/imageContainer";
 import ModalContainer from "./containers/modalContainer";
 import CheckBoxContainer from "./containers/checkBoxContainer";
 import RadioContainer from "./containers/radioContainer";
+import ListContainer from "./containers/listContainer";
 import BadgeContainer from "./containers/badgeContainer";
 import SearchContainer from "./containers/searchContainer";
 
@@ -25,6 +26,7 @@ const RootStack = DrawerNavigator({
   Modal: ModalContainer,
   CheckBox: CheckBoxContainer,
   Radio: RadioContainer,
+  List: ListContainer,
   Badge: BadgeContainer,
   Search: SearchContainer,
 },
