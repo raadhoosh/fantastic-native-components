@@ -22,7 +22,7 @@ import List from "./list";
 import Badge from "./badge";
 import Search from "./search";
 import Card from "./cards/Card";
-import BasicCard from "./cards/BasicCard";
+import CardImages from "./cards/CardImages";
 
 export {
     Icon,
@@ -47,5 +47,5 @@ export {
     Search,
     List,
     Card,
-    BasicCard,
+    CardImages,
 };

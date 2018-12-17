@@ -15,8 +15,7 @@ export interface IProps {
   borderColor?: string;
   text?: string;
   id?: number;
-  dataSource: Array<{ id: number, text: string, source: ImageSourcePropType }>;
-  source: ImageSourcePropType;
+  dataSource: Array<{ id: number, text: string, source: ImageSourcePropType }>;  
 }
 
 class List extends Component<IProps> {
