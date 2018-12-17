@@ -21,6 +21,8 @@ import Radio from "./radio";
 import List from "./list";
 import Badge from "./badge";
 import Search from "./search";
+import Card from "./cards/Card";
+import CardImages from "./cards/CardImages";
 
 export {
     Icon,
@@ -44,4 +46,6 @@ export {
     Badge,
     Search,
     List,
+    Card,
+    CardImages,
 };
