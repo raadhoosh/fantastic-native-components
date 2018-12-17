@@ -11,27 +11,25 @@ interface IProps {
     danger?: boolean;
     light?: boolean;
     dark?: boolean;
-    inverse?: boolean;
+    center?: boolean;
     backgroundColor?: string;
+    borderColor?: string;
     color?: string;
+    titleColor?: string;
     width?: number | string;
     height?: number | string;
     imageWidth?: number | string;
     imageHeight?: number | string;
     theme?: Theme;
-    disabled?: boolean;
     fontSize?: string | number;
     borderRadius?: string;
 }
 
 function getColor(props: IProps) {
 
-    let backgroundColor = props.theme && props.theme.button.backgroundColor ? props.theme.button.backgroundColor : "#6c757d";
-    let ForeColor = props.theme && props.theme.button.color ? props.theme.button.color : "#fff";
-
-    if (props.color) {
-        ForeColor = props.color;
-    }
+    let backgroundColor = "#fff";
+    let ForeColor = "#000";
+    
     if (props.backgroundColor) {
         backgroundColor = props.backgroundColor;
     } else {
@@ -50,16 +48,16 @@ function getColor(props: IProps) {
 
     }
 
-    const btnColor = { backgroundColor: backgroundColor, ForeColor: ForeColor };
-    return btnColor;
+    const CardColor = { backgroundColor: backgroundColor, ForeColor: ForeColor };
+    return CardColor;
 }
 
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
 const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
 const StyledCard = styled(TouchableOpacity)`      
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};    
-    border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : backgroundColor};        
+    background-color: ${backgroundColor};    
+    border: 1px solid ${backgroundColor};        
     width: ${(props: IProps) => props.width ? props.width :
         (props.theme && props.theme.button.width ? props.theme.button.width : 'auto')};  
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :
@@ -69,27 +67,13 @@ const StyledCard = styled(TouchableOpacity)`
     box-shadow: 10px 5px 5px #000;   
 `;
 
-const ButtonText = styled(Text)`    
-    text-align: center;   
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
-`;
-
-const StyledCardImages = styled(TouchableOpacity)`      
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};    
-    border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : backgroundColor};        
+const StyledCardImages = styled(TouchableOpacity)`  
+    border: 1px solid  ${(props: IProps) => props.borderColor ? props.borderColor : '#ddd'};           
     width: ${(props: IProps) => props.width ? props.width : 'auto'};  
     height: ${(props: IProps) => props.height ? props.height : 'auto'};  
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};    
-    box-shadow: 0 0 5px 5px #000;    
-    flex: 1;    
-    align-items: center;
-    overflow: hidden;
-`;
-
-const StyledCardImagesFooter = styled(View)`              
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};        
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};        
+    flex: 1;  
+    box-shadow: 10px 5px 5px #000;
 `;
 
 const StyledImage = styled(Image)`              
@@ -98,19 +82,24 @@ const StyledImage = styled(Image)`
     height: ${(props: IProps) => props.imageHeight ? props.imageHeight : '150px'};       
 `;
 
+const StyledCardImagesFooter = styled(View)` 
+    width: ${(props: IProps) => props.imageWidth ? props.imageWidth : '100%'};
+    background-color: ${backgroundColor};  
+    color: ${ForeColor}; 
+    padding: 12px;            
+`;
+
 const StyledCardImagesTitle = styled(Text)`    
-    text-align: center;   
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
+    text-align: ${(props: IProps) => props.center ? "center" : "left"};   
+    color: ${(props: IProps) => props.titleColor ? props.titleColor : ForeColor}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
+        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')};      
 `;
 
 const StyledCardImagesText = styled(Text)`    
-    text-align: center;   
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
-    padding: 12px;    
+    text-align: ${(props: IProps) => props.center ? "center" : "left"};   
+    color: ${(props: IProps) => props.color ? props.color : ForeColor};     
+    padding-top:10;    
 `;
 
-export { StyledCard, ButtonText, StyledCardImages, StyledCardImagesTitle, StyledImage, StyledCardImagesText , StyledCardImagesFooter};
+export { StyledCard, StyledCardImages, StyledCardImagesTitle, StyledImage, StyledCardImagesText, StyledCardImagesFooter };

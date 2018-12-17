@@ -1,9 +1,9 @@
 import * as React from "react";
-import { StyledCardImages, StyledCardImagesTitle , StyledImage, StyledCardImagesText} from "./Cards.style";
-import { ViewStyle , ImageSourcePropType} from "react-native";
+import { StyledCardImages, StyledCardImagesTitle, StyledImage, StyledCardImagesText, StyledCardImagesFooter } from "./Cards.style";
+import { ViewStyle, ImageSourcePropType } from "react-native";
 import { Theme } from '..';
 
-interface IProps {  
+interface IProps {
   style?: ViewStyle | object | Array<ViewStyle>;
   primary?: boolean;
   secondary?: boolean;
@@ -15,6 +15,7 @@ interface IProps {
   dark?: boolean;
   inverse?: boolean;
   backgroundColor?: string;
+  borderColor?: string;
   color?: string;
   width?: number | string;
   height?: number | string;
@@ -27,7 +28,9 @@ interface IProps {
   borderRadius?: string;
   title?: string;
   text?: string;
-  source : ImageSourcePropType;
+  center?: boolean;
+  titleColor?: string;
+  source: ImageSourcePropType;
 }
 
 const CardImages = (props: IProps) => {
@@ -35,15 +38,15 @@ const CardImages = (props: IProps) => {
   return (
     <StyledCardImages {...props} activeOpacity={0.8} onPress={props.disabled ? undefined : props.onPress} >
 
-     <StyledImage source={props.source}/>  
-
-      <StyledCardImagesTitle>
-        {props.title}
-      </StyledCardImagesTitle>
-      <StyledCardImagesText>
-        {props.text}
-      </StyledCardImagesText>
-     
+      <StyledImage source={props.source} imageWidth={props.imageWidth} imageHeight={props.imageHeight} />
+      <StyledCardImagesFooter {...props}>
+        <StyledCardImagesTitle titleColor={props.titleColor} center={props.center} {...props}>
+          {props.title}
+        </StyledCardImagesTitle>
+        <StyledCardImagesText color={props.color} center={props.center} {...props}>
+          {props.text}
+        </StyledCardImagesText>
+      </StyledCardImagesFooter>
     </StyledCardImages>
   );
 };
