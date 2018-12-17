@@ -43,5 +43,5 @@ export {
     Radio,
     Badge,
     Search,
-    List
+    List,
 };
