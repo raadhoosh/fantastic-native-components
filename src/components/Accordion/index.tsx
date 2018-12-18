@@ -1,8 +1,8 @@
 import * as React from "react";
 import { StyleSheet, Text, View, TouchableHighlight, Animated, ViewStyle } from "react-native";
 import { Icon } from "..";
-import Panel from "./Panel";
-type IStyle=  ViewStyle | object | Array<ViewStyle>;
+import { Panel } from "..";
+type IStyle = ViewStyle | object | Array<ViewStyle>;
 interface ObInterface {
     title: string;
     content: string;

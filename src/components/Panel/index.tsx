@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyledHeader, StyledHeaderText, StyledContent, StyledBody } from "./Panel.style";
 import { ViewStyle, ModalProps, View, Modal, TouchableOpacity } from "react-native";
-import { Icon, Button } from "../../components";
+import { Icon, Button } from "..";
 import { Theme } from "..";
 type IStyle=  ViewStyle | object | Array<ViewStyle>;
 interface IProps {
