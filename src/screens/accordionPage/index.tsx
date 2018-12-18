@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, Text } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Icon, Grid, Row, Col, Accordion } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Icon, Accordion } from "../../components";
 interface ObInterface {
     title: string;
     content: string;

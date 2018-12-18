@@ -1,8 +1,7 @@
 import * as React from "react";
 import { StyledHeader, StyledHeaderText, StyledContent, StyledBody } from "./Panel.style";
-import { ViewStyle, ModalProps, View, Modal, TouchableOpacity } from "react-native";
-import { Icon, Button } from "..";
-import { Theme } from "..";
+import { ViewStyle } from "react-native";
+
 type IStyle=  ViewStyle | object | Array<ViewStyle>;
 interface IProps {
     header?: JSX.Element | JSX.Element[];

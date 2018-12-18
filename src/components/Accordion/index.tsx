@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, Text, View, TouchableHighlight, Animated, ViewStyle } from "react-native";
+import { StyleSheet, Text, View, ViewStyle } from "react-native";
 import { Icon } from "..";
 import { Panel } from "..";
 type IStyle = ViewStyle | object | Array<ViewStyle>;

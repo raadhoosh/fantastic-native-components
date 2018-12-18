@@ -114,7 +114,7 @@ ShallowWrapper {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": undefined,
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iRbamj",
+            "componentId": "sc-gPEVay",
             "isStatic": false,
             "rules": Array [
               "      
@@ -138,7 +138,7 @@ ShallowWrapper {
           },
           "displayName": "Styled(Component)",
           "render": [Function],
-          "styledComponentId": "sc-iRbamj",
+          "styledComponentId": "sc-gPEVay",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -161,7 +161,7 @@ ShallowWrapper {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": undefined,
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-iRbamj",
             "isStatic": false,
             "rules": Array [
               "
@@ -200,7 +200,7 @@ ShallowWrapper {
             "textBreakStrategy": [Function],
           },
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-iRbamj",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -213,7 +213,7 @@ ShallowWrapper {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": undefined,
       "componentStyle": ComponentStyle {
-        "componentId": "sc-gPEVay",
+        "componentId": "sc-jDwBTQ",
         "isStatic": true,
         "rules": Array [
           "      
@@ -226,7 +226,7 @@ ShallowWrapper {
       "displayName": "Styled(TouchableOpacity)",
       "getDefaultProps": [Function],
       "render": [Function],
-      "styledComponentId": "sc-gPEVay",
+      "styledComponentId": "sc-jDwBTQ",
       "target": [Function],
       "toString": [Function],
       "warnTooManyClasses": [Function],
@@ -329,7 +329,7 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-iRbamj",
+              "componentId": "sc-gPEVay",
               "isStatic": false,
               "rules": Array [
                 "      
@@ -353,7 +353,7 @@ ShallowWrapper {
             },
             "displayName": "Styled(Component)",
             "render": [Function],
-            "styledComponentId": "sc-iRbamj",
+            "styledComponentId": "sc-gPEVay",
             "target": [Function],
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -376,7 +376,7 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-jlyJG",
+              "componentId": "sc-iRbamj",
               "isStatic": false,
               "rules": Array [
                 "
@@ -415,7 +415,7 @@ ShallowWrapper {
               "textBreakStrategy": [Function],
             },
             "render": [Function],
-            "styledComponentId": "sc-jlyJG",
+            "styledComponentId": "sc-iRbamj",
             "target": [Function],
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -428,7 +428,7 @@ ShallowWrapper {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": undefined,
         "componentStyle": ComponentStyle {
-          "componentId": "sc-gPEVay",
+          "componentId": "sc-jDwBTQ",
           "isStatic": true,
           "rules": Array [
             "      
@@ -441,7 +441,7 @@ ShallowWrapper {
         "displayName": "Styled(TouchableOpacity)",
         "getDefaultProps": [Function],
         "render": [Function],
-        "styledComponentId": "sc-gPEVay",
+        "styledComponentId": "sc-jDwBTQ",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
