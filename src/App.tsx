@@ -15,6 +15,7 @@ import RadioContainer from "./containers/radioContainer";
 import ListContainer from "./containers/listContainer";
 import BadgeContainer from "./containers/badgeContainer";
 import SearchContainer from "./containers/searchContainer";
+import TabContainer from "./containers/tabContainer";
 import CardsContainer from "./containers/cardsContainer";
 
 const RootStack = DrawerNavigator({
@@ -30,6 +31,7 @@ const RootStack = DrawerNavigator({
   List: ListContainer,
   Badge: BadgeContainer,
   Search: SearchContainer,
+  Tab: TabContainer,
   Cards: CardsContainer,
 },
   {

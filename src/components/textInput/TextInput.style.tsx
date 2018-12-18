@@ -41,8 +41,7 @@ function getColor(props: IProps) {
 
 const color = (props: IProps) => getColor(props);
 
-const StyledTextInput = styled(TextInput)`    
-    text-align: center;   
+const StyledTextInput = styled(TextInput)`       
     color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff": color)}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize :
         (props.theme && props.theme.textInput.fontSize ? props.theme.textInput.fontSize : '14px')}; 
