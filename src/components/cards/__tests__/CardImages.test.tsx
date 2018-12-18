@@ -1,4 +1,4 @@
-import Button from "../index";
+import CardImages from "../CardImages";
 import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
 
@@ -6,7 +6,7 @@ const createTestProps = (props: Object) => ({
   ...props,
 });
 
-describe("Button", () => {
+describe("CardImages", () => {
   describe("rendering", () => {
     let component: ShallowWrapper;
     let props: Object;
@@ -17,14 +17,14 @@ describe("Button", () => {
         secondary: true,
         success: true,
       });
-      component = shallow(<Button {...props} 
+      component = shallow(<CardImages source={require("../../../screen/ImagePage/img_avatar3.png")} {...props} 
         onPress={() => {
-          alert('You tapped the button!');
+          alert('You tapped the CardImages!');
       }}
-      >Button</Button>);
+      >CardImages</CardImages>);
     });
-    it("should render a <Button />", () => {
-      const component = shallow(<Button {...props} >Button</Button>);
+    it("should render a <CardImages />", () => {
+      const component = shallow(<CardImages source={require("../../../screen/ImagePage/img_avatar3.png")} {...props} >CardImages</CardImages>);
       expect(component).toMatchSnapshot();
     });
   });
