@@ -2,6 +2,8 @@ import * as React from "react";
 import { ThemeProvider, Theme as IPropsTheme } from "./components";
 import theme from "./common/theme";
 import { DrawerNavigator } from "react-navigation";
+import PanelContainer from "./containers/panelContainer";
+import AccordionContainer from "./containers/accordionContainer";
 import IconContainer from "./containers/iconContainer";
 import GridContainer from "./containers/gridContainer";
 import TextContainer from "./containers/textContainer";
@@ -18,6 +20,8 @@ import SearchContainer from "./containers/searchContainer";
 import CardsContainer from "./containers/cardsContainer";
 
 const RootStack = DrawerNavigator({
+  Panel: PanelContainer,
+  Accordion: AccordionContainer,
   Icon: IconContainer,
   Grid: GridContainer,
   Text: TextContainer,

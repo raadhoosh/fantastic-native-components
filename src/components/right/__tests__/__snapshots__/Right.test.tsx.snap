@@ -42,7 +42,7 @@ ShallowWrapper {
     },
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
+      "attrs": undefined,
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
         "isStatic": true,
@@ -91,7 +91,7 @@ ShallowWrapper {
       },
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
+        "attrs": undefined,
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": true,

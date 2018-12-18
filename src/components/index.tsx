@@ -1,4 +1,6 @@
 
+import Panel from "./Panel";
+import Accordion from "./Accordion";
 import Icon from "./icon";
 export { Grid, Col, Row } from "react-native-easy-grid";
 import StatusBar from "./statusBar";
@@ -25,6 +27,8 @@ import Card from "./cards/Card";
 import CardImages from "./cards/CardImages";
 
 export {
+    Panel,
+    Accordion,
     Icon,
     StatusBar,
     Right,
