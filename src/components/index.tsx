@@ -23,6 +23,7 @@ import Badge from "./badge";
 import Search from "./search";
 import Card from "./cards/Card";
 import CardImages from "./cards/CardImages";
+import FAB from "./fAB";
 
 export {
     Icon,
@@ -48,4 +49,5 @@ export {
     List,
     Card,
     CardImages,
+    FAB,
 };

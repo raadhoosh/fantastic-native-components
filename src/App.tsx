@@ -16,6 +16,7 @@ import ListContainer from "./containers/listContainer";
 import BadgeContainer from "./containers/badgeContainer";
 import SearchContainer from "./containers/searchContainer";
 import CardsContainer from "./containers/cardsContainer";
+import FABContainer from "./containers/fABContainer";
 
 const RootStack = DrawerNavigator({
   Icon: IconContainer,
@@ -31,6 +32,7 @@ const RootStack = DrawerNavigator({
   Badge: BadgeContainer,
   Search: SearchContainer,
   Cards: CardsContainer,
+  FAB: FABContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,
