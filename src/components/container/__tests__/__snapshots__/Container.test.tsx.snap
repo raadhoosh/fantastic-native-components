@@ -55,7 +55,7 @@ ShallowWrapper {
     },
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
+      "attrs": undefined,
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
         "isStatic": false,
@@ -116,7 +116,7 @@ padding-top: ",
       },
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
+        "attrs": undefined,
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": false,

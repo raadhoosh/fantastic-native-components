@@ -11,7 +11,7 @@ import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons";
 import Octicons from "react-native-vector-icons/Octicons";
 import Zocial from "react-native-vector-icons/Zocial";
 import { withTheme } from "styled-components";
-import { Theme } from '..';
+import { Theme } from "..";
 
 type Props = {
     type?: "Ionicons" | "Entypo" | "EvilIcons" | "Feather"

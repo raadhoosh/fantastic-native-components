@@ -77,7 +77,7 @@ ShallowWrapper {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": undefined,
           "componentStyle": ComponentStyle {
-            "componentId": "sc-eNQAEJ",
+            "componentId": "sc-jlyJG",
             "isStatic": false,
             "rules": Array [
               "      
@@ -92,7 +92,7 @@ ShallowWrapper {
           },
           "displayName": "Styled(WithTheme(Icon))",
           "render": [Function],
-          "styledComponentId": "sc-eNQAEJ",
+          "styledComponentId": "sc-jlyJG",
           "target": Object {
             "$$typeof": Symbol(react.forward_ref),
             "displayName": "WithTheme(Icon)",
@@ -128,7 +128,7 @@ ShallowWrapper {
           },
           "attrs": undefined,
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jKJlTe",
+            "componentId": "sc-iRbamj",
             "isStatic": false,
             "rules": Array [
               "      
@@ -151,7 +151,7 @@ ShallowWrapper {
           "displayName": "Styled(TextInput)",
           "getDefaultProps": [Function],
           "render": [Function],
-          "styledComponentId": "sc-jKJlTe",
+          "styledComponentId": "sc-iRbamj",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -165,7 +165,7 @@ ShallowWrapper {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": undefined,
       "componentStyle": ComponentStyle {
-        "componentId": "sc-ckVGcZ",
+        "componentId": "sc-gPEVay",
         "isStatic": false,
         "rules": Array [
           "     
@@ -192,7 +192,7 @@ ShallowWrapper {
       },
       "displayName": "Styled(Component)",
       "render": [Function],
-      "styledComponentId": "sc-ckVGcZ",
+      "styledComponentId": "sc-gPEVay",
       "target": [Function],
       "toString": [Function],
       "warnTooManyClasses": [Function],
@@ -260,7 +260,7 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-eNQAEJ",
+              "componentId": "sc-jlyJG",
               "isStatic": false,
               "rules": Array [
                 "      
@@ -275,7 +275,7 @@ ShallowWrapper {
             },
             "displayName": "Styled(WithTheme(Icon))",
             "render": [Function],
-            "styledComponentId": "sc-eNQAEJ",
+            "styledComponentId": "sc-jlyJG",
             "target": Object {
               "$$typeof": Symbol(react.forward_ref),
               "displayName": "WithTheme(Icon)",
@@ -311,7 +311,7 @@ ShallowWrapper {
             },
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-jKJlTe",
+              "componentId": "sc-iRbamj",
               "isStatic": false,
               "rules": Array [
                 "      
@@ -334,7 +334,7 @@ ShallowWrapper {
             "displayName": "Styled(TextInput)",
             "getDefaultProps": [Function],
             "render": [Function],
-            "styledComponentId": "sc-jKJlTe",
+            "styledComponentId": "sc-iRbamj",
             "target": [Function],
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -348,7 +348,7 @@ ShallowWrapper {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": undefined,
         "componentStyle": ComponentStyle {
-          "componentId": "sc-ckVGcZ",
+          "componentId": "sc-gPEVay",
           "isStatic": false,
           "rules": Array [
             "     
@@ -375,7 +375,7 @@ ShallowWrapper {
         },
         "displayName": "Styled(Component)",
         "render": [Function],
-        "styledComponentId": "sc-ckVGcZ",
+        "styledComponentId": "sc-gPEVay",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],

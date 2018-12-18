@@ -4,9 +4,13 @@ exports[`CheckBox rendering toMatchSnapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CheckBox
+    backgroundColor="9c27b0"
+    checked={true}
     color="#f00"
+    height={30}
     onPress={[Function]}
     primary={true}
+    width={30}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -23,11 +27,22 @@ ShallowWrapper {
     "props": Object {
       "activeOpacity": 0.2,
       "children": <ForwardRef
+        backgroundColor="9c27b0"
+        checked={true}
         color="#f00"
+        height={30}
         onPress={[Function]}
         primary={true}
-      />,
-      "onPress": undefined,
+        width={30}
+      >
+        <ForwardRef
+          color="#fff"
+          name="check"
+          size={12}
+          type="FontAwesome"
+        />
+      </ForwardRef>,
+      "onPress": [Function],
     },
     "ref": null,
     "rendered": Object {
@@ -35,18 +50,45 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": undefined,
+        "backgroundColor": "9c27b0",
+        "checked": true,
+        "children": <ForwardRef
+          color="#fff"
+          name="check"
+          size={12}
+          type="FontAwesome"
+        />,
         "color": "#f00",
+        "height": 30,
         "onPress": [Function],
         "primary": true,
+        "width": 30,
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "color": "#fff",
+          "name": "check",
+          "size": 12,
+          "type": "FontAwesome",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "WithTheme(Icon)",
+          "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
+      },
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
+        "attrs": undefined,
         "componentStyle": ComponentStyle {
-          "componentId": "sc-kgoBCf",
+          "componentId": "sc-jlyJG",
           "isStatic": false,
           "rules": Array [
             "      
@@ -73,7 +115,7 @@ ShallowWrapper {
         },
         "displayName": "Styled(Component)",
         "render": [Function],
-        "styledComponentId": "sc-kgoBCf",
+        "styledComponentId": "sc-jlyJG",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -91,11 +133,22 @@ ShallowWrapper {
       "props": Object {
         "activeOpacity": 0.2,
         "children": <ForwardRef
+          backgroundColor="9c27b0"
+          checked={true}
           color="#f00"
+          height={30}
           onPress={[Function]}
           primary={true}
-        />,
-        "onPress": undefined,
+          width={30}
+        >
+          <ForwardRef
+            color="#fff"
+            name="check"
+            size={12}
+            type="FontAwesome"
+          />
+        </ForwardRef>,
+        "onPress": [Function],
       },
       "ref": null,
       "rendered": Object {
@@ -103,18 +156,45 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": undefined,
+          "backgroundColor": "9c27b0",
+          "checked": true,
+          "children": <ForwardRef
+            color="#fff"
+            name="check"
+            size={12}
+            type="FontAwesome"
+          />,
           "color": "#f00",
+          "height": 30,
           "onPress": [Function],
           "primary": true,
+          "width": 30,
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "color": "#fff",
+            "name": "check",
+            "size": 12,
+            "type": "FontAwesome",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "WithTheme(Icon)",
+            "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
+        },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
+          "attrs": undefined,
           "componentStyle": ComponentStyle {
-            "componentId": "sc-kgoBCf",
+            "componentId": "sc-jlyJG",
             "isStatic": false,
             "rules": Array [
               "      
@@ -141,7 +221,7 @@ ShallowWrapper {
           },
           "displayName": "Styled(Component)",
           "render": [Function],
-          "styledComponentId": "sc-kgoBCf",
+          "styledComponentId": "sc-jlyJG",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],

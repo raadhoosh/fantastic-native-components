@@ -2,6 +2,7 @@ import React from "react";
 import SideBar from "../../screens/sideBar";
 
 const list = [
+    { route: "Accordion", name: "Accordion" },
     { route: "Icon", name: "Icon" },
     { route: "Grid", name: "Grid" },
     { route: "Text", name: "Text" },
@@ -10,7 +11,7 @@ const list = [
     { route: "Image", name: "Image" },
     { route: "Modal", name: "Modal" },
     { route: "CheckBox", name: "CheckBox" },
-    { route: "Radio", name: "Radio" },    
+    { route: "Radio", name: "Radio" },
     { route: "Badge", name: "Badge" },
     { route: "Search", name: "Search" },
     { route: "List", name: "List" },
