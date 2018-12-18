@@ -38,7 +38,7 @@ ShallowWrapper {
         "currentlyFocusedField": [Function],
         "focusTextInput": [Function],
       },
-      "attrs": Array [],
+      "attrs": undefined,
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
         "isStatic": false,
@@ -103,7 +103,7 @@ ShallowWrapper {
           "currentlyFocusedField": [Function],
           "focusTextInput": [Function],
         },
-        "attrs": Array [],
+        "attrs": undefined,
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": false,

@@ -1,4 +1,6 @@
 
+import Panel from "./Panel";
+import Accordion from "./Accordion";
 import Icon from "./icon";
 export { Grid, Col, Row } from "react-native-easy-grid";
 import StatusBar from "./statusBar";
@@ -24,8 +26,11 @@ import Search from "./search";
 import Tab from "./tabs/Tab";
 import Card from "./cards/Card";
 import CardImages from "./cards/CardImages";
+import FAB from "./fAB";
 
 export {
+    Panel,
+    Accordion,
     Icon,
     StatusBar,
     Right,
@@ -50,4 +55,5 @@ export {
     Tab,
     Card,
     CardImages,
+    FAB,
 };

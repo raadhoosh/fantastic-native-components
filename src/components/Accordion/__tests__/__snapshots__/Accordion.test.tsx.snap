@@ -1,0 +1,406 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion rendering toMatchSnapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Accordion
+    dataArray={
+      Array [
+        Object {
+          "content": "Lorem ipsum dolor sit amet",
+          "title": "First Element",
+        },
+        Object {
+          "content": "Lorem ipsum dolor sit amet",
+          "title": "Second Element",
+        },
+        Object {
+          "content": "Lorem ipsum dolor sit amet",
+          "title": "Third Element",
+        },
+      ]
+    }
+    expanded={0}
+    primary={true}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Panel
+          icon={
+            <ForwardRef
+              color="#fff"
+              name="sort-up"
+              type="FontAwesome"
+            />
+          }
+          primary={true}
+          title="First Element"
+          toggle={[Function]}
+          visible={true}
+        >
+          <Component>
+            <Component>
+              Lorem ipsum dolor sit amet
+            </Component>
+          </Component>
+        </Panel>,
+        <Panel
+          icon={
+            <ForwardRef
+              color="#fff"
+              name="sort-down"
+              type="FontAwesome"
+            />
+          }
+          primary={true}
+          title="Second Element"
+          toggle={[Function]}
+          visible={false}
+        >
+          <Component>
+            
+          </Component>
+        </Panel>,
+        <Panel
+          icon={
+            <ForwardRef
+              color="#fff"
+              name="sort-down"
+              type="FontAwesome"
+            />
+          }
+          primary={true}
+          title="Third Element"
+          toggle={[Function]}
+          visible={false}
+        >
+          <Component>
+            
+          </Component>
+        </Panel>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "class",
+        "props": Object {
+          "children": <Component>
+            <Component>
+              Lorem ipsum dolor sit amet
+            </Component>
+          </Component>,
+          "icon": <ForwardRef
+            color="#fff"
+            name="sort-up"
+            type="FontAwesome"
+          />,
+          "primary": true,
+          "title": "First Element",
+          "toggle": [Function],
+          "visible": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Component>
+              Lorem ipsum dolor sit amet
+            </Component>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Lorem ipsum dolor sit amet",
+            },
+            "ref": null,
+            "rendered": "Lorem ipsum dolor sit amet",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "class",
+        "props": Object {
+          "children": <Component>
+            
+          </Component>,
+          "icon": <ForwardRef
+            color="#fff"
+            name="sort-down"
+            type="FontAwesome"
+          />,
+          "primary": true,
+          "title": "Second Element",
+          "toggle": [Function],
+          "visible": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "class",
+        "props": Object {
+          "children": <Component>
+            
+          </Component>,
+          "icon": <ForwardRef
+            color="#fff"
+            name="sort-down"
+            type="FontAwesome"
+          />,
+          "primary": true,
+          "title": "Third Element",
+          "toggle": [Function],
+          "visible": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Panel
+            icon={
+              <ForwardRef
+                color="#fff"
+                name="sort-up"
+                type="FontAwesome"
+              />
+            }
+            primary={true}
+            title="First Element"
+            toggle={[Function]}
+            visible={true}
+          >
+            <Component>
+              <Component>
+                Lorem ipsum dolor sit amet
+              </Component>
+            </Component>
+          </Panel>,
+          <Panel
+            icon={
+              <ForwardRef
+                color="#fff"
+                name="sort-down"
+                type="FontAwesome"
+              />
+            }
+            primary={true}
+            title="Second Element"
+            toggle={[Function]}
+            visible={false}
+          >
+            <Component>
+              
+            </Component>
+          </Panel>,
+          <Panel
+            icon={
+              <ForwardRef
+                color="#fff"
+                name="sort-down"
+                type="FontAwesome"
+              />
+            }
+            primary={true}
+            title="Third Element"
+            toggle={[Function]}
+            visible={false}
+          >
+            <Component>
+              
+            </Component>
+          </Panel>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "class",
+          "props": Object {
+            "children": <Component>
+              <Component>
+                Lorem ipsum dolor sit amet
+              </Component>
+            </Component>,
+            "icon": <ForwardRef
+              color="#fff"
+              name="sort-up"
+              type="FontAwesome"
+            />,
+            "primary": true,
+            "title": "First Element",
+            "toggle": [Function],
+            "visible": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Component>
+                Lorem ipsum dolor sit amet
+              </Component>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Lorem ipsum dolor sit amet",
+              },
+              "ref": null,
+              "rendered": "Lorem ipsum dolor sit amet",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "class",
+          "props": Object {
+            "children": <Component>
+              
+            </Component>,
+            "icon": <ForwardRef
+              color="#fff"
+              name="sort-down"
+              type="FontAwesome"
+            />,
+            "primary": true,
+            "title": "Second Element",
+            "toggle": [Function],
+            "visible": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "children": <Component>
+              
+            </Component>,
+            "icon": <ForwardRef
+              color="#fff"
+              name="sort-down"
+              type="FontAwesome"
+            />,
+            "primary": true,
+            "title": "Third Element",
+            "toggle": [Function],
+            "visible": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

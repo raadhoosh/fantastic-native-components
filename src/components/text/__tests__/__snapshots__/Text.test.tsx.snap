@@ -30,7 +30,7 @@ ShallowWrapper {
     "rendered": "text",
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
+      "attrs": undefined,
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
         "isStatic": false,
@@ -96,7 +96,7 @@ width: auto
       "rendered": "text",
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
+        "attrs": undefined,
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": false,

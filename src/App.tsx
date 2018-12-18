@@ -2,6 +2,8 @@ import * as React from "react";
 import { ThemeProvider, Theme as IPropsTheme } from "./components";
 import theme from "./common/theme";
 import { DrawerNavigator } from "react-navigation";
+import PanelContainer from "./containers/panelContainer";
+import AccordionContainer from "./containers/accordionContainer";
 import IconContainer from "./containers/iconContainer";
 import GridContainer from "./containers/gridContainer";
 import TextContainer from "./containers/textContainer";
@@ -17,8 +19,11 @@ import BadgeContainer from "./containers/badgeContainer";
 import SearchContainer from "./containers/searchContainer";
 import TabContainer from "./containers/tabContainer";
 import CardsContainer from "./containers/cardsContainer";
+import FABContainer from "./containers/fABContainer";
 
 const RootStack = DrawerNavigator({
+  Panel: PanelContainer,
+  Accordion: AccordionContainer,
   Icon: IconContainer,
   Grid: GridContainer,
   Text: TextContainer,
@@ -33,6 +38,7 @@ const RootStack = DrawerNavigator({
   Search: SearchContainer,
   Tab: TabContainer,
   Cards: CardsContainer,
+  FAB: FABContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,
