@@ -1,7 +1,39 @@
+// .RH-tab {
+//   margin: 0 auto 20px auto;
+//   .tab {
+//     margin: 0;
+//     padding: 0;
+//     position: relative;
+//     top: 1px;
+//     z-index: 1;
+//     font-size: 20px;
+//     box-sizing: border-box;
+//     .tabTitle {
+//       padding: 5px 15px;
+//       cursor: pointer;
+//       display: inline-block;
+//       font-size: 13px;
+//       border-top: 4px solid transparent;
+//       border-left: 1px solid transparent;
+//       border-right: 1px solid transparent;
+//       &.active {
+//         background-color: $white-color;
+//         border-top: 4px solid $primary-border-color;
+//         border-left: 1px solid $border-light-color;
+//         border-right: 1px solid $border-light-color;
+//       }
+//     }
+//   }
+//   > div {
+//     background-color: $white-color;
+//     padding: 20px;
+//     border: 1px solid $border-light-color;
+//   }
+// }
+
 import styled from "styled-components";
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text, View } from "react-native";
 import { Theme } from '..';
-import View from "../content/Content.style";
 
 interface IProps {
     primary?: boolean;
@@ -63,10 +95,39 @@ const TabWrapper = styled(View)`
     margin-bottom: 5px;    
 `;
 
-const TabText = styled(Text)`    
+const StyledTabTitle = styled(TouchableOpacity)`    
     text-align: center;   
+    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
+    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};  
+`;
+
+const StyledTabHeading = styled(View)`    
+    flex: 1;
+    flex-direction: row;    
+    align-items:center;  
+    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};  
     color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
 `;
 
-export { TabWrapper, TabText };
+const StyledTabTitleText = styled(Text)`    
+    text-align: center;   
+    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '16px'}; 
+    padding: 10px;
+    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};  
+`;
+
+const StyledTabs = styled(View)`   
+    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
+`;
+
+const TabContent = styled(Text)`      
+    color: #000; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
+    padding: 10px;
+`;
+
+export { TabWrapper, StyledTabTitle, StyledTabTitleText, StyledTabHeading, StyledTabs, TabContent };

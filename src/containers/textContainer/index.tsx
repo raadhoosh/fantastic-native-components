@@ -2,11 +2,15 @@ import React from "react";
 import TextPage from "../../screens/textPage";
 export interface Props {
     children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    navigation: any;
 }
 class TextContainer extends React.PureComponent<Props> {
     render() {
-        return (<TextPage {...this.props} />);
+        return (<TextPage 
+            openDrawer={() => {
+                this.props.navigation.openDrawer();
+            }}
+            {...this.props} />);
     }
 }
 

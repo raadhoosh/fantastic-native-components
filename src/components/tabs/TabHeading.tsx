@@ -1,10 +1,10 @@
 import * as React from "react";
-import { TabText, TabWrapper } from "./Tabs.style";
 import { ViewStyle } from "react-native";
+import { StyledTabHeading } from "./Tabs.style";
+import TabTitle from './TabTitle';
 import { Theme } from '..';
 
-interface IProps {
-  children: JSX.Element | JSX.Element[] | string;
+interface IProps {  
   style?: ViewStyle | object | Array<ViewStyle>;
   primary?: boolean;
   secondary?: boolean;
@@ -23,17 +23,39 @@ interface IProps {
   disabled?: boolean;
   fontSize?: string | number;
   borderRadius?: string;
+
+  tabs?: Array<{ id: number, title: string, content: string | JSX.Element | JSX.Element[] }>;
+  currentTab : number; 
+  active?: string;
+  onTabChange:(index: number) => void;  
+  index?: number;
+  rtl?:boolean;
 }
 
-const Tab = (props: IProps) => {
-
+const TabHeading = (props: IProps) => {
+alert(props.currentTab)
   return (
-    <TabWrapper {...props} activeOpacity={0.8} onPress={props.disabled ? undefined : props.onPress} >
-      <TabText {...props}>
-        {props.children}
-      </TabText>
-    </TabWrapper>
+    <StyledTabHeading>    
+
+    {
+        props.tabs && props.tabs.map((tab, index) => {
+            return (
+                <TabTitle
+                    title={tab.title}
+                    key={index}
+                    index={index}
+                    currentTab={props.currentTab}
+                    active={`${props.currentTab === index ? 'true' : 'false'}`}
+                    onTabChange={props.onTabChange}                    
+                    rtl={props.rtl}
+                    style={[props.currentTab === index ? {backgroundColor: "#f00"} : " "]}
+                    {...props}
+                />
+            );
+        })
+    }
+</StyledTabHeading>
   );
 };
 
-export default Tab;
+export default TabHeading;
