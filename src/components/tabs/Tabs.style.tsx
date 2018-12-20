@@ -1,36 +1,3 @@
-// .RH-tab {
-//   margin: 0 auto 20px auto;
-//   .tab {
-//     margin: 0;
-//     padding: 0;
-//     position: relative;
-//     top: 1px;
-//     z-index: 1;
-//     font-size: 20px;
-//     box-sizing: border-box;
-//     .tabTitle {
-//       padding: 5px 15px;
-//       cursor: pointer;
-//       display: inline-block;
-//       font-size: 13px;
-//       border-top: 4px solid transparent;
-//       border-left: 1px solid transparent;
-//       border-right: 1px solid transparent;
-//       &.active {
-//         background-color: $white-color;
-//         border-top: 4px solid $primary-border-color;
-//         border-left: 1px solid $border-light-color;
-//         border-right: 1px solid $border-light-color;
-//       }
-//     }
-//   }
-//   > div {
-//     background-color: $white-color;
-//     padding: 20px;
-//     border: 1px solid $border-light-color;
-//   }
-// }
-
 import styled from "styled-components";
 import { TouchableOpacity, Text, View } from "react-native";
 import { Theme } from '..';
@@ -45,9 +12,12 @@ interface IProps {
     light?: boolean;
     dark?: boolean;
     inverse?: boolean;
+    active?: string;
     backgroundColor?: string;
+    backgroundColorLight?: string;
+    borderActive?: string;
     color?: string;
-    width?: string;    
+    width?: string;
     theme?: Theme;
     disabled?: boolean;
     fontSize?: string | number;
@@ -56,9 +26,11 @@ interface IProps {
 
 function getColor(props: IProps) {
 
-    let backgroundColor =  "#6c757d";
-    let ForeColor =  "#fff";
-    
+    let backgroundColor = "#6c757d";
+    let backgroundColorLight = "#6c757d";
+    let ForeColor = "#fff";
+    let borderActive = "#ccc";
+
     if (props.color) {
         ForeColor = props.color;
     }
@@ -76,24 +48,20 @@ function getColor(props: IProps) {
         if (typeof (color) === "string" && props.theme) {
             backgroundColor = props.theme[color].main;
             ForeColor = props.theme[color].contrastText;
+            borderActive = props.theme[color].dark;
+            backgroundColorLight = props.theme[color].light;
         }
 
     }
 
-    const btnColor = { backgroundColor: backgroundColor, ForeColor: ForeColor };
+    const btnColor = { backgroundColor: backgroundColor, ForeColor: ForeColor, borderActive: borderActive, backgroundColorLight: backgroundColorLight };
     return btnColor;
 }
 
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
 const ForeColor = (props: IProps) => getColor(props).ForeColor;
-
-const TabWrapper = styled(View)`      
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};    
-    border: 1px solid ${(props: IProps) => props.disabled ? "#ddd" : backgroundColor};        
-    width: ${(props: IProps) => props.width ? props.width :'auto'};  
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :'0'}; 
-    margin-bottom: 5px;    
-`;
+const borderActive = (props: IProps) => getColor(props).borderActive;
+const backgroundColorLight = (props: IProps) => getColor(props).backgroundColorLight;
 
 const StyledTabTitle = styled(TouchableOpacity)`    
     text-align: center;   
@@ -104,30 +72,27 @@ const StyledTabTitle = styled(TouchableOpacity)`
 
 const StyledTabHeading = styled(View)`    
     flex: 1;
-    flex-direction: row;    
-    align-items:center;  
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};  
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
+    flex-direction: row;   
 `;
 
 const StyledTabTitleText = styled(Text)`    
     text-align: center;   
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
+    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ?  ( props.active === "true" ? borderActive : backgroundColor ) : ForeColor}; 
     font-size:${(props: IProps) => props.fontSize ? props.fontSize : '16px'}; 
     padding: 10px;
-    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : backgroundColor)};  
+    background-color: ${(props: IProps) => props.disabled ? "#ddd" : (props.inverse ? ForeColor : ( props.active === "true" ? backgroundColorLight : backgroundColor ))};
+    border-bottom-width:  2;
+    border-bottom-color:  ${(props: IProps) => props.active === "true" ? borderActive : backgroundColor};
 `;
 
 const StyledTabs = styled(View)`   
-    color: ${(props: IProps) => props.disabled ? "#a1a1a1" : props.inverse ? backgroundColor : ForeColor}; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
+    border-width:  1;
+    border-color:  transparent;
 `;
 
 const TabContent = styled(Text)`      
-    color: #000; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
+    background-color: #fff;
     padding: 10px;
 `;
 
-export { TabWrapper, StyledTabTitle, StyledTabTitleText, StyledTabHeading, StyledTabs, TabContent };
+export { StyledTabTitle, StyledTabTitleText, StyledTabHeading, StyledTabs, TabContent };

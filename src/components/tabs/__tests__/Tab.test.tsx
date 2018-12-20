@@ -1,4 +1,4 @@
-import Button from "../index";
+import Tab from "../Tab";
 import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
 
@@ -6,7 +6,7 @@ const createTestProps = (props: Object) => ({
   ...props,
 });
 
-describe("Button", () => {
+describe("Tab", () => {
   describe("rendering", () => {
     let component: ShallowWrapper;
     let props: Object;
@@ -17,14 +17,14 @@ describe("Button", () => {
         secondary: true,
         success: true,
       });
-      component = shallow(<Button {...props} 
+      component = shallow(<Tab {...props} 
         onPress={() => {
-          alert('You tapped the button!');
+          alert('You tapped the Tab!');
       }}
-      >Button</Button>);
+      >Tab</Tab>);
     });
-    it("should render a <Button />", () => {
-      const component = shallow(<Button {...props} >Button</Button>);
+    it("should render a <Tab />", () => {
+      const component = shallow(<Tab {...props} >Tab</Tab>);
       expect(component).toMatchSnapshot();
     });
   });

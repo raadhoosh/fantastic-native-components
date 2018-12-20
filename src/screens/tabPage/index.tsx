@@ -50,14 +50,14 @@ class TabPage extends React.PureComponent<Props> {
                 <View style={{ marginTop: 30, marginBottom: 20 }}>
                     <Tab
                         secondary
-                        currentTab={0}
+                        currentTab={1}
                         dataTabs={dataTabs}
                     />
                 </View>
                 <View style={{ marginTop: 30, marginBottom: 20 }}>
                     <Tab
                         success
-                        currentTab={0}
+                        currentTab={2}
                         dataTabs={dataTabs}
                     />
                 </View>
@@ -69,6 +69,41 @@ class TabPage extends React.PureComponent<Props> {
                         dataTabs={dataTabs}
                     />
                 </View>
+                <View style={{ marginTop: 30, marginBottom: 20 }}>
+                    <Tab
+                        success
+                        inverse
+                        currentTab={0}
+                        dataTabs={dataTabs}
+                    />
+                </View>
+
+                <View style={{ marginTop: 30, marginBottom: 20 }}>
+                    <Tab
+                        primary
+                        inverse
+                        currentTab={0}
+                        dataTabs={dataTabs}
+                    />
+                </View>
+
+                <View style={{ marginTop: 30, marginBottom: 20 }}>
+                    <Tab                        
+                        inverse
+                        currentTab={0}
+                        dataTabs={dataTabs}
+                    />
+                </View>
+
+                <View style={{ marginTop: 30, marginBottom: 20 }}>
+                    <Tab
+                        success
+                        disabled
+                        currentTab={0}
+                        dataTabs={dataTabs}
+                    />
+                </View>
+
             </Content>
             <Footer>
                 <Title>{"Footer"}</Title>

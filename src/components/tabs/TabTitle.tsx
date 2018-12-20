@@ -24,13 +24,12 @@ interface IProps {
   borderRadius?: string;
   title?: string;
   active?: string;
-  onTabChange :(index: number) => void;
-  currentTab: number;
+  onTabChange :(index: number) => void;  
   index: number;
 }
 
 const TabTitle = (props: IProps) => {
-
+  
   return (
     <StyledTabTitle {...props} activeOpacity={0.8} onPress={props.disabled ? undefined : () => props.onTabChange(props.index)} >
       <StyledTabTitleText style={props.style} {...props}>

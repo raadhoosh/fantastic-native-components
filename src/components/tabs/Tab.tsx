@@ -5,7 +5,7 @@ import { StyledTabs, TabContent } from "./Tabs.style";
 import { Theme } from '..';
 
 export interface IState {
-    currentTab: number
+    currentTabIndex: number
 }
 
 interface IProps {
@@ -26,7 +26,7 @@ interface IProps {
     onPress?: () => void;
     disabled?: boolean;
     fontSize?: string | number;
-    borderRadius?: string;    
+    borderRadius?: string;
     currentTab: number;
     dataTabs: Array<{ id: number, title: string, content: string | JSX.Element | JSX.Element[] }>;
     rtl?: boolean;
@@ -36,26 +36,26 @@ class Tabs extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
-            currentTab: props.currentTab
+            currentTabIndex: props.currentTab
         };
         this.onTabChange = this.onTabChange.bind(this)
     }
 
     onTabChange(index: number) {
-        this.setState({ currentTab: index });
+        this.setState({ currentTabIndex: index });        
     }
 
     render() {
-alert(this.state.currentTab)
-        const tabContent = this.props.dataTabs ? this.props.dataTabs[this.state.currentTab].content : " ";
+       
+        const tabContent = this.props.dataTabs ? this.props.dataTabs[this.state.currentTabIndex].content : " ";
         return (
             <StyledTabs {...this.props} >
                 <TabHeading
                     tabs={this.props.dataTabs}
                     onTabChange={this.onTabChange}
-                    currentTab={this.state.currentTab}
-                    rtl={this.props.rtl}    
-                    {...this.props}               
+                    currentIndex= {this.state.currentTabIndex}
+                    rtl={this.props.rtl}
+                    {...this.props}
                 />
                 <TabContent {...this.props} >
                     {tabContent}
