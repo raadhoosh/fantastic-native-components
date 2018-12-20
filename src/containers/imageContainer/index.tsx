@@ -1,13 +1,14 @@
 import React from "react";
 import ImagePage from "../../screens/imagePage";
 export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;   
+    navigation: any;   
 }
 
 class TextContainer extends React.PureComponent<Props> {
     render() {
-        return (<ImagePage {...this.props}/>);
+        return (<ImagePage openDrawer={() => {
+            this.props.navigation.openDrawer();
+        }}/>);
     }
 }
 

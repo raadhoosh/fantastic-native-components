@@ -1,9 +1,9 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, TextInput } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, TextInput, Icon } from "../../components";
 
 export interface Props {
-    openDrawer: any;
+    openDrawer: () => void;
 }
 class TextInputPage extends React.PureComponent<Props> {
     render() {
@@ -11,17 +11,17 @@ class TextInputPage extends React.PureComponent<Props> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                        <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"TextInputPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                    <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content>
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: 30 }}>
-                    <TextInput width={'200px'}  placeholder={"Type here to translate!"} />
+                    <TextInput width={'200px'} placeholder={"Type here to translate!"} />
                     <TextInput primary width={'200px'} placeholder={"primary"} />
                     <TextInput secondary width={'200px'} placeholder={"secondary"} />
                     <TextInput success width={'200px'} placeholder={"success"} placeholderTextColor={"#618833"} />

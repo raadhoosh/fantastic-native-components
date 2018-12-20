@@ -1,10 +1,9 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, FAB } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, FAB, Icon } from "../../components";
 
 export interface FABPageProps {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    openDrawer: () => void;
 }
 class FABPage extends React.PureComponent<FABPageProps> {
     constructor(props: FABPageProps) {
@@ -15,12 +14,12 @@ class FABPage extends React.PureComponent<FABPageProps> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                    <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"FABPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>            
           

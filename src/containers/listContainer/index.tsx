@@ -1,12 +1,14 @@
 import React from "react";
 import ListPage from "../../screens/listPage";
 export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    navigation: any;
 }
+
 class ListContainer extends React.PureComponent<Props> {
     render() {
-        return (<ListPage {...this.props} />);
+        return (<ListPage openDrawer={() => {
+            this.props.navigation.openDrawer();
+        }} />);
     }
 }
 

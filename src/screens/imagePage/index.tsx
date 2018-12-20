@@ -1,8 +1,8 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, Image } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, Image, Icon } from "../../components";
 
-export interface Props {
+export interface Props {    
     openDrawer: any;
 }
 
@@ -12,12 +12,12 @@ class ImagePage extends React.PureComponent<Props> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                    <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"ImagePage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content>

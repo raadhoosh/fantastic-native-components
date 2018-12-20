@@ -1,10 +1,9 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, Search } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, Search, Icon } from "../../components";
 
 export interface Props {
-    openDrawer: any;
-    onChangeText?: (text: string) => void;
+    openDrawer: () => void;
 }
 
 export interface IState {
@@ -38,12 +37,12 @@ class SearchPage extends React.PureComponent<Props, IState> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                        <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"SearchPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                    <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
 
@@ -85,7 +84,7 @@ class SearchPage extends React.PureComponent<Props, IState> {
                     <Search
                         placeholder={"backgroundColor"}
                         value={this.state.value[4]}
-                        backgroundColor={"#f00"}                        
+                        backgroundColor={"#f00"}
                         color={"#fff"}
                         borderRadius={50}
                         onChangeText={(value) => this.onChangeText(value, 4)}

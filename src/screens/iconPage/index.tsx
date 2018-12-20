@@ -10,12 +10,12 @@ class IconPage extends React.PureComponent<Props> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Icon type="FontAwesome" name="list" />
+                    <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
                 <Title>{"IconPage"}</Title>
                 <Right>
-                    <Icon type="FontAwesome" name="search" />
+                    <Icon type="FontAwesome" name="search" color={"#fff"}/>
                 </Right>
             </Header>
             <Content>

@@ -1,10 +1,9 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, Badge } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, Badge, Icon } from "../../components";
 
 export interface BadgePageProps {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    openDrawer: () => void;
 }
 class BadgePage extends React.PureComponent<BadgePageProps> {
     constructor(props: BadgePageProps) {
@@ -15,12 +14,12 @@ class BadgePage extends React.PureComponent<BadgePageProps> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                        <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"BadgePage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                    <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content>
@@ -30,7 +29,7 @@ class BadgePage extends React.PureComponent<BadgePageProps> {
                     <Badge success>Success</Badge>
                     <Badge info>Info</Badge>
                     <Badge warning>Warning</Badge>
-                    <Badge backgroundColor={"#9c27b0"} color="#fff"                       
+                    <Badge backgroundColor={"#9c27b0"} color="#fff"
                     >backgroundColor</Badge>
                 </View>
 
@@ -39,10 +38,10 @@ class BadgePage extends React.PureComponent<BadgePageProps> {
                     <Badge secondary inverse >Secondary</Badge>
                     <Badge success inverse >Success</Badge>
                     <Badge info inverse >Info</Badge>
-                    <Badge warning  inverse >Warning</Badge>                    
+                    <Badge warning inverse >Warning</Badge>
                     <Badge inverse >Basic</Badge>
                     <Badge borderRadius={10} width={100}>width</Badge>
-                    <Badge borderRadius={0} backgroundColor="#ff0080"  BorderColor="#ff0080">backgroundColor</Badge>
+                    <Badge borderRadius={0} backgroundColor="#ff0080" BorderColor="#ff0080">backgroundColor</Badge>
                     <Badge borderRadius={0} backgroundColor="#fff" color="#000">BorderRadius</Badge>
                     <Badge borderRadius={0} backgroundColor="#fff" color="#000" BorderColor="#9c27b0">BorderColor</Badge>
                 </View>

@@ -1,12 +1,13 @@
 import React from "react";
 import ModalPage from "../../screens/modalPage";
 export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    navigation: any;
 }
 class ModalContainer extends React.PureComponent<Props> {
     render() {
-        return (<ModalPage {...this.props} />);
+        return (<ModalPage openDrawer={() => {
+            this.props.navigation.openDrawer();
+        }} />);
     }
 }
 

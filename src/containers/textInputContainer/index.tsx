@@ -1,12 +1,13 @@
 import React from "react";
 import TextInputPage from "../../screens/textInputPage";
 export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    navigation: any;
 }
 class TextInputContainer extends React.PureComponent<Props> {
     render() {
-        return (<TextInputPage {...this.props} />);
+        return (<TextInputPage openDrawer={() => {
+            this.props.navigation.openDrawer();
+        }} />);
     }
 }
 

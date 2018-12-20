@@ -12,13 +12,13 @@ class TextPage extends React.PureComponent<Props> {
         return (<Container>
             <Header>
                 <Left>
-                <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Icon type="FontAwesome" name="list" />
+                    <TouchableOpacity onPress={this.props.openDrawer}>
+                        <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"TextPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                    <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content>
