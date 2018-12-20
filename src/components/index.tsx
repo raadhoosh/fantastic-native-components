@@ -23,6 +23,7 @@ import Radio from "./radio";
 import List from "./list";
 import Badge from "./badge";
 import Search from "./search";
+import Tab from "./tabs/Tab";
 import Card from "./cards/Card";
 import CardImages from "./cards/CardImages";
 import FAB from "./fAB";
@@ -51,6 +52,7 @@ export {
     Badge,
     Search,
     List,
+    Tab,
     Card,
     CardImages,
     FAB,

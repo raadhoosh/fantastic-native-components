@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, Icon } from "../../components";
 
 export interface Props {
     children: JSX.Element | JSX.Element[] | string;
@@ -12,8 +12,8 @@ class TextPage extends React.PureComponent<Props> {
         return (<Container>
             <Header>
                 <Left>
-                    <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                <TouchableOpacity onPress={this.props.openDrawer}>
+                        <Icon type="FontAwesome" name="list" />
                     </TouchableOpacity>
                 </Left>
                 <Title>{"Headers"}</Title>

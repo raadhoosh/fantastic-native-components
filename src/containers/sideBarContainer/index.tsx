@@ -16,6 +16,7 @@ const list = [
     { route: "Badge", name: "Badge" },
     { route: "Search", name: "Search" },
     { route: "List", name: "List" },
+    { route: "Tab", name: "Tab" },
     { route: "Cards", name: "Cards" },
     { route: "FAB", name: "FAB" },
 ];
