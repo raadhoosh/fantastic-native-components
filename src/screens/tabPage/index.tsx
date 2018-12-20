@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, TouchableOpacity, Dimensions } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Tab, Col, Row } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Tab, Icon } from "../../components";
 import View from "../../components/content/Content.style";
 
 export interface Props {
@@ -31,12 +31,12 @@ class TabPage extends React.PureComponent<Props> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                        <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"TabPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                    <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content full>
@@ -88,7 +88,7 @@ class TabPage extends React.PureComponent<Props> {
                 </View>
 
                 <View style={{ marginTop: 30, marginBottom: 20 }}>
-                    <Tab                        
+                    <Tab
                         inverse
                         currentTab={0}
                         dataTabs={dataTabs}

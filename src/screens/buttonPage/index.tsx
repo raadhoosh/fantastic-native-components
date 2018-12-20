@@ -1,10 +1,9 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, Button } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, Button, Icon } from "../../components";
 
 export interface ButtonPageProps {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    openDrawer: () => void;
 }
 class ButtonPage extends React.PureComponent<ButtonPageProps> {
     constructor(props: ButtonPageProps) {
@@ -15,12 +14,12 @@ class ButtonPage extends React.PureComponent<ButtonPageProps> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                        <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"ButtonPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                    <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content>

@@ -11,12 +11,12 @@ class PanelPage extends React.PureComponent<Props> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Icon type="Ionicons" name="md-menu" />
+                        <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
                 <Title>{"PanelPage"}</Title>
                 <Right>
-                    <Icon type="FontAwesome" name="search" />
+                    <Icon type="FontAwesome" name="search" color={"#fff"} />
                 </Right>
             </Header>
             <Content>

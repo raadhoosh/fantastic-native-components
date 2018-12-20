@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, TouchableHighlight, Alert } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, Modal } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, Modal, Icon } from "../../components";
 
 export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    openDrawer: () => void;
 }
 
 export interface IState {
@@ -28,12 +27,12 @@ class ModalPage extends Component<Props, IState> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                    <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"ModalPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content>

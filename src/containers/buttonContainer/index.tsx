@@ -1,12 +1,13 @@
 import React from "react";
 import ButtonPage from "../../screens/buttonPage";
 export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    navigation: any;
 }
 class ButtonContainer extends React.PureComponent<Props> {
     render() {
-        return (<ButtonPage {...this.props} />);
+        return (<ButtonPage openDrawer={() => {
+            this.props.navigation.openDrawer();
+        }} />);
     }
 }
 

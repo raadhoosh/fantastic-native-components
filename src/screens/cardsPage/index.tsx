@@ -1,10 +1,9 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, CardImages } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, CardImages, Icon } from "../../components";
 
 export interface CardImagesPageProps {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    openDrawer: () => void;
 }
 class CardImagesPage extends React.PureComponent<CardImagesPageProps> {
     constructor(props: CardImagesPageProps) {
@@ -16,12 +15,12 @@ class CardImagesPage extends React.PureComponent<CardImagesPageProps> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                    <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"CardImagesPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content>

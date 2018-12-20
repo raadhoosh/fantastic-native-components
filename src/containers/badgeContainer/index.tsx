@@ -1,12 +1,13 @@
 import React from "react";
 import BadgePage from "../../screens/badgePage";
 export interface Props {
-    children: JSX.Element | JSX.Element[] | string;
-    openDrawer: any;
+    navigation: any;
 }
 class BadgeContainer extends React.PureComponent<Props> {
     render() {
-        return (<BadgePage {...this.props} />);
+        return (<BadgePage openDrawer={() => {
+            this.props.navigation.openDrawer();
+        }} />);
     }
 }
 

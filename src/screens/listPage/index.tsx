@@ -1,9 +1,9 @@
 import React from "react";
 import { View, TouchableOpacity ,Image } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Text, List } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Text, List, Icon } from "../../components";
 
 export interface Props {
-    openDrawer: any;
+    openDrawer: () => void;
 }
 
 class ListPage extends React.PureComponent<Props> {
@@ -37,12 +37,12 @@ class ListPage extends React.PureComponent<Props> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Text>menu</Text>
+                    <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"Headers"}</Title>
+                <Title>{"ListPage"}</Title>
                 <Right>
-                    <Text>right</Text>
+                <Text style={{ color: "#fff" }}>right</Text>
                 </Right>
             </Header>
             <Content>
