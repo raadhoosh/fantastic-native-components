@@ -20,6 +20,7 @@ import SearchContainer from "./containers/searchContainer";
 import TabContainer from "./containers/tabContainer";
 import CardsContainer from "./containers/cardsContainer";
 import FABContainer from "./containers/fABContainer";
+import ToastContainer from "./containers/toastsContainer";
 
 const RootStack = DrawerNavigator({
   Panel: PanelContainer,
@@ -39,6 +40,7 @@ const RootStack = DrawerNavigator({
   Tab: TabContainer,
   Cards: CardsContainer,
   FAB: FABContainer,
+  Toasts: ToastContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,

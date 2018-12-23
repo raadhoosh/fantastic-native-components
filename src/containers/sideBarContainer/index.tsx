@@ -19,6 +19,7 @@ const list = [
     { route: "Tab", name: "Tab" },
     { route: "Cards", name: "Cards" },
     { route: "FAB", name: "FAB" },
+    { route: "Toasts", name: "Toasts" },
 ];
 export interface IProps {
     navigation: any;
