@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
   View,
-  TouchableHighlight,
   Animated,
   Dimensions
 } from 'react-native';
-// import { Icon, Text } from "../../components";
-import { StyledToasts } from "./Toast.style";
+
+import { StyledToasts, StyledToastsText } from "./Toast.style";
 import { Theme } from "..";
 
 export interface IState {
@@ -32,29 +28,21 @@ export interface IProps {
   width?: number | string;
   height?: number | string;
   theme?: Theme;
-  onPress?: () => void;
-  disabled?: boolean;
   borderRadius?: string;
-  checked?: boolean;
   message?: string;
   modalShown?: boolean;
+  borderColor?: string;
 }
 
-let windowWidth = Dimensions.get('window').width
-let windowHeight = Dimensions.get('window').height
-
 class Toasts extends Component<IProps, IState> {
+  animatedValue: Animated.Value;
 
   constructor(props: IProps, ) {
     super(props)
     this.animatedValue = new Animated.Value(0)
-    this.animatedXValue = new Animated.Value(-windowWidth)
-   
+
     this.callToast = this.callToast.bind(this)
-  }
-
-  componentDidMount() {
-
+    this.closeToast = this.closeToast.bind(this)
   }
 
   UNSAFE_componentWillReceiveProps(nextProps: IProps) {
@@ -64,17 +52,17 @@ class Toasts extends Component<IProps, IState> {
     }
   }
 
-  callToast() {   
+  callToast() {
     Animated.timing(
       this.animatedValue,
       {
         toValue: 1,
         duration: 350
-      }).start(this.closeToast())
+      }).start(() => this.closeToast());
   }
 
   closeToast() {
-    setTimeout(() => {      
+    setTimeout(() => {
       Animated.timing(
         this.animatedValue,
         {
@@ -83,26 +71,6 @@ class Toasts extends Component<IProps, IState> {
         }).start()
     }, 2000)
   }
-
-  // callXToast() {
-  //   Animated.timing(
-  //     this.animatedXValue,
-  //     {
-  //       toValue: 0,
-  //       duration: 350
-  //     }).start(this.closeXToast())
-  // }
-
-  // closeXToast() {
-  //   setTimeout(() => {
-  //     Animated.timing(
-  //       this.animatedXValue,
-  //       {
-  //         toValue: -windowWidth,
-  //         duration: 350
-  //       }).start()
-  //   }, 2000)
-  // }
 
   render() {
 
@@ -116,18 +84,10 @@ class Toasts extends Component<IProps, IState> {
         <StyledToasts {...this.props} style={{
           transform: [{ translateY: animation }]
         }}>
-          <Text style={{ marginLeft: 10, color: 'white', fontSize: 16, fontWeight: 'bold' }}>
+          <StyledToastsText {...this.props}>
             {this.props.message}
-          </Text>
+          </StyledToastsText>
         </StyledToasts>
-
-        <Animated.View style={{
-          transform: [{ translateX: this.animatedXValue }],
-          height: 70, marginTop: windowHeight - 70, backgroundColor: 'green', position: 'absolute', left: 0,
-          top: 0, width: windowWidth, justifyContent: 'center'
-        }}>
-          <Text style={{ marginLeft: 10, color: 'white', fontSize: 16, fontWeight: 'bold', textAlign: 'center' }}>Success!</Text>
-        </Animated.View>
 
       </View>
     );

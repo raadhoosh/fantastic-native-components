@@ -19,8 +19,7 @@ describe("Toast", () => {
       });
       component = shallow(<Toast primary 
         color= '#f00'         
-        backgroundColor="9c27b0"  
-      
+        backgroundColor="9c27b0"        
       />);
     });
     it("renders", () => {

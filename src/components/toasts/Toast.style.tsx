@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { View, Animated } from "react-native";
+import { Text, Animated, Dimensions } from "react-native";
 import { Theme } from '..';
 
 interface IProps {
@@ -17,10 +17,9 @@ interface IProps {
     width?: number | string;
     height?: number | string;
     theme?: Theme;
-    disabled?: boolean;
     fontSize?: string | number;
     borderRadius?: string;
-    checked?: boolean;
+    borderColor?: string;
 }
 
 function getColor(props: IProps) {
@@ -54,20 +53,25 @@ function getColor(props: IProps) {
 }
 
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
+const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
 const StyledToasts = styled(Animated.View)`      
-    border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
+    border: 1px solid ${(props: IProps) => props.borderColor ? props.borderColor : backgroundColor};       
     width: ${(props: IProps) => props.width ? props.width : '100%'};       
     height: ${(props: IProps) => props.height ? props.height : '70'};             
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};     
-    justify-content: center;
-    align-items: center;
-    background-color: ${backgroundColor};
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};   
+    background-color: ${(props: IProps) =>  (props.inverse ? ForeColor : backgroundColor)};      
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
-   
+    top: 0;  
+    padding: 10px;    
 `;
 
-export { StyledToasts };
+const StyledToastsText = styled(Text)`       
+    color: ${(props: IProps) => props.inverse ? backgroundColor : ForeColor}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
+        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
+`;
+
+export { StyledToasts, StyledToastsText };

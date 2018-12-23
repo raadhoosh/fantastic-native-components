@@ -19,8 +19,7 @@ export interface Props {
 }
 
 export interface IState {
-  checked: Array<boolean>;
-  modalShown: boolean;
+  modalShown: Array<boolean>;
   message: string;
 }
 
@@ -28,25 +27,17 @@ class ToastPage extends Component<Props, IState> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      checked: Array.apply(null, new Array(5)).map(() => true),
-      modalShown: false,
+      modalShown: Array.apply(null, new Array(10)).map(() => false),
       message: ""
     };
 
-    this.handleCheck = this.handleCheck.bind(this);
     this.callToast = this.callToast.bind(this);
   }
 
-  handleCheck(i: number) {
-    const newArray = this.state.checked.map((element: boolean, index: number) => { return index === i ? !element : true; });
+  callToast(type: string, i: number) {
+    const newArray = this.state.modalShown.map((element: boolean, index: number) => { return index === i ? !element : false; });
     this.setState({
-      checked: newArray,
-    });
-  }
-
-  callToast(type: string) {
-    this.setState({
-      modalShown: true,
+      modalShown: newArray,
       message: type,
     })
   }
@@ -66,14 +57,29 @@ class ToastPage extends Component<Props, IState> {
           </Right>
         </Header>
 
-        <Content>
-          <Toast {...this.props} message={this.state.message} modalShown={this.state.modalShown} />
+        <Content full>
+          <Toast primary message={"primary"} modalShown={this.state.modalShown[0]} />
+          <Toast secondary message={"secondary"} modalShown={this.state.modalShown[1]} />
+          <Toast success message={"success"} modalShown={this.state.modalShown[2]} />
+          <Toast danger message={"danger"} modalShown={this.state.modalShown[3]} />
+          <Toast danger inverse message={"inverse"} modalShown={this.state.modalShown[4]} />
+
           <View style={{ marginTop: 100 }}>
-            <Button onPress={() => this.callToast('primary')} primary >primary Toast</Button>
+            <Button onPress={() => this.callToast('primary', 0)} primary >primary Toast</Button>
           </View>
-          <View style={{ marginTop: 100 }}>
-            <Button onPress={() => this.callToast('secondary')} secondary >secondary Toast</Button>
+          <View style={{ marginTop: 10 }}>
+            <Button onPress={() => this.callToast('secondary', 1)} secondary >secondary Toast</Button>
           </View>
+          <View style={{ marginTop: 10 }}>
+            <Button onPress={() => this.callToast('success', 2)} success >success Toast</Button>
+          </View>
+          <View style={{ marginTop: 10 }}>
+            <Button onPress={() => this.callToast('danger', 3)} danger >danger Toast</Button>
+          </View>
+          <View style={{ marginTop: 10 }}>
+            <Button onPress={() => this.callToast('inverse', 4)} danger inverse >inverse Toast</Button>
+          </View>
+
         </Content>
         <Footer>
           <Title>{"Footer"}</Title>
