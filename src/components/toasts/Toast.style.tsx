@@ -60,12 +60,14 @@ const StyledToasts = styled(Animated.View)`
     width: ${(props: IProps) => props.width ? props.width : '100%'};       
     height: ${(props: IProps) => props.height ? props.height : '70'};             
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};   
-    background-color: ${(props: IProps) =>  (props.inverse ? ForeColor : backgroundColor)};      
+    background-color: ${(props: IProps) => (props.inverse ? ForeColor : backgroundColor)};      
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;  
+    top: -60;  
     padding: 10px;    
+    flex:1;
+    justify-content: center;
 `;
 
 const StyledToastsText = styled(Text)`       

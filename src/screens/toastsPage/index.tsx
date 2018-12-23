@@ -56,9 +56,7 @@ class ToastPage extends Component<Props, IState> {
             <Text style={{ color: "#fff" }}>right</Text>
           </Right>
         </Header>
-
-        <Content full>
-          <Toast primary message={"primary"} modalShown={this.state.modalShown[0]} />
+        <Toast primary message={"primary"} modalShown={this.state.modalShown[0]} />
           <Toast secondary message={"secondary"} modalShown={this.state.modalShown[1]} />
           <Toast success message={"success"} modalShown={this.state.modalShown[2]} />
           <Toast danger message={"danger"} modalShown={this.state.modalShown[3]} />
@@ -78,12 +76,8 @@ class ToastPage extends Component<Props, IState> {
           </View>
           <View style={{ marginTop: 10 }}>
             <Button onPress={() => this.callToast('inverse', 4)} danger inverse >inverse Toast</Button>
-          </View>
-
-        </Content>
-        <Footer>
-          <Title>{"Footer"}</Title>
-        </Footer>
+          </View>      
+        
       </Container>
     );
   }
