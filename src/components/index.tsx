@@ -26,6 +26,7 @@ import Search from "./search";
 import Tab from "./tabs/Tab";
 import Card from "./cards/Card";
 import CardImages from "./cards/CardImages";
+import Spinner from "./spinner";
 import FAB from "./fAB";
 
 export {
@@ -55,5 +56,6 @@ export {
     Tab,
     Card,
     CardImages,
+    Spinner,
     FAB,
 };

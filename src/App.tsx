@@ -20,6 +20,7 @@ import SearchContainer from "./containers/searchContainer";
 import TabContainer from "./containers/tabContainer";
 import CardsContainer from "./containers/cardsContainer";
 import FABContainer from "./containers/fABContainer";
+import SpinnerContainer from "./containers/spinnerContainer";
 
 const RootStack = DrawerNavigator({
   Panel: PanelContainer,
@@ -38,6 +39,7 @@ const RootStack = DrawerNavigator({
   Search: SearchContainer,
   Tab: TabContainer,
   Cards: CardsContainer,
+  Spinner: SpinnerContainer,
   FAB: FABContainer,
 },
   {

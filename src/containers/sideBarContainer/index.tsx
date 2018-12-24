@@ -18,6 +18,7 @@ const list = [
     { route: "List", name: "List" },
     { route: "Tab", name: "Tab" },
     { route: "Cards", name: "Cards" },
+    { route: "Spinner", name: "Spinner" },
     { route: "FAB", name: "FAB" },
 ];
 export interface IProps {
