@@ -1,9 +1,9 @@
 import * as React from "react";
 import { StyledTabTitle, StyledTabTitleText } from "./Tabs.style";
 import { ViewStyle } from "react-native";
-import { Theme } from '..';
+import { Theme } from "..";
 
-interface IProps {  
+interface IProps {
   style?: ViewStyle | object | Array<ViewStyle>;
   primary?: boolean;
   secondary?: boolean;
@@ -16,7 +16,7 @@ interface IProps {
   inverse?: boolean;
   backgroundColor?: string;
   color?: string;
-  width?: string;  
+  width?: string;
   theme?: Theme;
   onPress?: () => void;
   disabled?: boolean;
@@ -24,12 +24,12 @@ interface IProps {
   borderRadius?: string;
   title?: string;
   active?: string;
-  onTabChange :(index: number) => void;  
+  onTabChange: (index: number) => void;
   index: number;
 }
 
 const TabTitle = (props: IProps) => {
-  
+
   return (
     <StyledTabTitle {...props} activeOpacity={0.8} onPress={props.disabled ? undefined : () => props.onTabChange(props.index)} >
       <StyledTabTitleText style={props.style} {...props}>

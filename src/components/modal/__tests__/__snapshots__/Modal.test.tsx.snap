@@ -92,7 +92,7 @@ ShallowWrapper {
         "rendered": null,
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
+          "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
@@ -206,7 +206,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": Object {
                   "$$typeof": Symbol(react.forward_ref),
-                  "attrs": undefined,
+                  "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bxivhb",
                     "isStatic": false,
@@ -271,7 +271,7 @@ ShallowWrapper {
             ],
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "attrs": undefined,
+              "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "sc-htpNat",
                 "isStatic": false,
@@ -321,7 +321,7 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "attrs": undefined,
+              "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "sc-ifAKCX",
                 "isStatic": false,
@@ -390,7 +390,7 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "attrs": undefined,
+              "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "sc-EHOje",
                 "isStatic": false,
@@ -421,7 +421,7 @@ ShallowWrapper {
         ],
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
+          "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": true,
@@ -521,7 +521,7 @@ ShallowWrapper {
           "rendered": null,
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "attrs": undefined,
+            "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
@@ -635,7 +635,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
-                    "attrs": undefined,
+                    "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bxivhb",
                       "isStatic": false,
@@ -700,7 +700,7 @@ ShallowWrapper {
               ],
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "attrs": undefined,
+                "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-htpNat",
                   "isStatic": false,
@@ -750,7 +750,7 @@ ShallowWrapper {
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "attrs": undefined,
+                "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-ifAKCX",
                   "isStatic": false,
@@ -819,7 +819,7 @@ ShallowWrapper {
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "attrs": undefined,
+                "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-EHOje",
                   "isStatic": false,
@@ -850,7 +850,7 @@ ShallowWrapper {
           ],
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "attrs": undefined,
+            "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-bwzfXH",
               "isStatic": true,

@@ -85,7 +85,7 @@ ShallowWrapper {
             "rendered": "panel",
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "attrs": undefined,
+              "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "sc-htpNat",
                 "isStatic": true,
@@ -131,7 +131,7 @@ ShallowWrapper {
         ],
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
+          "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
@@ -197,7 +197,7 @@ ShallowWrapper {
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
+          "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bxivhb",
             "isStatic": false,
@@ -233,7 +233,7 @@ ShallowWrapper {
     ],
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
-      "attrs": undefined,
+      "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
         "isStatic": true,
@@ -319,7 +319,7 @@ ShallowWrapper {
               "rendered": "panel",
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "attrs": undefined,
+                "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-htpNat",
                   "isStatic": true,
@@ -365,7 +365,7 @@ ShallowWrapper {
           ],
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "attrs": undefined,
+            "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-bwzfXH",
               "isStatic": false,
@@ -431,7 +431,7 @@ ShallowWrapper {
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "attrs": undefined,
+            "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-bxivhb",
               "isStatic": false,
@@ -467,7 +467,7 @@ ShallowWrapper {
       ],
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": undefined,
+        "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": true,

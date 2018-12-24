@@ -1,8 +1,8 @@
 import * as React from "react";
-import {ImagePropsBase,ImageStyle, Image} from "react-native";
+import { ImagePropsBase, ImageStyle, Image } from "react-native";
 
 interface IProps extends ImagePropsBase {
-  style?: ImageStyle | object | Array<ImageStyle>;  
+  style?: ImageStyle | object | Array<ImageStyle>;
 }
 
 const Img = (props: IProps) => {

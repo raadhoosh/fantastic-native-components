@@ -1,14 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search rendering should render a <Search /> 1`] = `
+exports[`FAB rendering should render a <FAB /> 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Search
+  Symbol(enzyme.__unrendered__): <FAB
     color="#f00"
-    onChangeText={[Function]}
+    onPress={[Function]}
     primary={true}
-    secondary={true}
-    success={true}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -23,35 +21,20 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
+      "activeOpacity": 0.7,
       "children": Array [
         <ForwardRef
           color="#f00"
-          name="search"
-          onChangeText={[Function]}
+          name="plus"
+          onPress={[Function]}
           primary={true}
-          secondary={true}
-          style={
-            Object {
-              "paddingRight": 7,
-            }
-          }
-          success={true}
           type="FontAwesome"
-        />,
-        <ForwardRef
-          color="#f00"
-          onChangeText={[Function]}
-          primary={true}
-          secondary={true}
-          success={true}
         />,
         undefined,
       ],
       "color": "#f00",
-      "onChangeText": [Function],
+      "onPress": [Function],
       "primary": true,
-      "secondary": true,
-      "success": true,
     },
     "ref": null,
     "rendered": Array [
@@ -61,14 +44,10 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "color": "#f00",
-          "name": "search",
-          "onChangeText": [Function],
+          "name": "plus",
+          "onPress": [Function],
           "primary": true,
-          "secondary": true,
-          "style": Object {
-            "paddingRight": 7,
-          },
-          "success": true,
+          "size": undefined,
           "type": "FontAwesome",
         },
         "ref": null,
@@ -80,14 +59,14 @@ ShallowWrapper {
             "componentId": "sc-gPEVay",
             "isStatic": false,
             "rules": Array [
-              "      
+              "     
     color: ",
               [Function],
-              "; 
+              ";
     font-size:",
               [Function],
-              ";        
-",
+              "; 
+   ",
             ],
           },
           "displayName": "Styled(WithTheme(Icon))",
@@ -105,60 +84,6 @@ ShallowWrapper {
           Symbol(Symbol.hasInstance): [Function],
         },
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "color": "#f00",
-          "onChangeText": [Function],
-          "primary": true,
-          "secondary": true,
-          "success": true,
-          "value": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "State": Object {
-            "blurTextInput": [Function],
-            "currentlyFocusedField": [Function],
-            "focusTextInput": [Function],
-          },
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-jDwBTQ",
-            "isStatic": false,
-            "rules": Array [
-              "      
-    color: ",
-              [Function],
-              "; 
-    font-size:",
-              [Function],
-              "; 
-    background-color: ",
-              [Function],
-              ";
-    border-radius: ",
-              [Function],
-              "; 
-    flex: 1;     
-",
-            ],
-          },
-          "displayName": "Styled(TextInput)",
-          "getDefaultProps": [Function],
-          "render": [Function],
-          "styledComponentId": "sc-jDwBTQ",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        },
-      },
       undefined,
     ],
     "type": Object {
@@ -168,9 +93,10 @@ ShallowWrapper {
         "componentId": "sc-jAaTju",
         "isStatic": false,
         "rules": Array [
-          "     
-    flex: 1;  
-    flex-direction : row; 
+          "  
+    flex: 1;
+    flex-direction: row;   
+    justify-content: center;
     align-items: center;
     background-color: ",
           [Function],
@@ -181,16 +107,39 @@ ShallowWrapper {
     width: ",
           [Function],
           ";  
-    border-radius: ",
+    height: ",
           [Function],
           ";  
-    padding-left: 10px;
-    padding-right: 10px; 
-    overflow: hidden;
+    border-radius: ",
+          [Function],
+          ";
+    padding-left: 10;
+    padding-right: 10;    
+    padding-top: 5;
+    padding-bottom: 5; 
+    position: absolute;
+    top:",
+          [Function],
+          ";
+    bottom:",
+          [Function],
+          "; 
+    left:",
+          [Function],
+          ";
+    right:",
+          [Function],
+          ";  
+    ",
+          "shadow-color: #000; shadowOffset {
+  width: 0; height: 2px;
+} shadow-opacity: 0.8px; shadow-radius: 2px; elevation: 10px;",
+          "    
 ",
         ],
       },
-      "displayName": "Styled(Component)",
+      "displayName": "Styled(TouchableOpacity)",
+      "getDefaultProps": [Function],
       "render": [Function],
       "styledComponentId": "sc-jAaTju",
       "target": [Function],
@@ -206,35 +155,20 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "activeOpacity": 0.7,
         "children": Array [
           <ForwardRef
             color="#f00"
-            name="search"
-            onChangeText={[Function]}
+            name="plus"
+            onPress={[Function]}
             primary={true}
-            secondary={true}
-            style={
-              Object {
-                "paddingRight": 7,
-              }
-            }
-            success={true}
             type="FontAwesome"
-          />,
-          <ForwardRef
-            color="#f00"
-            onChangeText={[Function]}
-            primary={true}
-            secondary={true}
-            success={true}
           />,
           undefined,
         ],
         "color": "#f00",
-        "onChangeText": [Function],
+        "onPress": [Function],
         "primary": true,
-        "secondary": true,
-        "success": true,
       },
       "ref": null,
       "rendered": Array [
@@ -244,14 +178,10 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "color": "#f00",
-            "name": "search",
-            "onChangeText": [Function],
+            "name": "plus",
+            "onPress": [Function],
             "primary": true,
-            "secondary": true,
-            "style": Object {
-              "paddingRight": 7,
-            },
-            "success": true,
+            "size": undefined,
             "type": "FontAwesome",
           },
           "ref": null,
@@ -263,14 +193,14 @@ ShallowWrapper {
               "componentId": "sc-gPEVay",
               "isStatic": false,
               "rules": Array [
-                "      
+                "     
     color: ",
                 [Function],
-                "; 
+                ";
     font-size:",
                 [Function],
-                ";        
-",
+                "; 
+   ",
               ],
             },
             "displayName": "Styled(WithTheme(Icon))",
@@ -288,60 +218,6 @@ ShallowWrapper {
             Symbol(Symbol.hasInstance): [Function],
           },
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "color": "#f00",
-            "onChangeText": [Function],
-            "primary": true,
-            "secondary": true,
-            "success": true,
-            "value": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "State": Object {
-              "blurTextInput": [Function],
-              "currentlyFocusedField": [Function],
-              "focusTextInput": [Function],
-            },
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-jDwBTQ",
-              "isStatic": false,
-              "rules": Array [
-                "      
-    color: ",
-                [Function],
-                "; 
-    font-size:",
-                [Function],
-                "; 
-    background-color: ",
-                [Function],
-                ";
-    border-radius: ",
-                [Function],
-                "; 
-    flex: 1;     
-",
-              ],
-            },
-            "displayName": "Styled(TextInput)",
-            "getDefaultProps": [Function],
-            "render": [Function],
-            "styledComponentId": "sc-jDwBTQ",
-            "target": [Function],
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
-          },
-        },
         undefined,
       ],
       "type": Object {
@@ -351,9 +227,10 @@ ShallowWrapper {
           "componentId": "sc-jAaTju",
           "isStatic": false,
           "rules": Array [
-            "     
-    flex: 1;  
-    flex-direction : row; 
+            "  
+    flex: 1;
+    flex-direction: row;   
+    justify-content: center;
     align-items: center;
     background-color: ",
             [Function],
@@ -364,16 +241,39 @@ ShallowWrapper {
     width: ",
             [Function],
             ";  
-    border-radius: ",
+    height: ",
             [Function],
             ";  
-    padding-left: 10px;
-    padding-right: 10px; 
-    overflow: hidden;
+    border-radius: ",
+            [Function],
+            ";
+    padding-left: 10;
+    padding-right: 10;    
+    padding-top: 5;
+    padding-bottom: 5; 
+    position: absolute;
+    top:",
+            [Function],
+            ";
+    bottom:",
+            [Function],
+            "; 
+    left:",
+            [Function],
+            ";
+    right:",
+            [Function],
+            ";  
+    ",
+            "shadow-color: #000; shadowOffset {
+  width: 0; height: 2px;
+} shadow-opacity: 0.8px; shadow-radius: 2px; elevation: 10px;",
+            "    
 ",
           ],
         },
-        "displayName": "Styled(Component)",
+        "displayName": "Styled(TouchableOpacity)",
+        "getDefaultProps": [Function],
         "render": [Function],
         "styledComponentId": "sc-jAaTju",
         "target": [Function],
