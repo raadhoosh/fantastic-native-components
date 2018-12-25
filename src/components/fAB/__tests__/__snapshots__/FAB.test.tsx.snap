@@ -56,7 +56,7 @@ ShallowWrapper {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gPEVay",
+            "componentId": "sc-dVhcbM",
             "isStatic": false,
             "rules": Array [
               "     
@@ -71,7 +71,7 @@ ShallowWrapper {
           },
           "displayName": "Styled(WithTheme(Icon))",
           "render": [Function],
-          "styledComponentId": "sc-gPEVay",
+          "styledComponentId": "sc-dVhcbM",
           "target": Object {
             "$$typeof": Symbol(react.forward_ref),
             "displayName": "WithTheme(Icon)",
@@ -90,7 +90,7 @@ ShallowWrapper {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "sc-jAaTju",
+        "componentId": "sc-fBuWsC",
         "isStatic": false,
         "rules": Array [
           "  
@@ -141,7 +141,7 @@ ShallowWrapper {
       "displayName": "Styled(TouchableOpacity)",
       "getDefaultProps": [Function],
       "render": [Function],
-      "styledComponentId": "sc-jAaTju",
+      "styledComponentId": "sc-fBuWsC",
       "target": [Function],
       "toString": [Function],
       "warnTooManyClasses": [Function],
@@ -190,7 +190,7 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-gPEVay",
+              "componentId": "sc-dVhcbM",
               "isStatic": false,
               "rules": Array [
                 "     
@@ -205,7 +205,7 @@ ShallowWrapper {
             },
             "displayName": "Styled(WithTheme(Icon))",
             "render": [Function],
-            "styledComponentId": "sc-gPEVay",
+            "styledComponentId": "sc-dVhcbM",
             "target": Object {
               "$$typeof": Symbol(react.forward_ref),
               "displayName": "WithTheme(Icon)",
@@ -224,7 +224,7 @@ ShallowWrapper {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-jAaTju",
+          "componentId": "sc-fBuWsC",
           "isStatic": false,
           "rules": Array [
             "  
@@ -275,7 +275,7 @@ ShallowWrapper {
         "displayName": "Styled(TouchableOpacity)",
         "getDefaultProps": [Function],
         "render": [Function],
-        "styledComponentId": "sc-jAaTju",
+        "styledComponentId": "sc-fBuWsC",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],

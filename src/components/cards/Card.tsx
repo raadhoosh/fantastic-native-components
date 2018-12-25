@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyledCard } from "./Cards.style";
 import { ViewStyle } from "react-native";
-import { Theme } from '..';
+import { Theme } from "..";
 
 interface IProps {
   children: JSX.Element | JSX.Element[] | string;

@@ -26,6 +26,7 @@ interface IProps {
   active?: string;
   onTabChange: (index: number) => void;
   index: number;
+  rtl?: boolean;
 }
 
 const TabTitle = (props: IProps) => {
