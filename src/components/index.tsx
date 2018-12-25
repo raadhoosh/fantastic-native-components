@@ -26,6 +26,7 @@ import Search from "./search";
 import Tab from "./tabs/Tab";
 import Card from "./cards/Card";
 import CardImages from "./cards/CardImages";
+import {SpinnerIcon ,Spinner} from "./spinner";
 import FAB from "./fAB";
 import Toast from "./toasts";
 
@@ -56,6 +57,8 @@ export {
     Tab,
     Card,
     CardImages,
+    SpinnerIcon,
+    Spinner,
     FAB,
     Toast,
 };
