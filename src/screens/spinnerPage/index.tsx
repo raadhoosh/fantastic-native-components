@@ -1,7 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Header, Footer, Title, Left, Right, Text, Spinner, Icon } from "../../components";
-import SpinnerImg from "../../components/spinner/spinerImg"
+import { Container, Header, Footer, Title, Left, Right, Text, Spinner, Icon, SpinnerIcon } from "../../components";
 
 export interface Props {
     openDrawer: () => void;
@@ -40,12 +39,12 @@ class SpinnerPage extends React.PureComponent<Props> {
                     <Spinner success name="circle-o-notch" size={50} />
                 </View>                
                 <View style={{ marginTop: 60, marginRight: 80 }}>
-                    <SpinnerImg source={require('./icon.png')}
+                    <SpinnerIcon source={require('./icon.png')}
                        style={{ width: 32, height: 32}}
                     />
                 </View>
                 <View style={{ marginTop: 60, marginRight: 80 }}>
-                    <SpinnerImg source={require('./030e06bd9e.png')}
+                    <SpinnerIcon source={require('./030e06bd9e.png')}
                        style={{ width: 32, height: 32}}
                     />
                 </View>
