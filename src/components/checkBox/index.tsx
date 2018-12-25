@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TouchableOpacity, View, AccessibilityProps } from "react-native";
+import { TouchableOpacity } from "react-native";
 import { Icon, Text } from "../../components";
 import { StyledCheckBox } from "./CheckBox.style";
 import { Theme } from "..";

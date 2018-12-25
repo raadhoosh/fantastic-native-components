@@ -28,6 +28,7 @@ import Card from "./cards/Card";
 import CardImages from "./cards/CardImages";
 import Spinner from "./spinner";
 import FAB from "./fAB";
+import Toast from "./toasts";
 
 export {
     Panel,
@@ -58,4 +59,5 @@ export {
     CardImages,
     Spinner,
     FAB,
+    Toast
 };

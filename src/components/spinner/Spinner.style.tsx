@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { Animated } from "react-native";
 
-interface IProps {
-    width?: number;
-    height?: number;
-}
-
 const StyledSpinners = styled(Animated.View)`   
     position: absolute;
     left: 0;    
@@ -16,9 +11,7 @@ const StyledSpinners = styled(Animated.View)`
     justify-content: center;
 `;
 
-const StyledSpinnersImg = styled(Animated.Image)`      
-    width: ${(props: IProps) => props.width ? props.width : '100'};       
-    height: ${(props: IProps) => props.height ? props.height : '100'};  
+const StyledSpinnersImg = styled(Animated.Image)`   
     position: absolute;
     left: 0;    
     top: 0;    

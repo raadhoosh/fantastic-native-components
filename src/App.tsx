@@ -21,6 +21,7 @@ import TabContainer from "./containers/tabContainer";
 import CardsContainer from "./containers/cardsContainer";
 import FABContainer from "./containers/fABContainer";
 import SpinnerContainer from "./containers/spinnerContainer";
+import ToastContainer from "./containers/toastsContainer";
 
 const RootStack = DrawerNavigator({
   Panel: PanelContainer,
@@ -41,6 +42,7 @@ const RootStack = DrawerNavigator({
   Cards: CardsContainer,
   Spinner: SpinnerContainer,
   FAB: FABContainer,
+  Toasts: ToastContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,

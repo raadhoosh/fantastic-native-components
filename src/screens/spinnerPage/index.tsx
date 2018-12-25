@@ -38,17 +38,15 @@ class SpinnerPage extends React.PureComponent<Props> {
                 </View>
                 <View style={{ marginTop: 60 }}>
                     <Spinner success name="circle-o-notch" size={50} />
-                </View>
-                <View style={{ marginTop: 60 }}>
-                    <SpinnerImg source={{ uri: 'https://s3.amazonaws.com/media-p.slid.es/uploads/alexanderfarennikov/images/1198519/reactjs.png' }}
-                        width={227}
-                        height={200}
+                </View>                
+                <View style={{ marginTop: 60, marginRight: 80 }}>
+                    <SpinnerImg source={require('./icon.png')}
+                       style={{ width: 32, height: 32}}
                     />
                 </View>
                 <View style={{ marginTop: 60, marginRight: 80 }}>
-                    <SpinnerImg source={require('../../components/spinner/icons/icons8-godtier-48.png')}
-                        width={50}
-                        height={50}
+                    <SpinnerImg source={require('./030e06bd9e.png')}
+                       style={{ width: 32, height: 32}}
                     />
                 </View>
             </View>
