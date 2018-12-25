@@ -112,9 +112,9 @@ ShallowWrapper {
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
+          "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gPEVay",
+            "componentId": "sc-fMiknA",
             "isStatic": false,
             "rules": Array [
               "      
@@ -138,7 +138,7 @@ ShallowWrapper {
           },
           "displayName": "Styled(Component)",
           "render": [Function],
-          "styledComponentId": "sc-gPEVay",
+          "styledComponentId": "sc-fMiknA",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -159,9 +159,9 @@ ShallowWrapper {
         "rendered": "secondary",
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
+          "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iRbamj",
+            "componentId": "sc-dVhcbM",
             "isStatic": false,
             "rules": Array [
               "
@@ -200,7 +200,7 @@ ShallowWrapper {
             "textBreakStrategy": [Function],
           },
           "render": [Function],
-          "styledComponentId": "sc-iRbamj",
+          "styledComponentId": "sc-dVhcbM",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -211,9 +211,9 @@ ShallowWrapper {
     ],
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
-      "attrs": undefined,
+      "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "sc-jDwBTQ",
+        "componentId": "sc-fBuWsC",
         "isStatic": true,
         "rules": Array [
           "      
@@ -226,7 +226,7 @@ ShallowWrapper {
       "displayName": "Styled(TouchableOpacity)",
       "getDefaultProps": [Function],
       "render": [Function],
-      "styledComponentId": "sc-jDwBTQ",
+      "styledComponentId": "sc-fBuWsC",
       "target": [Function],
       "toString": [Function],
       "warnTooManyClasses": [Function],
@@ -327,9 +327,9 @@ ShallowWrapper {
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "attrs": undefined,
+            "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-gPEVay",
+              "componentId": "sc-fMiknA",
               "isStatic": false,
               "rules": Array [
                 "      
@@ -353,7 +353,7 @@ ShallowWrapper {
             },
             "displayName": "Styled(Component)",
             "render": [Function],
-            "styledComponentId": "sc-gPEVay",
+            "styledComponentId": "sc-fMiknA",
             "target": [Function],
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -374,9 +374,9 @@ ShallowWrapper {
           "rendered": "secondary",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "attrs": undefined,
+            "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-iRbamj",
+              "componentId": "sc-dVhcbM",
               "isStatic": false,
               "rules": Array [
                 "
@@ -415,7 +415,7 @@ ShallowWrapper {
               "textBreakStrategy": [Function],
             },
             "render": [Function],
-            "styledComponentId": "sc-iRbamj",
+            "styledComponentId": "sc-dVhcbM",
             "target": [Function],
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -426,9 +426,9 @@ ShallowWrapper {
       ],
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": undefined,
+        "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-jDwBTQ",
+          "componentId": "sc-fBuWsC",
           "isStatic": true,
           "rules": Array [
             "      
@@ -441,7 +441,7 @@ ShallowWrapper {
         "displayName": "Styled(TouchableOpacity)",
         "getDefaultProps": [Function],
         "render": [Function],
-        "styledComponentId": "sc-jDwBTQ",
+        "styledComponentId": "sc-fBuWsC",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],

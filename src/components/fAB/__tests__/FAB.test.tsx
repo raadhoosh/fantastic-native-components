@@ -12,19 +12,17 @@ describe("FAB", () => {
     let props: Object;
     beforeEach(() => {
       props = createTestProps({
-        color: '#f00',
+        color: "#f00",
         primary: true,
-        secondary: true,
-        success: true,
       });
-      component = shallow(<FAB {...props} 
+      component = shallow(<FAB {...props}
         onPress={() => {
-          alert('You tapped the FAB!');
-      }}
+          alert("You tapped the FAB!");
+        }}
       />);
     });
+
     it("should render a <FAB />", () => {
-      const component = shallow(<FAB {...props} />);
       expect(component).toMatchSnapshot();
     });
   });

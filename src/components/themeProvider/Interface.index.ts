@@ -10,7 +10,7 @@ interface Text {
     color?: string;
     lineHeight?: number;
     textAlign?: "auto" | "left" | "right" | "center" | "justify";
-    fontFamily?: string,
+    fontFamily?: string;
     fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
 }
 interface Button {
@@ -20,7 +20,7 @@ interface Button {
     borderRadius?: string;
     fontFamily?: string;
     backgroundColor?: string;
-    padding?: string;   
+    padding?: string;
 }
 interface TextInput {
     fontSize?: string | number;
@@ -29,7 +29,7 @@ interface TextInput {
     borderRadius?: string;
     fontFamily?: string;
     backgroundColor?: string;
-    padding?: string;   
+    padding?: string;
 }
 export default interface Theme {
     primary: ColorBase;
@@ -46,5 +46,5 @@ export default interface Theme {
     platform: "ios" | "android";
     text: Text;
     button: Button;
-    textInput :TextInput;
+    textInput: TextInput;
 }

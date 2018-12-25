@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyledCardImages, StyledCardImagesTitle, StyledImage, StyledCardImagesText, StyledCardImagesFooter } from "./Cards.style";
 import { ViewStyle, ImageSourcePropType } from "react-native";
-import { Theme } from '..';
+import { Theme } from "..";
 
 interface IProps {
   style?: ViewStyle | object | Array<ViewStyle>;

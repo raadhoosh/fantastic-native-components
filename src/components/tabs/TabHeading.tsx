@@ -1,8 +1,8 @@
 import * as React from "react";
 import { ViewStyle } from "react-native";
 import { StyledTabHeading } from "./Tabs.style";
-import TabTitle from './TabTitle';
-import { Theme } from '..';
+import TabTitle from "./TabTitle";
+import { Theme } from "..";
 
 interface IProps {
     style?: ViewStyle | object | Array<ViewStyle>;
@@ -31,7 +31,7 @@ interface IProps {
 }
 
 const TabHeading = (props: IProps) => {
-   
+
     return (
         <StyledTabHeading>
 
@@ -42,9 +42,9 @@ const TabHeading = (props: IProps) => {
                             title={tab.title}
                             key={index}
                             index={index}
-                            active={`${props.currentIndex === index ? 'true' : 'false'}`}
+                            active={`${props.currentIndex === index ? "true" : "false"}`}
                             onTabChange={props.onTabChange}
-                            rtl={props.rtl}                            
+                            rtl={props.rtl}
                             {...props}
                         />
                     );

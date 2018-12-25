@@ -1,7 +1,7 @@
 import * as React from "react";
 import StyledTextInput from "./TextInput.style";
-import { ViewStyle ,TextInputProps} from "react-native";
-import { Theme } from '..';
+import { ViewStyle, TextInputProps } from "react-native";
+import { Theme } from "..";
 
 interface IProps extends TextInputProps {
   style?: ViewStyle | object | Array<ViewStyle>;
@@ -13,10 +13,10 @@ interface IProps extends TextInputProps {
   danger?: boolean;
   light?: boolean;
   dark?: boolean;
-  backgroundColor?: string;  
+  backgroundColor?: string;
   color?: string;
-  width?: string;  
-  theme?: Theme;  
+  width?: string;
+  theme?: Theme;
   fontSize?: string | number;
   borderRadius?: string;
   inverse?: boolean;
@@ -26,7 +26,7 @@ interface IProps extends TextInputProps {
 const TextInput = (props: IProps) => {
 
   return (
-    <StyledTextInput {...props}/>)
+    <StyledTextInput {...props} />)
 
 };
 

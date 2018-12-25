@@ -86,9 +86,9 @@ ShallowWrapper {
       },
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "attrs": undefined,
+        "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-iRbamj",
+          "componentId": "sc-dVhcbM",
           "isStatic": false,
           "rules": Array [
             "      
@@ -115,7 +115,7 @@ ShallowWrapper {
         },
         "displayName": "Styled(Component)",
         "render": [Function],
-        "styledComponentId": "sc-iRbamj",
+        "styledComponentId": "sc-dVhcbM",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -192,9 +192,9 @@ ShallowWrapper {
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": undefined,
+          "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iRbamj",
+            "componentId": "sc-dVhcbM",
             "isStatic": false,
             "rules": Array [
               "      
@@ -221,7 +221,7 @@ ShallowWrapper {
           },
           "displayName": "Styled(Component)",
           "render": [Function],
-          "styledComponentId": "sc-iRbamj",
+          "styledComponentId": "sc-dVhcbM",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],

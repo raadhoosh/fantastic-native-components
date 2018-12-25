@@ -38,13 +38,12 @@ ShallowWrapper {
         "currentlyFocusedField": [Function],
         "focusTextInput": [Function],
       },
-      "attrs": undefined,
+      "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
         "isStatic": false,
         "rules": Array [
-          "    
-    text-align: center;   
+          "       
     color: ",
           [Function],
           "; 
@@ -103,13 +102,12 @@ ShallowWrapper {
           "currentlyFocusedField": [Function],
           "focusTextInput": [Function],
         },
-        "attrs": undefined,
+        "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": false,
           "rules": Array [
-            "    
-    text-align: center;   
+            "       
     color: ",
             [Function],
             "; 

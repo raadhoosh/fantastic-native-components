@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FABText, FABWrapper, StyledIcon } from "./FAB.style";
 import { ViewStyle } from "react-native";
-import { Theme } from '..';
+import { Theme } from "..";
 
 interface IProps {
   style?: ViewStyle | object | Array<ViewStyle>;
@@ -18,7 +18,7 @@ interface IProps {
   color?: string;
   iconColor?: string;
   width?: number;
-  height?: number; 
+  height?: number;
   theme?: Theme;
   onPress?: () => void;
   disabled?: boolean;
@@ -38,7 +38,7 @@ const FAB = (props: IProps) => {
 
   return (
     <FABWrapper {...props} activeOpacity={props.activeOpacity ? props.activeOpacity : 0.7} onPress={props.disabled ? undefined : props.onPress} >
-      <StyledIcon type="FontAwesome" name={props.iconName ? props.iconName : "plus"}  size={props.iconSize} {...props}/>
+      <StyledIcon type="FontAwesome" name={props.iconName ? props.iconName : "plus"} size={props.iconSize} {...props} />
       {props.label && <FABText {...props}>
         {props.label}
       </FABText>}

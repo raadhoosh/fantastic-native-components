@@ -1,7 +1,8 @@
 import CardImages from "../CardImages";
 import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
-
+// tslint:disable-next-line:no-var-requires
+const uri = require("../../../screens/imagePage/img_avatar3.png");
 const createTestProps = (props: Object) => ({
   ...props,
 });
@@ -12,19 +13,16 @@ describe("CardImages", () => {
     let props: Object;
     beforeEach(() => {
       props = createTestProps({
-        color: '#f00',
+        color: "#f00",
         primary: true,
-        secondary: true,
-        success: true,
       });
-      component = shallow(<CardImages source={require("../../../screen/ImagePage/img_avatar3.png")} {...props} 
+      component = shallow(<CardImages source={uri} {...props}
         onPress={() => {
-          alert('You tapped the CardImages!');
+          alert("You tapped the CardImages!");
       }}
       >CardImages</CardImages>);
     });
     it("should render a <CardImages />", () => {
-      const component = shallow(<CardImages source={require("../../../screen/ImagePage/img_avatar3.png")} {...props} >CardImages</CardImages>);
       expect(component).toMatchSnapshot();
     });
   });

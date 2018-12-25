@@ -1,7 +1,7 @@
 import * as React from "react";
-import { StyledText,StyledTitle } from "./Title.style";
+import { StyledText, StyledTitle } from "./Title.style";
 import { ViewStyle, TextStyle } from "react-native";
-import { Theme } from '..';
+import { Theme } from "..";
 
 export interface IProps {
   theme?: Theme;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import StyledLeft from "./Left.style";
 import { ViewStyle } from "react-native";
-import { Theme } from '..';
+import { Theme } from "..";
 
 export interface IProps {
   theme?: Theme;

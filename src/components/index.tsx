@@ -57,5 +57,5 @@ export {
     Card,
     CardImages,
     FAB,
-    Toast
+    Toast,
 };

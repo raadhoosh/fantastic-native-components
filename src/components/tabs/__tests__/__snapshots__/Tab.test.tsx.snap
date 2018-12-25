@@ -1,0 +1,580 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab rendering should render a <Tab /> 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Tabs
+    color="#f00"
+    currentTab={1}
+    dataTabs={
+      Array [
+        Object {
+          "content": "First tab content",
+          "id": 1,
+          "title": "First tab title",
+        },
+        Object {
+          "content": "Second tab content",
+          "id": 2,
+          "title": "Second tab title",
+        },
+        Object {
+          "content": "Third tab content",
+          "id": 3,
+          "title": "Third tab title",
+        },
+      ]
+    }
+    onPress={[Function]}
+    primary={true}
+    rtl={false}
+  >
+    Tab
+  </Tabs>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <TabHeading
+          color="#f00"
+          currentIndex={1}
+          currentTab={1}
+          dataTabs={
+            Array [
+              Object {
+                "content": "First tab content",
+                "id": 1,
+                "title": "First tab title",
+              },
+              Object {
+                "content": "Second tab content",
+                "id": 2,
+                "title": "Second tab title",
+              },
+              Object {
+                "content": "Third tab content",
+                "id": 3,
+                "title": "Third tab title",
+              },
+            ]
+          }
+          onPress={[Function]}
+          onTabChange={[Function]}
+          primary={true}
+          rtl={false}
+          tabs={
+            Array [
+              Object {
+                "content": "First tab content",
+                "id": 1,
+                "title": "First tab title",
+              },
+              Object {
+                "content": "Second tab content",
+                "id": 2,
+                "title": "Second tab title",
+              },
+              Object {
+                "content": "Third tab content",
+                "id": 3,
+                "title": "Third tab title",
+              },
+            ]
+          }
+        >
+          Tab
+        </TabHeading>,
+        <ForwardRef
+          color="#f00"
+          currentTab={1}
+          dataTabs={
+            Array [
+              Object {
+                "content": "First tab content",
+                "id": 1,
+                "title": "First tab title",
+              },
+              Object {
+                "content": "Second tab content",
+                "id": 2,
+                "title": "Second tab title",
+              },
+              Object {
+                "content": "Third tab content",
+                "id": 3,
+                "title": "Third tab title",
+              },
+            ]
+          }
+          onPress={[Function]}
+          primary={true}
+          rtl={false}
+        >
+          Second tab content
+        </ForwardRef>,
+      ],
+      "color": "#f00",
+      "currentTab": 1,
+      "dataTabs": Array [
+        Object {
+          "content": "First tab content",
+          "id": 1,
+          "title": "First tab title",
+        },
+        Object {
+          "content": "Second tab content",
+          "id": 2,
+          "title": "Second tab title",
+        },
+        Object {
+          "content": "Third tab content",
+          "id": 3,
+          "title": "Third tab title",
+        },
+      ],
+      "onPress": [Function],
+      "primary": true,
+      "rtl": false,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Tab",
+          "color": "#f00",
+          "currentIndex": 1,
+          "currentTab": 1,
+          "dataTabs": Array [
+            Object {
+              "content": "First tab content",
+              "id": 1,
+              "title": "First tab title",
+            },
+            Object {
+              "content": "Second tab content",
+              "id": 2,
+              "title": "Second tab title",
+            },
+            Object {
+              "content": "Third tab content",
+              "id": 3,
+              "title": "Third tab title",
+            },
+          ],
+          "onPress": [Function],
+          "onTabChange": [Function],
+          "primary": true,
+          "rtl": false,
+          "tabs": Array [
+            Object {
+              "content": "First tab content",
+              "id": 1,
+              "title": "First tab title",
+            },
+            Object {
+              "content": "Second tab content",
+              "id": 2,
+              "title": "Second tab title",
+            },
+            Object {
+              "content": "Third tab content",
+              "id": 3,
+              "title": "Third tab title",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": "Tab",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Second tab content",
+          "color": "#f00",
+          "currentTab": 1,
+          "dataTabs": Array [
+            Object {
+              "content": "First tab content",
+              "id": 1,
+              "title": "First tab title",
+            },
+            Object {
+              "content": "Second tab content",
+              "id": 2,
+              "title": "Second tab title",
+            },
+            Object {
+              "content": "Third tab content",
+              "id": 3,
+              "title": "Third tab title",
+            },
+          ],
+          "onPress": [Function],
+          "primary": true,
+          "rtl": false,
+        },
+        "ref": null,
+        "rendered": "Second tab content",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ifAKCX",
+            "isStatic": true,
+            "rules": Array [
+              "
+    background-color: #fff;
+    padding: 10px;
+",
+            ],
+          },
+          "displayName": "Styled(Component)",
+          "propTypes": Object {
+            "accessible": [Function],
+            "adjustsFontSizeToFit": [Function],
+            "allowFontScaling": [Function],
+            "disabled": [Function],
+            "ellipsizeMode": [Function],
+            "minimumFontScale": [Function],
+            "nativeID": [Function],
+            "numberOfLines": [Function],
+            "onLayout": [Function],
+            "onLongPress": [Function],
+            "onPress": [Function],
+            "pressRetentionOffset": [Function],
+            "selectable": [Function],
+            "selectionColor": [Function],
+            "style": [Function],
+            "suppressHighlighting": [Function],
+            "testID": [Function],
+            "textBreakStrategy": [Function],
+          },
+          "render": [Function],
+          "styledComponentId": "sc-ifAKCX",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bxivhb",
+        "isStatic": true,
+        "rules": Array [
+          "
+    border-width:  1;
+    border-color:  transparent;
+",
+        ],
+      },
+      "displayName": "Styled(Component)",
+      "render": [Function],
+      "styledComponentId": "sc-bxivhb",
+      "target": [Function],
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+      Symbol(Symbol.hasInstance): [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <TabHeading
+            color="#f00"
+            currentIndex={1}
+            currentTab={1}
+            dataTabs={
+              Array [
+                Object {
+                  "content": "First tab content",
+                  "id": 1,
+                  "title": "First tab title",
+                },
+                Object {
+                  "content": "Second tab content",
+                  "id": 2,
+                  "title": "Second tab title",
+                },
+                Object {
+                  "content": "Third tab content",
+                  "id": 3,
+                  "title": "Third tab title",
+                },
+              ]
+            }
+            onPress={[Function]}
+            onTabChange={[Function]}
+            primary={true}
+            rtl={false}
+            tabs={
+              Array [
+                Object {
+                  "content": "First tab content",
+                  "id": 1,
+                  "title": "First tab title",
+                },
+                Object {
+                  "content": "Second tab content",
+                  "id": 2,
+                  "title": "Second tab title",
+                },
+                Object {
+                  "content": "Third tab content",
+                  "id": 3,
+                  "title": "Third tab title",
+                },
+              ]
+            }
+          >
+            Tab
+          </TabHeading>,
+          <ForwardRef
+            color="#f00"
+            currentTab={1}
+            dataTabs={
+              Array [
+                Object {
+                  "content": "First tab content",
+                  "id": 1,
+                  "title": "First tab title",
+                },
+                Object {
+                  "content": "Second tab content",
+                  "id": 2,
+                  "title": "Second tab title",
+                },
+                Object {
+                  "content": "Third tab content",
+                  "id": 3,
+                  "title": "Third tab title",
+                },
+              ]
+            }
+            onPress={[Function]}
+            primary={true}
+            rtl={false}
+          >
+            Second tab content
+          </ForwardRef>,
+        ],
+        "color": "#f00",
+        "currentTab": 1,
+        "dataTabs": Array [
+          Object {
+            "content": "First tab content",
+            "id": 1,
+            "title": "First tab title",
+          },
+          Object {
+            "content": "Second tab content",
+            "id": 2,
+            "title": "Second tab title",
+          },
+          Object {
+            "content": "Third tab content",
+            "id": 3,
+            "title": "Third tab title",
+          },
+        ],
+        "onPress": [Function],
+        "primary": true,
+        "rtl": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Tab",
+            "color": "#f00",
+            "currentIndex": 1,
+            "currentTab": 1,
+            "dataTabs": Array [
+              Object {
+                "content": "First tab content",
+                "id": 1,
+                "title": "First tab title",
+              },
+              Object {
+                "content": "Second tab content",
+                "id": 2,
+                "title": "Second tab title",
+              },
+              Object {
+                "content": "Third tab content",
+                "id": 3,
+                "title": "Third tab title",
+              },
+            ],
+            "onPress": [Function],
+            "onTabChange": [Function],
+            "primary": true,
+            "rtl": false,
+            "tabs": Array [
+              Object {
+                "content": "First tab content",
+                "id": 1,
+                "title": "First tab title",
+              },
+              Object {
+                "content": "Second tab content",
+                "id": 2,
+                "title": "Second tab title",
+              },
+              Object {
+                "content": "Third tab content",
+                "id": 3,
+                "title": "Third tab title",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": "Tab",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Second tab content",
+            "color": "#f00",
+            "currentTab": 1,
+            "dataTabs": Array [
+              Object {
+                "content": "First tab content",
+                "id": 1,
+                "title": "First tab title",
+              },
+              Object {
+                "content": "Second tab content",
+                "id": 2,
+                "title": "Second tab title",
+              },
+              Object {
+                "content": "Third tab content",
+                "id": 3,
+                "title": "Third tab title",
+              },
+            ],
+            "onPress": [Function],
+            "primary": true,
+            "rtl": false,
+          },
+          "ref": null,
+          "rendered": "Second tab content",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-ifAKCX",
+              "isStatic": true,
+              "rules": Array [
+                "
+    background-color: #fff;
+    padding: 10px;
+",
+              ],
+            },
+            "displayName": "Styled(Component)",
+            "propTypes": Object {
+              "accessible": [Function],
+              "adjustsFontSizeToFit": [Function],
+              "allowFontScaling": [Function],
+              "disabled": [Function],
+              "ellipsizeMode": [Function],
+              "minimumFontScale": [Function],
+              "nativeID": [Function],
+              "numberOfLines": [Function],
+              "onLayout": [Function],
+              "onLongPress": [Function],
+              "onPress": [Function],
+              "pressRetentionOffset": [Function],
+              "selectable": [Function],
+              "selectionColor": [Function],
+              "style": [Function],
+              "suppressHighlighting": [Function],
+              "testID": [Function],
+              "textBreakStrategy": [Function],
+            },
+            "render": [Function],
+            "styledComponentId": "sc-ifAKCX",
+            "target": [Function],
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bxivhb",
+          "isStatic": true,
+          "rules": Array [
+            "
+    border-width:  1;
+    border-color:  transparent;
+",
+          ],
+        },
+        "displayName": "Styled(Component)",
+        "render": [Function],
+        "styledComponentId": "sc-bxivhb",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
