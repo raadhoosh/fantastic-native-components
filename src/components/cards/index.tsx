@@ -25,7 +25,7 @@ interface IProps {
   onPress?: () => void;
   disabled?: boolean;
   fontSize?: string | number;
-  borderRadius?: string;
+  borderRadius?: number;
   title?: string;
   text?: string;
   center?: boolean;
@@ -36,7 +36,7 @@ interface IProps {
 const CardImages = (props: IProps) => {
 
   return (
-    <StyledCardImages {...props} activeOpacity={0.8} onPress={props.disabled ? undefined : props.onPress} >
+    <StyledCardImages {...props} activeOpacity={0.8} onPress={props.disabled ? undefined : props.onPress} borderRadius={props.borderRadius} >
 
       <StyledImage source={props.source} imageWidth={props.imageWidth} imageHeight={props.imageHeight} />
       <StyledCardImagesFooter {...props}>

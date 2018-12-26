@@ -57,11 +57,12 @@ class ToastPage extends Component<Props, IState> {
           </Right>
         </Header>
         <Toast primary message={"primary"} modalShown={this.state.modalShown[0]} />
-          <Toast secondary message={"secondary"} modalShown={this.state.modalShown[1]} />
-          <Toast success message={"success"} modalShown={this.state.modalShown[2]} />
-          <Toast danger message={"danger"} modalShown={this.state.modalShown[3]} />
-          <Toast danger inverse message={"inverse"} modalShown={this.state.modalShown[4]} />
+        <Toast secondary message={"secondary"} modalShown={this.state.modalShown[1]} />
+        <Toast success message={"success"} modalShown={this.state.modalShown[2]} />
+        <Toast danger message={"danger"} modalShown={this.state.modalShown[3]} />
+        <Toast danger inverse message={"inverse"} modalShown={this.state.modalShown[4]} />
 
+        <View style={{ padding: 20 }}>
           <View style={{ marginTop: 100 }}>
             <Button onPress={() => this.callToast('primary', 0)} primary >primary Toast</Button>
           </View>
@@ -76,8 +77,9 @@ class ToastPage extends Component<Props, IState> {
           </View>
           <View style={{ marginTop: 10 }}>
             <Button onPress={() => this.callToast('inverse', 4)} danger inverse >inverse Toast</Button>
-          </View>      
-        
+          </View>
+        </View>
+
       </Container>
     );
   }

@@ -24,8 +24,7 @@ import List from "./list";
 import Badge from "./badge";
 import Search from "./search";
 import Tab from "./tabs/Tab";
-import Card from "./cards/Card";
-import CardImages from "./cards/CardImages";
+import CardImages from "./cards";
 import {SpinnerIcon ,Spinner} from "./spinner";
 import FAB from "./fAB";
 import Toast from "./toasts";
@@ -55,7 +54,6 @@ export {
     Search,
     List,
     Tab,
-    Card,
     CardImages,
     SpinnerIcon,
     Spinner,

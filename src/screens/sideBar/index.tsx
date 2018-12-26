@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, ScrollView } from "react-native";
 export interface Props {
     routes: Array<any>;
     onChangeRoute: any;
@@ -8,7 +8,7 @@ class SideBar extends React.PureComponent<Props> {
     render() {
         const { routes, onChangeRoute } = this.props;
         return (
-            <View style={{ flex: 1, marginTop: 20 }}>
+            <ScrollView style={{ flex: 1, marginTop: 20 }}>
                 {routes.map((item, index) => (
                     <TouchableOpacity
                         onPress={onChangeRoute(item.route)}
@@ -17,7 +17,7 @@ class SideBar extends React.PureComponent<Props> {
                         <Text>{item.name}</Text>
                     </TouchableOpacity>
                 ))}
-            </View>
+            </ScrollView>
         );
     }
 }

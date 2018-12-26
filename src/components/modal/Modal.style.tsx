@@ -23,7 +23,7 @@ interface IProps extends ViewProps {
 
 function getColor(props: IProps) {
 
-    let TextInputColor = props.theme && props.theme.button.color ? props.theme.button.color : "#000";
+    let TextInputColor = "#000";
     const color =
         (props.primary && "primary")
         || (props.secondary && "secondary")

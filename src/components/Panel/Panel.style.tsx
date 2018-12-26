@@ -18,7 +18,7 @@ interface IProps extends ViewProps {
 
 function getColor(props: IProps) {
 
-    let TextInputColor = props.theme && props.theme.button.color ? props.theme.button.color : "#000";
+    let TextInputColor = "#6c757d";
     const inColor = (props.primary && "primary")
         || (props.secondary && "secondary")
         || (props.success && "success")
@@ -43,7 +43,10 @@ const StyledContent = styled(View)`
 
 const StyledHeader = styled(TouchableOpacity)`
     background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : (props.inverse ? "#fff" : color)};
-    padding: 10px;
+    padding-top: 10;
+    padding-bottom: 10;
+    padding-left: 12;
+    padding-right: 12;
     display: flex;
     flex-direction: row;
 `;

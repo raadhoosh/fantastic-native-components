@@ -55,7 +55,7 @@ class Panel extends React.PureComponent<IProps> {
             style = styledContent;
         }
         return (
-            <StyledContent style={style}>
+            <StyledContent style={style} {...this.props}>
                 {this.renderHeader()}
                 {this.renderBody()}
             </StyledContent>

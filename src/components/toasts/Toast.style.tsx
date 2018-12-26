@@ -24,8 +24,8 @@ interface IProps {
 
 function getColor(props: IProps) {
 
-    let backgroundColor = props.theme && props.theme.button.backgroundColor ? props.theme.button.backgroundColor : "#6c757d";
-    let ForeColor = props.theme && props.theme.button.color ? props.theme.button.color : "#fff";
+    let backgroundColor =  "#6c757d";
+    let ForeColor = "#fff";
 
     if (props.color) {
         ForeColor = props.color;
@@ -72,8 +72,7 @@ const StyledToasts = styled(Animated.View)`
 
 const StyledToastsText = styled(Text)`       
     color: ${(props: IProps) => props.inverse ? backgroundColor : ForeColor}; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
 `;
 
 export { StyledToasts, StyledToastsText };

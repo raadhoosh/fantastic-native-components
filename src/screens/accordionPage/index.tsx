@@ -17,15 +17,19 @@ class AccordionPage extends React.PureComponent<Props> {
             <Header>
                 <Left>
                     <TouchableOpacity onPress={this.props.openDrawer}>
-                    <Icon type="Ionicons" name="md-menu" color={"#fff"} />
+                        <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
                 <Title>{"AccordionPage"}</Title>
                 <Right>
-                    <Icon type="FontAwesome" name="search" color={"#fff"}/>
+                    <Icon type="FontAwesome" name="search" color={"#fff"} />
                 </Right>
             </Header>
             <Content>
+                <Accordion
+                    primary
+                    dataArray={dataArray}
+                    expanded={expanded} />
                 <Accordion
                     dark
                     dataArray={dataArray}

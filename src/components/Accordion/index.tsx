@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, Text, View, ViewStyle } from "react-native";
+import { Text, View, ViewStyle } from "react-native";
 import { Icon } from "..";
 import { Panel } from "..";
 type IStyle = ViewStyle | object | Array<ViewStyle>;
@@ -25,39 +25,14 @@ type Props = {
     dark?: boolean;
     backgroundColor?: string;
 };
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "#fff",
-        margin: 10,
-        overflow: "hidden",
-    },
-    titleContainer: {
-        flexDirection: "row",
-    },
-    title: {
-        flex: 1,
-        padding: 10,
-        color: "#2a2f43",
-        fontWeight: "bold",
-    },
-    button: {
 
-    },
-    buttonImage: {
-        width: 30,
-        height: 25,
-    },
-    body: {
-        padding: 10,
-        paddingTop: 0,
-    },
-});
 interface State {
     visible: number;
 }
 class Accordion extends React.Component<Props, State> {
     icons: {
-        "up": JSX.Element; "down": JSX.Element;
+        "up": JSX.Element;
+        "down": JSX.Element;
     };
 
     constructor(props: Props) {
@@ -70,9 +45,11 @@ class Accordion extends React.Component<Props, State> {
             "down": <Icon color="#fff" type="FontAwesome" name="sort-down" />,
         };
     }
+
     toggle = (index: number) => () => {
         this.setState({ visible: index });
     }
+
     renderIcon = (key: number) => {
         const { icon } = this.props;
         let elmIcon = icon || this.icons.down;
@@ -81,6 +58,7 @@ class Accordion extends React.Component<Props, State> {
         }
         return elmIcon;
     }
+
     renderBody = (item: ObInterface, key: number) => {
         if (this.state.visible === key) {
             return <View>
