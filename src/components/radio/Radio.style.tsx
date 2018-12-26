@@ -24,7 +24,7 @@ interface IProps {
 
 function getColor(props: IProps) {
 
-    let ForeColor = props.theme && props.theme.button.color ? props.theme.button.color : "#6c757d";
+    let ForeColor =  "#6c757d";
 
     if (props.color) {
         ForeColor = props.color;

@@ -24,8 +24,8 @@ interface IProps {
 
 function getColor(props: IProps) {
 
-    let backgroundColor = props.theme && props.theme.button.backgroundColor ? props.theme.button.backgroundColor : "#6c757d";
-    let ForeColor = props.theme && props.theme.button.color ? props.theme.button.color : "#fff";
+    let backgroundColor =  "#6c757d";
+    let ForeColor = "#fff";
 
     if (props.color) {
         ForeColor = props.color;
@@ -66,12 +66,16 @@ const StyledSearch = styled(View)`
     padding-left: 10px;
     padding-right: 10px; 
     overflow: hidden;
+    shadow-color: #000;
+    shadow-offset: 0px 2px;
+    shadow-opacity: 0.8;
+    shadow-radius: 2;
+    elevation: 3;
 `;
 
 const StyledTextInput = styled(TextInput)`      
     color: ${(props: IProps) => props.inverse ? backgroundColor : ForeColor}; 
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : '14px')}; 
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : '14px'}; 
     background-color: ${(props: IProps) => props.inverse ? ForeColor : backgroundColor};
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'}; 
     flex: 1;     

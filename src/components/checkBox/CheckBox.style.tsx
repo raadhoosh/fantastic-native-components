@@ -25,8 +25,8 @@ interface IProps {
 
 function getColor(props: IProps) {
 
-    let backgroundColor = props.theme && props.theme.button.backgroundColor ? props.theme.button.backgroundColor : "#6c757d";
-    let ForeColor = props.theme && props.theme.button.color ? props.theme.button.color : "#fff";
+    let backgroundColor =  "#6c757d";
+    let ForeColor =  "#fff";
 
     if (props.color) {
         ForeColor = props.color;
@@ -56,7 +56,7 @@ function getColor(props: IProps) {
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
 
 const StyledCheckBox = styled(View)`      
-    border: 2px solid ${(props: IProps) => props.checked ? backgroundColor : "#ddd"};        
+    border: 2px solid ${(props: IProps) => props.disabled ? "#ddd" : (props.checked ? backgroundColor : "#ddd")};       
     width: ${(props: IProps) => props.width ? props.width : '20px'};       
     height: ${(props: IProps) => props.height ? props.height : '20px'};             
     border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : '0'};     

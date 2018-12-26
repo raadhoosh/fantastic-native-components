@@ -22,7 +22,7 @@ interface IProps {
     imageHeight?: number | string;
     theme?: Theme;
     fontSize?: string | number;
-    borderRadius?: string;
+    borderRadius?: number;
 }
 
 function getColor(props: IProps) {
@@ -55,29 +55,21 @@ function getColor(props: IProps) {
 const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
 const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
-const StyledCard = styled(TouchableOpacity)`
-    background-color: ${backgroundColor};
-    border: 1px solid ${backgroundColor};
-    width: ${(props: IProps) => props.width ? props.width :
-        (props.theme && props.theme.button.width ? props.theme.button.width : "auto")};
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius :
-        (props.theme && props.theme.button.borderRadius ? props.theme.button.borderRadius : "0")};
-    margin-bottom: 5px;
-    padding: ${(props: IProps) => (props.theme && props.theme.button.padding) ? props.theme.button.padding : "5px 10px"};
-    box-shadow: 10px 5px 5px #000;
-`;
-
 const StyledCardImages = styled(TouchableOpacity)`
     border: 1px solid  ${(props: IProps) => props.borderColor ? props.borderColor : "#ddd"};
     width: ${(props: IProps) => props.width ? props.width : "auto"};
     height: ${(props: IProps) => props.height ? props.height : "auto"};
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : "0"};
+    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : "5"};
     flex: 1;
-    box-shadow: 10px 5px 5px #000;
+    overflow: hidden;
+    shadow-color: #ddd;
+    shadow-offset: 0px 3px;
+    shadow-opacity: 0.1;
+    shadow-radius: 2;
+    elevation:5; 
 `;
 
-const StyledImage = styled(Image)`
-    border-radius: ${(props: IProps) => props.borderRadius ? props.borderRadius : "0"};
+const StyledImage = styled(Image)`    
     width: ${(props: IProps) => props.imageWidth ? props.imageWidth : "100%"};
     height: ${(props: IProps) => props.imageHeight ? props.imageHeight : "150px"};
 `;
@@ -92,8 +84,7 @@ const StyledCardImagesFooter = styled(View)`
 const StyledCardImagesTitle = styled(Text)`
     text-align: ${(props: IProps) => props.center ? "center" : "left"};
     color: ${(props: IProps) => props.titleColor ? props.titleColor : ForeColor};
-    font-size:${(props: IProps) => props.fontSize ? props.fontSize :
-        (props.theme && props.theme.button.fontSize ? props.theme.button.fontSize : "14px")};
+    font-size:${(props: IProps) => props.fontSize ? props.fontSize : "14px"};
 `;
 
 const StyledCardImagesText = styled(Text)`
@@ -102,4 +93,4 @@ const StyledCardImagesText = styled(Text)`
     padding-top:10;
 `;
 
-export { StyledCard, StyledCardImages, StyledCardImagesTitle, StyledImage, StyledCardImagesText, StyledCardImagesFooter };
+export { StyledCardImages, StyledCardImagesTitle, StyledImage, StyledCardImagesText, StyledCardImagesFooter };

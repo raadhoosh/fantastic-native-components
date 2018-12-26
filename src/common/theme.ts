@@ -1,5 +1,5 @@
 import { Theme } from "../components";
-import { Platform, Dimensions, PixelRatio } from "react-native";
+import { Platform, Dimensions } from "react-native";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -55,28 +55,6 @@ const mainTheme: Theme = {
         main: "#6c757d",
         dark: "#343a40",
         contrastText: "#fff",
-    },
-    text: {
-        fontSize: "14px",
-        color: "#000",
-        fontWeight: "normal",
-        textAlign: "auto"
-    },
-    button: {
-        fontSize: "14px",
-        color: "#6c757d",
-        width: "auto",
-        borderRadius: "5px",
-        backgroundColor: "#dddddd",
-        padding: "5px 10px",        
-    },
-    textInput: {
-        fontSize: "14px",
-        color: "#6c757d",
-        width: "auto",
-        borderRadius: "5px",
-        backgroundColor: "#dddddd",
-        padding: "5px 10px",        
     },
     deviceWidth: deviceHeight,
     deviceHeight: deviceWidth,

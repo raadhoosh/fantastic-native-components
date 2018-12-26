@@ -82,13 +82,11 @@ const FABWrapper = styled(TouchableOpacity)`
     bottom:${(props: IProps) => props.bottom ? props.bottom : (props.top ? "auto" : '10')}; 
     left:${(props: IProps) => props.left ? props.left : (props.right ? "auto" : '10')};
     right:${(props: IProps) => props.right ? props.right : (props.left ? "auto" : '10')};  
-    ${{
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.8,
-        shadowRadius: 2,
-        elevation: 10
-    }}    
+    shadow-color: #000;
+    shadow-offset: 0px 2px;
+    shadow-opacity: 0.8;
+    shadow-radius: 2;
+    elevation: 10; 
 `;
 
 const FABText = styled(Text)`    

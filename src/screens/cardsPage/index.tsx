@@ -96,6 +96,20 @@ class CardImagesPage extends React.PureComponent<CardImagesPageProps> {
                 <View style={{ flex: 1, justifyContent: "center", marginTop: 30, marginBottom: 30 }}>
                     <CardImages
                         fontSize={24}
+                        titleColor={"#9c27b0"}
+                        borderColor={"transparent"}
+                        width={200}
+                        center
+                        title={"Tailored Jeans"}
+                        source={require('./img_avatar3.png')}
+                        text={"Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum."}
+                        borderRadius ={1}
+                    />
+                </View>
+
+                <View style={{ flex: 1, justifyContent: "center", marginTop: 30, marginBottom: 30 }}>
+                    <CardImages
+                        fontSize={24}
                         titleColor={"#ff0080"}
                         imageHeight={250}                        
                         borderColor={"transparent"}                        
