@@ -10,7 +10,7 @@ export interface Props {
     dataArray: Array<ObInterface>;
     expanded: number;
 }
-class AccordionPage extends React.PureComponent<Props> {
+class homePage extends React.PureComponent<Props> {
     render() {
         const { dataArray, expanded } = this.props;
         return (<Container>
@@ -20,7 +20,7 @@ class AccordionPage extends React.PureComponent<Props> {
                         <Icon type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Title>{"AccordionPage"}</Title>
+                <Title>{"Sport"}</Title>
                 <Right>
                     <Icon type="FontAwesome" name="search" color={"#fff"} />
                 </Right>
@@ -42,4 +42,4 @@ class AccordionPage extends React.PureComponent<Props> {
     }
 }
 
-export default AccordionPage;
+export default homePage;
