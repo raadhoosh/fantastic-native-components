@@ -9,9 +9,9 @@ const isIphoneX =
 
 const mainTheme: Theme = {
     primary: {
-        light: "#4dabf5",
-        main: "#2196f3",
-        dark: "#1769aa",
+        light: "#343536",
+        main: "#171818",
+        dark: "#000",
         contrastText: "#fff",
     },
     secondary: {
@@ -33,9 +33,9 @@ const mainTheme: Theme = {
         contrastText: "#fff",
     },
     danger: {
-        light: "#f6685e",
-        main: "#f44336",
-        dark: "#aa2e25",
+        light: "#FF005A",
+        main: "#FF005A",
+        dark: "#FF005A",
         contrastText: "#fff",
     },
     success: {
