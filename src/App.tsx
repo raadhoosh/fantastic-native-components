@@ -1,11 +1,11 @@
 import * as React from "react";
 import { ThemeProvider, Theme as IPropsTheme } from "./components";
 import theme from "./common/theme";
-import { createDrawerNavigator } from "react-navigation";
+import { DrawerNavigator } from "react-navigation";
 import HomeContainer from "./containers/homeContainer";
 import SideBar from "./containers/sideBarContainer";
 
-const RootStack = createDrawerNavigator({
+const RootStack = DrawerNavigator({
   Home: HomeContainer,
 },
   {
