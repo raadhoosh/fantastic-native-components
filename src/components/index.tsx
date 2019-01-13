@@ -1,4 +1,5 @@
 
+import Item from "./item";
 import Panel from "./Panel";
 import Accordion from "./Accordion";
 import Icon from "./icon";
@@ -30,6 +31,7 @@ import FAB from "./fAB";
 import Toast from "./toasts";
 
 export {
+    Item,
     Panel,
     Accordion,
     Icon,

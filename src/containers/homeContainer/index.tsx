@@ -12,7 +12,7 @@ class HomeContainer extends React.PureComponent<IProps> {
           ];
         return (<HomePage  openDrawer={() => {
             this.props.navigation.openDrawer();
-        }}   dataArray={dataArray} expanded={0}  />);
+        }}   dataArray={dataArray} expanded={0}   />);
     }
 }
 
