@@ -1,7 +1,13 @@
 import React, { Component } from "react";
+import { View, Text } from "react-native";
 import { Icon } from "../../components";
 import { StyledRadio, StyledWrapper, StyledText } from "./Gallery.style";
 import { Theme } from "..";
+import Carousel, { ParallaxImage } from 'react-native-snap-carousel';
+
+export interface IState {
+  entries: Array<Element>;
+}
 
 export interface IProps {
   primary?: boolean;
@@ -16,33 +22,47 @@ export interface IProps {
   color?: string;
   textColor?: string;
   width?: number | string;
-  theme?: Theme;  
+  theme?: Theme;
   onPress?: () => void;
   disabled?: boolean;
   fontSize?: number;
   borderRadius?: string;
-  label?: string;  
+  label?: string;
   checked?: boolean;
 }
 
-class Radio extends Component<IProps> {
+class Radio extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
+    this.state = {
+      entries: []
+    }
+  }
+
+  _renderItem({ item, index }, parallaxProps: any) {
+    return (
+      <View>
+        <ParallaxImage
+          source={{ uri: item.thumbnail }}
+          parallaxFactor={0.4}
+          {...parallaxProps}
+        />
+        <Text numberOfLines={2}>
+          {item.title}
+        </Text>
+      </View>
+    );
   }
 
   render() {
     return (
-      <StyledWrapper
-        onPress={this.props.disabled ? undefined : this.props.onPress}
-      >
-        <StyledRadio {...this.props}>
-          {this.props.checked && (
-            <Icon {...this.props} name="circle" type="FontAwesome" size={11} />
-          )}
-        </StyledRadio>
-        <StyledText textColor={this.props.textColor} fontSize={this.props.fontSize}>
-          {this.props.label}
-        </StyledText>
+      <StyledWrapper>
+        <Carousel
+          data={this.state.entries}
+          renderItem={this._renderItem}
+          hasParallaxImages={true}
+        />
+
       </StyledWrapper>
     );
   }

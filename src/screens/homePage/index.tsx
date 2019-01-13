@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, Text } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Icon, Accordion } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Icon, Accordion, Gallery } from "../../components";
 interface ObInterface {
     title: string;
     content: string;
@@ -34,6 +34,7 @@ class homePage extends React.PureComponent<Props> {
                     dark
                     dataArray={dataArray}
                     expanded={expanded} />
+                <Gallery />
             </Content>
             <Footer>
                 <Title>{"Footer"}</Title>
