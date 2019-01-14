@@ -25,15 +25,7 @@ class homePage extends React.PureComponent<Props> {
                     <Icon type="FontAwesome" name="search" color={"#fff"} />
                 </Right>
             </Header>
-            <Content>
-                <Accordion
-                    primary
-                    dataArray={dataArray}
-                    expanded={expanded} />
-                <Accordion
-                    dark
-                    dataArray={dataArray}
-                    expanded={expanded} />
+            <Content>                            
                 <Gallery />
             </Content>
             <Footer>

@@ -4,6 +4,7 @@ import { Icon } from "../../components";
 import { StyledRadio, StyledWrapper, StyledText } from "./Gallery.style";
 import { Theme } from "..";
 import Carousel, { ParallaxImage } from 'react-native-snap-carousel';
+import { ENTRIES1 } from '../../static/entries';
 
 export interface IState {
   entries: Array<Element>;
@@ -57,12 +58,11 @@ class Radio extends Component<IProps, IState> {
   render() {
     return (
       <StyledWrapper>
-        <Carousel
-          data={this.state.entries}
+        {/* <Carousel
+          data={ENTRIES1}
           renderItem={this._renderItem}
           hasParallaxImages={true}
-        />
-
+        /> */}
       </StyledWrapper>
     );
   }
