@@ -9,7 +9,7 @@ const isIphoneX =
 
 const mainTheme: Theme = {
     primary: {
-        light: "#343536",       
+        light: "#343536",
         main: "#000",
         dark: "#000",
         contrastText: "#fff",

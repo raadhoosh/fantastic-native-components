@@ -1,14 +1,7 @@
 import React from "react";
 import SideBar from "../../screens/sideBar";
-
-const list = [
-    { route: "Home", name: "Premier League", data: "PremierLeague" },
-    { route: "Home", name: "UEFA Champions League", data: "UEFAChampionsLeague" },
-    { route: "Home", name: "UEFA Europa League", data: "PremierLeague" },
-    { route: "Home", name: "Internationals", data: "Internationals" },
-    { route: "Home", name: "Podcasts", data: "Podcasts" },
-    { route: "Home", name: "Log In | Sign-Up" },
-];
+import { Query } from "react-apollo";
+import { LOCAL_MENU_QUERY } from "../../common/gql";
 export interface IProps {
     navigation: any;
 }
@@ -19,10 +12,18 @@ class SideBarContainer extends React.PureComponent<IProps | any> {
         };
     }
     render() {
-        return (<SideBar
-            routes={list}
-            onChangeRoute={this.onChangeRout}
-        />);
+        return (
+            <Query query={LOCAL_MENU_QUERY}>
+                {({ data, error, loading }) => {
+                    return (<SideBar
+                        routes={data.menus}
+                        error={error}
+                        loading={loading}
+                        onChangeRoute={this.onChangeRout}
+                    />);
+                }}
+            </Query>
+        );
     }
 }
 

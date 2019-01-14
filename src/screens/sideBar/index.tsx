@@ -7,11 +7,31 @@ export interface Props {
     theme: Theme;
     routes: Array<any>;
     onChangeRoute: any;
+    error: any;
+    loading: boolean;
 }
 class SideBar extends React.PureComponent<Props> {
     render() {
-        const { routes, onChangeRoute } = this.props;
+        const { routes, loading, error, onChangeRoute } = this.props;
         const color = this.props.theme.primary.light;
+        if (error) {
+            return <ScrollView style={{ flex: 1, marginTop: 20, backgroundColor: color }}>
+                <Text
+                    fontSize={18}
+                    secondary>
+                    {JSON.stringify(error)}
+                </Text>
+            </ScrollView>;
+        }
+        if (loading) {
+            return <ScrollView style={{ flex: 1, marginTop: 20, backgroundColor: color }}>
+                <Text
+                    fontSize={18}
+                    secondary>
+                    {"loading"}
+                </Text>
+            </ScrollView>;
+        }
         return (
             <ScrollView style={{ flex: 1, marginTop: 20, backgroundColor: color }}>
                 {routes.map((item, index) => (

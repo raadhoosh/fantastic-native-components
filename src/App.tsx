@@ -4,6 +4,7 @@ import theme from "./common/theme";
 import { DrawerNavigator } from "react-navigation";
 import HomeContainer from "./containers/homeContainer";
 import SideBar from "./containers/sideBarContainer";
+import ApolloProvider from "./common/gql/Apollo";
 
 const RootStack = DrawerNavigator({
   Home: HomeContainer,
@@ -19,9 +20,11 @@ export default class App extends React.Component<Props> {
   props: any;
   render() {
     return (
-      <ThemeProvider theme={theme}>
-        <RootStack />
-      </ThemeProvider>
+      <ApolloProvider>
+        <ThemeProvider theme={theme}>
+          <RootStack />
+        </ThemeProvider>
+      </ApolloProvider>
     );
   }
 }
