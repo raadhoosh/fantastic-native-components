@@ -26,7 +26,7 @@ import Badge from "./badge";
 import Search from "./search";
 import Tab from "./tabs/Tab";
 import CardImages from "./cards";
-import {SpinnerIcon ,Spinner} from "./spinner";
+import { SpinnerIcon, Spinner } from "./spinner";
 import FAB from "./fAB";
 import Toast from "./toasts";
 

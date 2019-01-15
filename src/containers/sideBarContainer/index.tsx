@@ -16,7 +16,7 @@ class SideBarContainer extends React.PureComponent<IProps | any> {
             <Query query={LOCAL_MENU_QUERY}>
                 {({ data, error, loading }) => {
                     return (<SideBar
-                        routes={data.menus}
+                        routes={data}
                         error={error}
                         loading={loading}
                         onChangeRoute={this.onChangeRout}

@@ -5,7 +5,7 @@ import { TouchableOpacity, ScrollView } from "react-native";
 import { Text, Theme, List, Item } from "./../../components";
 export interface Props {
     theme: Theme;
-    routes: Array<any>;
+    routes: any;
     onChangeRoute: any;
     error: any;
     loading: boolean;
@@ -32,9 +32,10 @@ class SideBar extends React.PureComponent<Props> {
                 </Text>
             </ScrollView>;
         }
+
         return (
             <ScrollView style={{ flex: 1, marginTop: 20, backgroundColor: color }}>
-                {routes.map((item, index) => (
+                {routes.menus.map((item: any, index: number) => (
                     <Item
                         onPress={onChangeRoute(item.route)}
                         key={`route-${index}`}>
