@@ -22,13 +22,13 @@ export default StyleSheet.create({
     scrollview: {
         flex: 1
     },
-    exampleContainer: {
-        paddingVertical: 30
+    slideshowContainer: {
+        paddingVertical: 0
     },
-    exampleContainerDark: {
+    slideshowContainerDark: {
         backgroundColor: colors.black
     },
-    exampleContainerLight: {
+    slideshowContainerLight: {
         backgroundColor: 'white'
     },
     title: {
@@ -52,14 +52,23 @@ export default StyleSheet.create({
         textAlign: 'center'
     },
     slider: {
-        marginTop: 15,
+        marginTop: 0,
         overflow: 'visible' // for custom animations
     },
     sliderContentContainer: {
-        paddingVertical: 10 // for custom animation
+        paddingVertical: 0 // for custom animation
     },
     paginationContainer: {
-        paddingVertical: 8
+        paddingVertical: 8,
+        position: "absolute",
+        left: 0,
+        bottom: 20,
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        alignContent: "center",
+        justifyContent: "center",
+        width: "100%",
     },
     paginationDot: {
         width: 8,

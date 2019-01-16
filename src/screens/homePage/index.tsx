@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, Text } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Icon, Accordion, Gallery } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Icon, Accordion, Gallery, Slideshow } from "../../components";
 interface ObInterface {
     title: string;
     content: string;
@@ -25,7 +25,8 @@ class homePage extends React.PureComponent<Props> {
                     <Icon type="FontAwesome" name="search" color={"#fff"} />
                 </Right>
             </Header>
-            <Content>                            
+            <Content full>
+                <Slideshow />
                 <Gallery />
             </Content>
             <Footer>
