@@ -11,7 +11,7 @@ import { scrollInterpolators, animatedStyles } from './carousel/animations';
 const IS_ANDROID = Platform.OS === 'android';
 const SLIDER_1_FIRST_ITEM = 1;
 
-export default class example extends Component {
+export default class Gallery extends Component {
 
     constructor (props) {
         super(props);
@@ -71,7 +71,8 @@ export default class example extends Component {
     layoutExample (number, title, type) {
         const isTinder = type === 'tinder';
         return (
-            <View style={[styles.exampleContainer, isTinder ? styles.exampleContainerDark : styles.exampleContainerLight]}>               
+            // <View style={[styles.exampleContainer, isTinder ? styles.exampleContainerDark : styles.exampleContainerLight]}>               
+            <View style={styles.exampleContainer}>               
                
                 <Text style={[styles.subtitle, isTinder ? {} : styles.titleDark]}>{title}</Text>
                 <Carousel
@@ -146,10 +147,7 @@ export default class example extends Component {
                     >                       
                         { example2 }
                         { example3 }
-                        { example4 }
-                        { example5 }
-                        { example6 }
-                        { example7 }                       
+                        { example4 }                       
                     </ScrollView>
                 </View>
             </SafeAreaView>

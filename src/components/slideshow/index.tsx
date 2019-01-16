@@ -75,8 +75,8 @@ export default class Slideshow extends Component {
                     containerStyle={styles.paginationContainer}
                     dotColor={'rgba(255, 255, 255, 0.92)'}
                     dotStyle={styles.paginationDot}
-                    inactiveDotColor={colors.white}
-                    inactiveDotOpacity={1}
+                    inactiveDotColor={colors.black}
+                    inactiveDotOpacity={0.4}
                     inactiveDotScale={0.6}
                     carouselRef={this._slider1Ref}
                     tappableDots={!!this._slider1Ref}

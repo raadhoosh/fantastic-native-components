@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const colors = {
     black: '#000',
+    white: '#fff',
     gray: '#888888',
     background1: '#000',
     background2: '#000'
@@ -74,6 +75,6 @@ export default StyleSheet.create({
         width: 8,
         height: 8,
         borderRadius: 4,
-        marginHorizontal: 8
+        marginHorizontal: 0
     }
 });
