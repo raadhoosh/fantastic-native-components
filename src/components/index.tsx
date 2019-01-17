@@ -30,6 +30,7 @@ import FAB from "./fAB";
 import Toast from "./toasts";
 import Gallery from "./gallery";
 import Slideshow from "./slideshow";
+import Game from "./game";
 
 export {
     Panel,
@@ -62,5 +63,6 @@ export {
     FAB,
     Toast,
     Gallery,
-    Slideshow
+    Slideshow,
+    Game
 };

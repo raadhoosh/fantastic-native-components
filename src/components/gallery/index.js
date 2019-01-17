@@ -126,10 +126,7 @@ export default class Gallery extends Component {
     render () {        
         const example2 = this.momentumExample(2, 'Featured');
         const example3 = this.layoutExample(3, '"Featured');
-        const example4 = this.layoutExample(4, '"Featured');
-        const example5 = this.customExample(5, 'Featured',  this._renderItem);
-        const example6 = this.customExample(6, 'Featured',  this._renderLightItem);
-        const example7 = this.customExample(7, 'Featured',  this._renderDarkItem);        
+        const example4 = this.layoutExample(4, '"Featured');            
 
         return (
             <SafeAreaView style={styles.safeArea}>

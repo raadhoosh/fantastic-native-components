@@ -8,9 +8,7 @@
     "test--w": "jest --watchAll --verbose",
     "test--c": "jest --verbose --coverage"
   },
-  "dependencies": {
-    "@types/react-native-snap-carousel": "^3.7.1",
-    "@types/styled-components": "^4.0.3",
+  "dependencies": {    
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4",
     "react-native-easy-grid": "^0.2.0",
@@ -20,7 +18,8 @@
     "react-navigation": "^2.18.2",
     "styled-components": "^4.0.3"
   },
-  "devDependencies": {
+  "devDependencies": {    
+    "@types/react-native-snap-carousel": "^3.7.1",
     "@types/react-native-vector-icons": "^4.6.4",
     "@types/enzyme": "^3.1.14",
     "@types/enzyme-adapter-react-16": "^1.0.3",

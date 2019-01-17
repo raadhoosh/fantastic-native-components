@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, Text } from "react-native";
-import { Container, Content, Header, Footer, Title, Left, Right, Icon, Accordion, Gallery, Slideshow } from "../../components";
+import { Container, Content, Header, Footer, Title, Left, Right, Icon, Accordion, Gallery, Slideshow, Game } from "../../components";
 interface ObInterface {
     title: string;
     content: string;
@@ -27,6 +27,16 @@ class homePage extends React.PureComponent<Props> {
             </Header>
             <Content full>
                 <Slideshow />
+                <Game
+                    primary
+                    fontSize={24}
+                    titleColor={"#f00"}
+                    width={"80%"}
+                    title={"Tailored Jeans"}
+                    // source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+                    source={require('./img.png')}
+                    text={"Southampton"}
+                />
                 <Gallery />
             </Content>
             <Footer>

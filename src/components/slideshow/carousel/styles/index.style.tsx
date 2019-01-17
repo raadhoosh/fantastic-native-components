@@ -24,7 +24,8 @@ export default StyleSheet.create({
         flex: 1
     },
     slideshowContainer: {
-        paddingVertical: 0
+        paddingVertical: 0,
+        backgroundColor: colors.black
     },
     slideshowContainerDark: {
         backgroundColor: colors.black
@@ -63,12 +64,11 @@ export default StyleSheet.create({
         paddingVertical: 8,
         position: "absolute",
         left: 0,
-        bottom: 20,
+        bottom: 10,
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
         alignContent: "center",
-        justifyContent: "center",
         width: "100%",
     },
     paginationDot: {
@@ -76,5 +76,35 @@ export default StyleSheet.create({
         height: 8,
         borderRadius: 4,
         marginHorizontal: 0
-    }
+    },
+    titleWrapper: {
+        position: 'absolute',
+        top: 30,
+        left: 0,
+        color: '#fff',
+        fontSize: 13,
+        fontWeight: 'bold',
+        letterSpacing: 0.5, 
+        maxWidth : "100%"       
+    },
+    titleSlideshow: {
+        color: colors.white,
+        fontSize: 32,
+        fontWeight: 'bold',
+        letterSpacing: 0.5,
+        padding: 10,       
+        backgroundColor: "rgba(0, 0, 0, 0.45)",
+        marginRight: 10,
+        marginLeft: 10,
+    },
+    subTitleSlideshow: {
+        color: colors.black,
+        fontSize: 20,
+        fontWeight: 'bold',
+        letterSpacing: 0.5,
+        padding: 10,        
+        backgroundColor: "#fff",
+        marginRight: 10,
+        marginLeft: 10,
+    },
 });
