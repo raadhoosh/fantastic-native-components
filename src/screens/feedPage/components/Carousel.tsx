@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ScrollView, Image, Dimensions } from "react-native";
+import { ScrollView, Image, Dimensions, Text } from "react-native";
 import { Col, Row } from "../../../components";
 
 const deviceWidth = Dimensions.get("window").width;
@@ -16,6 +16,7 @@ interface ICarouselProps {
 export class App extends React.PureComponent<ICarouselProps> {
     render() {
         const { data } = this.props;
+
         return (
             <Col>
                 <ScrollView

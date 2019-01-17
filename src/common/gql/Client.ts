@@ -43,7 +43,7 @@ const client = new ApolloClient({
   request: async (operation: any) => {
     operation.setContext({
       headers: {
-        authorization: token ? `Bearer ${token}` : " ",
+        "x-api-key":  `da2-ff3dkyzb4jelngtjzjwy3xcytu`,
       },
     });
   },

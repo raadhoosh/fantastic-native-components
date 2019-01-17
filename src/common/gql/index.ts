@@ -7,7 +7,14 @@ export const LOCAL_STATE_QUERY = gql`
 
 export const LOCAL_MENU_QUERY = gql`
   query {
-  menus @client
+    listMenus{
+    items {
+      data
+      route
+      name
+    }
+    nextToken
+  }
   }
 `;
 
@@ -27,6 +34,45 @@ export const LOCAL_GAMES_QUERY = gql`
   query {
     games @client
   }
+`;
+export const listFeeds = gql`
+  query {
+  listFeeds{
+    nextToken
+    items {
+      id
+      title
+      elements {
+        id
+        title
+        type
+        duration
+        short_description
+        base_image
+        url
+      }
+    }
+  }
+  listGames{
+    items{
+      id
+      title
+    }
+    nextToken
+  }
+ 
+  listSliders{
+    items {
+      id
+      title
+      type
+      short_description
+      url
+    }
+    nextToken
+  }
+}
+
 `;
 
 export const TOGGLE_LOGIN_MUTATION = gql`

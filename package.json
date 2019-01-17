@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build": "jest --verbose",
     "test": "jest --verbose",
     "test--w": "jest --watchAll --verbose",
     "test--c": "jest --verbose --coverage"
@@ -11,6 +12,9 @@
   "dependencies": {
     "@types/styled-components": "^4.0.3",
     "apollo-boost": "^0.1.23",
+    "aws-amplify": "^1.1.19",
+    "aws-appsync": "^1.7.1",
+    "aws-appsync-react": "^1.2.6",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "react": "16.6.0-alpha.8af6728",

@@ -47,9 +47,9 @@ class FeedPage extends React.PureComponent<Props> {
         }
 
         return <>
-            {data.sliders && <Carousel data={data.sliders} />}
-            {data.games && <Game data={data.games} />}
-            {data.feeds && <Feed data={data.feeds} />}
+            {data.listSliders && data.listSliders.items && <Carousel data={data.listSliders.items} />}
+            {data.listGames && data.listSliders.items && <Game data={data.listGames.items} />}
+            {data.listFeeds && data.listSliders.items && <Feed data={data.listFeeds.items} />}
         </>;
     }
 

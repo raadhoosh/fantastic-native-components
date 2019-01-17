@@ -35,7 +35,7 @@ class SideBar extends React.PureComponent<Props> {
 
         return (
             <ScrollView style={{ flex: 1, marginTop: 20, backgroundColor: color }}>
-                {routes.menus.map((item: any, index: number) => (
+                {routes.listMenus.items.map((item: any, index: number) => (
                     <Item
                         onPress={onChangeRoute(item.route)}
                         key={`route-${index}`}>
