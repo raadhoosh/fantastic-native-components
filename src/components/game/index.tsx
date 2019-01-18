@@ -1,8 +1,18 @@
 import * as React from "react";
-import { StyledGame, StyledGameTitle, StyledImage, StyledGameText, StyledGameFooter, StyledGameImgWrapper, StyledVS } from "./Cards.style";
-import { ViewStyle, ImageSourcePropType } from "react-native";
+import {
+  StyledGame,
+  StyledGameTitle,
+  StyledImage,
+  StyledGameText,
+  StyledGameFooter,
+  StyledGameImgWrapper,
+  StyledVS,
+  StledTeams,
+  StyledVSWrapper,
+  StyledTextStart
+} from "./Cards.style";
+import { ViewStyle, ImageSourcePropType, Text  } from "react-native";
 import { Theme } from "..";
-import View from "../content/Content.style";
 
 interface IProps {
   style?: ViewStyle | object | Array<ViewStyle>;
@@ -28,45 +38,62 @@ interface IProps {
   fontSize?: string | number;
   borderRadius?: number;
   title?: string;
-  text?: string;
+  textLeft?: string;
+  textRight?: string;
   center?: boolean;
   titleColor?: string;
-  source: ImageSourcePropType;
+  sourceLleft: ImageSourcePropType;
+  sourceRight: ImageSourcePropType;
 }
 
 const Game = (props: IProps) => {
-
   return (
-    <StyledGame {...props} activeOpacity={0.8} onPress={props.disabled ? undefined : props.onPress} borderRadius={props.borderRadius} >
+    <StyledGame
+      {...props}
+      activeOpacity={0.8}
+      onPress={props.disabled ? undefined : props.onPress}
+      borderRadius={props.borderRadius}
+    >
       <StyledGameImgWrapper>
-        <View style={{ backgroundColor: "#000", width: "50%" ,flex: 1}}>
-          <StyledImage source={props.source} imageWidth={props.imageWidth} imageHeight={props.imageHeight} />
+        <StledTeams>
+          <StyledImage
+            source={props.sourceLleft}
+            imageWidth={props.imageWidth}
+            imageHeight={props.imageHeight}
+          />
           <StyledGameText color={props.color} center={props.center} {...props}>
-            {props.text}
+            {props.textLeft}
           </StyledGameText>
-        </View>
+        </StledTeams>
 
-        <View style={{ width: 56, backgroundColor: "#transparent", position: "absolute", left: "40%", top: 1.75, zIndex: 1 }}>
+        <StyledVSWrapper>
           <StyledVS color={props.color} center={props.center} {...props}>
             VS
-        </StyledVS>
-        </View>
+          </StyledVS>
+        </StyledVSWrapper>
 
-        <View style={{ backgroundColor: "#000", width: "50%" ,flex: 1 }}>
-          <StyledImage source={props.source} imageWidth={props.imageWidth} imageHeight={props.imageHeight} />
+        <StledTeams>
+          <StyledImage
+            source={props.sourceRight}
+            imageWidth={props.imageWidth}
+            imageHeight={props.imageHeight}
+          />
           <StyledGameText color={props.color} center={props.center} {...props}>
-            {props.text}
+            {props.textRight}
           </StyledGameText>
-        </View>
-
+        </StledTeams>        
       </StyledGameImgWrapper>
 
       <StyledGameFooter {...props}>
-        <StyledGameTitle titleColor={props.titleColor} center={props.center} {...props}>
-          {props.title}
+      <StyledTextStart>Starts</StyledTextStart>
+        <StyledGameTitle
+          titleColor={props.titleColor}
+          center={props.center}
+          {...props}
+        >
+         SAT {props.title}
         </StyledGameTitle>
       </StyledGameFooter>
-
     </StyledGame>
   );
 };
