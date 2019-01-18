@@ -31,6 +31,8 @@ import Toast from "./toasts";
 import Gallery from "./gallery";
 import Slideshow from "./slideshow";
 import Game from "./game";
+import CardSport from "./cardsSport";
+import TitleSport from "./titleSport";
 
 export {
     Panel,
@@ -64,5 +66,7 @@ export {
     Toast,
     Gallery,
     Slideshow,
-    Game
+    Game,
+    CardSport,
+    TitleSport
 };

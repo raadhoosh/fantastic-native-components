@@ -12,8 +12,11 @@ import {
   Accordion,
   Gallery,
   Slideshow,
-  Game
+  Game,
+  CardSport,
+  TitleSport
 } from "../../components";
+import View from "../../components/content/Content.style";
 interface ObInterface {
   title: string;
   content: string;
@@ -39,14 +42,12 @@ class homePage extends React.PureComponent<Props> {
             <Icon type="FontAwesome" name="search" color={"#fff"} />
           </Right>
         </Header>
-        <Content full>
+        <Content full color={"#000"}>
           <Slideshow />
           <ScrollView
             horizontal={true}
             style={{
-              backgroundColor: "#000",
-              paddingLeft: 12,
-              paddingRight: 12
+              backgroundColor: "#000"
             }}
           >
             <Game
@@ -78,6 +79,54 @@ class homePage extends React.PureComponent<Props> {
             />
           </ScrollView>
 
+          <View
+            style={{
+              backgroundColor: "#000",
+              marginTop: 30,
+            }}
+          >
+            <TitleSport title={"Upcoming Matches"} />
+            <ScrollView
+              horizontal={true}
+              style={{
+                backgroundColor: "#000"
+              }}
+            >
+              <CardSport
+                primary
+                source={require("./card.jpg")}
+                title={"Mini Match: Manchester City v Wolverhampton"}
+                titleColor={"#FF005A"}
+                icon={"lock"}
+                time={"01:52"}
+                live={"LIVE"}
+                text={
+                  "If you’re short on time, catch up on the action with this mi..."
+                }
+              />
+              <CardSport
+                primary
+                source={require("./card.jpg")}
+                title={"Mini Match: Manchester City v Wolverhampton"}
+                titleColor={"#FF005A"}
+                time={"01:52"}
+                text={
+                  "If you’re short on time, catch up on the action with this mi..."
+                }
+              />
+              <CardSport
+                primary
+                source={require("./card.jpg")}
+                title={"Mini Match: Manchester City v Wolverhampton"}
+                titleColor={"#FF005A"}
+                live={"LIVE"}
+                time={"01:52"}
+                text={
+                  "If you’re short on time, catch up on the action with this mi..."
+                }
+              />
+            </ScrollView>
+          </View>
           <Gallery />
         </Content>
         <Footer>
