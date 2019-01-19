@@ -6,7 +6,7 @@ type Props = {
 };
 
 const StyledHeader = styled(View)`
-height:  ${(props: Props) => props.theme.isIphoneX ? 45 : 55};
+height:  ${(props: Props) => props.theme.isIphoneX ? 65 : 55};
 padding-left: 6px;
 padding-right: 6px;
 flex-direction: row;
