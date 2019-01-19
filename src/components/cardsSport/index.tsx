@@ -42,7 +42,7 @@ interface IProps {
   center?: boolean;
   titleColor?: string;
   icon?: string;
-  live?: string;
+  live?: string | boolean;
   time?: string;
   source: ImageSourcePropType;
 }
@@ -56,7 +56,7 @@ const CardImages = (props: IProps) => {
       borderRadius={props.borderRadius}
     >
       <StyledImageRapper>
-        {props.live && <StyledLive>{props.live}</StyledLive>}
+        {props.live && <StyledLive>{"LIVE"}</StyledLive>}
 
         <StyledImage
           source={props.source}

@@ -10,7 +10,7 @@ height:  ${(props: Props) => props.theme.isIphoneX ? 45 : 55};
 padding-left: 6px;
 padding-right: 6px;
 flex-direction: row;
-background-color:  ${(props: Props) => {       
+background-color:  ${(props: Props) => {
         return props.theme[props.color].main;
     }};
 `;

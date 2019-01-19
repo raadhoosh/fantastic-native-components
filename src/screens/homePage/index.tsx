@@ -43,7 +43,7 @@ class homePage extends React.PureComponent<Props> {
           </Right>
         </Header>
         <Content full color={"#000"}>
-          <Slideshow />
+          {/* <Slideshow /> */}
           <ScrollView
             horizontal={true}
             style={{
@@ -54,7 +54,7 @@ class homePage extends React.PureComponent<Props> {
               primary
               fontSize={24}
               title={"Tailored Jeans"}
-              sourceLleft={require("./game.png")}
+              sourceLeft={require("./game.png")}
               sourceRight={require("./img.png")}
               textLeft={"Southampton"}
               textRight={"Brighton"}
@@ -64,7 +64,7 @@ class homePage extends React.PureComponent<Props> {
               fontSize={24}
               title={"Tailored Jeans"}
               sourceRight={require("./img.png")}
-              sourceLleft={require("./game.png")}
+              sourceLeft={require("./game.png")}
               textLeft={"Southampton"}
               textRight={"Brighton"}
             />
@@ -73,7 +73,7 @@ class homePage extends React.PureComponent<Props> {
               fontSize={24}
               title={"Tailored Jeans"}
               sourceRight={require("./img.png")}
-              sourceLleft={require("./game.png")}
+              sourceLeft={require("./game.png")}
               textLeft={"Southampton"}
               textRight={"Brighton"}
             />

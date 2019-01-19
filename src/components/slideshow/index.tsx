@@ -1,74 +1,44 @@
-import React, { Component } from 'react';
-import { Platform, View, ScrollView, Text, StatusBar, SafeAreaView, TouchableOpacity, Image } from 'react-native';
+import React, { Component } from "react";
+import { Platform, View, ScrollView, Text, StatusBar, SafeAreaView, TouchableOpacity, Image } from "react-native";
 // import LinearGradient from 'react-native-linear-gradient';
-import Carousel, { Pagination } from 'react-native-snap-carousel';
-import styles, { colors } from './carousel/styles/index.style';
-import { sliderWidth, itemWidth } from './carousel/styles/SliderEntry.style';
-import { Row } from 'react-native-easy-grid';
-
-export const ENTRIES1 = [
-    {
-        title: 'Premier League',
-        subtitle: 'Watch now',
-        illustration: 'https://i.imgur.com/UYiroysl.jpg'
-    },
-    {
-        title: 'Earlier this morning, NYC',
-        subtitle: 'Watch now',
-        illustration: 'https://i.imgur.com/UPrs1EWl.jpg'
-    },
-    {
-        title: 'White Pocket Sunset',
-        subtitle: 'Watch now ',
-        illustration: 'https://i.imgur.com/MABUbpDl.jpg'
-    },
-    {
-        title: 'Acrocorinth, Greece',
-        subtitle: 'Watch now',
-        illustration: 'https://i.imgur.com/KZsmUi2l.jpg'
-    },
-    {
-        title: 'The lone tree, majestic ',
-        subtitle: 'Watch now',
-        illustration: 'https://i.imgur.com/2nCt3Sbl.jpg'
-    },
-    {
-        title: 'Middle Earth, Germany',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: 'https://i.imgur.com/lceHsT6l.jpg'
-    }
-];
+import Carousel, { Pagination } from "react-native-snap-carousel";
+import styles, { colors } from "./carousel/styles/index.style";
+import { sliderWidth, itemWidth } from "./carousel/styles/SliderEntry.style";
+import { Row } from "react-native-easy-grid";
 
 const SLIDER_1_FIRST_ITEM = 1;
-export default class Slideshow extends Component {
+interface IProps {
+    data: Array<Object>;
+}
+interface IState {
+    errors: any;
+    slider1ActiveSlide: any;
+}
+export default class Slideshow extends Component<IProps, IState> {
     _carousel: any;
-    state: {
-        errors: any,
-        slider1ActiveSlide: any
-    }
     constructor(props: any) {
         super(props);
         this.state = {
             errors: [],
             slider1ActiveSlide: SLIDER_1_FIRST_ITEM,
-        }
+        };
         this._carousel = {};
     }
 
     _onPressCarousel = (item: any) => {
         // here handle carousel press
-        alert("dcx s")
+        alert("dcx s");
     }
-    _renderItem({ item }: any) {
+    _renderItem({ item, index }: any) {
 
         return (
             <View style={{
                 width: "98%",
                 marginLeft: "1%",
-                marginRight: "1%"
+                marginRight: "1%",
             }}>
                 <View >
-                    <Image source={{ uri: item.illustration }} style={{ height: 300, width: "100%", flex: 1 }} />
+                    <Image source={{ uri: item.url }} style={{ height: 300, width: "100%", flex: 1 }} />
                     <TouchableOpacity style={styles.titleWrapper} >
                         <Row>
                             <Text style={styles.titleSlideshow} >
@@ -77,7 +47,7 @@ export default class Slideshow extends Component {
                         </Row>
                         <Row>
                             <Text style={styles.subTitleSlideshow} >
-                                {item.subtitle}
+                                {index % 3 === 0 ? "LOGIN IN TO WATCH" : "WATCH NOW"}
                             </Text>
                         </Row>
                     </TouchableOpacity>
@@ -91,12 +61,11 @@ export default class Slideshow extends Component {
         const { slider1ActiveSlide } = this.state;
         return (
             <>
-
                 <View style={styles.slideshowContainer}>
                     <Carousel
-                        layout={'default'}
+                        layout={"default"}
                         ref={(c: any) => { this._carousel = c; }}
-                        data={ENTRIES1}
+                        data={this.props.data}
                         renderItem={item => this._renderItem(item)}
                         autoplay={true}
                         autoplayInterval={3000}
@@ -106,10 +75,10 @@ export default class Slideshow extends Component {
                     />
 
                     <Pagination
-                        dotsLength={ENTRIES1.length}
+                        dotsLength={this.props.data.length}
                         activeDotIndex={slider1ActiveSlide}
                         containerStyle={styles.paginationContainer}
-                        dotColor={'rgba(255, 255, 255, 0.92)'}
+                        dotColor={"rgba(255, 255, 255, 0.92)"}
                         dotStyle={styles.paginationDot}
                         inactiveDotColor={colors.white}
                         inactiveDotOpacity={1}

@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Icon, Col, Row, Text } from "../../../components";
+import { Icon, Col, Row, Text, TitleSport, CardSport } from "../../../components";
 import CardImage from "./CardImages";
 import { ScrollView } from "react-native";
+import View from "../../../components/content/Content.style";
 
 type Item = {
     id: string;
@@ -19,33 +20,36 @@ export class App extends React.PureComponent<IFeedProps> {
         return (
             <>
                 {data.map((item: any, index: any) => {
-                    return <Col key={index}>
-                        <Row>
-                            <Text fontSize={18} secondary>{item.title}</Text>
-                            <Text
-                                style={{
-                                    marginLeft: 24,
-                                    color: "#ccc",
-                                    marginTop: 3,
-                                }}
-                                fontSize={14}
-                                secondary>{"VIEW ALL"}</Text>
-                            <Icon style={{ marginLeft: 12 }} type="FontAwesome" name="angle-right" color={"#ccc"} />
-                        </Row>
+                    return <View
+                        style={{
+                            backgroundColor: "#000",
+                            marginTop: 30,
+                        }} key={index}>
+                        <TitleSport title={item.title} />
+
                         <ScrollView horizontal={true}
                             style={{
-                                flex: 1,
-                                marginTop: 20,
-                                marginBottom: 30,
-                                height: 250,
+                                backgroundColor: "#000",
                             }}>
                             {
                                 item.elements.map((element: any, key: number) => {
-                                    return <CardImage item={element} key={key} />;
+                                    return <CardSport
+                                        key={"key" + key}
+                                        primary
+                                        source={{ uri: element.url }}
+                                        title={element.title}
+                                        titleColor={"#FF005A"}
+                                        icon={"lock"}
+                                        time={element.duration}
+                                        live={element.type === "Live"}
+                                        text={
+                                            element.short_description
+                                        }
+                                    />;
                                 })
                             }
                         </ScrollView>
-                    </Col>;
+                    </View>;
                 })}
             </>
         );

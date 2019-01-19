@@ -57,10 +57,17 @@ export const listFeeds = gql`
     items{
       id
       title
+      two_title
+      updateTime
+      categoryTitle
+      description
+      imageUrl
+      publish
+      image
+      image2
     }
     nextToken
   }
- 
   listSliders{
     items {
       id

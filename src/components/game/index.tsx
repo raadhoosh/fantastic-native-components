@@ -9,9 +9,9 @@ import {
   StyledVS,
   StledTeams,
   StyledVSWrapper,
-  StyledTextStart
+  StyledTextStart,
 } from "./Cards.style";
-import { ViewStyle, ImageSourcePropType, Text  } from "react-native";
+import { ViewStyle, ImageSourcePropType, Text } from "react-native";
 import { Theme } from "..";
 
 interface IProps {
@@ -42,7 +42,7 @@ interface IProps {
   textRight?: string;
   center?: boolean;
   titleColor?: string;
-  sourceLleft: ImageSourcePropType;
+  sourceLeft: ImageSourcePropType;
   sourceRight: ImageSourcePropType;
 }
 
@@ -57,11 +57,11 @@ const Game = (props: IProps) => {
       <StyledGameImgWrapper>
         <StledTeams>
           <StyledImage
-            source={props.sourceLleft}
+            source={props.sourceLeft}
             imageWidth={props.imageWidth}
             imageHeight={props.imageHeight}
           />
-          <StyledGameText color={props.color} center={props.center} {...props}>
+          <StyledGameText numberOfLines={1}  color={props.color} center={props.center} {...props}>
             {props.textLeft}
           </StyledGameText>
         </StledTeams>
@@ -78,20 +78,22 @@ const Game = (props: IProps) => {
             imageWidth={props.imageWidth}
             imageHeight={props.imageHeight}
           />
-          <StyledGameText color={props.color} center={props.center} {...props}>
+          <StyledGameText numberOfLines={1} color={props.color} center={props.center} {...props}>
             {props.textRight}
           </StyledGameText>
-        </StledTeams>        
+        </StledTeams>
       </StyledGameImgWrapper>
 
       <StyledGameFooter {...props}>
-      <StyledTextStart>Starts</StyledTextStart>
+        {/* <StyledTextStart>Starts</StyledTextStart> */}
         <StyledGameTitle
+        numberOfLines={1}
           titleColor={props.titleColor}
           center={props.center}
           {...props}
         >
-         SAT {props.title}
+          {/* SAT  */}
+          {props.title}
         </StyledGameTitle>
       </StyledGameFooter>
     </StyledGame>
