@@ -1,6 +1,6 @@
 import React from "react";
-import { TouchableOpacity, ScrollView, Image, Dimensions } from "react-native";
-import { Container, Content, Text, Header, Title, Left, Right, Icon, Slideshow } from "../../components";
+import { TouchableOpacity, ScrollView, Image, Dimensions, View } from "react-native";
+import { Container, Content, Text, Header, Title, Left, Right, Icon, Slideshow, Row, Spinner } from "../../components";
 import Game from "./components/Game";
 import Feed from "./components/Feed";
 interface ObInterface {
@@ -20,19 +20,30 @@ class FeedPage extends React.PureComponent<Props> {
     render() {
 
         return (<Container>
-            <Header>
-                <Left>
+            <Header >
+                <Left style={{ marginLeft: 0 }}>
                     <TouchableOpacity onPress={this.props.openDrawer}>
                         <Icon size={30} type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
-                <Image
-                    source={require("./logo.png")}
-                    style={{ width: 140, height: 16, marginTop: 15 }}
-                />
-                {/* <Right>
-                    <Icon type="FontAwesome" name="search" color={"#fff"} />
-                </Right> */}
+                <Row style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignContent: "center",
+                    alignItems: "center",
+                }} >
+                    <Image
+                        source={require("./logo.png")}
+                        style={{
+                            // alignContent: "center",
+                            // alignItems: "center",
+                            alignSelf: "center",
+                            width: 130,
+                            height: 20,
+                            left: -25,
+                        }}
+                    />
+                </Row>
             </Header>
             <Content style={{ backgroundColor: "#010101" }} full>
                 {this._render(this.props)}
@@ -45,7 +56,16 @@ class FeedPage extends React.PureComponent<Props> {
             return <Text danger>{"Error"}</Text>;
         }
         if (loading) {
-            return <Text danger>{"loading"}</Text>;
+            return <View style={{
+                marginTop: 20,
+                height: 200,
+                justifyContent: "center",
+                alignContent: "center",
+                alignItems: "center",
+                alignSelf: "center",
+            }} >
+                <Spinner size={30} danger name={"cog"} />
+            </View>;
         }
 
         return <>

@@ -68,8 +68,9 @@ export default class Slideshow extends Component<IProps, IState> {
                         data={this.props.data}
                         renderItem={item => this._renderItem(item)}
                         autoplay={true}
-                        autoplayInterval={3000}
+                        autoplayInterval={3500}
                         loop={true}
+                        onSnapToItem={(index) => this.setState({ slider1ActiveSlide: index })}
                         sliderWidth={sliderWidth}
                         itemWidth={itemWidth}
                     />
@@ -78,13 +79,13 @@ export default class Slideshow extends Component<IProps, IState> {
                         dotsLength={this.props.data.length}
                         activeDotIndex={slider1ActiveSlide}
                         containerStyle={styles.paginationContainer}
-                        dotColor={"rgba(255, 255, 255, 0.92)"}
+                        dotColor={colors.white}
                         dotStyle={styles.paginationDot}
-                        inactiveDotColor={colors.white}
+                        inactiveDotColor={"transparent"}
                         inactiveDotOpacity={1}
-                        inactiveDotScale={0.6}
+                        inactiveDotScale={1}
                         carouselRef={this._carousel}
-                        tappableDots={!!this._carousel}
+                        tappableDots={!this._carousel}
                     />
                 </View>
 

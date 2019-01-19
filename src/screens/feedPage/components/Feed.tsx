@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Icon, Col, Row, Text, TitleSport, CardSport } from "../../../components";
-import CardImage from "./CardImages";
 import { ScrollView } from "react-native";
 import View from "../../../components/content/Content.style";
 
