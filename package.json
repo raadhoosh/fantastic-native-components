@@ -22,11 +22,13 @@
     "react-native": "0.57.4",
     "react-native-easy-grid": "^0.2.0",
     "react-native-keyboard-aware-scroll-view": "^0.7.4",
+    "react-native-snap-carousel": "^3.7.5",
     "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^2.18.2",
     "styled-components": "^4.0.3"
   },
-  "devDependencies": {
+  "devDependencies": {    
+    "@types/react-native-snap-carousel": "^3.7.1",
     "@types/enzyme": "^3.1.14",
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/graphql": "^14.0.4",

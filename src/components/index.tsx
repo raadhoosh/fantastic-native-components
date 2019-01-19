@@ -29,6 +29,11 @@ import CardImages from "./cards";
 import { SpinnerIcon, Spinner } from "./spinner";
 import FAB from "./fAB";
 import Toast from "./toasts";
+import Gallery from "./gallery";
+import Slideshow from "./slideshow";
+import Game from "./game";
+import CardSport from "./cardsSport";
+import TitleSport from "./titleSport";
 
 export {
     Item,
@@ -61,4 +66,9 @@ export {
     Spinner,
     FAB,
     Toast,
+    Gallery,
+    Slideshow,
+    Game,
+    CardSport,
+    TitleSport
 };
