@@ -5,7 +5,6 @@ export interface IProps {
 }
 import { Query } from "react-apollo";
 import { listFeeds } from "../../common/gql";
-import { Text } from "react-native";
 
 class FeedContainer extends React.PureComponent<IProps | any> {
 
@@ -15,6 +14,7 @@ class FeedContainer extends React.PureComponent<IProps | any> {
                 {({ data, error, loading }) => {
                     if (error) {
                         return (<FeedPage
+                            navigation={this.props.navigation}
                             error
                             openDrawer={() => {
                                 this.props.navigation.openDrawer();
@@ -22,6 +22,7 @@ class FeedContainer extends React.PureComponent<IProps | any> {
                     }
                     if (loading) {
                         return (<FeedPage
+                            navigation={this.props.navigation}
                             loading
                             openDrawer={() => {
                                 this.props.navigation.openDrawer();
@@ -29,6 +30,7 @@ class FeedContainer extends React.PureComponent<IProps | any> {
                     }
                     return (<FeedPage
                         data={data}
+                        navigation={this.props.navigation}
                         openDrawer={() => {
                             this.props.navigation.openDrawer();
                         }} />);

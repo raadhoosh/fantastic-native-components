@@ -12,6 +12,7 @@ const deviceWidth = Dimensions.get("window").width - 60;
 // tslint:disable:max-line-length
 export interface Props {
     openDrawer: () => void;
+    navigation: any;
     data?: any;
     error?: any;
     loading?: boolean;
@@ -51,7 +52,7 @@ class FeedPage extends React.PureComponent<Props> {
         </Container>);
     }
     private _render = ({ data, error, loading }: any) => {
-
+        const { navigate } = this.props.navigation;
         if (error) {
             return <Text danger>{"Error"}</Text>;
         }
@@ -69,7 +70,9 @@ class FeedPage extends React.PureComponent<Props> {
         }
 
         return <>
-            {data.listSliders && data.listSliders.items && <Slideshow data={data.listSliders.items} />}
+            {data.listSliders && data.listSliders.items && <Slideshow onProps={() => {
+                navigate("Video");
+            }} data={data.listSliders.items} />}
             {data.listGames && data.listSliders.items && <Game data={data.listGames.items} />}
             {data.listFeeds && data.listSliders.items && <Feed data={data.listFeeds.items} />}
         </>;

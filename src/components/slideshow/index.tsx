@@ -9,6 +9,7 @@ import { Row } from "react-native-easy-grid";
 const SLIDER_1_FIRST_ITEM = 1;
 interface IProps {
     data: Array<Object>;
+    onProps: () => void;
 }
 interface IState {
     errors: any;
@@ -27,7 +28,7 @@ export default class Slideshow extends Component<IProps, IState> {
 
     _onPressCarousel = (item: any) => {
         // here handle carousel press
-        alert("dcx s");
+        this.props.onProps();
     }
     _renderItem({ item, index }: any) {
 
@@ -39,7 +40,7 @@ export default class Slideshow extends Component<IProps, IState> {
             }}>
                 <View >
                     <Image source={{ uri: item.url }} style={{ height: 300, width: "100%", flex: 1 }} />
-                    <TouchableOpacity style={styles.titleWrapper} >
+                    <TouchableOpacity onPress={this._onPressCarousel} style={styles.titleWrapper} >
                         <Row>
                             <Text style={styles.titleSlideshow} >
                                 {item.title}

@@ -18,11 +18,24 @@ export const LOCAL_MENU_QUERY = gql`
   }
 `;
 
-export const LOCAL_FEED_QUERY = gql`
+export const  FEED_QUERY = gql`
   query {
-  feeds @client
-  sliders @client
-  games @client
+    listFeeds{
+      nextToken
+      items {
+        id
+        title
+        elements {
+          id
+          title
+          type
+          duration
+          short_description
+          base_image
+          url
+        }
+      }
+    }
   }
 `;
 export const LOCAL_SLIDER_QUERY = gql`

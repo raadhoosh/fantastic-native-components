@@ -34,6 +34,7 @@ import Slideshow from "./slideshow";
 import Game from "./game";
 import CardSport from "./cardsSport";
 import TitleSport from "./titleSport";
+import Video from "./video";
 
 export {
     Item,
@@ -70,5 +71,6 @@ export {
     Slideshow,
     Game,
     CardSport,
-    TitleSport
+    TitleSport,
+    Video
 };
