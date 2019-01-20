@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
-import Video from 'react-native-video';
+import { AppRegistry, StyleSheet, Text, View } from "react-native";
+import Video from "react-native-video";
 import { StyledText } from "./video.style";
 import { relative } from "path";
 
