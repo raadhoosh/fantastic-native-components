@@ -5,14 +5,25 @@ export interface IProps {
 }
 import { Query } from "react-apollo";
 import { listFeeds } from "../../common/gql";
+import View from "../../components/content/Content.style";
+import { Text } from "react-native";
 
 class FeedContainer extends React.PureComponent<IProps | any> {
-
+    onChangeRout = () => {
+        return () => {
+            this.props.navigation.navigate("Login");
+        };
+    }
     render() {
         return (
             <Query query={listFeeds}>
                 {({ data, error, loading }) => {
                     if (error) {
+                        return <View>
+                            <Text>
+                            {JSON.stringify(error)}
+                            </Text>
+                        </View>
                         return (<FeedPage
                             navigation={this.props.navigation}
                             error
@@ -33,7 +44,9 @@ class FeedContainer extends React.PureComponent<IProps | any> {
                         navigation={this.props.navigation}
                         openDrawer={() => {
                             this.props.navigation.openDrawer();
-                        }} />);
+                        }}
+
+                         />);
                 }}
             </Query>
         );

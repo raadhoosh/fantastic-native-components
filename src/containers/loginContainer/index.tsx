@@ -1,19 +1,19 @@
 import React from "react";
-import HomePage from "../../screens/homePage";
+import LoginPage from "../../screens/loginPage";
 export interface IProps {
     navigation: any;
 }
-class HomeContainer extends React.PureComponent<IProps> {
+class LoginContainer extends React.PureComponent<IProps> {
     render() {
         const dataArray = [
             { title: "First Element", content: "Lorem ipsum dolor sit amet" },
             { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
             { title: "Third Element", content: "Lorem ipsum dolor sit amet" },
           ];
-        return (<HomePage  openDrawer={() => {
+        return (<LoginPage  openDrawer={() => {
             this.props.navigation.openDrawer();
         }}   dataArray={dataArray} expanded={0}   />);
     }
 }
 
-export default HomeContainer;
+export default LoginContainer;

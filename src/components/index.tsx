@@ -35,6 +35,7 @@ import Game from "./game";
 import CardSport from "./cardsSport";
 import TitleSport from "./titleSport";
 import Video from "./video";
+import Login from "./login";
 
 export {
     Item,
@@ -72,5 +73,6 @@ export {
     Game,
     CardSport,
     TitleSport,
-    Video
+    Video,
+    Login
 };

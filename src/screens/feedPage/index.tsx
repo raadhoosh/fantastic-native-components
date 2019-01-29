@@ -12,6 +12,7 @@ const deviceWidth = Dimensions.get("window").width - 60;
 // tslint:disable:max-line-length
 export interface Props {
     openDrawer: () => void;
+    openLogin: () => void;
     navigation: any;
     data?: any;
     error?: any;
@@ -36,15 +37,16 @@ class FeedPage extends React.PureComponent<Props> {
                     <Image
                         source={require("./logo.png")}
                         style={{
-                            // alignContent: "center",
-                            // alignItems: "center",
-                            alignSelf: "center",
                             width: 130,
                             height: 20,
-                            left: -25,
                         }}
                     />
                 </Row>
+                <Right style={{ marginLeft: 0 }}>
+                    <TouchableOpacity onPress={this.props.openLogin}>
+                        <Icon size={30} type="FontAwesome" name="user" color={"#fff"} />
+                    </TouchableOpacity>
+                </Right>
             </Header>
             <Content style={{ backgroundColor: "#010101" }} full>
                 {this._render(this.props)}
