@@ -39,8 +39,7 @@ class LoginPage extends React.PureComponent<Props> {
           </Right>
         </Header>
         <Content full color={"#000"}>
-          <Login />
-          {/* <Text style={{ color: "#fff" }}>login</Text> */}
+          <Login />        
         </Content>
         <Footer>
           <Title>{"Footer"}</Title>

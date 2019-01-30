@@ -25,7 +25,7 @@ interface IProps {
 
 function getColor(props: IProps) {
 
-    let backgroundColor = "#6c757d";
+    let backgroundColor = "#000";
     let ForeColor = "#fff";
 
     if (props.color) {
@@ -49,14 +49,30 @@ function getColor(props: IProps) {
 
     }
 
-    const btnColor = { backgroundColor: backgroundColor, ForeColor: ForeColor };
-    return btnColor;
+    const color = { backgroundColor: backgroundColor, ForeColor: ForeColor };
+    return color;
 }
 
-const backgroundColor = (props: IProps) => getColor(props).backgroundColor;
+const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
-const StyledLogin = styled(View)`      
-   padding : 30px
+const StyledLogin = styled(View)`  
+   background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : "#000"};      
+   padding : 30px;
 `;
 
-export { StyledLogin };
+const StyledTitle = styled(Text)`      
+   background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : "#000"};  
+   color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff" : ForeColor)}; 
+   font-size: 32px;
+   text-align: center;  
+`;
+
+const StyledMessage = styled(View)`  
+   background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : "#000"};      
+   display: flex;
+   flex-direction: row;
+   justify-content: center;   
+   margin-top: 24px;
+`;
+
+export { StyledLogin, StyledTitle , StyledMessage};

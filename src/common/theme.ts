@@ -22,7 +22,7 @@ const mainTheme: Theme = {
     },
     info: {
         light: "#33c9dc",
-        main: "#00bcd4",
+        main: "#05cedd",
         dark: "#ba000d",
         contrastText: "#fff",
     },

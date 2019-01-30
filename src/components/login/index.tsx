@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { TouchableOpacity } from "react-native";
-import { Icon, Text, TextInput } from "../../components";
-import { StyledLogin } from "./Login.style";
+import {TextInput, Button, Text } from "../../components";
+import { StyledLogin, StyledTitle, StyledMessage } from "./Login.style";
 import { Theme } from "..";
+import View from "../content/Content.style";
 
 export interface IProps {
   primary?: boolean;
@@ -33,12 +33,62 @@ class Login extends Component<IProps> {
   render() {
     return (
       <StyledLogin {...this.props}>
-        <TextInput
-          label="Email"  
-          inverse       
-        />
-        <TextInput />
-      </StyledLogin>
+        <StyledTitle>
+          Login
+          </StyledTitle>
+        <View
+          style={{ marginTop: 16, backgroundColor: "#000" }}
+        >
+          <TextInput
+            label="Email"
+            inverse
+            borderColor={"#acafb2"}
+            placeholder={"Enter your email"}
+            placeholderTextColor={"#797979"}
+            height={48}
+          />
+        </View>
+
+        <View
+          style={{ marginTop: 16, backgroundColor: "#000" }}
+        >
+          <TextInput
+            label="Password"            
+            inverse
+            borderColor={"#acafb2"}
+            placeholder={"Enter your email"}
+            placeholderTextColor={"#797979"}
+            height={48}
+            icon="eye-slash"            
+          />
+        </View>
+        <View
+          style={{ marginTop: 26, backgroundColor: "#000" }}
+        >
+          <Button
+            danger
+            height={"48px"}
+            fontSize={16}
+          >
+            Log in
+        </Button>
+        </View>
+
+        <StyledMessage >
+          <Text
+            color={"#fff"}
+          >
+            Forgot your login details?
+        </Text>
+          <Text
+            info
+            style={{ paddingLeft: 5}}
+          >
+            Get help signing in.
+        </Text>
+        </StyledMessage>
+
+      </StyledLogin >
     );
   }
 }
