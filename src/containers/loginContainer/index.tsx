@@ -9,10 +9,10 @@ class LoginContainer extends React.PureComponent<IProps> {
             { title: "First Element", content: "Lorem ipsum dolor sit amet" },
             { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
             { title: "Third Element", content: "Lorem ipsum dolor sit amet" },
-          ];
-        return (<LoginPage  openDrawer={() => {
+        ];
+        return (<LoginPage openDrawer={() => {
             this.props.navigation.openDrawer();
-        }}   dataArray={dataArray} expanded={0}   />);
+        }} dataArray={dataArray} expanded={0} />);
     }
 }
 

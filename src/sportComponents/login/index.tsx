@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import {TextInput, Button, Text } from "../../components";
+import { TextInput, Button, Text } from "../../components";
 import { StyledLogin, StyledTitle, StyledMessage } from "./Login.style";
 import { Theme } from "..";
-import View from "../content/Content.style";
+import { View, TouchableOpacity } from 'react-native';
 
 export interface IProps {
   primary?: boolean;
@@ -20,14 +20,27 @@ export interface IProps {
   height?: number | string;
   theme?: Theme;
   onPress?: () => void;
+  handleForgotPassword?: () => void;
   disabled?: boolean;
   borderRadius?: string;
   checked?: boolean;
+  changeIcon?: boolean,
 }
 
-class Login extends Component<IProps> {
+interface State {
+  changeIcon?: boolean;
+}
+
+class Login extends Component<IProps, State> {
   constructor(props: IProps) {
     super(props);
+    this.state = {
+      changeIcon: false,
+    };
+  }
+
+  handleForgotPassword = () => {
+    this.props.handleForgotPassword && this.props.handleForgotPassword();
   }
 
   render() {
@@ -53,15 +66,21 @@ class Login extends Component<IProps> {
           style={{ marginTop: 16, backgroundColor: "#000" }}
         >
           <TextInput
-            label="Password"            
+            label="Password"
             inverse
             borderColor={"#acafb2"}
             placeholder={"Enter your email"}
             placeholderTextColor={"#797979"}
             height={48}
-            icon="eye-slash"            
+            icon={`${this.state.changeIcon ? "eye" : "eye-slash"}`}
+            onPressIcon={() => {
+              this.setState({
+                changeIcon: !this.state.changeIcon
+              })
+            }}
           />
         </View>
+        
         <View
           style={{ marginTop: 26, backgroundColor: "#000" }}
         >
@@ -80,12 +99,16 @@ class Login extends Component<IProps> {
           >
             Forgot your login details?
         </Text>
-          <Text
-            info
-            style={{ paddingLeft: 5}}
+          <TouchableOpacity
+            onPress={this.handleForgotPassword}
           >
-            Get help signing in.
+            <Text
+              info
+              style={{ paddingLeft: 5 }}
+            >
+              Get help signing in.
         </Text>
+          </TouchableOpacity>
         </StyledMessage>
 
       </StyledLogin >

@@ -1,19 +1,12 @@
 import React from "react";
-import { TouchableOpacity, ScrollView, Text } from "react-native";
 import {
   Container,
   Content,
-  Header,
-  Footer,
-  Title,
-  Left,
-  Right,
-  Icon,
-  Gallery,
-  TitleSport,
-  Video,
   Spinner,
 } from "../../components";
+import {
+  Video,
+} from "../../sportComponents"
 import View from "../../components/content/Content.style";
 import Feed from "../feedPage/components/Feed";
 export interface VideoPageProps {

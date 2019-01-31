@@ -1,6 +1,7 @@
 import React from "react";
-import { TouchableOpacity, ScrollView, Image, Dimensions, View } from "react-native";
-import { Container, Content, Text, Header, Title, Left, Right, Icon, Slideshow, Row, Spinner } from "../../components";
+import { TouchableOpacity, Image, Dimensions, View } from "react-native";
+import { Container, Content, Text, Header, Left, Right, Icon, Row, Spinner } from "../../components";
+import {  Slideshow } from "../../sportComponents";
 import Game from "./components/Game";
 import Feed from "./components/Feed";
 interface ObInterface {
@@ -22,6 +23,7 @@ class FeedPage extends React.PureComponent<Props> {
     render() {
 
         return (<Container>
+          
             <Header >
                 <Left style={{ marginLeft: 0 }}>
                     <TouchableOpacity onPress={this.props.openDrawer}>

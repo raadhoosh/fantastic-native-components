@@ -1,16 +1,14 @@
 import React from "react";
-import { TouchableOpacity, Text, ScrollView } from "react-native";
+import { TouchableOpacity } from "react-native";
 import {
   Container,
-  Content,
-  Header,
-  Footer,
-  Title,
-  Left,
-  Right,
-  Icon,
-  Login
+  Content,  
 } from "../../components";
+
+import {
+  Login,
+  HeaderSport
+} from "../../sportComponents";
 
 interface ObInterface {
   title: string;
@@ -27,23 +25,10 @@ class LoginPage extends React.PureComponent<Props> {
 
     return (
       <Container>
-        <Header>
-          <Left>
-            <TouchableOpacity onPress={this.props.openDrawer}>
-              <Icon type="Ionicons" name="md-menu" color={"#fff"} />
-            </TouchableOpacity>
-          </Left>
-          <Title>{"Sport"}</Title>
-          <Right>
-            <Icon type="FontAwesome" name="search" color={"#fff"} />
-          </Right>
-        </Header>
+        <HeaderSport />
         <Content full color={"#000"}>
-          <Login />        
-        </Content>
-        <Footer>
-          <Title>{"Footer"}</Title>
-        </Footer>
+          <Login />
+        </Content>      
       </Container>
     );
   }

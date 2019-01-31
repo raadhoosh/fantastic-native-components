@@ -1,4 +1,3 @@
-
 import Item from "./item";
 import Panel from "./Panel";
 import Accordion from "./Accordion";
@@ -29,13 +28,8 @@ import CardImages from "./cards";
 import { SpinnerIcon, Spinner } from "./spinner";
 import FAB from "./fAB";
 import Toast from "./toasts";
-import Gallery from "./gallery";
-import Slideshow from "./slideshow";
 import Game from "./game";
-import CardSport from "./cardsSport";
 import TitleSport from "./titleSport";
-import Video from "./video";
-import Login from "./login";
 
 export {
     Item,
@@ -67,12 +61,7 @@ export {
     SpinnerIcon,
     Spinner,
     FAB,
-    Toast,
-    Gallery,
-    Slideshow,
-    Game,
-    CardSport,
-    TitleSport,
-    Video,
-    Login
+    Toast,   
+    Game,    
+    TitleSport,    
 };

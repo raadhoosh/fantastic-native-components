@@ -26,6 +26,7 @@ interface IProps extends TextInputProps {
   label?: string;
   labelColor?: string;
   icon?: string;
+  onPressIcon?: () => void;
 }
 
 interface State extends TextInputProps {
@@ -39,9 +40,8 @@ class TextInput extends Component<IProps, State>{
     super(props);
     this.state = {
       hasFocus: false,
-      changeIcon: false,
+      changeIcon: true,
     };
-
   }
 
   onFocus = () => {
@@ -56,10 +56,11 @@ class TextInput extends Component<IProps, State>{
     })
   }
 
-  onPressIcon = () => {
+  onPressIcon = () => {    
     this.setState({
       changeIcon: !this.state.changeIcon
     })
+    this.props.onPressIcon && this.props.onPressIcon();
   }
 
   render() {
