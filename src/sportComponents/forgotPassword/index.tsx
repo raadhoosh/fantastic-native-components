@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { TextInput, Button, Text } from "../../components";
-import { StyledLogin, StyledTitle, StyledMessage } from "./ForgotPassword.style";
+import { StyledLogin, StyledTitle, StyledSupTitle, StyledMessage, StyledButtonWrapper } from "./ForgotPassword.style";
 import { Theme } from "..";
 import { View, TouchableOpacity } from 'react-native';
 
@@ -49,12 +49,11 @@ class Login extends Component<IProps, State> {
         <StyledTitle>
           Forgot your password?
           </StyledTitle>
-        <Text>
-          block
-              leading-normal
-              mb-16
-              text-center
-          </Text>
+
+        <StyledSupTitle >
+          Enter your Optus Sport email below and we will send you a link to get back into your account.
+          </StyledSupTitle>
+
         <View
           style={{ marginTop: 16, backgroundColor: "#000" }}
         >
@@ -65,25 +64,6 @@ class Login extends Component<IProps, State> {
             placeholder={"Enter your email"}
             placeholderTextColor={"#797979"}
             height={48}
-          />
-        </View>
-
-        <View
-          style={{ marginTop: 16, backgroundColor: "#000" }}
-        >
-          <TextInput
-            label="Password"
-            inverse
-            borderColor={"#acafb2"}
-            placeholder={"Enter your email"}
-            placeholderTextColor={"#797979"}
-            height={48}
-            icon={`${this.state.changeIcon ? "eye" : "eye-slash"}`}
-            onPressIcon={() => {
-              this.setState({
-                changeIcon: !this.state.changeIcon
-              })
-            }}
           />
         </View>
 
@@ -100,9 +80,7 @@ class Login extends Component<IProps, State> {
         </View>
 
         <StyledMessage >
-          <TouchableOpacity
-            onPress={this.handleForgotPassword}
-          >
+          <TouchableOpacity>
             <Text
               info
               style={{ paddingLeft: 5 }}
@@ -112,17 +90,17 @@ class Login extends Component<IProps, State> {
           </TouchableOpacity>
         </StyledMessage>
 
-        <View
-          style={{ marginTop: 26, backgroundColor: "#000" }}
-        >
+        <StyledButtonWrapper >
+
           <Button
-            danger
+            primary
             height={"48px"}
             fontSize={16}
+            onPress={this.handleForgotPassword}
           >
-            Send reset link
+            Back to login
         </Button>
-        </View>
+        </StyledButtonWrapper>
       </StyledLogin >
     );
   }

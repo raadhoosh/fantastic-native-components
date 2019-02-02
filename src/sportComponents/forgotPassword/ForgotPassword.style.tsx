@@ -57,7 +57,7 @@ const ForeColor = (props: IProps) => getColor(props).ForeColor;
 
 const StyledLogin = styled(View)`  
    background-color: ${(props: IProps) => props.backgroundColor ? props.backgroundColor : "#000"};      
-   padding : 30px;
+   padding : 30px;   
 `;
 
 const StyledTitle = styled(Text)`      
@@ -65,6 +65,19 @@ const StyledTitle = styled(Text)`
    color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff" : ForeColor)}; 
    font-size: 32px;
    text-align: center;  
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 24px;   
+   max-width: 300px;
+`;
+const StyledSupTitle = styled(Text)`      
+   max-width: 300px;
+   color: ${(props: IProps) => props.color ? props.color : (props.inverse ? "#fff" : ForeColor)}; 
+   line-height: 30;
+   font-size: 16px;
+   text-align: center;  
+   margin-left: auto;
+   margin-right: auto;
 `;
 
 const StyledMessage = styled(View)`  
@@ -74,5 +87,11 @@ const StyledMessage = styled(View)`
    justify-content: center;   
    margin-top: 24px;
 `;
+const StyledButtonWrapper = styled(View)`    
+   margin-top: 24px;
+   padding-top: 24px;
+   border-top-width: 1px;
+   border-top-color: ${(props: IProps) => props.theme.primary.light};    
+`;
 
-export { StyledLogin, StyledTitle , StyledMessage};
+export { StyledLogin, StyledTitle, StyledSupTitle, StyledMessage, StyledButtonWrapper };

@@ -27,6 +27,7 @@ interface IProps extends TextInputProps {
   labelColor?: string;
   icon?: string;
   onPressIcon?: () => void;
+  secureTextEntry?: boolean;
 }
 
 interface State extends TextInputProps {
@@ -56,7 +57,7 @@ class TextInput extends Component<IProps, State>{
     })
   }
 
-  onPressIcon = () => {    
+  onPressIcon = () => {
     this.setState({
       changeIcon: !this.state.changeIcon
     })
@@ -70,7 +71,7 @@ class TextInput extends Component<IProps, State>{
           this.props.label && <StyledLabel color={this.props.labelColor}>{this.props.label}</StyledLabel>
         }
         <StyledInputWrapper {...this.props} hasFocus={this.state.hasFocus}>
-          <StyledTextInput {...this.props} onFocus={this.onFocus} onBlur={this.onBlur} secureTextEntry={this.state.changeIcon ? true : false} />
+          <StyledTextInput {...this.props} onFocus={this.onFocus} onBlur={this.onBlur} secureTextEntry={this.props.secureTextEntry && this.state.changeIcon ? true : false} />
           {this.props.icon && (
             <StyledIconWrapper onPress={this.onPressIcon} >
               <Icon name={this.props.icon} type="FontAwesome" color="#fff" size={24} />

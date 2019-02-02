@@ -13,6 +13,10 @@ flex-direction: row;
 background-color:  ${(props: Props) => {
         return props.theme[props.color].main;
     }};
+border-color:  ${(props: Props) => {
+        return props.theme[props.color].light;
+    }};
+border-bottom-width: 1px;    
 `;
 
 export default StyledHeader;

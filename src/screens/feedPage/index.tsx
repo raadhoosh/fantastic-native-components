@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Image, Dimensions, View } from "react-native";
 import { Container, Content, Text, Header, Left, Right, Icon, Row, Spinner } from "../../components";
-import {  Slideshow } from "../../sportComponents";
+import { Slideshow, HeaderSport } from "../../sportComponents";
 import Game from "./components/Game";
 import Feed from "./components/Feed";
 interface ObInterface {
@@ -23,33 +23,11 @@ class FeedPage extends React.PureComponent<Props> {
     render() {
 
         return (<Container>
-          
-            <Header >
-                <Left style={{ marginLeft: 0 }}>
-                    <TouchableOpacity onPress={this.props.openDrawer}>
-                        <Icon size={30} type="Ionicons" name="md-menu" color={"#fff"} />
-                    </TouchableOpacity>
-                </Left>
-                <Row style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignContent: "center",
-                    alignItems: "center",
-                }} >
-                    <Image
-                        source={require("./logo.png")}
-                        style={{
-                            width: 130,
-                            height: 20,
-                        }}
-                    />
-                </Row>
-                <Right style={{ marginLeft: 0 }}>
-                    <TouchableOpacity onPress={this.props.openLogin}>
-                        <Icon size={30} type="FontAwesome" name="user" color={"#fff"} />
-                    </TouchableOpacity>
-                </Right>
-            </Header>
+
+            <HeaderSport
+                navigation={this.props.navigation}
+            />
+
             <Content style={{ backgroundColor: "#010101" }} full>
                 {this._render(this.props)}
             </Content>

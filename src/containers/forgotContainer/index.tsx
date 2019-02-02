@@ -1,9 +1,9 @@
 import React from "react";
-import LoginPage from "../../screens/loginPage";
+import ForgotPasswordPage from "../../screens/forgotPasswordPage";
 export interface IProps {
     navigation: any;
 }
-class LoginContainer extends React.PureComponent<IProps> {
+class ForgotPasswordContainer extends React.PureComponent<IProps> {
 
     onChangeRout = (route: string) => {
         this.props.navigation.navigate(route);
@@ -15,7 +15,7 @@ class LoginContainer extends React.PureComponent<IProps> {
             { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
             { title: "Third Element", content: "Lorem ipsum dolor sit amet" },
         ];
-        return (<LoginPage openDrawer={() => {
+        return (<ForgotPasswordPage openDrawer={() => {
             this.props.navigation.openDrawer();
         }} dataArray={dataArray} expanded={0}
             navigation={this.props.navigation}
@@ -24,4 +24,4 @@ class LoginContainer extends React.PureComponent<IProps> {
     }
 }
 
-export default LoginContainer;
+export default ForgotPasswordContainer;

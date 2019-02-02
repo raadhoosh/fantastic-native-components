@@ -19,7 +19,6 @@ export interface IProps {
   width?: number | string;
   height?: number | string;
   theme?: Theme;
-  onPress?: () => void;
   handleForgotPassword?: () => void;
   disabled?: boolean;
   borderRadius?: string;
@@ -67,6 +66,7 @@ class Login extends Component<IProps, State> {
         >
           <TextInput
             label="Password"
+            secureTextEntry={true}
             inverse
             borderColor={"#acafb2"}
             placeholder={"Enter your email"}
@@ -80,7 +80,7 @@ class Login extends Component<IProps, State> {
             }}
           />
         </View>
-        
+
         <View
           style={{ marginTop: 26, backgroundColor: "#000" }}
         >
