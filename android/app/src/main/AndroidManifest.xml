@@ -10,11 +10,15 @@
       android:icon="@mipmap/ic_launcher"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+        <meta-data
+            android:name="JW_LICENSE_KEY"
+            android:value="mnzqi8RbddAbsUn7cv6aAVbVapF7zBDLqzSIyOc3x85CT+5WmU9y/0fkUxfHq1yI" />
       <activity
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
         android:name=".MainActivity"
         android:label="@string/app_name"
-        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
         android:windowSoftInputMode="adjustResize">
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />

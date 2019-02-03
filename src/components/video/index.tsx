@@ -31,8 +31,14 @@ export default class VideoSport extends Component<IProps, IState> {
                             ref={(ref) => {
                                 this.player = ref;
                             }}
-                            source={require("./video.mp4")}
-                            // source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+                            // source={require("./video.mp4")}
+                            // bufferConfig={{
+                            //     minBufferMs: 15000,
+                            //     maxBufferMs: 50000,
+                            //     bufferForPlaybackMs: 2500,
+                            //     bufferForPlaybackAfterRebufferMs: 5000,
+                            //   }}
+                            source={{ uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4" }}
                             // rate={1.0}
                             // volume={1.0}
                             // muted={false}

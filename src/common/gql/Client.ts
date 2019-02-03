@@ -43,7 +43,7 @@ const client = new ApolloClient({
   request: async (operation: any) => {
     operation.setContext({
       headers: {
-        "x-api-key":  `da2-i2irsw6qd5dc7kaphzowu4qiqu`,
+        "x-api-key":  `da2-c3ffyyb7qjfklo5ypvbnk3yfde`,
       },
     });
   },

@@ -709,6 +709,14 @@
     "@types/react" "*"
     "@types/react-native" "*"
 
+"@types/react-native-video@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@types/react-native-video/-/react-native-video-3.1.0.tgz#cbb5c77ef62c5927b893d7db99baba79d618ca76"
+  integrity sha512-8Y/8lQ+H7bv28mzO5JYYXy1CviwGPw/dtNblK56+GrW/OOkeWaR+viiSCvdd5/yKIEHM26g77GdMFydSFvlxOw==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
 "@types/react-native@*", "@types/react-native@^0.57.7":
   version "0.57.7"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.7.tgz#4cbc81de4f0f54985b20dc25010744889176e775"
@@ -5741,6 +5749,10 @@ react-native-easy-grid@^0.2.0:
 react-native-iphone-x-helper@^1.0.3:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.0.tgz#9f8a376eb00bc712115abff4420318a0063fa796"
+
+"react-native-jwplayer@https://github.com/nulleof/react-native-jwplayer.git":
+  version "0.1.0"
+  resolved "https://github.com/nulleof/react-native-jwplayer.git#96b095256110a4eaeb458ba5701218ab1492e77a"
 
 react-native-keyboard-aware-scroll-view@^0.7.4:
   version "0.7.4"

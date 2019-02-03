@@ -6,9 +6,30 @@ export interface IProps {
 import { Query } from "react-apollo";
 import { listFeeds } from "../../common/gql";
 
-class FeedContainer extends React.PureComponent<IProps | any> {
+import JWPlayer from "./JWPlayer";
+import { View, Text } from "react-native";
+import Button from "./Button";
 
+class FeedContainer extends React.PureComponent<IProps | any, any> {
+    public onTop = () => {
+        let c = this.state ? (this.state.count ? this.state.count : 0) : 0;
+        this.setState({
+            count: c + 1,
+            start: true,
+        });
+    }
     render() {
+        return (<View style={{ marginTop: 50, padding: 24 }}>
+            <Text>
+                margin {this.state ? this.state.count : 0}
+            </Text>
+            <Button OnTop={this.onTop} buttonText={"salam"} style={{ height: 40, width: 150, backgroundColor: "red" }} />
+            <JWPlayer
+
+                buttonText={this.state ? (this.state.start ? "a" : "false") : "false"}
+                // player={this.state ? (this.state.start ? true : false) : false}
+                style={{ width: 300, height: 300, backgroundColor: "red" }} />
+        </View>);
         return (
             <Query query={listFeeds}>
                 {({ data, error, loading }) => {
@@ -28,6 +49,7 @@ class FeedContainer extends React.PureComponent<IProps | any> {
                                 this.props.navigation.openDrawer();
                             }} />);
                     }
+                    JWPlayer.show("Awesome", JWPlayer.SHORT);
                     return (<FeedPage
                         data={data}
                         navigation={this.props.navigation}

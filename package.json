@@ -21,6 +21,7 @@
     "react-apollo": "^2.3.3",
     "react-native": "0.57.4",
     "react-native-easy-grid": "^0.2.0",
+    "react-native-jwplayer": "https://github.com/nulleof/react-native-jwplayer.git",
     "react-native-keyboard-aware-scroll-view": "^0.7.4",
     "react-native-snap-carousel": "^3.7.5",
     "react-native-vector-icons": "^6.1.0",

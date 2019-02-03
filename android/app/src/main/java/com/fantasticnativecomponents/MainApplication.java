@@ -4,6 +4,8 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.brentvatne.react.ReactVideoPackage;
+import com.module.jwplayer.ButtonPackage;
+import com.module.jwplayer.JWPlayerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -26,7 +28,9 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new ReactVideoPackage(),
-            new VectorIconsPackage()
+            new JWPlayerPackage(),// add in local module
+            new VectorIconsPackage(),
+            new ButtonPackage()
       );
     }
 
