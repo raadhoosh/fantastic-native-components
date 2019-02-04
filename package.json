@@ -9,7 +9,7 @@
     "test--w": "jest --watchAll --verbose",
     "test--c": "jest --verbose --coverage"
   },
-  "dependencies": {
+  "dependencies": {  
     "@types/styled-components": "^4.0.3",
     "apollo-boost": "^0.1.23",
     "aws-amplify": "^1.1.19",

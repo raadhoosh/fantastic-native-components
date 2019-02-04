@@ -26,8 +26,8 @@ interface IProps {
 }
 
 function getColor(props: IProps) {
-  let bgColor: string = "#fff";
-  let fColor: string = "#000";
+  let bgColor: string = "#000";
+  let fColor: string = "#fff";
 
   if (props.backgroundColor) {
     bgColor = props.backgroundColor;
@@ -98,47 +98,47 @@ const StyledCardImagesText = styled(Text)`
   padding-top: 10;
 `;
 
-const StyledLive = styled(Text)`
-  text-align: ${(props: IProps) => (props.center ? "center" : "left")};
-  background: #FF005A;
-  color: #fff;
+const StyledIconWrapper = styled(View)`
+  width: ${(props: IProps) => (props.imageWidth ? props.imageWidth : "auto")};
+  background-color: rgba(0,0,0,.8); 
   position: absolute;
-  right: 0;
-  top: 15;
-  padding-top: 5;
-  padding-bottom: 5;
-  padding-left: 10;
-  padding-right: 10;
-  font-size: 20px;
-  z-index: 1;  
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+`;
+
+const StyledLive = styled(Text)`
+  text-align: ${(props: IProps) => (props.center ? "center" : "left")};  
+  color: ${(props: IProps) => props.theme.danger.main};  
+  font-size: 11px;
+  z-index: 1;   
+`;
+const StyledCoverage = styled(Text)`
+  text-align: ${(props: IProps) => (props.center ? "center" : "left")};  
+  color: ${(props: IProps) => props.theme.danger.contrastText};  
+  font-size: 11px;
+  z-index: 1; 
+  margin-left: 5px;   
 `;
 
 const StyledPremium = styled(Text)`
   text-align: ${(props: IProps) => (props.center ? "center" : "left")};
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  padding-top: 5;
-  padding-bottom: 5;
-  padding-left: 10;
-  padding-right: 10;
+  color: #fff;  
   font-size: 16px;
+  margin-right: 10px;
 `;
 
 const StyledDuration = styled(Text)`
   text-align: ${(props: IProps) => (props.center ? "center" : "left")};
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding-top: 5;
-  padding-bottom: 5;
-  padding-left: 10;
-  padding-right: 10;
-  font-size: 16px;
+  color: #fff;  
+  font-size: 11px;
+  padding-left: 5px
 `;
 
 export {
@@ -150,5 +150,7 @@ export {
   StyledLive,
   StyledPremium,
   StyledDuration,
-  StyledImageRapper
+  StyledImageRapper,
+  StyledIconWrapper,
+  StyledCoverage
 };

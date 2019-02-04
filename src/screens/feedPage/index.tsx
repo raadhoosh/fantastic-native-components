@@ -55,7 +55,7 @@ class FeedPage extends React.PureComponent<Props> {
             {data.listSliders && data.listSliders.items && <Slideshow onProps={() => {
                 navigate("Video");
             }} data={data.listSliders.items} />}
-            {data.listGames && data.listSliders.items && <Game data={data.listGames.items} />}
+            {/* {data.listGames && data.listSliders.items && <Game data={data.listGames.items} />} */}
             {data.listFeeds && data.listSliders.items && <Feed data={data.listFeeds.items} />}
         </>;
     }

@@ -8,7 +8,9 @@ import {
   StyledLive,
   StyledPremium,
   StyledDuration,
-  StyledImageRapper
+  StyledImageRapper,
+  StyledIconWrapper,
+  StyledCoverage
 } from "./Cards.style";
 import { ViewStyle, ImageSourcePropType } from "react-native";
 import { Icon } from "../../components";
@@ -43,11 +45,12 @@ interface IProps {
   titleColor?: string;
   icon?: string;
   live?: string | boolean;
+  coverage?: string | boolean;
   time?: string;
   source: ImageSourcePropType;
 }
 
-const CardImages = (props: IProps) => {
+const CardImagesSport = (props: IProps) => {
   return (
     <StyledCardImages
       {...props}
@@ -56,25 +59,27 @@ const CardImages = (props: IProps) => {
       borderRadius={props.borderRadius}
     >
       <StyledImageRapper>
-        {props.live && <StyledLive>{"LIVE"}</StyledLive>}
-
         <StyledImage
           source={props.source}
           imageWidth={props.imageWidth}
           imageHeight={props.imageHeight}
         />
-        {props.icon && (
-          <StyledPremium>
-            <Icon
-              style={{ marginLeft: 12 }}
-              type="FontAwesome"
-              name={props.icon}
-              color={"#ccc"}
-            />
-          </StyledPremium>
-        )}
+        <StyledIconWrapper>
+          {props.icon && (
+            <StyledPremium>
+              <Icon
+                style={{ marginLeft: 12 }}
+                type="FontAwesome"
+                name={props.icon}
+                color={"#ccc"}
+              />
+            </StyledPremium>
+          )}
+          {props.live && <StyledLive>{"LIVE"}</StyledLive>}
+          {props.coverage && <StyledCoverage>{"Coverage in "}</StyledCoverage>}
+          {props.time && <StyledDuration>{props.time}</StyledDuration>}
+        </StyledIconWrapper>
 
-        {props.time && <StyledDuration>{props.time}</StyledDuration>}
       </StyledImageRapper>
 
       <StyledCardImagesFooter {...props}>
@@ -97,4 +102,4 @@ const CardImages = (props: IProps) => {
   );
 };
 
-export default CardImages;
+export default CardImagesSport;

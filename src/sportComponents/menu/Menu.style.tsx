@@ -40,8 +40,10 @@ const ForeColor = (props: IProps) => getColor(props);
 const StyledWrapper = styled(View)`
   display: flex;
   flex-direction: row;
+  flex: 1;  
   align-items: center;  
-  flex: 1;
+  border-bottom-width: 1px;
+  border-bottom-color: ${(props: IProps) => props.theme.primary.light};
 `;
 
 const StyledTitle = styled(Text)`
@@ -53,19 +55,19 @@ const StyledTitle = styled(Text)`
   font-size: ${(props: IProps) => (props.fontSize ? props.fontSize : "22px")};
   width: auto;
   flex: 1;
+  padding: 10px;
 `;
 
 const StyledText = styled(Text)`
-  color: ${ForeColor};
+  color: #acafb2;
   font-weight: ${(props: IProps) =>
     props.fontWeight ? props.fontWeight : "normal"};
   text-align: ${(props: IProps) =>
     props.textAlign ? props.textAlign : "auto"};
-  font-size: ${(props: IProps) => (props.fontSize ? props.fontSize : "14px")};
+  font-size: ${(props: IProps) => (props.fontSize ? props.fontSize : "18px")};
   width: auto;
   padding-left: 12px;
-  padding-right: 12px;  
-  text-decoration: underline;
+  padding-right: 12px;
 `;
 
 export { StyledTitle, StyledText, StyledWrapper };

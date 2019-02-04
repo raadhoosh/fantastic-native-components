@@ -1,7 +1,7 @@
 import * as React from "react";
-import { StyledTitle, StyledText, StyledWrapper } from "./Title.style";
+import { StyledTitle, StyledText, StyledWrapper } from "./Menu.style";
 import { Theme } from "..";
-import { TextStyle, TextProps, View, Text } from "react-native";
+import { TextStyle, TextProps } from "react-native";
 import { Icon } from "../../components";
 
 interface IProps extends TextStyle, TextProps {
@@ -17,16 +17,13 @@ interface IProps extends TextStyle, TextProps {
   title?: string;
 }
 
-const TitleSport = (props: IProps) => {
+const MenuItem = (props: IProps) => {
   return (
     <StyledWrapper>
       <StyledTitle {...props}>{props.title}</StyledTitle>
-
-      <StyledText>VIEW ALL</StyledText>
-
-      {/* <Icon type="FontAwesome" name="angle-right" color={"#888a8c"} size={20} /> */}
+      <Icon type="FontAwesome" name="angle-right" color={"#fff"} size={20} />
     </StyledWrapper>
   );
 };
 
-export default TitleSport;
+export default MenuItem;
