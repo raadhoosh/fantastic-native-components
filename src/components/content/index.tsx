@@ -2,6 +2,7 @@ import * as React from "react";
 import StyledKeyboardAwareScrollView from "./Content.style";
 type IProps = {
     theme?: any,
+    style?: any,
     color?: string,
     full?: boolean,
     disableKBDismissScroll?: boolean;

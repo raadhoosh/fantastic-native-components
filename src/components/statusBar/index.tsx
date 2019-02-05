@@ -14,6 +14,6 @@ export default ({ backgroundColor, barStyle }: IProps) => (
     <View style={[{
         height: STATUSBAR_HEIGHT,
     }, { backgroundColor }]}>
-        <StatusBar translucent backgroundColor={backgroundColor} barStyle={barStyle} />
+        <StatusBar  translucent backgroundColor={backgroundColor} barStyle={barStyle} />
     </View>
 );

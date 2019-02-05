@@ -1,4 +1,4 @@
-
+import Item from "./item";
 import Panel from "./Panel";
 import Accordion from "./Accordion";
 import Icon from "./icon";
@@ -25,11 +25,14 @@ import Badge from "./badge";
 import Search from "./search";
 import Tab from "./tabs/Tab";
 import CardImages from "./cards";
-import {SpinnerIcon ,Spinner} from "./spinner";
+import { SpinnerIcon, Spinner } from "./spinner";
 import FAB from "./fAB";
 import Toast from "./toasts";
+import Game from "./game";
+import TitleSport from "./titleSport";
 
 export {
+    Item,
     Panel,
     Accordion,
     Icon,
@@ -58,5 +61,7 @@ export {
     SpinnerIcon,
     Spinner,
     FAB,
-    Toast,
+    Toast,   
+    Game,    
+    TitleSport,    
 };

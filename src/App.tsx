@@ -2,11 +2,18 @@ import * as React from "react";
 import { ThemeProvider, Theme as IPropsTheme } from "./components";
 import theme from "./common/theme";
 import { DrawerNavigator } from "react-navigation";
-import HomeContainer from "./containers/homeContainer";
+import FeedContainer from "./containers/feedContainer";
+import VideoContainer from "./containers/videoContainer";
 import SideBar from "./containers/sideBarContainer";
+import ApolloProvider from "./common/gql/Apollo";
+import LoginContainer from "./containers/loginContainer";
+import ForgotPasswordContainer from "./containers/forgotContainer";
 
 const RootStack = DrawerNavigator({
-  Home: HomeContainer,
+  Feed: FeedContainer,
+  Video: VideoContainer,
+  ForgotPassword: ForgotPasswordContainer,
+  Login: LoginContainer,
 },
   {
     contentComponent: props => <SideBar {...props} />,
@@ -19,9 +26,11 @@ export default class App extends React.Component<Props> {
   props: any;
   render() {
     return (
-      <ThemeProvider theme={theme}>
-        <RootStack />
-      </ThemeProvider>
+      <ApolloProvider>
+        <ThemeProvider theme={theme}>
+          <RootStack />
+        </ThemeProvider>
+      </ApolloProvider>
     );
   }
 }

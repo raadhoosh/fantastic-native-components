@@ -17,7 +17,8 @@ interface IProps {
   inverse?: boolean;
   backgroundColor?: string;
   color?: string;
-  width?: string;  
+  width?: number | string;
+  height?: number | string; 
   theme?: Theme;
   onPress?: () => void;
   disabled?: boolean;

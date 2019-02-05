@@ -1,25 +1,59 @@
 import React from "react";
-import { Text, TouchableOpacity, ScrollView } from "react-native";
+import { withTheme } from "styled-components";
+import { ScrollView, Platform } from "react-native";
+import { Text, Theme, Item } from "./../../components";
+import { MenuItem } from "../../sportComponents";
+const isIos = Platform.OS === "ios";
+
 export interface Props {
-    routes: Array<any>;
+    theme: Theme;
+    routes: any;
     onChangeRoute: any;
+    error: any;
+    loading: boolean;
 }
 class SideBar extends React.PureComponent<Props> {
     render() {
-        const { routes, onChangeRoute } = this.props;
+        const { routes, loading, error, onChangeRoute } = this.props;
+        const color = this.props.theme.primary.dark;
+        if (error) {
+            return <ScrollView style={{ flex: 1, marginTop: isIos ? 0 : 20, paddingTop: isIos ? 20 : 0, backgroundColor: color }}>
+                <Text
+                    fontSize={18}
+                    secondary>
+                    {JSON.stringify(error)}
+                </Text>
+            </ScrollView>;
+        }
+        if (loading) {
+            return <ScrollView style={{ flex: 1, marginTop: isIos ? 0 : 20, paddingTop: isIos ? 20 : 0, backgroundColor: color }}>
+                <Text
+                    fontSize={18}
+                    secondary>
+                    {"loading"}
+                </Text>
+            </ScrollView>;
+        }
+
         return (
-            <ScrollView style={{ flex: 1, marginTop: 20 }}>
-                {routes.map((item, index) => (
-                    <TouchableOpacity
-                        onPress={onChangeRoute(item.route)}
-                        key={`route-${index}`}
-                        style={{ width: "100%", borderBottomColor: "#111", borderBottomWidth: 1, padding: 6 }}>
-                        <Text>{item.name}</Text>
-                    </TouchableOpacity>
+            <ScrollView style={{ flex: 1, marginTop: isIos ? 0 : 20, paddingTop: isIos ? 20 : 0, paddingRight: 20, backgroundColor: color }}>
+                {routes.listMenus.items.map((item: any, index: number) => (
+                    <MenuItem
+                        key={item.toString()}
+                        title={item.name} />
+                    // <Item
+                    //     onPress={onChangeRoute(item.route)}
+                    //     key={`route-${index}`}>
+                    //     <Text
+                    //         fontSize={18}
+                    //         secondary >
+                    //         {item.name}
+                    //     </Text>
+                    // </Item>
                 ))}
             </ScrollView>
         );
     }
 }
 
-export default SideBar;
+export default withTheme(SideBar);
