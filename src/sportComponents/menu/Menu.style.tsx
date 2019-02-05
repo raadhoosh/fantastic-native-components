@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Text, TextStyle, View } from "react-native";
-import { Theme } from "..";
+import { Theme } from "../../components";
 
 interface IProps extends TextStyle {
   primary?: boolean;
@@ -11,10 +11,11 @@ interface IProps extends TextStyle {
   danger?: boolean;
   light?: boolean;
   dark?: boolean;
-  theme?: Theme;
+  theme: Theme;
 }
 
 function getColor(props: IProps) {
+  // tslint:disable-next-line:no-shadowed-variable
   let ForeColor = "#fff";
   if (props.color) {
     ForeColor = props.color;
@@ -40,8 +41,8 @@ const ForeColor = (props: IProps) => getColor(props);
 const StyledWrapper = styled(View)`
   display: flex;
   flex-direction: row;
-  flex: 1;  
-  align-items: center;  
+  flex: 1;
+  align-items: center;
   border-bottom-width: 1px;
   border-bottom-color: ${(props: IProps) => props.theme.primary.light};
 `;
@@ -52,7 +53,7 @@ const StyledTitle = styled(Text)`
     props.fontWeight ? props.fontWeight : "normal"};
   text-align: ${(props: IProps) =>
     props.textAlign ? props.textAlign : "auto"};
-  font-size: ${(props: IProps) => (props.fontSize ? props.fontSize : "22px")};
+  font-size: ${(props: IProps) => (props.fontSize ? props.fontSize : "20px")};
   width: auto;
   flex: 1;
   padding: 10px;

@@ -5,14 +5,14 @@ import {
   Spinner,
 } from "../../components";
 import {
-  Video,
-} from "../../sportComponents"
+  Video, HeaderSport,
+} from "../../sportComponents";
 import View from "../../components/content/Content.style";
 import Feed from "../feedPage/components/Feed";
 export interface VideoPageProps {
-  openDrawer: () => void;
   data: any;
   error: any;
+  navigation: any;
   loading: boolean;
 }
 
@@ -22,7 +22,7 @@ class VideoPage extends React.PureComponent<VideoPageProps> {
 
     if (error) {
       return (<Container>
-
+        <HeaderSport navigation={this.props.navigation} />
         <Content color={"#000"}>
 
           <View
@@ -38,7 +38,7 @@ class VideoPage extends React.PureComponent<VideoPageProps> {
     }
     if (loading) {
       return (<Container>
-
+        <HeaderSport navigation={this.props.navigation} />
         <Content color={"#000"}>
 
           <View
@@ -54,7 +54,7 @@ class VideoPage extends React.PureComponent<VideoPageProps> {
     }
     return (
       <Container>
-
+        <HeaderSport navigation={this.props.navigation} />
         <Content full color={"#000"}>
           <View
             style={{

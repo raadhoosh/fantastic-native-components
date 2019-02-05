@@ -2,6 +2,7 @@ import React from "react";
 import ForgotPasswordPage from "../../screens/forgotPasswordPage";
 export interface IProps {
     navigation: any;
+    theme: any;
 }
 class ForgotPasswordContainer extends React.PureComponent<IProps> {
 
@@ -10,14 +11,9 @@ class ForgotPasswordContainer extends React.PureComponent<IProps> {
     }
 
     render() {
-        const dataArray = [
-            { title: "First Element", content: "Lorem ipsum dolor sit amet" },
-            { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
-            { title: "Third Element", content: "Lorem ipsum dolor sit amet" },
-        ];
-        return (<ForgotPasswordPage openDrawer={() => {
-            this.props.navigation.openDrawer();
-        }} dataArray={dataArray} expanded={0}
+
+        return (<ForgotPasswordPage
+            theme={this.props.theme}
             navigation={this.props.navigation}
             onChangeRout={this.onChangeRout}
         />);

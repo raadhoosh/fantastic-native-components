@@ -21,7 +21,9 @@ export default class VideoSport extends Component<IProps, IState> {
 
     render() {
         setTimeout(() => {
-            this.setState({ paused: false });
+            if (this.state.paused) {
+                this.setState({ paused: false });
+            }
         }, 1000);
         return (
             <>

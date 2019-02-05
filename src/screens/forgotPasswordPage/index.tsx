@@ -1,5 +1,4 @@
 import React from "react";
-import { TouchableOpacity, Text } from "react-native";
 import {
   Container,
   Content,
@@ -7,7 +6,7 @@ import {
 
 import {
   ForgotPassword,
-  HeaderSport
+  HeaderSport,
 } from "../../sportComponents";
 
 interface ObInterface {
@@ -15,26 +14,25 @@ interface ObInterface {
   content: string;
 }
 export interface Props {
-  openDrawer: () => void;
   onChangeRout: (route: string) => void;
-  dataArray: Array<ObInterface>;
-  expanded: number;
   navigation: any;
+  theme: any;
 }
-class forgotPasswordPage extends React.PureComponent<Props> {
+class ForgotPasswordPage extends React.PureComponent<Props> {
 
   onChangeRout = (route: string) => {
+    // tslint:disable-next-line:no-unused-expression
     this.props.onChangeRout && this.props.onChangeRout(route);
   }
 
   render() {
-    const { dataArray, expanded } = this.props;
-    
+
     return (
       <Container>
-        <HeaderSport />
+        <HeaderSport navigation={this.props.navigation} />
         <Content full color={"#000"}>
           <ForgotPassword
+            theme={this.props.theme}
             handleForgotPassword={() => this.onChangeRout("Login")}
           />
         </Content>
@@ -43,4 +41,4 @@ class forgotPasswordPage extends React.PureComponent<Props> {
   }
 }
 
-export default forgotPasswordPage;
+export default ForgotPasswordPage;

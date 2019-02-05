@@ -13,13 +13,13 @@ type IProps = {
     light?: boolean;
     dark?: boolean;
     theme?: any;
-    children: JSX.Element | JSX.Element[];
-    openDrawer: () => void;
-    onChangeRout: (route: string) => void;
+    children?: JSX.Element | JSX.Element[];
+    // openDrawer?: () => void;
+    // onChangeRout: (route: string) => void;
     navigation: any;
 };
 
-class headerSport extends Component<IProps> {
+class HeaderSport extends Component<IProps> {
     constructor(props: IProps) {
         super(props);
         this.state = {
@@ -28,26 +28,21 @@ class headerSport extends Component<IProps> {
     }
 
     onChangeRout = (route: string) => {
+        // tslint:disable-next-line:no-unused-expression
         this.props.navigation && this.props.navigation.navigate(route);
+    }
+    openDrawer = () => {
+        // tslint:disable-next-line:no-unused-expression
+        this.props.navigation && this.props.navigation.openDrawer();
     }
 
     render() {
-        const { children, primary, secondary, success, info, warning, danger, light, dark, ...others } = this.props;
+        const { primary, secondary, success, info, warning, danger, light, dark, ...others } = this.props;
 
-        const color = (primary && "primary") ||
-            (secondary && "secondary") ||
-            (success && "success") ||
-            (info && "info") ||
-            (warning && "warning") ||
-            (danger && "danger") ||
-            (light && "light") ||
-            (dark && "dark") ||
-            "primary";
-        const backgroundColor = this.props.theme[color].dark;
         return (
-            <Header >
+            <Header {...{ primary, secondary, success, info, warning, danger, light, dark }}  >
                 <Left style={{ marginLeft: 0 }}>
-                    <TouchableOpacity onPress={this.props.openDrawer}>
+                    <TouchableOpacity onPress={this.openDrawer}>
                         <Icon size={30} type="Ionicons" name="md-menu" color={"#fff"} />
                     </TouchableOpacity>
                 </Left>
@@ -76,6 +71,6 @@ class headerSport extends Component<IProps> {
             </Header>
         );
     }
-};
+}
 
-export default withTheme(headerSport);
+export default withTheme(HeaderSport);

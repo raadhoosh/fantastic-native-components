@@ -17,9 +17,7 @@ class VideoContainer extends React.PureComponent<Props> {
                         data={data}
                         error={error}
                         loading={loading}
-                        openDrawer={() => {
-                            this.props.navigation.openDrawer();
-                        }} />
+                        navigation={this.props.navigation} />
                     );
                 }}
             </Query>

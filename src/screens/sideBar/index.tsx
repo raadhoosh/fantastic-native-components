@@ -1,10 +1,10 @@
 import React from "react";
 import { withTheme } from "styled-components";
-
-import { TouchableOpacity, ScrollView, Platform } from "react-native";
-import { Text, Theme, List, Item } from "./../../components";
+import { ScrollView, Platform } from "react-native";
+import { Text, Theme, Item } from "./../../components";
+import { MenuItem } from "../../sportComponents";
 const isIos = Platform.OS === "ios";
- 
+
 export interface Props {
     theme: Theme;
     routes: any;
@@ -15,9 +15,9 @@ export interface Props {
 class SideBar extends React.PureComponent<Props> {
     render() {
         const { routes, loading, error, onChangeRoute } = this.props;
-        const color = this.props.theme.primary.light;
+        const color = this.props.theme.primary.dark;
         if (error) {
-            return <ScrollView style={{ flex: 1, marginTop: isIos? 0 :20,paddingTop:isIos? 20 :0, backgroundColor: color }}>
+            return <ScrollView style={{ flex: 1, marginTop: isIos ? 0 : 20, paddingTop: isIos ? 20 : 0, backgroundColor: color }}>
                 <Text
                     fontSize={18}
                     secondary>
@@ -26,7 +26,7 @@ class SideBar extends React.PureComponent<Props> {
             </ScrollView>;
         }
         if (loading) {
-            return <ScrollView style={{ flex: 1, marginTop: isIos? 0 :20,paddingTop:isIos? 20 :0, backgroundColor: color }}>
+            return <ScrollView style={{ flex: 1, marginTop: isIos ? 0 : 20, paddingTop: isIos ? 20 : 0, backgroundColor: color }}>
                 <Text
                     fontSize={18}
                     secondary>
@@ -36,17 +36,20 @@ class SideBar extends React.PureComponent<Props> {
         }
 
         return (
-            <ScrollView style={{ flex: 1, marginTop: isIos? 0 :20,paddingTop:isIos? 20 :0, backgroundColor: color }}>
+            <ScrollView style={{ flex: 1, marginTop: isIos ? 0 : 20, paddingTop: isIos ? 20 : 0, paddingRight: 20, backgroundColor: color }}>
                 {routes.listMenus.items.map((item: any, index: number) => (
-                    <Item
-                        onPress={onChangeRoute(item.route)}
-                        key={`route-${index}`}>
-                        <Text
-                            fontSize={18}
-                            secondary >
-                            {item.name}
-                        </Text>
-                    </Item>
+                    <MenuItem
+                        key={item.toString()}
+                        title={item.name} />
+                    // <Item
+                    //     onPress={onChangeRoute(item.route)}
+                    //     key={`route-${index}`}>
+                    //     <Text
+                    //         fontSize={18}
+                    //         secondary >
+                    //         {item.name}
+                    //     </Text>
+                    // </Item>
                 ))}
             </ScrollView>
         );

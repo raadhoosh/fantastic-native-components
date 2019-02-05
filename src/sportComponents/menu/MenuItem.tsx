@@ -1,6 +1,6 @@
 import * as React from "react";
-import { StyledTitle, StyledText, StyledWrapper } from "./Menu.style";
-import { Theme } from "..";
+import { StyledTitle, StyledWrapper } from "./Menu.style";
+import { Theme } from "../../components";
 import { TextStyle, TextProps } from "react-native";
 import { Icon } from "../../components";
 
@@ -14,13 +14,13 @@ interface IProps extends TextStyle, TextProps {
   light?: boolean;
   dark?: boolean;
   theme?: Theme;
-  title?: string;
+  title: string;
 }
 
 const MenuItem = (props: IProps) => {
   return (
-    <StyledWrapper>
-      <StyledTitle {...props}>{props.title}</StyledTitle>
+    <StyledWrapper theme={props.theme}>
+      <StyledTitle theme {...props}>{props.title}</StyledTitle>
       <Icon type="FontAwesome" name="angle-right" color={"#fff"} size={20} />
     </StyledWrapper>
   );

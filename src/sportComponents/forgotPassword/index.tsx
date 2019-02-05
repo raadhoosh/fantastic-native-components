@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { TextInput, Button, Text } from "../../components";
 import { StyledLogin, StyledTitle, StyledSupTitle, StyledMessage, StyledButtonWrapper } from "./ForgotPassword.style";
-import { Theme } from "..";
-import { View, TouchableOpacity } from 'react-native';
+import { Theme } from "../../components";
+import { View, TouchableOpacity } from "react-native";
 
 export interface IProps {
   primary?: boolean;
@@ -18,13 +18,13 @@ export interface IProps {
   color?: string;
   width?: number | string;
   height?: number | string;
-  theme?: Theme;
+  theme: Theme;
   onPress?: () => void;
   handleForgotPassword?: () => void;
   disabled?: boolean;
   borderRadius?: string;
   checked?: boolean;
-  changeIcon?: boolean,
+  changeIcon?: boolean;
 }
 
 interface State {
@@ -40,17 +40,18 @@ class Login extends Component<IProps, State> {
   }
 
   handleForgotPassword = () => {
+    // tslint:disable-next-line:no-unused-expression
     this.props.handleForgotPassword && this.props.handleForgotPassword();
   }
 
   render() {
     return (
       <StyledLogin {...this.props}>
-        <StyledTitle>
+        <StyledTitle {...this.props}>
           Forgot your password?
           </StyledTitle>
 
-        <StyledSupTitle >
+        <StyledSupTitle {...this.props}>
           Enter your Optus Sport email below and we will send you a link to get back into your account.
           </StyledSupTitle>
 
@@ -79,7 +80,7 @@ class Login extends Component<IProps, State> {
         </Button>
         </View>
 
-        <StyledMessage >
+        <StyledMessage {...this.props} >
           <TouchableOpacity>
             <Text
               info
@@ -90,7 +91,7 @@ class Login extends Component<IProps, State> {
           </TouchableOpacity>
         </StyledMessage>
 
-        <StyledButtonWrapper >
+        <StyledButtonWrapper {...this.props}>
 
           <Button
             primary

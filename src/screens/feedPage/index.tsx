@@ -1,19 +1,16 @@
 import React from "react";
-import { TouchableOpacity, Image, Dimensions, View } from "react-native";
-import { Container, Content, Text, Header, Left, Right, Icon, Row, Spinner } from "../../components";
+import {  Dimensions, View } from "react-native";
+import { Container, Content, Text, Spinner } from "../../components";
 import { Slideshow, HeaderSport } from "../../sportComponents";
-import Game from "./components/Game";
+
 import Feed from "./components/Feed";
 interface ObInterface {
     title: string;
     content: string;
 }
-const deviceWidth = Dimensions.get("window").width - 60;
 
 // tslint:disable:max-line-length
 export interface Props {
-    openDrawer: () => void;
-    openLogin: () => void;
     navigation: any;
     data?: any;
     error?: any;
@@ -23,11 +20,9 @@ class FeedPage extends React.PureComponent<Props> {
     render() {
 
         return (<Container>
-
             <HeaderSport
                 navigation={this.props.navigation}
             />
-
             <Content style={{ backgroundColor: "#010101" }} full>
                 {this._render(this.props)}
             </Content>

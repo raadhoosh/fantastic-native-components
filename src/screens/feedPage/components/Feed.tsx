@@ -34,13 +34,13 @@ export class App extends React.PureComponent<IFeedProps> {
                             {
                                 item.elements.map((element: any, key: number) => {
                                     return <CardSport
-                                        key={"key" + key}                                        
+                                        key={"key" + key}
                                         source={{ uri: element.url }}
-                                        title={element.title}                                       
+                                        title={element.title}
                                         icon={"lock"}
                                         time={element.type === "Live" ? " " : element.duration}
                                         live={element.type === "Live"}
-                                        coverage ={element.type !== "Live"}
+                                        coverage={element.type !== "Live"}
                                         text={
                                             element.short_description
                                         }

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { TextInput, Button, Text } from "../../components";
 import { StyledLogin, StyledTitle, StyledMessage } from "./Login.style";
-import { Theme } from "..";
-import { View, TouchableOpacity } from 'react-native';
+import { Theme } from "../../components";
+import { View, TouchableOpacity } from "react-native";
 
 export interface IProps {
   primary?: boolean;
@@ -23,7 +23,7 @@ export interface IProps {
   disabled?: boolean;
   borderRadius?: string;
   checked?: boolean;
-  changeIcon?: boolean,
+  changeIcon?: boolean;
 }
 
 interface State {
@@ -39,6 +39,7 @@ class Login extends Component<IProps, State> {
   }
 
   handleForgotPassword = () => {
+    // tslint:disable-next-line:no-unused-expression
     this.props.handleForgotPassword && this.props.handleForgotPassword();
   }
 
@@ -75,8 +76,8 @@ class Login extends Component<IProps, State> {
             icon={`${this.state.changeIcon ? "eye" : "eye-slash"}`}
             onPressIcon={() => {
               this.setState({
-                changeIcon: !this.state.changeIcon
-              })
+                changeIcon: !this.state.changeIcon,
+              });
             }}
           />
         </View>
