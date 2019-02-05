@@ -54,7 +54,7 @@ class VideoPage extends React.PureComponent<VideoPageProps> {
     }
     return (
       <Container>
-        <HeaderSport navigation={this.props.navigation} />
+        {/* <HeaderSport navigation={this.props.navigation} /> */}
         <Content full color={"#000"}>
           <View
             style={{
