@@ -19,17 +19,22 @@ class FeedContainer extends React.PureComponent<IProps | any, any> {
         });
     }
     render() {
-        return (<View style={{ marginTop: 50, padding: 24 }}>
-            <Text>
-                margin {this.state ? this.state.count : 0}
-            </Text>
-            <Button OnTop={this.onTop} buttonText={"salam"} style={{ height: 40, width: 150, backgroundColor: "red" }} />
-            <JWPlayer
 
-                buttonText={this.state ? (this.state.start ? "a" : "false") : "false"}
-                // player={this.state ? (this.state.start ? true : false) : false}
-                style={{ width: 300, height: 300, backgroundColor: "red" }} />
-        </View>);
+        return (
+            <View >
+                <View style={{ marginTop: 50, padding: 12 }}>
+                    <Text>
+                        margin {this.state ? this.state.count : 0}
+                    </Text>
+                    <Button OnTop={this.onTop} buttonText={"salam"} style={{ height: 40, width: 150, backgroundColor: "red" }} />
+                    <JWPlayer
+
+                        buttonText={this.state ? (this.state.start ? "a" : "false") : "false"}
+                        // player={this.state ? (this.state.start ? true : false) : false}
+                        style={{ width: 300, height: 300, backgroundColor: "red" }} />
+                </View>
+            </View>
+        );
         return (
             <Query query={listFeeds}>
                 {({ data, error, loading }) => {
