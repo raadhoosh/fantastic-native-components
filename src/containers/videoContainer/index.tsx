@@ -8,7 +8,16 @@ export interface Props {
     navigation: any;
 }
 class VideoContainer extends React.PureComponent<Props> {
-
+    componentWillMount() {
+        let a: string = JSON.stringify({ "username": "salman.zare@optus.com.au", "password": "Salman@2o19", "rememberMe": "false" });
+        // fetch("https://web-pp.sport-ott.com/api/userauth/login", { method: "POST", body: a })
+        //     .then((data) => {
+        //         alert(JSON.stringify(data));
+        //     })
+        //     .catch((err: any) => {
+        //         alert(err);
+        //     });
+    }
     render() {
         return (
             <Query query={FEED_QUERY}>

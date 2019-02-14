@@ -26,7 +26,7 @@ export default class Slideshow extends Component<IProps, IState> {
         this._carousel = {};
     }
 
-    _onPressCarousel = (item: any) => {
+    _onPressCarousel = (item: any) => () => {
         // here handle carousel press
         this.props.onProps();
     }
@@ -39,8 +39,8 @@ export default class Slideshow extends Component<IProps, IState> {
                 marginRight: "1%",
             }}>
                 <View >
-                    <Image source={{ uri: item.url }} style={{ height: 300, width: "100%", flex: 1 }} />
-                    <TouchableOpacity onPress={this._onPressCarousel} style={styles.titleWrapper} >
+                    <Image source={{ uri: item.imageUrl }} style={{ height: 300, width: "100%", flex: 1 }} />
+                    <TouchableOpacity onPress={this._onPressCarousel(item)} style={styles.titleWrapper} >
                         <Row>
                             <Text style={styles.titleSlideshow} >
                                 {item.title}

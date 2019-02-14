@@ -1,5 +1,5 @@
 import React from "react";
-import {  Dimensions, View } from "react-native";
+import { Dimensions, View } from "react-native";
 import { Container, Content, Text, Spinner } from "../../components";
 import { Slideshow, HeaderSport } from "../../sportComponents";
 
@@ -13,6 +13,7 @@ interface ObInterface {
 export interface Props {
     navigation: any;
     data?: any;
+    carousel?: any;
     error?: any;
     loading?: boolean;
 }
@@ -28,8 +29,9 @@ class FeedPage extends React.PureComponent<Props> {
             </Content>
         </Container>);
     }
-    private _render = ({ data, error, loading }: any) => {
+    private _render = ({ data, error, carousel, loading }: any) => {
         const { navigate } = this.props.navigation;
+
         if (error) {
             return <Text danger>{"Error"}</Text>;
         }
@@ -46,10 +48,14 @@ class FeedPage extends React.PureComponent<Props> {
             </View>;
         }
 
+        // if (carousel) {
+        //     return <Text danger>{"carousel"}</Text>;
+        // }
+
         return <>
-            {data.listSliders && data.listSliders.items && <Slideshow onProps={() => {
+            {carousel && <Slideshow onProps={() => {
                 navigate("Video");
-            }} data={data.listSliders.items} />}
+            }} data={carousel} />}
             {/* {data.listGames && data.listSliders.items && <Game data={data.listGames.items} />} */}
             {data.listFeeds && data.listSliders.items && <Feed data={data.listFeeds.items} />}
         </>;
