@@ -101,7 +101,7 @@ export default class VideoSport extends Component<IProps, IState> {
                             key={"name"}
                             title={this.props.text}
                             // description={'Film Test'}
-                            src= {JSON.stringify(this.state.playerInstanceSetup)}
+                            src= {this.state.playerInstanceSetup}
                             // src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
                             // src="https://wowzaec2demo.streamlock.net/live/bigbuckbunny/playlist.m3u8"
                             // src="https://descargapwebrealmadrid.akamaized.net/2018/04/05/b2c71017-0b44-4bfa-9d6f-f56247a818b2_1000k.mp4"

@@ -5,7 +5,7 @@ import { requireNativeComponent, View } from 'react-native';
 var iface = {
     name: 'JWPlayer',
     PropTypes: {
-        src: PropTypes.string || PropTypes.number ,
+        src: PropTypes.string || PropTypes.number || PropTypes.object ,
         title: PropTypes.string,
         // description: PropTypes.string,
         play: PropTypes.bool,
