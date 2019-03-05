@@ -1,0 +1,120 @@
+
+{
+    "playback": {
+        "@assetId": "42463",
+        "title": "Optus Sport 1",
+        "live": true,
+        "aspect16x9": true,
+        "drmProtected": true,
+        "playbackStatus": "OK",
+        "hasItems": false,
+        "encoderStartTime": "2018-07-30T03:12:28Z",
+        "liveBroadcastTime": "2018-07-30T01:05:56Z",
+        "items": {
+            "item": [
+                {
+                    "base": "https://epllinearcdn.optusnet.com.au",
+                    "bitrate": 0,
+                    "drmProxyType": "widevine_modular,playready",
+                    "fileSize": 0,
+                    "license": {
+                        "@name": "widevine_modular",
+                        "@uri": "https://drm-widevine-licensing.axprod.net/AcquireLicense",
+                        "drmData": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiM0NEMkY3QjEtQzNBOC00MjJBLTk0OTctQTdCNzAwN0Q3RkI1IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiZDY3YTE2Y2QtYTY5NS01ZGU0LTk5N2YtYWUyNDZjY2YwNWVhIn1dfSwiZXhwaXJhdGlvbl9kYXRlIjoiMjAyMC0wMi0yNFQxMDoxMDowNi4wMzRaIn0.ycc0B8MN-QsxHspmwoNujCbJ4H5pXDCm-ZlOQ9gmMBc",
+                        "key": "d67a16cd-a695-5de4-997f-ae246ccf05ea",
+                        "drm": {
+                            "license": [
+                                {
+                                    "@name": "widevine_modular",
+                                    "@uri": "https://drm-widevine-licensing.axprod.net/AcquireLicense",
+                                    "drmData": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiM0NEMkY3QjEtQzNBOC00MjJBLTk0OTctQTdCNzAwN0Q3RkI1IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiZDY3YTE2Y2QtYTY5NS01ZGU0LTk5N2YtYWUyNDZjY2YwNWVhIn1dfSwiZXhwaXJhdGlvbl9kYXRlIjoiMjAyMC0wMi0yNFQxMDoxMDowNi4wMzRaIn0.ycc0B8MN-QsxHspmwoNujCbJ4H5pXDCm-ZlOQ9gmMBc",
+                                    "key": "d67a16cd-a695-5de4-997f-ae246ccf05ea"
+                                },
+                                {
+                                    "@name": "playready",
+                                    "@uri": "https://drm-playready-licensing.axprod.net/AcquireLicense",
+                                    "drmData": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiM0NEMkY3QjEtQzNBOC00MjJBLTk0OTctQTdCNzAwN0Q3RkI1IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiZDY3YTE2Y2QtYTY5NS01ZGU0LTk5N2YtYWUyNDZjY2YwNWVhIn1dfSwiZXhwaXJhdGlvbl9kYXRlIjoiMjAyMC0wMi0yNFQxMDoxMDowNi4wMzRaIn0.ycc0B8MN-QsxHspmwoNujCbJ4H5pXDCm-ZlOQ9gmMBc",
+                                    "key": "d67a16cd-a695-5de4-997f-ae246ccf05ea"
+                                }
+                            ]
+                        }
+                    },
+                    "log": {
+                        "@uri": "/api/web/asset/42463/play/log/0/"
+                    },
+                    "mediaFormat": "smil",
+                    "protocol": "DASH",
+                    "scheme": "https",
+                    "server": "epllinearcdn.optusnet.com.au",
+                    "streamsProvider": "infinit",
+                    "url": "https://epllinearcdn.optusnet.com.au/__cl/default/__c/OS1/__op/axcenc/__f/manifest.mpd"
+                },
+                {
+                    "license": {
+                        "@name": "widevine_modular",
+                        "@uri": "https://licenseproxy.ha.optus-third.vimondtv.com/license/wvmodular/42463?timeStamp=2019-02-24T10%3A10%3A10%2B0000&contract=c03bce3d109100e39e7e09cadf9505a9&account=source",
+                        "drm": {
+                            "license": [
+                                {
+                                    "@uri": "https://licenseproxy.ha.optus-third.vimondtv.com/license/wvmodular/42463?timeStamp=2019-02-24T10%3A10%3A10%2B0000&contract=c03bce3d109100e39e7e09cadf9505a9&account=source",
+                                    "@name": "widevine_modular"
+                                },
+                                {
+                                    "@uri": "https://licenseproxy.ha.optus-third.vimondtv.com/license/playready/42463?timeStamp=2019-02-24T10%3A10%3A10%2B0000&contract=c03bce3d109100e39e7e09cadf9505a9&account=source",
+                                    "@name": "playready"
+                                }
+                            ]
+                        }
+                    },
+                    "log": {
+                        "@uri": "/api/web/asset/42463/play/log/0/"
+                    },
+                    "bitrate": 0,
+                    "fileSize": 0,
+                    "mediaFormat": "smil",
+                    "scheme": "https",
+                    "server": "epllinearcdn.optusnet.com.au",
+                    "base": "https://epllinearcdn.optusnet.com.au",
+                    "url": "https://epllinearcdn.optusnet.com.au/726f32a8-f12d-ba5a-2622-10ef4f51f1b6/726f32a8-f12d-ba5a-2622-10ef4f51f1b6.ism/manifest(format=mpd-time-csf)",
+                    "drmProxyType": "widevine_modular,playready",
+                    "protocol": "DASH"
+                },
+                {
+                    "license": {
+                        "@name": "widevine_modular",
+                        "@uri": "https://licenseproxy.ha.optus-third.vimondtv.com/license/wvmodular/42463?timeStamp=2019-02-24T10%3A10%3A10%2B0000&contract=c03bce3d109100e39e7e09cadf9505a9&account=source",
+                        "drm": {
+                            "license": [
+                                {
+                                    "@uri": "https://licenseproxy.ha.optus-third.vimondtv.com/license/wvmodular/42463?timeStamp=2019-02-24T10%3A10%3A10%2B0000&contract=c03bce3d109100e39e7e09cadf9505a9&account=source",
+                                    "@name": "widevine_modular"
+                                },
+                                {
+                                    "@uri": "https://licenseproxy.ha.optus-third.vimondtv.com/license/playready/42463?timeStamp=2019-02-24T10%3A10%3A10%2B0000&contract=c03bce3d109100e39e7e09cadf9505a9&account=source",
+                                    "@name": "playready"
+                                }
+                            ]
+                        }
+                    },
+                    "log": {
+                        "@uri": "/api/web/asset/42463/play/log/0/"
+                    },
+                    "bitrate": 0,
+                    "fileSize": 0,
+                    "mediaFormat": "smil",
+                    "scheme": "https",
+                    "server": "epllinearcdn.optusnet.com.au",
+                    "base": "https://epllinearcdn.optusnet.com.au",
+                    "url": "https://epllinearcdn.optusnet.com.au/726f32a8-f12d-ba5a-2622-10ef4f51f1b6/726f32a8-f12d-ba5a-2622-10ef4f51f1b6.ism/manifest(format=mpd-time-csf)",
+                    "drmProxyType": "widevine_modular,playready",
+                    "protocol": "DASH"
+                }
+            ]
+        },
+        "logData": "749BF55EDF0FDA454FDB1BCFD102A888FF8EAE417B057BFDE53E826364B8DF78BCF7E05C25C9AB4086EC8D35FFFB28E6AA2C322D3B34899CBA3259ADDC8C4102AD7C10ED42B511F47A46632EFE71EF131FF01EDBC7C6DB8FBDEC0939B8A3021A2622F99C49C651801F3446329EF6F6DA0AE7DB24B7B849AADBD9852F2F6972CABB5A85A372844FC1D68AE69C5E9667BF4040B639AA46B2E6B15B9AF1BD95AD68EF264D15C4629EBFCD30C8730F3988535AABB3DBAFCFA72850243D3377244ADEF8310A92C66AEA6CC06CF2C630695673BCB7DA6A1C666BE5C292E574E6A90D4544CD82F99B6FF934F467142777759A82BFB4CE48A337009647E2F2654271A1D25AFB48C89D81A00FA6C062FE128EFE86ABFF19CFCB51DC95C2C11E8D6ADAFD57DBB659D48A14C847D6658810D177E8FA2DAB62BC772B7E09501D307C270B1C13DE6DE79C39CF7B0A009B72920C7071F2",
+        "userAccessEndTime": "2020-01-01T10:40:28Z",
+        "streamRule": {
+            "maxSubscriptionStreams": 1
+        }
+    }
+}

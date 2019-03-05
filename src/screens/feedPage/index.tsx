@@ -57,7 +57,7 @@ class FeedPage extends React.PureComponent<Props> {
                 navigate("Video");
             }} data={carousel} />}
             {/* {data.listGames && data.listSliders.items && <Game data={data.listGames.items} />} */}
-            {data.listFeeds && data.listSliders.items && <Feed data={data.listFeeds.items} />}
+            {/* {data.listFeeds && data.listSliders.items && <Feed data={data.listFeeds.items} />} */}
         </>;
     }
 
