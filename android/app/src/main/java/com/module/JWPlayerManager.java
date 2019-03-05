@@ -36,12 +36,20 @@ public class JWPlayerManager extends SimpleViewManager<JWView> {
     @ReactProp(name= "src")
     public  void setSrc(JWView v,@Nullable String src){
         if( src!= null) {
-            pi= new PlaylistItem.Builder()
-                    .file(src)
-                    .title(title!= null ? title:"")
-                    .description(description!=null?description:" ")
-                    .build();
-            jwview.load(pi);
+       PlaylistItem playerConfig = new PlaylistItem.setup({
+                        image: "/uploads/myPoster.jpg",
+                        sources: [{
+                            file: "/uploads/myVideo720.mp4",
+                            label: "720p HD"
+                        },{
+                            file: "/uploads/myVideo360.mp4",
+                            label: "360p SD",
+                            "default": "true"
+                        },{
+                            file: "/uploads/myVideo180.mp4",
+                            label: "180p Web"
+                        }]});
+            jwview.load(playerConfig);
         }
     }
 //

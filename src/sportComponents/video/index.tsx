@@ -27,29 +27,40 @@ export default class VideoSport extends Component<IProps, IState> {
 
     async componentWillMount() {
         let Auth;
+        let AccessToken;
         let d = new Date();
         let t = "t:" + d.getMonth() + "-" + d.getDate() + "-" + d.getHours();
-        let p = await AsyncStorage.getItem("@auth:" + t);
+        let p = await AsyncStorage.getItem("@auth13:" + t);
         if (p) {
-            Auth = JSON.parse(p);
+            debugger
+            Auth = this.state.Auth;
+            this.setPlayer(Auth);
         } else {
             let a: string = JSON.stringify({ "username": "salman.zare@optus.com.au", "password": "Salman@2o19", "rememberMe": "false" });
             fetch("https://web-pp.sport-ott.com/api/userauth/login", { method: "POST", body: a })
                 .then((data) => {
                     if (data) {
-                        Auth = data;
-                        AsyncStorage.setItem("@auth:" + t, JSON.stringify(data));
+                        const body = JSON.parse(_.get(data, "_bodyText"));
+                        Auth=body.result;
+                        debugger
+                        AsyncStorage.setItem("@auth1:" + t, JSON.stringify(Auth));
+                        
+                        this.setState({ Auth: Auth });
+                        this.setPlayer(Auth);
                     }
-                    alert(JSON.stringify(data));
+                   //alert(JSON.stringify(data));
                 })
                 .catch((err: any) => {
                     alert(err);
                 });
         }
+        // alert(JSON.stringify(Auth));
+    }
 
-        await Auth;
+    setPlayer=(Auth: any)=>{
         if (Auth) {
-            const AccessToken = _.get(Auth, "IdToken");
+            let AccessToken = _.get(Auth, "IdToken");
+            debugger
             this.setState({ Auth: AccessToken });
             if (AccessToken)
                 // tslint:disable-next-line:max-line-length
@@ -62,61 +73,65 @@ export default class VideoSport extends Component<IProps, IState> {
                         },
                     })
                     .then((data) => {
-                        this.setState({ data: data });
-                        let list = playerInstanceSetup(data);
+
+                        debugger;
+                        const Body = JSON.parse(_.get(data, "_bodyText"));
+                        debugger;
+                        
+                        this.setState({ data: Body });
+                        let list = playerInstanceSetup(Body);
                         this.setState({ playerInstanceSetup : list });
-                        // alert(JSON.stringify(data));
+                         //alert(JSON.stringify(data));
                     })
                     .catch((err: any) => {
+                        debugger
                         alert(err);
                     });
         }
-
-        // alert(JSON.stringify(Auth));
     }
 
     render() {
-        setTimeout(() => {
-            if (this.state.paused) {
-                this.setState({ paused: false });
-            }
-        }, 1000);
-        return (
-            <>
-                <View style={styles.container}>
+        if(this.state){
+            if(this.state.playerInstanceSetup){
+                return (
+                    <>
+                    <View style={styles.container}>
                     <View style={styles.videoWrapper}>
-                        <JWPlayer
+                    <JWPlayer
                             key={"name"}
                             title={this.props.text}
                             // description={'Film Test'}
-                            src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+                            src= {JSON.stringify(this.state.playerInstanceSetup)}
+                            // src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
                             // src="https://wowzaec2demo.streamlock.net/live/bigbuckbunny/playlist.m3u8"
                             // src="https://descargapwebrealmadrid.akamaized.net/2018/04/05/b2c71017-0b44-4bfa-9d6f-f56247a818b2_1000k.mp4"
                             // src={require("./video.mp4").toString()}
                             play={true}
                             style={styles.video}
                         />
-                        {/* <Video
-                            ref={(ref) => {
-                                this.player = ref;
-                            }}
-                            source={require("./video.mp4")}
-                            // source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-                            // rate={1.0}
-                            // volume={1.0}
-                            // muted={false}
-                            resizeMode={"cover"}
-                            // fullscreenOrientation
-                            style={styles.video}
-                            controls
-                            // fullscreen
-                            paused={this.state.paused}
-                        /> */}
+                    </View>
+                        <View style={{ marginTop: 60, flex: 1 }}>
+                            <StyledText>
+                        {Date.now()}
+                            </StyledText>
+                        </View>
+                    </View>
+                    </>
+                )
+              
+            }
+        }
+        return (
+            <>
+                <View style={styles.container}>
+                    <View style={styles.videoWrapper}>
+                   
+                        
+                      
                     </View>
                     <View style={{ marginTop: 60, flex: 1 }}>
                         <StyledText>
-                            {this.props.text}
-                            {this.state && JSON.stringify(this.state.playerInstanceSetup)}
+                    {this.props.text}
                         </StyledText>
                     </View>
                 </View>
