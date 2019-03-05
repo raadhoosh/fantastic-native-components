@@ -7,6 +7,7 @@ import android.widget.FrameLayout;
 
 import com.facebook.react.bridge.ReactContext;
 import com.longtailvideo.jwplayer.JWPlayerView;
+import com.longtailvideo.jwplayer.configuration.PlayerConfig;
 import com.longtailvideo.jwplayer.media.playlists.PlaylistItem;
 
 public class JWView extends FrameLayout {
@@ -47,5 +48,9 @@ public class JWView extends FrameLayout {
 
     public void load(PlaylistItem param) {
         this.playerView.load( param );
+    }
+
+    public void setup(PlayerConfig param) {
+        this.playerView.setup( param );
     }
 }
