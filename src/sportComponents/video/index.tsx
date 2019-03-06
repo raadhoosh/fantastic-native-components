@@ -32,7 +32,7 @@ export default class VideoSport extends Component<IProps, IState> {
         let t = "t:" + d.getMonth() + "-" + d.getDate() + "-" + d.getHours();
         let p = await AsyncStorage.getItem("@auth13:" + t);
         if (p) {
-            debugger
+            // debugger
             Auth = this.state.Auth;
             this.setPlayer(Auth);
         } else {
@@ -41,14 +41,14 @@ export default class VideoSport extends Component<IProps, IState> {
                 .then((data) => {
                     if (data) {
                         const body = JSON.parse(_.get(data, "_bodyText"));
-                        Auth=body.result;
-                        debugger
+                        Auth = body.result;
+                        // debugger
                         AsyncStorage.setItem("@auth1:" + t, JSON.stringify(Auth));
-                        
+
                         this.setState({ Auth: Auth });
                         this.setPlayer(Auth);
                     }
-                   //alert(JSON.stringify(data));
+                    //alert(JSON.stringify(data));
                 })
                 .catch((err: any) => {
                     alert(err);
@@ -57,10 +57,10 @@ export default class VideoSport extends Component<IProps, IState> {
         // alert(JSON.stringify(Auth));
     }
 
-    setPlayer=(Auth: any)=>{
+    setPlayer = (Auth: any) => {
         if (Auth) {
             let AccessToken = _.get(Auth, "IdToken");
-            debugger
+            // debugger
             this.setState({ Auth: AccessToken });
             if (AccessToken)
                 // tslint:disable-next-line:max-line-length
@@ -74,64 +74,61 @@ export default class VideoSport extends Component<IProps, IState> {
                     })
                     .then((data) => {
 
-                        debugger;
+                        // debugger;
                         const Body = JSON.parse(_.get(data, "_bodyText"));
-                        debugger;
-                        
+                        // debugger;
+
                         this.setState({ data: Body });
                         let list = playerInstanceSetup(Body);
-                        this.setState({ playerInstanceSetup : list });
-                         //alert(JSON.stringify(data));
+                        this.setState({ playerInstanceSetup: list });
+                        // alert(JSON.stringify(data));
                     })
                     .catch((err: any) => {
-                        debugger
+                        // debugger
                         alert(err);
                     });
         }
     }
 
     render() {
-        if(this.state){
-            if(this.state.playerInstanceSetup){
+        if (this.state) {
+            if (this.state.playerInstanceSetup) {
                 return (
                     <>
-                    <View style={styles.container}>
-                    <View style={styles.videoWrapper}>
-                    <JWPlayer
-                            key={"name"}
-                            title={this.props.text}
-                            // description={'Film Test'}
-                            src= {this.state.playerInstanceSetup}
-                            // src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
-                            // src="https://wowzaec2demo.streamlock.net/live/bigbuckbunny/playlist.m3u8"
-                            // src="https://descargapwebrealmadrid.akamaized.net/2018/04/05/b2c71017-0b44-4bfa-9d6f-f56247a818b2_1000k.mp4"
-                            // src={require("./video.mp4").toString()}
-                            play={true}
-                            style={styles.video}
-                        />
-                    </View>
-                        <View style={{ marginTop: 60, flex: 1 }}>
-                            <StyledText>
-                        {Date.now()}
-                            </StyledText>
+                        <View style={styles.container}>
+                            <View style={styles.videoWrapper}>
+                                <JWPlayer
+                                    key={"name"}
+                                    title={this.props.text}
+                                    // description={'Film Test'}
+                                    src={JSON.stringify(this.state.playerInstanceSetup)}
+                                    // src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+                                    // src="https://wowzaec2demo.streamlock.net/live/bigbuckbunny/playlist.m3u8"
+                                    // src="https://descargapwebrealmadrid.akamaized.net/2018/04/05/b2c71017-0b44-4bfa-9d6f-f56247a818b2_1000k.mp4"
+                                    // src={require("./video.mp4").toString()}
+                                    play={true}
+                                    style={styles.video}
+                                />
+                            </View>
+                            <View style={{ marginTop: 60, flex: 1 }}>
+                                <StyledText>
+                                    {Date.now()}
+                                </StyledText>
+                            </View>
                         </View>
-                    </View>
                     </>
-                )
-              
+                );
+
             }
         }
         return (
             <>
                 <View style={styles.container}>
                     <View style={styles.videoWrapper}>
-                   
-                        
-                      
                     </View>
                     <View style={{ marginTop: 60, flex: 1 }}>
                         <StyledText>
-                    {this.props.text}
+                            {this.props.text}
                         </StyledText>
                     </View>
                 </View>

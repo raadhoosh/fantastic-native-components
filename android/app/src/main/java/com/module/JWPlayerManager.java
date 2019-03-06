@@ -4,6 +4,7 @@ package com.module;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
+import com.google.gson.Gson;
 import com.longtailvideo.jwplayer.configuration.PlayerConfig;
 import com.longtailvideo.jwplayer.media.playlists.PlaylistItem;
 
@@ -28,7 +29,7 @@ public class JWPlayerManager extends SimpleViewManager<JWView> {
     protected JWView createViewInstance(ThemedReactContext reactContext) {
         context = reactContext;
 //         PlayerConfig playerConfig = new PlayerConfig.Builder().build();
-        jwview = new JWView( reactContext );
+        jwview = new JWView(reactContext );
 //         pi= new PlaylistItem.Builder()
 //                    .file("http://playertest.longtailvideo.com/adaptive/bipbop/gear4/prog_index.m3u8")
 //                    .title("BipBop")
@@ -41,10 +42,13 @@ public class JWPlayerManager extends SimpleViewManager<JWView> {
 
     //
     @ReactProp(name = "src")
-    public void setSrc(JWView v, @Nullable List<PlaylistItem> src) {
+    public void setSrc(JWView v, @Nullable String src) {
         if (src != null) {
-            PlayerConfig playerConfig = new PlayerConfig.Builder().playlist(src).build();
-            jwview.setup( playerConfig );
+              Gson gson = new Gson();
+            PlayerConfig playerConfig;
+            playerConfig = gson.fromJson( src,PlayerConfig.class);
+//            playerConfig = (PlayerConfig) src;
+            jwview.setup(playerConfig);
         }
     }
 
