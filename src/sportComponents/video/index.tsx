@@ -76,10 +76,12 @@ export default class VideoSport extends Component<IProps, IState> {
 
                         // debugger;
                         const Body = JSON.parse(_.get(data, "_bodyText"));
-                        // debugger;
+                         debugger;
 
                         this.setState({ data: Body });
                         let list = playerInstanceSetup(Body);
+                        debugger;
+
                         this.setState({ playerInstanceSetup: list });
                         // alert(JSON.stringify(data));
                     })

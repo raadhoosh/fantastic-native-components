@@ -45,9 +45,11 @@ public class JWPlayerManager extends SimpleViewManager<JWView> {
     public void setSrc(JWView v, @Nullable String src) {
         if (src != null) {
               Gson gson = new Gson();
-            PlayerConfig playerConfig;
-            playerConfig = gson.fromJson( src,PlayerConfig.class);
-//            playerConfig = (PlayerConfig) src;
+             List<PlaylistItem> lp;
+            GsonFormat player= gson.fromJson( src,GsonFormat.class);
+            PlayerConfig playerConfig = new PlayerConfig.Builder()
+                    .playlist(lp)
+                    .build();
             jwview.setup(playerConfig);
         }
     }
