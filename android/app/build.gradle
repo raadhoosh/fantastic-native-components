@@ -141,6 +141,7 @@ dependencies {
     implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+    implementation 'com.google.android.exoplayer:exoplayer:2.+'
     implementation 'com.google.code.gson:gson:+'
     //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
@@ -148,7 +149,6 @@ dependencies {
 
     implementation 'com.longtailvideo.jwplayer:jwplayer-core:3.4.2'
     implementation 'com.longtailvideo.jwplayer:jwplayer-common:3.4.2'
-
 }
 
 // Run this once to be able to run the application with BUCK

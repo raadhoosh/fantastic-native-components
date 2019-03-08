@@ -48,7 +48,7 @@ export default class VideoSport extends Component<IProps, IState> {
                         this.setState({ Auth: Auth });
                         this.setPlayer(Auth);
                     }
-                    //alert(JSON.stringify(data));
+                    // alert(JSON.stringify(data));
                 })
                 .catch((err: any) => {
                     alert(err);
@@ -76,11 +76,11 @@ export default class VideoSport extends Component<IProps, IState> {
 
                         // debugger;
                         const Body = JSON.parse(_.get(data, "_bodyText"));
-                         debugger;
+                        //  debugger;
 
                         this.setState({ data: Body });
                         let list = playerInstanceSetup(Body);
-                        debugger;
+                        //  debugger;
 
                         this.setState({ playerInstanceSetup: list });
                         // alert(JSON.stringify(data));
@@ -93,7 +93,7 @@ export default class VideoSport extends Component<IProps, IState> {
     }
 
     render() {
-        if (this.state) {
+        if (this.state && false) {
             if (this.state.playerInstanceSetup) {
                 return (
                     <>
@@ -127,6 +127,12 @@ export default class VideoSport extends Component<IProps, IState> {
             <>
                 <View style={styles.container}>
                     <View style={styles.videoWrapper}>
+                        <Video
+                            repeat
+                            resizeMode="cover"
+                            source={require("./video.mp4")}
+                            style={styles.video}
+                        />
                     </View>
                     <View style={{ marginTop: 60, flex: 1 }}>
                         <StyledText>
