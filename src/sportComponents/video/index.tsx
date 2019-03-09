@@ -42,7 +42,8 @@ export default class VideoSport extends Component<IProps, IState> {
                     if (data) {
                         const body = JSON.parse(_.get(data, "_bodyText"));
                         Auth = body.result;
-                        // debugger
+                        // tslint:disable-next-line:no-debugger
+                        debugger;
                         AsyncStorage.setItem("@auth1:" + t, JSON.stringify(Auth));
 
                         this.setState({ Auth: Auth });
@@ -74,7 +75,8 @@ export default class VideoSport extends Component<IProps, IState> {
                     })
                     .then((data) => {
 
-                        // debugger;
+                        // tslint:disable-next-line:no-debugger
+                        debugger;
                         const Body = JSON.parse(_.get(data, "_bodyText"));
                         //  debugger;
 
@@ -93,7 +95,7 @@ export default class VideoSport extends Component<IProps, IState> {
     }
 
     render() {
-        if (this.state && false) {
+        if (this.state) {
             if (this.state.playerInstanceSetup) {
                 return (
                     <>
@@ -127,12 +129,13 @@ export default class VideoSport extends Component<IProps, IState> {
             <>
                 <View style={styles.container}>
                     <View style={styles.videoWrapper}>
-                        <Video
+                        {/* <Video
                             repeat
                             resizeMode="cover"
-                            source={require("./video.mp4")}
+                            source={{uri: "https://epllinearcdn.optusnet.com.au/__cl/default/__c/OS1/__op/axcenc/__f/manifest.mpd"}}
+                            drmName="widevine"
                             style={styles.video}
-                        />
+                        /> */}
                     </View>
                     <View style={{ marginTop: 60, flex: 1 }}>
                         <StyledText>
