@@ -21,7 +21,7 @@ import static com.google.android.exoplayer2.util.Util.toByteArray;
 @TargetApi(18)
 public class WidevineMediaDrmCallback implements MediaDrmCallback {
 
-    private String mLicenseServer, mAxDrmMessage;
+    private String mLicenseServer;
 
 //    public WidevineMediaDrmCallback(String licenseServer, String axDrmMessage) {
 //        // license server URL has hardcoded value of: "https://drm-widevine-licensing.axtest.net/AcquireLicense"
@@ -50,21 +50,18 @@ public class WidevineMediaDrmCallback implements MediaDrmCallback {
             "https://drm-widevine-licensing.axtest.net/AcquireLicense";
 
     private final String defaultUri;
+    Map<String, String> mAxDrmMessage;
 
-    public WidevineMediaDrmCallback(String contentId, String provider) {
-        String params = "?video_id=" + contentId + "&provider=" + provider;
+    public WidevineMediaDrmCallback(String contentId, Map<String, String> mad) {
+        String params = "?video_id=" + contentId;
+        mAxDrmMessage = mad;
         defaultUri = WIDEVINE_LICENSE_SERVER_BASE_URI + params;
     }
 
     @Override
     public byte[] executeProvisionRequest(UUID uuid, ExoMediaDrm.ProvisionRequest request) throws IOException {
         String url = request.getDefaultUrl() + "&signedRequest=" + new String( request.getData() );
-        Map<String, String> requestProperties = null;
-        if (mAxDrmMessage != null) {
-            requestProperties.put( "X-AxDRM-Message", mAxDrmMessage );
-        }
-
-        return executePost( url, null, requestProperties );
+        return executePost( url, null, mAxDrmMessage );
     }
 
     @Override
@@ -73,12 +70,7 @@ public class WidevineMediaDrmCallback implements MediaDrmCallback {
         if (TextUtils.isEmpty( url )) {
             url = defaultUri;
         }
-        Map<String, String> requestProperties = null;
-        if (mAxDrmMessage != null) {
-            requestProperties.put( "X-AxDRM-Message", mAxDrmMessage );
-        }
-
-        return executePost( url, request.getData(), null );
+        return executePost( url, request.getData(), mAxDrmMessage );
     }
 
     /**
