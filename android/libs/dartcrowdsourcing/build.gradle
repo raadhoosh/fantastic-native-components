@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+	compileSdkVersion project.ext.compileSdkVersion
+	buildToolsVersion project.ext.buildToolsVersion
+
+	defaultConfig {
+		minSdkVersion 14
+		targetSdkVersion 23
+		versionCode 1
+		versionName "1.0"
+	}
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+	lintOptions {
+		abortOnError false
+	}
+}
+
+repositories {
+	flatDir {
+		dirs 'libs'
+	}
+}
+
+dependencies {
+	implementation fileTree(include: ['*.jar'], dir: 'libs')
+	implementation 'com.android.support:appcompat-v7:'+project.ext.supportLibraryVersion
+	//compile 'com.google.android.gms:play-services:8.3.0'
+	//compile 'com.squareup.retrofit:retrofit:1.9.0'
+	//compile 'com.squareup.okhttp:okhttp:2.6.0'
+	//compile 'com.google.code.gson:gson:2.4'
+	implementation files('libs/dartactivetestinglib.jar')
+	implementation files('libs/dartpassivecollectorlib.jar')
+	//compile files('libs/dartgeofencinglib.jar')
+	implementation files('libs/dartcrowdsourcinglib.jar')
+}
+
+//task clearArchive(type: Delete) {
+//    delete 'libs/dartgeofencinglib.jar'
+//}
+//
+//build.dependsOn(clearArchive)

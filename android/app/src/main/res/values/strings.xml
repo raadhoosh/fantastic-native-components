@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FantasticNativeComponents</string>
+    <string name="error_querying_decoders">FantasticNativeComponents</string>
+    <string name="error_no_secure_decoder">FantasticNativeComponents</string>
+    <string name="error_no_decoder">FantasticNativeComponents</string>
+    <string name="error_instantiating_decoder">FantasticNativeComponents</string>
+    <string name="unrecognized_media_format">FantasticNativeComponents</string>
 </resources>

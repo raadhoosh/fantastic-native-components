@@ -1,0 +1,119 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.optus.express.network.dartcrowdsourcingandroidarchive">
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+	<uses-feature android:name="android.hardware.telephony" android:required="false"/>
+
+	<application
+			android:label="@string/app_name"
+			android:supportsRtl="true">
+
+		<!-- Start DART Analytics Library integration -->
+		<service
+				android:name="com.optus.express.network.dartcrowdsourcinglib.DartShortLivedService"
+				android:enabled="true"
+				android:exported="false">
+			<intent-filter>
+				<action
+						android:name=".DartService"
+						android:value="com.optus.express.network.dartcrowdsourcinglib.DART_SHORT_LIVED_SERVICE"/>
+			</intent-filter>
+		</service>
+
+		<receiver android:name="com.optus.express.network.dartcrowdsourcinglib.DartBroadcastReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+				<action android:name="android.net.wifi.STATE_CHANGE"/>
+				<action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+				<action android:name="android.intent.action.PHONE_STATE"/>
+			</intent-filter>
+		</receiver>
+
+		<!--<receiver
+			android:name="com.optus.express.network.dartcrowdsourcingandroidarchive.DartGeofenceNotificationReceiver"
+			android:label="Dart Geofence Receiver">
+			<intent-filter>
+				<action android:name="DartGeofenceNotification.SEND_NOTIFICATION" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name="com.optus.express.network.dartgeofencinglib.GeofenceWifiScanReceiver" android:label="WIFI SCAN Receiver"/>
+
+		<receiver android:name="com.optus.express.network.dartgeofencinglib.GeofenceConnectionChangedReceiver">
+			<intent-filter>
+				<action android:name="android.location.PROVIDERS_CHANGED" />
+				<action android:name="com.optus.express.network.dartgeofecninglib.RERUN" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
+
+		<service android:name="com.optus.express.network.dartgeofencinglib.GeofenceTransitionsIntentService"/>-->
+
+		<meta-data
+				android:name="PREFKEY_APIKEY"
+				android:value="@string/pApiKey"/>
+		<meta-data
+				android:name="PREFKEY_AUTOTEST"
+				android:value="@string/pAutoTest"/>
+		<meta-data
+				android:name="PREFKEY_VERSION"
+				android:value="@string/pVersion"/>
+		<meta-data
+				android:name="PREFKEY_HOMEMCCMNCS"
+				android:value="@string/pHomeMccMnc"/>
+		<meta-data
+				android:name="PREFKEY_UPLOADURL"
+				android:value="@string/pUploadUrl"/>
+		<meta-data
+				android:name="PREFKEY_UPLOADURL_SECURE"
+				android:value="@string/pUploadUrlSecure"/>
+		<meta-data
+				android:name="DARTLIB_ISTHISASLAVEAPP"
+				android:value="@string/pIsSlave"/>
+		<meta-data
+				android:name="PREFKEY_ISTHISASLAVEAPP"
+				android:value="@string/pIsSlave"/>
+		<meta-data
+				android:name="PREFKEY_MASTERAPPPACKAGE"
+				android:value="@string/pMasterAppPackage"/>
+		<meta-data
+				android:name="PREFKEY_MASTERAPPVERSION"
+				android:value="@string/pMasterAppVersion"/>
+		<meta-data
+				android:name="PREFKEY_DEBUG"
+				android:value="@string/pDebug"/>
+
+		<!--<meta-data
+			android:name="PREFKEY_ENABLEGEOFENCING"
+			android:value="@string/pEnableGeofencing" />
+		<meta-data
+			android:name="PREFKEY_GEOFENCINGHOSTSERVER"
+			android:value="@string/pGeofencingHostServer" />
+		<meta-data
+			android:name="PREFKEY_GEOFENCINGHOSTSERVERURI"
+			android:value="@string/pGeofencingHostServerUri" />
+
+		<meta-data
+			android:name="PREFKEY_GEOFENCINGLOGSERVERURL"
+			android:value="@string/pGeofencingLogServerUrl" />
+
+		<meta-data
+			android:name="PREFKEY_DEBUGGEOFENCING"
+			android:value="@string/pDebugGeofencing" />
+
+		<meta-data
+			android:name="PREFKEY_WIFISCANINTERVAL"
+			android:value="@string/pWifiScanInterval" /> -->
+		<!-- End DART Analytics Library integration -->
+
+	</application>
+
+</manifest>

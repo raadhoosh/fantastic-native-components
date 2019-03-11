@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('Conviva_SDK_Android_2.138.0.35421.jar'))

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Properties for DartCrowdSourcingLib -->
+	<string name="pApiKey">OptusEPL_1fc4e804</string>
+	<string name="pDebug">false</string>
+	<string name="pAutoTest">true</string>
+	<string name="pVersion">1.0</string>
+	<string name="pHomeMccMnc">50502</string>
+	<string name="pUploadUrl">http://dartmobileingress.optuszoo.com.au/Ingress/records/open/create/</string>
+	<string name="pUploadUrlSecure">http://dartmobileingress.optuszoo.com.au/Ingress/records/open/create/</string>
+	<string name="pIsSlave">false</string>
+	<string name="pMasterAppPackage">null</string>
+	<string name="pMasterAppVersion">-1</string>
+	<string name="pEnableGeofencing">false</string>
+	<string name="pGeofencingHostServer">http://darttest.optuszoo.com.au</string>
+	<string name="pGeofencingHostServerUri">geofence.json</string>
+	<string name="pGeofencingLogServerUrl">http://darttest.optuszoo.com.au/cgi-bin/dart-cricket/event.pl</string>
+	<string name="pDebugGeofencing">false</string>
+	<string name="pWifiScanInterval">30000</string>
+
+</resources>

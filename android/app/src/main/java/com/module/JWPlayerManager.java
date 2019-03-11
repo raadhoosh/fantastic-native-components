@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
-
+import com.google.android.exoplayer.*;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -221,70 +222,7 @@ public class JWPlayerManager extends SimpleViewManager<JWView> {
                                         .getWidevine()
                                         .getLicenseRequestHeaders();
                         Log.i( "SajjadLog", "--------- JWPlayer Manager : 13 ---------" );
-                        Map<String, String> requestProperties = new Map<String, String>() {
-                            @Override
-                            public int size() {
-                                return 0;
-                            }
-
-                            @Override
-                            public boolean isEmpty() {
-                                return false;
-                            }
-
-                            @Override
-                            public boolean containsKey(Object key) {
-                                return false;
-                            }
-
-                            @Override
-                            public boolean containsValue(Object value) {
-                                return false;
-                            }
-
-                            @Override
-                            public String get(Object key) {
-                                return null;
-                            }
-
-                            @Override
-                            public String put(String key, String value) {
-                                return null;
-                            }
-
-                            @Override
-                            public String remove(Object key) {
-                                return null;
-                            }
-
-                            @Override
-                            public void putAll(@NonNull Map<? extends String, ? extends String> m) {
-
-                            }
-
-                            @Override
-                            public void clear() {
-
-                            }
-
-                            @NonNull
-                            @Override
-                            public Set<String> keySet() {
-                                return null;
-                            }
-
-                            @NonNull
-                            @Override
-                            public Collection<String> values() {
-                                return null;
-                            }
-
-                            @NonNull
-                            @Override
-                            public Set<Entry<String, String>> entrySet() {
-                                return null;
-                            }
-                        };
+                        Map<String, String> requestProperties = new HashMap<String, String>();
                         Log.i( "SajjadLog", "--------- JWPlayer Manager : 14 ---------" );
                         final int size3 = listheader.size();
                         Log.i( "SajjadLog", "--------- listheader ---------" + listheader );
@@ -300,6 +238,7 @@ public class JWPlayerManager extends SimpleViewManager<JWView> {
                                 .title( playlist.get( i ).getTitle() )
                                 .description( playlist.get( i ).getDescription() )
                                 .image( playlist.get( i ).getImage() )
+                                .mediaId( playlist.get( i ).getMediaid() )
                                 .mediaDrmCallback( new WidevineMediaDrmCallback( playlist.get( i ).getMediaid(), requestProperties ) )
                                 .build();
                         Log.i( "SajjadLog", "--------- JWPlayer Manager : 20 ---------" );

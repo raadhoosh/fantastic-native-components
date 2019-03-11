@@ -1,0 +1,10 @@
+<resources>
+	<string name="app_name">dartcrowdsourcingandroidarchive</string>
+	<string name="dart_disclaimer">This app has features that measure your experience on the mobile network so we can
+		make it better for you. We’re checking your signal strength, speed of connection, WiFi access point and mobile
+		phone tower, not who you are calling or websites you are visiting.\nYou can switch collection off at anytime by
+		pressing the "Disable Collection" button.
+	</string>
+	<string name="dart_disclaimer_title">Hello</string>
+	<string name="dartnotification_title">Welcome</string>
+</resources>

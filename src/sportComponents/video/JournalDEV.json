@@ -4,7 +4,8 @@
         "image": "https://image-service.ha.optus-third.vimondtv.com/api/v2/img/5c7c9e3ee4b0c39c0c37acb6",
         "description": "Watch football 24/7 on Optus Sport 1.",
         "mediaid": "42463",
-        "sources": [{
+        "sources": [
+        {
             "file": "https://epllinearcdn.optusnet.com.au/__cl/default/__c/OS1/__op/axcenc/__f/manifest.mpd",
             "drm": {
                 "widevine": {
