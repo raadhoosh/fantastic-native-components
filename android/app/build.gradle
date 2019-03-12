@@ -146,7 +146,7 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-vector-icons')
+    //implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
 //    implementation 'com.google.android.exoplayer:exoplayer:r1.4.0'
