@@ -300,7 +300,7 @@ public class JWPlayerManager extends SimpleViewManager<JWView> {
                                 .title( playlist.get( i ).getTitle() )
                                 .description( playlist.get( i ).getDescription() )
                                 .image( playlist.get( i ).getImage() )
-                                .mediaDrmCallback( new WidevineMediaDrmCallback( playlist.get( i ).getMediaid(), requestProperties ) )
+                                .mediaDrmCallback( new WidevineMediaDrmCallback() )
                                 .build();
                         Log.i( "SajjadLog", "--------- JWPlayer Manager : 20 ---------" );
                         lp.add( p );
