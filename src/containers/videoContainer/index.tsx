@@ -20,16 +20,21 @@ class VideoContainer extends React.PureComponent<Props> {
     }
     render() {
         return (
-            <Query query={FEED_QUERY}>
-                {({ data, error, loading }) => {
-                    return (<VideoPage
-                        data={data}
-                        error={error}
-                        loading={loading}
+            <VideoPage
+                        data={[]}
+                        error={false}
+                        loading={false}
                         navigation={this.props.navigation} />
-                    );
-                }}
-            </Query>
+            // <Query query={FEED_QUERY}>
+            //     {({ data, error, loading }) => {
+            //         return (<VideoPage
+            //             data={[]}
+            //             error={false}
+            //             loading={false}
+            //             navigation={this.props.navigation} />
+            //         );
+            //     }}
+            // </Query>
         );
     }
 }

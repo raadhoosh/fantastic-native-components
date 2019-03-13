@@ -1,7 +1,6 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import { AppRegistry, StyleSheet, Text, View, AsyncStorage } from "react-native";
-import Video from "react-native-video";
 import { StyledText } from "./video.style";
 import JWPlayer from "./JWPlayer.js";
 import { relative } from "path";
@@ -76,16 +75,15 @@ export default class VideoSport extends Component<IProps, IState> {
                     .then((data) => {
 
                         // tslint:disable-next-line:no-debugger
-                        debugger;
+                        // debugger;
                         const Body = JSON.parse(_.get(data, "_bodyText"));
                         //  debugger;
 
                         this.setState({ data: Body });
                         let list = playerInstanceSetup(Body);
                         //  debugger;
-                        alert(JSON.stringify(data));
+                        // alert(JSON.stringify(data));
                         this.setState({ playerInstanceSetup: list });
-                        
                     })
                     .catch((err: any) => {
                         // debugger
@@ -116,7 +114,7 @@ export default class VideoSport extends Component<IProps, IState> {
                             </View>
                             <View style={{ marginTop: 60, flex: 1 }}>
                                 <StyledText>
-                                    {Date.now()}
+                                {this.props.text}
                                 </StyledText>
                             </View>
                         </View>
