@@ -5,7 +5,7 @@ buildscript {
         buildToolsVersion = "28.0.3"
         minSdkVersion = 16
         compileSdkVersion = 28
-        targetSdkVersion = 28
+        targetSdkVersion = 26
         supportLibVersion = "27.1.1"
     }
     repositories {
@@ -29,7 +29,12 @@ allprojects {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
         }
-        maven { url 'https://mvn.jwplayer.com/content/repositories/releases/' }
+        maven {
+            url 'https://mvn.jwplayer.com/content/repositories/develop/'
+        }
+        maven {
+            url 'https://mvn.jwplayer.com/content/repositories/releases/'
+        }
     }
 }
 

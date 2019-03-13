@@ -4,6 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
       android:name=".MainApplication"
@@ -13,7 +14,7 @@
       android:theme="@style/AppTheme">
         <meta-data
             android:name="JW_LICENSE_KEY"
-            android:value="mnzqi8RbddAbsUn7cv6aAVbVapF7zBDLqzSIyOc3x85CT+5WmU9y/0fkUxfHq1yI" />
+            android:value="i9QBEPXIb0o5kh8dH2sNdFUtc6dw8crzMPFhr2ygH01l4OmO" />
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"

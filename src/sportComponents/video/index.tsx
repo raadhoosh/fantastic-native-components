@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { AppRegistry, StyleSheet, Text, View, AsyncStorage } from "react-native";
 import Video from "react-native-video";
 import { StyledText } from "./video.style";
-// import JWPlayer from "./JWPlayer.js";
+import JWPlayer from "./JWPlayer.js";
 import { relative } from "path";
 import playerInstanceSetup from "./playerInstanceSetup";
 
@@ -25,38 +25,38 @@ export default class VideoSport extends Component<IProps, IState> {
         this.state = { paused: true };
     }
 
-    // async componentWillMount() {
-    //     let Auth;
-    //     let AccessToken;
-    //     let d = new Date();
-    //     let t = "t:" + d.getMonth() + "-" + d.getDate() + "-" + d.getHours();
-    //     let p = await AsyncStorage.getItem("@auth13:" + t);
-    //     if (p) {
-    //         // debugger
-    //         Auth = this.state.Auth;
-    //         this.setPlayer(Auth);
-    //     } else {
-    //         let a: string = JSON.stringify({ "username": "salman.zare@optus.com.au", "password": "Salman@2o19", "rememberMe": "false" });
-    //         fetch("https://web-pp.sport-ott.com/api/userauth/login", { method: "POST", body: a })
-    //             .then((data) => {
-    //                 if (data) {
-    //                     const body = JSON.parse(_.get(data, "_bodyText"));
-    //                     Auth = body.result;
-    //                     // tslint:disable-next-line:no-debugger
-    //                     debugger;
-    //                     AsyncStorage.setItem("@auth1:" + t, JSON.stringify(Auth));
+    async componentWillMount() {
+        let Auth;
+        let AccessToken;
+        let d = new Date();
+        let t = "t:" + d.getMonth() + "-" + d.getDate() + "-" + d.getHours();
+        let p = await AsyncStorage.getItem("@auth13:" + t);
+        if (p) {
+            // debugger
+            Auth = this.state.Auth;
+            this.setPlayer(Auth);
+        } else {
+            let a: string = JSON.stringify({ "username": "salman.zare@optus.com.au", "password": "Salman@2o19", "rememberMe": "false" });
+            fetch("https://web-pp.sport-ott.com/api/userauth/login", { method: "POST", body: a })
+                .then((data) => {
+                    if (data) {
+                        const body = JSON.parse(_.get(data, "_bodyText"));
+                        Auth = body.result;
+                        // tslint:disable-next-line:no-debugger
+                        debugger;
+                        AsyncStorage.setItem("@auth1:" + t, JSON.stringify(Auth));
 
-    //                     this.setState({ Auth: Auth });
-    //                     this.setPlayer(Auth);
-    //                 }
-    //                 // alert(JSON.stringify(data));
-    //             })
-    //             .catch((err: any) => {
-    //                 alert(err);
-    //             });
-    //     }
-    //     // alert(JSON.stringify(Auth));
-    // }
+                        this.setState({ Auth: Auth });
+                        this.setPlayer(Auth);
+                    }
+                    // alert(JSON.stringify(data));
+                })
+                .catch((err: any) => {
+                    alert(err);
+                });
+        }
+        // alert(JSON.stringify(Auth));
+    }
 
     setPlayer = (Auth: any) => {
         if (Auth) {
@@ -83,9 +83,9 @@ export default class VideoSport extends Component<IProps, IState> {
                         this.setState({ data: Body });
                         let list = playerInstanceSetup(Body);
                         //  debugger;
-
+                        alert(JSON.stringify(data));
                         this.setState({ playerInstanceSetup: list });
-                        // alert(JSON.stringify(data));
+                        
                     })
                     .catch((err: any) => {
                         // debugger
@@ -95,52 +95,56 @@ export default class VideoSport extends Component<IProps, IState> {
     }
 
     render() {
-        // TODO
-        // if (this.state && false) {
-        //     if (this.state.playerInstanceSetup) {
-        //         return (
-        //             <>
-        //                 <View style={styles.container}>
-        //                     <View style={styles.videoWrapper}>
-        //                         <JWPlayer
-        //                             key={"name"}
-        //                             title={this.props.text}
-        //                             // description={'Film Test'}
-        //                             src={JSON.stringify(this.state.playerInstanceSetup)}
-        //                             // src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
-        //                             // src="https://wowzaec2demo.streamlock.net/live/bigbuckbunny/playlist.m3u8"
-        //                             // src="https://descargapwebrealmadrid.akamaized.net/2018/04/05/b2c71017-0b44-4bfa-9d6f-f56247a818b2_1000k.mp4"
-        //                             // src={require("./video.mp4").toString()}
-        //                             play={true}
-        //                             style={styles.video}
-        //                         />
-        //                     </View>
-        //                     <View style={{ marginTop: 60, flex: 1 }}>
-        //                         <StyledText>
-        //                             {Date.now()}
-        //                         </StyledText>
-        //                     </View>
-        //                 </View>
-        //             </>
-        //         );
+        if (this.state) {
+            if (this.state.playerInstanceSetup) {
+                return (
+                    <>
+                        <View style={styles.container}>
+                            <View style={styles.videoWrapper}>
+                                <JWPlayer
+                                    key={"name"}
+                                    title={this.props.text}
+                                    // description={'Film Test'}
+                                    src={JSON.stringify(this.state.playerInstanceSetup)}
+                                    // src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+                                    // src="https://wowzaec2demo.streamlock.net/live/bigbuckbunny/playlist.m3u8"
+                                    // src="https://descargapwebrealmadrid.akamaized.net/2018/04/05/b2c71017-0b44-4bfa-9d6f-f56247a818b2_1000k.mp4"
+                                    // src={require("./video.mp4").toString()}
+                                    play={true}
+                                    style={styles.video}
+                                />
+                            </View>
+                            <View style={{ marginTop: 60, flex: 1 }}>
+                                <StyledText>
+                                    {Date.now()}
+                                </StyledText>
+                            </View>
+                        </View>
+                    </>
+                );
 
-        //     }
-        // }
+            }
+        }
         return (
             <>
                 <View style={styles.container}>
                     <View style={styles.videoWrapper}>
-                        <Video
-                            repeat
-                            resizeMode="cover"
-                            source={require("./video.mp4")}
-                           // source={{uri: "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"}}
-                            style={styles.video}
-                        />
+                                {/* <JWPlayer
+                                    key={"name"}
+                                    title={this.props.text}
+                                    // description={'Film Test'}
+                                    // src={JSON.stringify(this.state.playerInstanceSetup)}
+                                    src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+                                    // src="https://wowzaec2demo.streamlock.net/live/bigbuckbunny/playlist.m3u8"
+                                    // src="https://descargapwebrealmadrid.akamaized.net/2018/04/05/b2c71017-0b44-4bfa-9d6f-f56247a818b2_1000k.mp4"
+                                    // src={require("./video.mp4").toString()}
+                                    play={true}
+                                    style={styles.video}
+                                /> */}
                     </View>
                     <View style={{ marginTop: 60, flex: 1 }}>
                         <StyledText>
-                           {this.props.text}
+                            {this.props.text}
                         </StyledText>
                     </View>
                 </View>

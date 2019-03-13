@@ -1,10 +1,10 @@
 package com.module;
 
 import android.annotation.TargetApi;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 import com.google.android.exoplayer2.drm.ExoMediaDrm;
-
 import com.longtailvideo.jwplayer.media.drm.MediaDrmCallback;
 
 import java.io.IOException;
@@ -21,56 +21,63 @@ import static com.google.android.exoplayer2.util.Util.toByteArray;
 @TargetApi(18)
 public class WidevineMediaDrmCallback implements MediaDrmCallback {
 
-    private String mLicenseServer;
+    private static String WIDEVINE_LICENSE_SERVER_BASE_URI =
+            "https://proxy.uat.widevine.com/proxy";
 
-//    public WidevineMediaDrmCallback(String licenseServer, String axDrmMessage) {
-//        // license server URL has hardcoded value of: "https://drm-widevine-licensing.axtest.net/AcquireLicense"
-//        // defined in SampleChooserActivity class
-//        mLicenseServer = licenseServer;
-//        mAxDrmMessage = axDrmMessage;
-//    }
-//
-//    @Override
-//    public byte[] executeProvisionRequest(UUID uuid, ExoMediaDrm.ProvisionRequest request) throws IOException {
-//        String url = request.getDefaultUrl() + "&signedRequest=" + new String(request.getData());
-//        return Util.executePost(url, null, null);
-//     // return  null;
-//    }
-//
-//    // Requesting key from license server using license token obtained from the authorization service
-//    @Override
-//    public byte[] executeKeyRequest(UUID uuid, ExoMediaDrm.KeyRequest request) throws IOException {
-//        Map<String, String> requestProperties = new HashMap<>();
-//        requestProperties.put("X-AxDRM-Message", mAxDrmMessage);
-//        //return  null;
-//        return Util.executePost(mLicenseServer, request.getData(), requestProperties);
-//    }
-
-    private static final String WIDEVINE_LICENSE_SERVER_BASE_URI =
-            "https://drm-widevine-licensing.axtest.net/AcquireLicense";
+    private static final String WIDEVINE_GTS_DEFAULT_BASE_URI =
+            "https://proxy.uat.widevine.com/proxy";
 
     private final String defaultUri;
-    Map<String, String> mAxDrmMessage;
+//    private final String licenseServerUrl;
 
-    public WidevineMediaDrmCallback(String contentId, Map<String, String> mad) {
-        String params = "?video_id=" + contentId;
-        mAxDrmMessage = mad;
-        defaultUri = WIDEVINE_LICENSE_SERVER_BASE_URI + params;
+    private boolean isProviderAvailable;
+
+    private final Map<String, String> KEY_REQUEST_PROPERTIES = new HashMap<>();
+
+    WidevineMediaDrmCallback() {
+        isProviderAvailable = true;
+//        licenseServerUrl = WIDEVINE_LICENSE_SERVER_BASE_URI;
+        defaultUri = WIDEVINE_GTS_DEFAULT_BASE_URI;
     }
+
+    WidevineMediaDrmCallback(String BASE_URI, String LICENSE_SERVER) {
+        isProviderAvailable = true;
+        defaultUri = BASE_URI;
+//        licenseServerUrl = BASE_URI;
+    }
+
+    WidevineMediaDrmCallback(String BASE_URI, String LICENSE_SERVER,Map<String, String> maps) {
+        isProviderAvailable = false;
+        for (Map.Entry<String, String> entry : maps.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            KEY_REQUEST_PROPERTIES.put( key, value );
+            // do what you have to do here
+            // In your case, another loop.
+        }
+//        licenseServerUrl = BASE_URI;
+        defaultUri = BASE_URI;
+    }
+
 
     @Override
     public byte[] executeProvisionRequest(UUID uuid, ExoMediaDrm.ProvisionRequest request) throws IOException {
         String url = request.getDefaultUrl() + "&signedRequest=" + new String( request.getData() );
-        return executePost( url, null, mAxDrmMessage );
+        return executePost( url, null, null );
     }
 
     @Override
     public byte[] executeKeyRequest(UUID uuid, ExoMediaDrm.KeyRequest request) throws IOException {
+
         String url = request.getLicenseServerUrl();
+
         if (TextUtils.isEmpty( url )) {
             url = defaultUri;
         }
-        return executePost( url, request.getData(), mAxDrmMessage );
+
+        return isProviderAvailable ?
+                executePost( url, request.getData(), null ) :
+                executePost( url, request.getData(), KEY_REQUEST_PROPERTIES );
     }
 
     /**
@@ -82,17 +89,15 @@ public class WidevineMediaDrmCallback implements MediaDrmCallback {
      * @return The response body.
      * @throws IOException If an error occurred making the request.
      */
-    public static byte[] executePost(String url, byte[] data, Map<String, String> requestProperties)
+    private static byte[] executePost(String url, byte[] data, Map<String, String> requestProperties)
             throws IOException {
         HttpURLConnection urlConnection = null;
         try {
             urlConnection = (HttpURLConnection) new URL( url ).openConnection();
             urlConnection.setRequestMethod( "POST" );
-
             urlConnection.setDoOutput( data != null );
             urlConnection.setDoInput( true );
             if (requestProperties != null) {
-
                 for (Map.Entry<String, String> requestProperty : requestProperties.entrySet()) {
                     urlConnection.setRequestProperty( requestProperty.getKey(), requestProperty.getValue() );
                 }
@@ -106,6 +111,7 @@ public class WidevineMediaDrmCallback implements MediaDrmCallback {
                     out.close();
                 }
             }
+
             // Read and return the response body.
             InputStream inputStream = urlConnection.getInputStream();
             try {
