@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -221,70 +222,7 @@ public class JWPlayerManager extends SimpleViewManager<JWView> {
                                         .getWidevine()
                                         .getLicenseRequestHeaders();
                         Log.i( "SajjadLog", "--------- JWPlayer Manager : 13 ---------" );
-                        Map<String, String> requestProperties = new Map<String, String>() {
-                            @Override
-                            public int size() {
-                                return 0;
-                            }
-
-                            @Override
-                            public boolean isEmpty() {
-                                return false;
-                            }
-
-                            @Override
-                            public boolean containsKey(Object key) {
-                                return false;
-                            }
-
-                            @Override
-                            public boolean containsValue(Object value) {
-                                return false;
-                            }
-
-                            @Override
-                            public String get(Object key) {
-                                return null;
-                            }
-
-                            @Override
-                            public String put(String key, String value) {
-                                return null;
-                            }
-
-                            @Override
-                            public String remove(Object key) {
-                                return null;
-                            }
-
-                            @Override
-                            public void putAll(@NonNull Map<? extends String, ? extends String> m) {
-
-                            }
-
-                            @Override
-                            public void clear() {
-
-                            }
-
-                            @NonNull
-                            @Override
-                            public Set<String> keySet() {
-                                return null;
-                            }
-
-                            @NonNull
-                            @Override
-                            public Collection<String> values() {
-                                return null;
-                            }
-
-                            @NonNull
-                            @Override
-                            public Set<Entry<String, String>> entrySet() {
-                                return null;
-                            }
-                        };
+                        Map<String, String> requestProperties = new HashMap<>();
                         Log.i( "SajjadLog", "--------- JWPlayer Manager : 14 ---------" );
                         final int size3 = listheader.size();
                         Log.i( "SajjadLog", "--------- listheader ---------" + listheader );

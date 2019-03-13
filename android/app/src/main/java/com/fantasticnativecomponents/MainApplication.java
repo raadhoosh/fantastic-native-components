@@ -1,6 +1,8 @@
 package com.fantasticnativecomponents;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.facebook.react.ReactApplication;
@@ -49,5 +51,11 @@ public class MainApplication extends Application implements ReactApplication {
         super.onCreate();
         SoLoader.init( this, /* native exopackage */ false );
         Log.i( "SajjadLog", "--------MainApplication----------" );
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 }

@@ -66,7 +66,7 @@ public class WidevineMediaDrmCallback implements MediaDrmCallback {
 
     @Override
     public byte[] executeKeyRequest(UUID uuid, ExoMediaDrm.KeyRequest request) throws IOException {
-        String url = request.getDefaultUrl();
+        String url = request.getLicenseServerUrl();
         if (TextUtils.isEmpty( url )) {
             url = defaultUri;
         }
